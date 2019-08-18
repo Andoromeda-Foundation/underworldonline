@@ -1,0 +1,177 @@
+/**
+ * UIList 使用的数据
+ * Created by 黑暗之神KDS on 2019-07-09 15:04:42.
+ */
+class UIListItemData {
+    /** 事件：发生选中状态改变时触发 使用EventUtils */
+    static EVENT_SELECT_CHANGE: string = "UIListItemDataEVENT_SELECT_CHANGE";
+    /** 时间：发生打开状态改变时触发 使用EventUtils */
+    static EVENT_OPEN_CHANGE: string = "UIListItemDataEVENT_OPEN_CHANGE";
+    protected _children: UIListItemData[] = [];
+    protected _parent: UIListItemData;
+    protected _isOpen: boolean = true;
+    protected _uiNames: string[] = [];
+    /** 任意附加的数据 */
+    data: any;
+    /**
+     * 提取储存数据
+     * @param includeData [可选] 默认值=false 是否包含自定义附加的数据，请保证该数据可以JSON化
+     */
+    getSaveData(includeData: boolean = false): any {
+
+        var dData: any = {};
+        for (var i in this._uiNames) {
+            dData[i] = this[i];
+        }
+        if (includeData) dData.data = this.data;
+        var len = this._children.length;
+        if (len > 0) {
+            dData.children = [];
+            for (var s = 0; s < this._children.length; s++) {
+                var item = this._children[s];
+                dData.children.push(item.getSaveData(includeData));
+            }
+        }
+        dData.isOpen = this.isOpen;
+        return dData;
+    }
+    /**
+     * 还原储存数据
+     * @param saveData 
+     */
+    static recoverySaveData(saveData: any): UIListItemData {
+        var d = new UIListItemData();
+        for (var i in saveData) {
+            if (i == "children") continue;
+            d[i] = saveData[i];
+        }
+        for (var i in saveData.children) {
+            var saveDataChild = saveData.children[i];
+            var dChild = UIListItemData.recoverySaveData(saveDataChild);
+            d.addChild(dChild);
+        }
+        return d;
+    }
+    /** 是否处于打开状态（树节点的情况） */
+    get isOpen() { return this._isOpen; }
+    set isOpen(v) {
+        if (v != this._isOpen) {
+            this._isOpen = v;
+            EventUtils.happen(this, UIListItemData.EVENT_OPEN_CHANGE);
+        }
+    }
+    /**
+     * 获取UI名称
+     * @return [string] 
+     */
+    get uiNames(): string[] { return this._uiNames; }
+    /**
+     * 获取父节点
+     * @return [UIListItemData] 
+     */
+    get parent(): UIListItemData { return this._parent; }
+    /**
+     * 添加节点
+     * @param item 节点数据对象
+     */
+    addChild(item: UIListItemData) { this._children.push(item); item._parent = this; }
+    /**
+     * 添加节点到指定索引中
+     * @param item 节点数据对象
+     * @param index 插入所在索引
+     */
+    addChildAt(item: UIListItemData, index: number) { this._children.splice(index, 0, item); item._parent = this; }
+    /**
+     * 移除节点
+     * @param item 节点数据对象
+     */
+    removeChild(item: UIListItemData) { this._children.splice(this._children.indexOf(item), 1); item._parent = null; }
+    /**
+     * 移除节点至指定索引中
+     * @param index 节点所在的索引
+     */
+    removeChildAt(index: number) { var item = this._children.splice(index, 1)[0]; item._parent = null; }
+    /**
+     * 移除所有节点
+     */
+    removeAll() { for (var i in this._children) { this._children[i]._parent = null; }; this._children.length = 0; }
+    /**
+     * 获取节点根据索引
+     * @param index 节点所在的索引
+     * @return [UIListItemData] 
+     */
+    getChildAt(index: number): UIListItemData { return this._children[index]; }
+    /**
+     * 获取节点索引
+     * @param item 节点数据对象
+     */
+    getChildIndex(item: UIListItemData) { return this._children.indexOf(item); }
+    /**
+     * 子节点总数
+     */
+    get numChildren() { return this._children.length; }
+    /**
+     * 子节点列表
+     */
+    get children() { return this._children; }
+    /**
+     * 是否继承于指定节点
+     */
+    isInherit(data: UIListItemData) {
+        var p = this.parent;
+        while (p) {
+            if (p == data) return true;
+            p = p._parent;
+        }
+        return false;
+    }
+    /**
+     * 获取树型结构下全部节点中的子节点列表（含自身节点）
+     * @param arr 
+     */
+    getList(arr: UIListItemData[] = null): UIListItemData[] {
+        return ArrayUtils.getTreeNodeArray(this, "_children", arr);
+    }
+    /**
+     * 获取树形结构的根节点
+     * @return [UIListItemData] 
+     */
+    get root(): UIListItemData {
+        var p: UIListItemData = this;
+        while (true) {
+            if (p._parent) {
+                p = p._parent;
+            }
+            else {
+                break;
+            }
+        }
+        return p;
+    }
+    /**
+     * 获取所在树的深度
+     * @return [number] 
+     */
+    get depth(): number {
+        var p = this as UIListItemData;
+        var d = 0;
+        while (1) {
+            if (!p.parent) break;
+            d++;
+            p = p.parent;
+        }
+        return d;
+    }
+    /**
+     * 是否是隐藏节点（即父系节点可能被关闭了）
+     */
+    get isHideNode() {
+        var p = this.parent;
+        while (1) {
+            if (!p) break;
+            if (!p.isOpen) return true;
+            p = p.parent;
+        }
+        return false;
+    }
+}

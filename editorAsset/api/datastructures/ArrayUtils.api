@@ -1,0 +1,181 @@
+/**
+ * 数组工具类
+ */
+class ArrayUtils {
+    /**
+     * 数组内随机打乱排序
+     * @param arr 数组
+     */
+    static randOrder(arr: any[]): void {
+       return null;
+    }
+    /**
+     * 添加数据
+     * @param arr 数据组 
+     * @param index 索引 -1=加入到数组尾端
+     * @param arg 添加的数据
+     */
+    static insert(arr: any[], index: number, ...arg): number {
+       return null;
+    }
+    /**
+     * 删除数据
+     * @param arr 数据组 
+     * @param index 索引 -1=删除尾端数据
+     * @return [any] 被删除的数据对象
+     */
+    static delete(arr: any[], index: number): any {
+       return null;
+    }
+    /**
+     * 移除数据
+     * @param arr 数据组 
+     * @param obj 数据对象
+     * @return [any] 
+     */
+    static remove(arr: any[], obj: any): any {
+        return null;
+    }
+    /**
+     * 获取数据
+     * @param arr 数据组 
+     * @param index 索引 -1=尾端数据
+     * @return [any] 
+     */
+    static get(arr: any[], index: number): any {
+        return null;
+    }
+    /**
+     * 更改数据中的值
+     * @param arr 数据组
+     * @param index 索引
+     * @param paramValue 参数和值Object 
+     * @param 实际被更改的对象数组
+     */
+    static set(arr: any[], index: number, paramValue: any): any[] {
+        return null;
+    }
+    /**
+     * 插入数据 找到空值或添加
+     */
+    static insertToNullPosition(arr: any[], obj: any): number {
+       return null;
+    }
+    /**
+     * 找到一个空的位置
+     */
+    static getNullPosition(arr: any[]): number {
+        return null;
+    }
+
+    /**
+     * 剔除相同的元素
+     * @param arr 原数组
+     * @return [any] 新数组 
+     */
+    static removeSameObject(arr: any[]): any[] {
+      return null;
+    };
+    /**
+     * 匹配数据
+     * @param arr 数组
+     * @param matchObj 参数 
+     * @param onlyOne 是否只找一个
+     * @param symbol 对比符号
+     * @param indexOfMode 返回匹配的索引而非返回匹配的对象
+     * @return [any] 
+     */
+    static matchAttributes(arr: any, matchData: any, onlyOne: boolean, symbol: string = "==", indexOfMode: boolean = false): any[] | number[] {
+       return null;
+    };
+    /**
+     * 匹配数据 深度2
+     * @param arr 数组
+     * @param attribute 属性
+     * @param matchObj 参数 
+     * @param onlyOne
+     * @return [any] 
+     */
+    static matchAttributesD2(arr: any, attribute: string, matchData: any, onlyOne: boolean, symbol: string = "=="): any[] {
+       return null;
+    };
+    /**
+     * 匹配数据 深度2
+     * @param arr 数组
+     * @param attribute 属性
+     * @param attribute2 属性2
+     * @param matchObj 参数 
+     * @param onlyOne
+     * @return [any] 
+     */
+    static matchAttributesD3(arr: any, attribute: string, attribute2: string, matchData: any, onlyOne: boolean, symbol: string = "=="): any[] {
+       return null;
+    };
+    /**
+     * 获取数组中元素出现的个数
+     * @param arr 数组
+     * @param value 元素
+     * @return [number] 出现的个数 
+     */
+    static getElementSize(arr: any[], value: any): number {
+        return null;
+    }
+    /**
+     * 批量装载创建对象
+     * @param objCls 对象类
+     * @param size 数目
+     * @param obj 
+     * @param arr [可选] 默认值=null 装载至的数组，设置则以该数组为装载对象
+     * @return [any] 
+     */
+    static createObjects(objCls: any, size: number, onCreateOne: (index: number, obj: any) => void=null, arr: any[] = null): any[] {
+        return null;
+    }
+    /**
+     * 互换数组中的位置
+     * @param arr 数组 
+     * @param index1 位置1 
+     * @param index2 位置2
+     */
+    static swap(arr: any[], index1: number, index2: number) {
+        return null;
+    }
+    /**
+     * 调整数组中元素位置
+     * @param arr 数组
+     * @param element 元素
+     * @param index 位置
+     */
+    static adjustment(arr: any[], element: any, index: number) {
+        return null;
+    }
+    /**
+     * 按照asc排序（忽略大小写）
+     * @param arr 数组 
+     * @param attributeName 属性的名称 
+     * @param isAsc 是否正序排序
+     */
+    static sort(arr: any[], attributeName: string, isAsc: boolean) {
+        return null;
+    };
+    /**
+     * 比较，列出B数组相对于A数组中不同的元素
+     * @param aArr A数组
+     * @param bArr B数组
+     * @param appended 增加的元素 列表
+     * @param subtract 减少的元素列表
+     */
+    static compare(aArr: any[], bArr: any[]): { appended: any[], subtract: any[] } {
+       return null;
+    }
+    /**
+     * 获取树型结构下全部节点中的子节点列表
+     * @param reeNode 树型结构节点
+     * @param childrenAttr 如 “children”
+     * @param arrayList
+     */
+    static getTreeNodeArray(treeNode: any, childrenAttr: string = "children", arrayList: any[] = null): any[] {
+        return null;
+    }
+
+}

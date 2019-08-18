@@ -1,0 +1,1544 @@
+{
+    "list": [
+        null,
+        "向下移动一步",
+        "向左移动一步",
+        "向上移动一步",
+        "向右移动一步",
+        "向左下移动一步",
+        "向右下移动一步",
+        "向左上移动一步",
+        "向右上移动一步",
+        "随机移动一步",
+        "靠近玩家一步",
+        "远离玩家一步",
+        "移动至",
+        "跳跃至",
+        "设置位置",
+        "停止移动",
+        "等待",
+        "忽略不能移动的场合ON",
+        "忽略不能移动的场合OFF",
+        "脸朝下",
+        "脸朝左",
+        "脸朝上",
+        "脸朝右",
+        "脸朝左下",
+        "脸朝右下",
+        "脸朝左上",
+        "脸朝右上",
+        "面向玩家",
+        "背向玩家",
+        "更改体型",
+        "更改移动速度",
+        "更改透明度",
+        "更改色相",
+        "更改动作播放间隔",
+        "更改影子",
+        "播放动画",
+        "停止动画",
+        "播放音效",
+        "允许选中ON",
+        "允许选中OFF",
+        "固定朝向ON",
+        "固定朝向OFF",
+        "最前方显示ON",
+        "最前方显示OFF",
+        "穿透ON",
+        "穿透OFF",
+        "播放动作ON",
+        "播放动作OFF",
+        "桥属性ON",
+        "桥属性OFF",
+        "wahaha",
+        "aaaaaa"
+    ],
+    "data": {
+        "1": {
+            "id": 1,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 124,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "2": {
+            "id": 2,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 413,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "3": {
+            "id": 3,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "4": {
+            "id": 4,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "5": {
+            "id": 5,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "6": {
+            "id": 6,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "7": {
+            "id": 7,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "8": {
+            "id": 8,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true,
+                    "hideBlockTitle": false
+                }
+            ]
+        },
+        "9": {
+            "id": 9,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "10": {
+            "id": 10,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "11": {
+            "id": 11,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true,
+                    "hideBlockTitle": false
+                }
+            ]
+        },
+        "12": {
+            "id": 12,
+            "blockList": [
+                {
+                    "name": "移动至",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6656779923_0.24565940455403146",
+                                "varName": "使用格子坐标",
+                                "varType": 2,
+                                "compData": {
+                                    "compType": 15,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 76,
+                            "x": 22,
+                            "width": 119,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6656779923_0.18224181524943606",
+                                "varName": "x",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 7,
+                            "x": 10,
+                            "width": 120,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6656779923_0.9653712132362076",
+                                "varName": "y",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 41.375,
+                            "x": 9.625,
+                            "width": 120,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 117,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "13": {
+            "id": 13,
+            "blockList": [
+                {
+                    "name": "跳跃至",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6656779923_0.24565940455403146",
+                                "varName": "使用格子坐标",
+                                "varType": 2,
+                                "compData": {
+                                    "compType": 15,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 76,
+                            "x": 22,
+                            "width": 119,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6656779923_0.18224181524943606",
+                                "varName": "x",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 7,
+                            "x": 10,
+                            "width": 120,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6656779923_0.9653712132362076",
+                                "varName": "y",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 41.375,
+                            "x": 9.625,
+                            "width": 120,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 117,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "14": {
+            "id": 14,
+            "blockList": [
+                {
+                    "name": "设置位置",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6656779923_0.24565940455403146",
+                                "varName": "使用格子坐标",
+                                "varType": 2,
+                                "compData": {
+                                    "compType": 15,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 76,
+                            "x": 22,
+                            "width": 119,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6656779923_0.18224181524943606",
+                                "varName": "x",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 7,
+                            "x": 10,
+                            "width": 120,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6656779923_0.9653712132362076",
+                                "varName": "y",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 41.375,
+                            "x": 9.625,
+                            "width": 120,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 117,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "15": {
+            "id": 15,
+            "blockList": [
+                {
+                    "name": "停止移动",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 49,
+                    "autoOrder": true,
+                    "hideBlockTitle": false
+                }
+            ]
+        },
+        "16": {
+            "id": 16,
+            "blockList": [
+                {
+                    "name": "等待",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6658269246_0.9354905810950407",
+                                "varName": "帧数",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 7,
+                            "x": 8,
+                            "width": 121,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 49,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "17": {
+            "id": 17,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true,
+                    "hideBlockTitle": false
+                }
+            ]
+        },
+        "18": {
+            "id": 18,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "19": {
+            "id": 19,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "20": {
+            "id": 20,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "21": {
+            "id": 21,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "22": {
+            "id": 22,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "23": {
+            "id": 23,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "24": {
+            "id": 24,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "25": {
+            "id": 25,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "26": {
+            "id": 26,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "27": {
+            "id": 27,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "28": {
+            "id": 28,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true,
+                    "hideBlockTitle": false
+                }
+            ]
+        },
+        "29": {
+            "id": 29,
+            "blockList": [
+                {
+                    "name": "更改体型",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6658501378_0.24036078938789784",
+                                "varName": "体型",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 1,
+                                    "compParam": {
+                                        "minLimit": 0,
+                                        "maxLimit": "10",
+                                        "tickValue": "0.01",
+                                        "limitInteger": false,
+                                        "lockTextLimit": false
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 10,
+                            "x": 9,
+                            "width": 323,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 53,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "30": {
+            "id": 30,
+            "blockList": [
+                {
+                    "name": "更改移动速度",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6661681599_0.891735623762222",
+                                "varName": "移动速度",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 1,
+                                    "compParam": {
+                                        "minLimit": 0,
+                                        "maxLimit": "3000",
+                                        "tickValue": "1",
+                                        "limitInteger": true,
+                                        "lockTextLimit": false
+                                    }
+                                },
+                                "defaultValue": "300",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 12,
+                            "x": 10,
+                            "width": 350,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 55,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "31": {
+            "id": 31,
+            "blockList": [
+                {
+                    "name": "更改透明度",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6661681599_0.891735623762222",
+                                "varName": "透明度",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 1,
+                                    "compParam": {
+                                        "minLimit": 0,
+                                        "maxLimit": "1",
+                                        "tickValue": "0.01",
+                                        "limitInteger": false,
+                                        "lockTextLimit": true
+                                    }
+                                },
+                                "defaultValue": "1",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 12,
+                            "x": 10,
+                            "width": 350,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 55,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "32": {
+            "id": 32,
+            "blockList": [
+                {
+                    "name": "色相",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6661681599_0.891735623762222",
+                                "varName": "色相",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 1,
+                                    "compParam": {
+                                        "minLimit": "-255",
+                                        "maxLimit": "255",
+                                        "tickValue": "1",
+                                        "limitInteger": true,
+                                        "lockTextLimit": true
+                                    }
+                                },
+                                "defaultValue": "0",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 12,
+                            "x": 10,
+                            "width": 350,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 55,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "33": {
+            "id": 33,
+            "blockList": [
+                {
+                    "name": "更改动作播放间隔",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6662248054_0.22377060069854093",
+                                "varName": "动作播放间隔",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 1,
+                                    "compParam": {
+                                        "minLimit": "1",
+                                        "maxLimit": "120",
+                                        "tickValue": "1",
+                                        "limitInteger": true,
+                                        "lockTextLimit": false
+                                    }
+                                },
+                                "defaultValue": "0",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 12,
+                            "x": 10,
+                            "width": 350,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 54,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "34": {
+            "id": 34,
+            "blockList": [
+                {
+                    "name": "更改影子",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6659273396_0.25530337372152356",
+                                "varName": "启用影子",
+                                "varType": 2,
+                                "compData": {
+                                    "compType": 15,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 6,
+                            "x": 15,
+                            "width": 70,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 51,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                },
+                {
+                    "name": "影子参数设定",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6659490970_0.14511556072046883",
+                                "varName": "影子宽度",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [
+                                {
+                                    "attrID": "6659273396_0.25530337372152356",
+                                    "value": true
+                                }
+                            ],
+                            "y": 11,
+                            "x": 8,
+                            "width": 116,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6659490970_0.49123776847105094",
+                                "varName": "影子高度",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [
+                                {
+                                    "attrID": "6659273396_0.25530337372152356",
+                                    "value": true
+                                }
+                            ],
+                            "y": 11.23076923076923,
+                            "x": 164.23076923076923,
+                            "width": 116,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6659490970_0.8878262602412532",
+                                "varName": "影子透明度",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 1,
+                                    "compParam": {
+                                        "minLimit": 0,
+                                        "maxLimit": "1",
+                                        "tickValue": "0.01",
+                                        "limitInteger": false,
+                                        "lockTextLimit": true
+                                    }
+                                },
+                                "defaultValue": "1",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [
+                                {
+                                    "attrID": "6659273396_0.25530337372152356",
+                                    "value": true
+                                }
+                            ],
+                            "y": 50.230769230769226,
+                            "x": 8.230769230769226,
+                            "width": 312,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [
+                        {
+                            "attrID": "6659273396_0.25530337372152356",
+                            "value": true
+                        }
+                    ],
+                    "blockHeight": 95,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "35": {
+            "id": 35,
+            "blockList": [
+                {
+                    "name": "播放动画",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6662030483_0.5853126032665821",
+                                "varName": "选择动画",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 4,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "1",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 8,
+                            "x": 6,
+                            "width": 237,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6662087339_0.649781779253986",
+                                "varName": "循环",
+                                "varType": 2,
+                                "compData": {
+                                    "compType": 15,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 41,
+                            "x": 6,
+                            "width": 56,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6662087570_0.8163209659253428",
+                                "varName": "显示击中效果",
+                                "varType": 2,
+                                "compData": {
+                                    "compType": 15,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 41,
+                            "x": 69,
+                            "width": 111,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 85,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "36": {
+            "id": 36,
+            "blockList": [
+                {
+                    "name": "停止动画",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6662507326_0.8834249388338296",
+                                "varName": "选择动画",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 4,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "1",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 8,
+                            "x": 6,
+                            "width": 237,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 49,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "37": {
+            "id": 37,
+            "blockList": [
+                {
+                    "name": "播放音效",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6662507326_0.8834249388338296",
+                                "varName": "播放音效",
+                                "varType": 1,
+                                "compData": {
+                                    "compType": 20,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 8,
+                            "x": 6,
+                            "width": 237,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 49,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "38": {
+            "id": 38,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true,
+                    "hideBlockTitle": false
+                }
+            ]
+        },
+        "39": {
+            "id": 39,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "40": {
+            "id": 40,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "41": {
+            "id": 41,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "42": {
+            "id": 42,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "43": {
+            "id": 43,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "44": {
+            "id": 44,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "45": {
+            "id": 45,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "46": {
+            "id": 46,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "47": {
+            "id": 47,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "48": {
+            "id": 48,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "49": {
+            "id": 49,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "50": {
+            "id": 50,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "51": {
+            "id": 51,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6832219952_0.28268053421044925",
+                                "varName": "放大",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 11,
+                            "x": 11,
+                            "width": 209,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true,
+                    "hideBlockTitle": false
+                }
+            ]
+        }
+    }
+}

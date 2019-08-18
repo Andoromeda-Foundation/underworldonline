@@ -1,0 +1,774 @@
+{
+    "sceneObjects": [
+        {
+            "modelID": 2,
+            "index": 0,
+            "name": "未命名0",
+            "x": 354,
+            "y": 449,
+            "z": 0,
+            "avatarID": 1002,
+            "avatarOri": 2,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {
+                "avatar": {
+                    "type": 1,
+                    "id": 0
+                }
+            },
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        null,
+        {
+            "modelID": 2,
+            "index": 2,
+            "name": "未命名2",
+            "x": 1136,
+            "y": 976,
+            "z": 0,
+            "avatarID": 1002,
+            "avatarOri": 2,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": true,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {
+                "avatar": {
+                    "type": 1,
+                    "id": 0
+                }
+            },
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": true,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 2,
+            "index": 3,
+            "name": "未命名2",
+            "x": 1008,
+            "y": 1232,
+            "z": 0,
+            "avatarID": 1029,
+            "avatarOri": 6,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 4,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {
+                "avatar": {
+                    "type": 1,
+                    "id": 0
+                }
+            },
+            "selectEnabled": false,
+            "fixedOrientation": true,
+            "onTop": false,
+            "through": true,
+            "bridge": true,
+            "autoPlayEnable": false,
+            "scale": 1,
+            "speed": 48,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 2,
+            "index": 4,
+            "name": "未命名4",
+            "x": 794,
+            "y": 532,
+            "z": 0,
+            "avatarID": 1002,
+            "avatarOri": 3,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {
+                "avatar": {
+                    "type": 1,
+                    "id": 0
+                }
+            },
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        }
+    ],
+    "commands": [],
+    "behaviors": [
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ]
+    ],
+    "customAttributes": [
+        {
+            "arr": {
+                "varType": 6,
+                "value": []
+            },
+            "age": {
+                "varType": 0,
+                "value": 6661
+            }
+        },
+        {},
+        {
+            "arr": {
+                "varType": 6,
+                "value": []
+            },
+            "age": {
+                "varType": 0,
+                "value": 6661
+            }
+        },
+        {
+            "arr": {
+                "varType": 6,
+                "value": []
+            },
+            "age": {
+                "varType": 0,
+                "value": 6661
+            }
+        },
+        {
+            "arr": {
+                "varType": 6,
+                "value": []
+            },
+            "age": {
+                "varType": 0,
+                "value": 6661
+            }
+        }
+    ],
+    "events": [
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    null,
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FfFffF'>玩家变量===[.s]</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "10++"
+                ],
+                [
+                    13,
+                    3,
+                    10,
+                    1,
+                    0,
+                    1,
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    4,
+                    "11+=2"
+                ],
+                [
+                    13,
+                    3,
+                    11,
+                    1,
+                    0,
+                    2,
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    4,
+                    "设置字符串1"
+                ],
+                [
+                    13,
+                    5,
+                    3,
+                    0,
+                    0,
+                    "asset/image/scene/fog/11.png",
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    4,
+                    "设置字符串2"
+                ],
+                [
+                    13,
+                    5,
+                    3,
+                    0,
+                    0,
+                    "asset/image/picture/face/官方立绘2/女主-哭2.png",
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    4,
+                    "设置开关1"
+                ],
+                [
+                    13,
+                    4,
+                    5,
+                    0,
+                    0,
+                    1,
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    4,
+                    "设置开关2"
+                ],
+                [
+                    13,
+                    4,
+                    5,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [
+                {
+                    "type": 2,
+                    "varID": 0,
+                    "compare": 1,
+                    "value": 0
+                }
+            ],
+            "click": [],
+            "collide": [
+                [
+                    13,
+                    6,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    22,
+                    -2,
+                    0,
+                    [
+                        [
+                            1,
+                            1008,
+                            1,
+                            0
+                        ],
+                        [
+                            31,
+                            666
+                        ],
+                        [
+                            17,
+                            30
+                        ],
+                        [
+                            31,
+                            123
+                        ],
+                        [
+                            1,
+                            1002,
+                            1,
+                            0
+                        ]
+                    ],
+                    false
+                ],
+                [
+                    23
+                ],
+                [
+                    32,
+                    255,
+                    0,
+                    0,
+                    0,
+                    10,
+                    1,
+                    1,
+                    1,
+                    -1
+                ],
+                [
+                    17,
+                    "10",
+                    0,
+                    false
+                ],
+                [
+                    32,
+                    0,
+                    0,
+                    0,
+                    0,
+                    10,
+                    1,
+                    1,
+                    1,
+                    -1
+                ]
+            ],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [],
+            "collide": [
+                [
+                    0,
+                    1,
+                    0,
+                    [
+                        0,
+                        1,
+                        1,
+                        0
+                    ],
+                    0,
+                    0,
+                    [
+                        0,
+                        1,
+                        1,
+                        0
+                    ],
+                    2,
+                    [
+                        1,
+                        1,
+                        0
+                    ],
+                    1,
+                    0,
+                    [
+                        1,
+                        1
+                    ],
+                    "",
+                    "",
+                    false
+                ],
+                [
+                    13,
+                    6,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    19,
+                    "",
+                    "triggerPlayer.controlEnabled = false;",
+                    "triggerPlayer.controlEnabled = false;\n"
+                ],
+                [
+                    22,
+                    -2,
+                    0,
+                    [
+                        [
+                            13,
+                            1,
+                            31,
+                            38
+                        ]
+                    ],
+                    false
+                ],
+                [
+                    23
+                ],
+                [
+                    22,
+                    -2,
+                    0,
+                    [
+                        [
+                            45
+                        ],
+                        [
+                            31,
+                            200
+                        ],
+                        [
+                            16
+                        ],
+                        [
+                            13,
+                            1,
+                            38,
+                            38
+                        ],
+                        [
+                            46
+                        ]
+                    ],
+                    false
+                ],
+                [
+                    22,
+                    -1,
+                    0,
+                    [
+                        [
+                            31,
+                            200
+                        ],
+                        [
+                            13,
+                            1,
+                            37,
+                            38
+                        ]
+                    ],
+                    false
+                ],
+                [
+                    23
+                ],
+                [
+                    19,
+                    "",
+                    "triggerPlayer.controlEnabled = true;",
+                    "triggerPlayer.controlEnabled = true;\n"
+                ],
+                [
+                    13,
+                    6,
+                    1,
+                    0,
+                    0,
+                    1,
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    14
+                ],
+                [
+                    2
+                ],
+                [
+                    0,
+                    1,
+                    0,
+                    [
+                        0,
+                        1,
+                        1,
+                        0
+                    ],
+                    0,
+                    0,
+                    [
+                        0,
+                        1,
+                        1,
+                        0
+                    ],
+                    2,
+                    [
+                        1,
+                        1,
+                        1
+                    ],
+                    0,
+                    0,
+                    [
+                        1,
+                        1
+                    ],
+                    "",
+                    "",
+                    false
+                ],
+                [
+                    13,
+                    6,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    19,
+                    "",
+                    "triggerPlayer.controlEnabled = false;",
+                    "triggerPlayer.controlEnabled = false;\n"
+                ],
+                [
+                    22,
+                    -2,
+                    0,
+                    [
+                        [
+                            13,
+                            1,
+                            37,
+                            38
+                        ]
+                    ],
+                    false
+                ],
+                [
+                    23
+                ],
+                [
+                    22,
+                    -2,
+                    0,
+                    [
+                        [
+                            45
+                        ],
+                        [
+                            16
+                        ],
+                        [
+                            13,
+                            1,
+                            30,
+                            38
+                        ],
+                        [
+                            46
+                        ]
+                    ],
+                    false
+                ],
+                [
+                    22,
+                    -1,
+                    0,
+                    [
+                        [
+                            13,
+                            1,
+                            31,
+                            38
+                        ]
+                    ],
+                    false
+                ],
+                [
+                    23
+                ],
+                [
+                    19,
+                    "",
+                    "triggerPlayer.controlEnabled = true;",
+                    "triggerPlayer.controlEnabled = true;\n"
+                ],
+                [
+                    13,
+                    6,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    14
+                ],
+                [
+                    2
+                ]
+            ],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [],
+            "collide": [],
+            "update": []
+        }
+    ],
+    "id": 6
+}

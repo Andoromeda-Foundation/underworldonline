@@ -1,0 +1,92 @@
+/**
+ * 地图层
+ */
+class ClientSceneLayer extends GameSprite {
+    /**
+     * 对应的地图对象
+     */
+    scene: ClientScene;
+    /**
+     * 偏移值-X
+     */
+    dx: number = 0;
+    /**
+     * 偏移值-Y
+     */
+    dy: number = 0;
+    /**
+     * X方向流动
+     */
+    xMove: number = 0;
+    /**
+     * Y方向流动
+     */
+    yMove: number = 0;
+    /**
+     * 是否自动更换子显示对象层次 根据显示对象Y坐标刷新
+     */
+    isChangeChildZOrder: boolean;
+    /**
+     * x循环 中途更改此项后需要调用refreshLoopShow刷新
+     */
+    xLoop: boolean;
+    /**
+     * y循环 中途更改此项后需要调用refreshLoopShow刷新
+     */
+    yLoop: boolean;
+    /**
+     * 远景比例 1.0 表示 100% 普通地图是100%
+     */
+    prospectsPer: number = 1.0;
+    /**
+     * 地图层资源地址
+     */
+    get mapUrl(): string { return null; }
+    /**
+     * 图块模式，在创建时需要设定好才可使用图块模式绘制
+     */
+    drawMode: boolean;
+    /**
+     * 刷新循环显示
+     */
+    refreshLoopShow() {
+     
+    }
+    /**
+     * 绘制图块
+     * @param xGrid 
+     * @param yGrid 
+     * @param texture 
+     * @param dx 贴图偏移x
+     * @param dy 贴图偏移y
+     */
+    drawTile(xGrid: number, yGrid: number, tileData: { tex: Texture, texID: number, x: number, y: number, w: number, h: number }): void {
+
+    }
+    /**
+     * 刷新图块：将此前绘制过的图块统一显示出来
+     */
+    flushTile(): void {
+
+    }
+    /**
+     * 设置完整图片作为该层地图图像
+     * @param imgURL 完整图片地址 
+     */
+    setBigImage(imgURL: string): void {
+
+    }
+    /**
+     * 根据texture设置背景
+     * @param t 贴图
+     */
+    setBigTexture(t: Texture): void {
+
+    }
+    /**
+     * 释放资源
+     */
+    dispose() {
+
+    }
+}

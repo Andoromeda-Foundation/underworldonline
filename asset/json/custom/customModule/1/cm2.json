@@ -1,0 +1,114 @@
+{
+    "attrs": {
+        "卡牌图片": {
+            "varType": 1,
+            "value": "asset/image/picture/卡面/帷幕守望/001_002.jpg"
+        },
+        "卡牌类别": {
+            "varType": 0,
+            "value": 1
+        },
+        "卡牌派系": {
+            "varType": 0,
+            "value": 0
+        },
+        "魔法领域": {
+            "varType": 0,
+            "value": 5
+        },
+        "插画家": {
+            "varType": 1,
+            "value": "T.K.Slicam"
+        },
+        "结附类别": {
+            "varType": 0,
+            "value": 0
+        },
+        "结附阵营": {
+            "varType": 0,
+            "value": 0
+        },
+        "作用范围": {
+            "varType": 0,
+            "value": 0
+        },
+        "具体数量": {
+            "varType": 0,
+            "value": 0
+        },
+        "费用": {
+            "varType": 0,
+            "value": 2
+        },
+        "防御力": {
+            "varType": 0,
+            "value": 1
+        },
+        "类别": {
+            "varType": 0,
+            "value": 1
+        },
+        "子类别": {
+            "varType": 6,
+            "value": [
+                1
+            ]
+        },
+        "忠诚需求": {
+            "varType": 9,
+            "value": [
+                {
+                    "数量": {
+                        "varType": 0,
+                        "value": 1
+                    },
+                    "派系": {
+                        "varType": 0,
+                        "value": 0
+                    }
+                }
+            ]
+        },
+        "能力": {
+            "varType": 11,
+            "value": []
+        },
+        "能效描述": {
+            "varType": 1,
+            "value": "现身触发横置目标与巨石阵看护人位于的相同地区的角色"
+        },
+        "背景描述": {
+            "varType": 1,
+            "value": "尽管石阵已有数千年未曾开启，此间祭司却从未擅离职守。"
+        },
+        "战斗图标": {
+            "varType": 0,
+            "value": 0
+        },
+        "势力图标": {
+            "varType": 0,
+            "value": 1
+        },
+        "临时战斗图标": {
+            "varType": 0,
+            "value": 0
+        },
+        "临时势力图标": {
+            "varType": 0,
+            "value": 0
+        },
+        "调查图标": {
+            "varType": 0,
+            "value": 0
+        },
+        "临时调查图标": {
+            "varType": 0,
+            "value": 0
+        },
+        "数量限制": {
+            "varType": 0,
+            "value": 3
+        }
+    },
+    "id": 2
+}

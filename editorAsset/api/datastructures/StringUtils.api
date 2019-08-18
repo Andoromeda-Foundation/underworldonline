@@ -1,0 +1,39 @@
+/**
+ * Created by 黑暗之神KDS on 2019-01-02 20:23:15.
+ */
+class StringUtils {
+    /**
+     * 获取字符真实长度
+     * @param str 
+     */
+    static getRealLength(str: string): number {
+        return null;
+    }
+    /**
+     * 清除HTML格式
+     * -- 目前为SuperText的Span
+     * @param str 
+     * @return [string] 
+     */
+    static clearHtmlTag(str: string): string {
+        return null;
+    }
+    /**
+     * HTML转义
+     * @param t 
+     * @return [string] 
+     */
+    static toHtmlEscape(t: string): string {
+        return null;
+    }
+    /**
+     * 获取两个字符串中间不相同的地方的信息
+     * @param str1 字符串1
+     * @param str2 字符串2
+     * @return [头串相同的字符数目,尾串相同的字符数目]
+     */
+    static getMiddleDiff(str1: string, str2: string): [number, number] {
+        return null;
+    };
+}
+

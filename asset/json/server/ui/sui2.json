@@ -1,0 +1,254 @@
+{
+    "5581955867_0.6575172027572596": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6825974928_0.08763354291981162": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5582328454_0.22629988264918843": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5618548423_0.8183572327243582": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5618995167_0.27398953345757127": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5619178124_0.606545989317085": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6553231594_0.19729876755103337": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6553125305_0.9935321969478503": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6553239336_0.5617739117115579": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6553242385_0.13755490890858524": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6553244903_0.874265180296061": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5619131494_0.7333645263413944": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5621606251_0.5040174290566759": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "背景模糊",
+                    "// let a = new UI_roleCard();\r\n// stage.addChild(a);\r\nvar ui:GUI_mainMenu = GameUI.get(2) as any;\r\nTween.to(ui.图片_background_dim, { alpha: 1 }, 500);",
+                    "var ui = GameUI.get(2);\nTween.to(ui.图片_background_dim, { alpha: 1 }, 500);\n"
+                ],
+                [
+                    20,
+                    "界面移出效果",
+                    "var ui: GUI_mainMenu = GameUI.get(2) as any;\r\nTween.to(ui.容器_上, { y: -ui.容器_上.height, alpha: 0 }, 100);\r\nTween.to(ui.容器_右下, { y: 801, alpha: 0 }, 100);\r\nTween.to(ui.容器_左, { x: -ui.容器_左.width, alpha: 0 }, 100);\r\nTween.to(ui.容器_右, { x: 1401, alpha: 0 }, 200);\r\n// 上下线消失\r\nui.图片_mainMenu_line1.alpha = 0;\r\nui.图片_mainMenu_line2.alpha = 0;",
+                    "var ui = GameUI.get(2);\nTween.to(ui.容器_上, { y: -ui.容器_上.height, alpha: 0 }, 100);\nTween.to(ui.容器_右下, { y: 801, alpha: 0 }, 100);\nTween.to(ui.容器_左, { x: -ui.容器_左.width, alpha: 0 }, 100);\nTween.to(ui.容器_右, { x: 1401, alpha: 0 }, 200);\nui.图片_mainMenu_line1.alpha = 0;\nui.图片_mainMenu_line2.alpha = 0;\n"
+                ],
+                [
+                    17,
+                    "250",
+                    1,
+                    true
+                ],
+                [
+                    72,
+                    3
+                ]
+            ]
+        ]
+    },
+    "5621629036_0.22200223581299405": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5621656612_0.16985495290453656": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5621668742_0.22691090903903": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5621757498_0.5068340249814411": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5621906740_0.09079291627595909": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6554407701_0.7506365261402492": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5622202082_0.43691712344982725": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5622331116_0.6925657642605714": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5622416668_0.7327205836062232": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5622471532_0.612501841883401": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5622733020_0.4715580966958748": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5622751941_0.8318303641695532": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "5622777088_0.935312785512723": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6495441807_0.7796543319958835": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6495487392_0.27501088384484174": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6499924882_0.3860575875437753": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6503075807_0.2882727030496517": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6495862957_0.9469167880751104": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6673204148_0.013675063154935607": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6495866855_0.18918670137197835": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6673245626_0.3358479498849716": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6673510928_0.7205137442864875": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6550393321_0.2028901710344": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6673468621_0.9480646766998126": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6550466310_0.06604108640356654": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "id": 2
+}

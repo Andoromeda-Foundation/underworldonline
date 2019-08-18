@@ -1,0 +1,202 @@
+{
+    "devProList": [
+        {
+            "sid": "638670.2388161059-59747933899",
+            "mode": 3,
+            "name": "GameCreator",
+            "supportLibs": [],
+            "icon": "",
+            "isShowSupportLib": false,
+            "windowParams": {
+                "visible": true,
+                "alpha": "1.0",
+                "minimizable": true,
+                "maximizable": true,
+                "resizable": true,
+                "width": "1400",
+                "height": "800",
+                "x": "100",
+                "y": "100",
+                "minWidth": "100",
+                "minHeight": "100",
+                "maxWidth": "2000",
+                "maxHeight": "1000",
+                "aspectRatio": false,
+                "fullScreen": 3,
+                "showInTop": 2,
+                "canDragWindow": true,
+                "onlyRunOne": false,
+                "showInPlatform": 0,
+                "autoRun": true,
+                "usePercent": false,
+                "fullScreenable": true,
+                "qrcode": true
+            },
+            "createDate": 1559957744914,
+            "shortcutAppData": {
+                "index": 2,
+                "fullPath": "GameCreator.html"
+            },
+            "serverID": 0,
+            "proInfo": "",
+            "isOnlyPromptInCurrentProject": false,
+            "canvasbuilderSDK": false
+        },
+        {
+            "sid": "997254.5036202564-59748005335",
+            "mode": 1,
+            "name": "Server",
+            "supportLibs": [],
+            "icon": "",
+            "windowParams": {
+                "visible": true,
+                "alpha": 1,
+                "minimizable": true,
+                "maximizable": true,
+                "resizable": true,
+                "width": 90,
+                "height": 90,
+                "x": 5,
+                "y": 5,
+                "minWidth": 100,
+                "minHeight": 100,
+                "maxWidth": 2000,
+                "maxHeight": 1000,
+                "aspectRatio": false,
+                "fullScreen": 0,
+                "showInTop": 0,
+                "canDragWindow": true,
+                "onlyRunOne": false,
+                "showInPlatform": 0,
+                "autoRun": false,
+                "usePercent": true,
+                "fullScreenable": false,
+                "qrcode": false
+            },
+            "createDate": 1559957816350,
+            "shortcutAppData": {
+                "index": 1,
+                "fullPath": ""
+            },
+            "serverID": 0,
+            "proInfo": "",
+            "oriScriptURLs": [
+                "Server/script.js"
+            ]
+        },
+        {
+            "sid": "710607.7983091166-59748152339",
+            "mode": 3,
+            "name": "Run",
+            "supportLibs": [],
+            "icon": "",
+            "windowParams": {
+                "visible": true,
+                "alpha": 1,
+                "minimizable": true,
+                "maximizable": true,
+                "resizable": true,
+                "width": 800,
+                "height": 600,
+                "x": 100,
+                "y": 100,
+                "minWidth": 100,
+                "minHeight": 100,
+                "maxWidth": 2000,
+                "maxHeight": 1000,
+                "aspectRatio": false,
+                "fullScreen": 0,
+                "showInTop": 0,
+                "canDragWindow": true,
+                "onlyRunOne": false,
+                "showInPlatform": 0,
+                "autoRun": false,
+                "usePercent": false,
+                "fullScreenable": false,
+                "qrcode": true
+            },
+            "createDate": 1559957963354,
+            "shortcutAppData": {
+                "index": 0,
+                "fullPath": "Run.html"
+            },
+            "serverID": 0,
+            "proInfo": ""
+        },
+        {
+            "sid": "687941.7704197719-64188681260",
+            "mode": 3,
+            "name": "behaviorView",
+            "supportLibs": [],
+            "icon": "",
+            "windowParams": {
+                "visible": true,
+                "alpha": 1,
+                "minimizable": true,
+                "maximizable": true,
+                "resizable": true,
+                "width": 800,
+                "height": 600,
+                "x": 100,
+                "y": 100,
+                "minWidth": 100,
+                "minHeight": 100,
+                "maxWidth": 2000,
+                "maxHeight": 1000,
+                "aspectRatio": false,
+                "fullScreen": 0,
+                "showInTop": 0,
+                "canDragWindow": true,
+                "onlyRunOne": false,
+                "showInPlatform": 0,
+                "autoRun": false,
+                "usePercent": false,
+                "fullScreenable": false,
+                "qrcode": true
+            },
+            "createDate": 1564398492275,
+            "serverID": 0,
+            "proInfo": ""
+        }
+    ],
+    "systemPlug": [],
+    "dataGroup": [
+        {
+            "oriListSidDatas": [
+                "638670.2388161059-59747933899",
+                "997254.5036202564-59748005335",
+                "710607.7983091166-59748152339",
+                "687941.7704197719-64188681260"
+            ],
+            "groupName": "默认分组",
+            "isOpen": true,
+            "sid": "220818.47675312049-59747858589"
+        }
+    ],
+    "copyFiles": [
+        [
+            "defaultProject/editorAsset",
+            "editorAsset"
+        ],
+        [
+            "defaultProject/asset/editor",
+            "asset/editor"
+        ],
+        [
+            "defaultProject/GameCreator",
+            "GameCreator"
+        ],
+        [
+            "defaultProject/Run",
+            "Run"
+        ],
+        [
+            "defaultProject/Server",
+            "Server"
+        ],
+        [
+            "defaultProject/behaviorView",
+            "behaviorView"
+        ]
+    ]
+}

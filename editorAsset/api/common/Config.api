@@ -1,0 +1,98 @@
+/**
+ * 通用配置
+ * Created by 黑暗之神KDS on 2018-05-22 20:26:48.
+ */
+class Config {
+    /**
+     * 开启此项可以在游戏运行中看到障碍信息
+     */
+    static DEBUG_OBSTACLE: boolean = false;
+    /**
+     * 编辑模式
+     */
+    static EDIT_MODE: boolean;
+    /**
+     * 是否服务器模式
+     */
+    static IS_SERVER:boolean;
+    /**
+     * 发布版模式
+     */
+    static RELEASE_MODE:boolean;
+    /**
+     * 切割图块大小
+     */
+    static TILE_SPLIT_SIZE: number;
+    /**
+     * 当场景格子数量【宽高任意一个】大于SCENE_BY_DRAWLINES_MAX时，采用贴图fillTexture绘制，否则采用drawlines绘制网格
+     */
+    static SCENE_BY_DRAWLINES_MAX: number = 500;
+    //------------------------------------------------------------------------------------------------------
+    // 可配置的环境变量
+    //------------------------------------------------------------------------------------------------------
+    /**
+    * 连接的服务端地址
+    */
+    static GAME_SERVER_HOST: string;
+    /**
+     * 连接的客户端地址
+     */
+    static GAME_SERVER_PORT: number;
+    //------------------------------------------------------------------------------------------------------
+    // 系统环境配置
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 默认窗口宽度
+     */
+    static WINDOW_WIDTH: number;
+    /**
+     * 默认窗口高度
+     */
+    static WINDOW_HEIGHT: number;
+    /**
+     * 默认舞台背景色
+     */
+    static STAGE_BACKGROUND_COLOR: string;
+    /**
+     * 背景音乐切换时间
+     */
+    static SCENE_BGM_TWEEN: number;
+    /**
+     * 环境音效切换时间
+     */
+    static SCENE_BGS_TWEEN: number;
+    /**
+     * 场景格子大小
+     */
+    static SCENE_GRID_SIZE: number;
+    /**
+     * 点击移动时到格子中心而非实际坐标点
+     */
+    static MOVE_TO_GRID_CENTER: boolean;
+    /**
+     * 四方向移动
+     */
+    static MOVE_4_ORI: boolean;
+    /**
+     * 图块放大时的采样方式
+     * 图块是否使用线性采样方式，线性采样可以解决缩放后马赛克的问题，同时也会产生描边
+     * 可以填满地图或使用空像素边缘的图块素材来摆放
+     */
+    static TILE_LINEAR_MAG: boolean;
+    /**
+     * 图块缩小时的采样方式
+     */
+    static TILE_LINEAR_MIN: boolean;
+    /**
+     * 跳跃花费的时间 ms
+     */
+    static SCENE_OBJECT_JUMP_INTERVAL:number;
+    /**
+     * 场景对象跳跃高度 px
+     */
+    static SCENE_OBJECT_JUMP_HEIGHT:number;
+}
+/**
+ * 输出
+ */
+function trace(...arg) { return null; }

@@ -1,0 +1,614 @@
+{
+    "list": {
+        "1": [
+            null,
+            "忠诚需求",
+            "魔法领域",
+            "卡堆",
+            "卡组",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "2": [
+            null,
+            "新的结构"
+        ],
+        "3": [
+            null
+        ]
+    },
+    "type": {
+        "1": "公共结构",
+        "2": "场景对象模型",
+        "3": "自定义模块"
+    },
+    "data": {
+        "1": {
+            "id": 1,
+            "blockList": [
+                {
+                    "name": "基础属性",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "5630442336_0.9034095150962904",
+                                "varName": "派系",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "帷幕守望,猎魔人"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": true
+                            },
+                            "attrConditions": [],
+                            "y": 0,
+                            "x": 0,
+                            "width": 100,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6494794714_0.628586286965588",
+                                "varName": "数量",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {
+                                        "items": "帷幕守望,猎魔人"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": true
+                            },
+                            "attrConditions": [],
+                            "y": 29,
+                            "x": 2,
+                            "width": 70,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 579,
+                    "autoOrder": true,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "2": {
+            "id": 2,
+            "blockList": [
+                {
+                    "name": "基础属性",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "5630442336_0.9034095150962904",
+                                "varName": "魔法领域",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "心灵,神圣,星辰,死亡,血脉"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": true
+                            },
+                            "attrConditions": [],
+                            "y": 33,
+                            "x": 37,
+                            "width": 112,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6494794714_0.628586286965588",
+                                "varName": "数量",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {
+                                        "items": "帷幕守望,猎魔人"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": true
+                            },
+                            "attrConditions": [],
+                            "y": 33,
+                            "x": 147,
+                            "width": 70,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 579,
+                    "autoOrder": true,
+                    "hideBlockTitle": false
+                }
+            ]
+        },
+        "3": {
+            "id": 3,
+            "blockList": [
+                {
+                    "name": "基本属性",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6683895467_0.4068726628362813",
+                                "varName": "卡牌",
+                                "varType": 4,
+                                "compData": {
+                                    "compType": 1004,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": true
+                            },
+                            "attrConditions": [],
+                            "y": 0,
+                            "x": 0,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6683921458_0.35156456066092967",
+                                "varName": "数量",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": true
+                            },
+                            "attrConditions": [],
+                            "y": 0,
+                            "x": 205,
+                            "width": 75,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": false,
+                    "hideBlockTitle": true
+                }
+            ]
+        },
+        "4": {
+            "id": 4,
+            "blockList": [
+                {
+                    "name": "基本属性",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6685881410_0.07439736261421737",
+                                "varName": "卡牌列表",
+                                "varType": 3,
+                                "compData": {
+                                    "compType": 1003,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 3,
+                                "arrayMode": true,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 46,
+                            "x": 5,
+                            "width": 380,
+                            "height": 252
+                        },
+                        {
+                            "attr": {
+                                "id": "6685955522_0.33915630614271786",
+                                "varName": "卡组名称",
+                                "varType": 1,
+                                "compData": {
+                                    "compType": 9,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "我的卡组",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": true
+                            },
+                            "attrConditions": [],
+                            "y": 6,
+                            "x": 10,
+                            "width": 241,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true,
+                    "hideBlockTitle": false
+                }
+            ]
+        },
+        "5": {
+            "id": 5,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "6": {
+            "id": 6,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "7": {
+            "id": 7,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "8": {
+            "id": 8,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "9": {
+            "id": 9,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "10": {
+            "id": 10,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "11": {
+            "id": 11,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "12": {
+            "id": 12,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "13": {
+            "id": 13,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "14": {
+            "id": 14,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "15": {
+            "id": 15,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "16": {
+            "id": 16,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "17": {
+            "id": 17,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "18": {
+            "id": 18,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "19": {
+            "id": 19,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "20": {
+            "id": 20,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "1001": {
+            "id": 1001,
+            "blockList": [
+                {
+                    "name": "掉落道具",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "varName": "掉落几率",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 9,
+                            "x": 12,
+                            "width": 360,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "varName": "掉落道具",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 3,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 47,
+                            "x": 12,
+                            "width": 370,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 96,
+                    "autoOrder": true
+                }
+            ]
+        }
+    }
+}

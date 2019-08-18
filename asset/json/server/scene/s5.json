@@ -1,0 +1,200 @@
+{
+    "sceneObjects": [
+        {
+            "modelID": 2,
+            "index": 0,
+            "name": "未命名8",
+            "x": 211,
+            "y": 248,
+            "z": 0,
+            "avatarID": 1002,
+            "avatarOri": 2,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {
+                "avatar": {
+                    "type": 1,
+                    "id": 0
+                }
+            },
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        null,
+        {
+            "modelID": 2,
+            "index": 2,
+            "name": "未命名2",
+            "x": 565,
+            "y": 444,
+            "z": 0,
+            "avatarID": 1002,
+            "avatarOri": 2,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {
+                "avatar": {
+                    "type": 1,
+                    "id": 0
+                }
+            },
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        }
+    ],
+    "commands": [],
+    "behaviors": [
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ]
+    ],
+    "customAttributes": [
+        {
+            "arr": {
+                "varType": 6,
+                "value": [
+                    44,
+                    555,
+                    6666
+                ]
+            },
+            "age": {
+                "varType": 0,
+                "value": 6661
+            }
+        },
+        {},
+        {
+            "arr": {
+                "varType": 6,
+                "value": []
+            },
+            "age": {
+                "varType": 0,
+                "value": 6661
+            }
+        }
+    ],
+    "events": [
+        {
+            "condition": [],
+            "click": [
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "创建"
+                ],
+                [
+                    19,
+                    "",
+                    "var soData = new SceneObject();\r\nsoData.modelID = 2;\r\nsoData.avatarID = 1008;\r\nsoData.x = MathUtils.rand(Config.WINDOW_WIDTH);\r\nsoData.y = MathUtils.rand(Config.WINDOW_HEIGHT);\r\nvar so = ServerSceneObject.create(soData);\r\ntrigger.scene.addSceneObject(so);\r\n\r\n",
+                    "var soData = new SceneObject();\nsoData.modelID = 2;\nsoData.avatarID = 1008;\nsoData.x = MathUtils.rand(Config.WINDOW_WIDTH);\nsoData.y = MathUtils.rand(Config.WINDOW_HEIGHT);\nvar so = ServerSceneObject.create(soData);\ntrigger.scene.addSceneObject(so);\n"
+                ],
+                [
+                    4,
+                    "克隆"
+                ],
+                [
+                    19,
+                    "",
+                    "var so = ServerSceneObject.clone(4,2,trigger.scene);\r\ntrigger.scene.addSceneObject(so);\r\n",
+                    "var so = ServerSceneObject.clone(4, 2, trigger.scene);\ntrigger.scene.addSceneObject(so);\n"
+                ],
+                [
+                    4,
+                    "自定义属性"
+                ],
+                [
+                    20,
+                    "",
+                    "var so:ClientSceneObject_2 = Game.currentScene.getSceneObjectByID(0) as ClientSceneObject_2;\r\nalert(so.arr);\r\nalert(so.age)",
+                    "var so = Game.currentScene.getSceneObjectByID(0);\nalert(so.arr);\nalert(so.age);\n"
+                ],
+                [
+                    4,
+                    "修改自定义属性"
+                ],
+                [
+                    19,
+                    "",
+                    "var so:ServerSceneObject_2 = trigger.executor as ServerSceneObject_2;\r\nso.age = 8889;\r\n",
+                    "var so = trigger.executor;\nso.age = 8889;\n"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    20,
+                    "",
+                    "var players = Game.currentScene.players;\r\ndebugger",
+                    "var players = Game.currentScene.players;\ndebugger;\n"
+                ]
+            ],
+            "collide": [],
+            "update": []
+        }
+    ],
+    "id": 5
+}

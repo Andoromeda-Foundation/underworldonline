@@ -1,0 +1,87 @@
+{
+    "customConfig": {},
+    "SCENE_FIXED_THREAD_COUNT": 2,
+    "MAX_CONN": 1000,
+    "MYSQL_CONN_HOST": "127.0.0.1",
+    "MYSQL_CONN_PORT": "3306",
+    "MYSQL_CONN_USERNAME": "root",
+    "MYSQL_CONN_PASSWORD": "",
+    "MYSQL_CONN_DATABASE": "GameCreator_4402615965",
+    "BORN": {
+        "sceneID": 1,
+        "so": {
+            "modelID": 1,
+            "index": 0,
+            "name": "",
+            "x": 558,
+            "y": 440,
+            "z": 0,
+            "avatarID": 0,
+            "avatarOri": 2,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {
+                "avatar": {
+                    "type": 1,
+                    "id": 0
+                },
+                "HPC": {
+                    "type": 2,
+                    "id": 1
+                }
+            },
+            "selectEnabled": false,
+            "fixedOrientation": false,
+            "onTop": true,
+            "through": true,
+            "bridge": false,
+            "autoPlayEnable": false,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "hasCommand": []
+        },
+        "event": {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "1112",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>这个世界不存在恶魔吗？</span>"
+                ],
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "1112",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>哇哈哈哈哈</span>"
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        "customAttribute": {}
+    },
+    "WHEN_NO_SCENE": {
+        "sceneID": 1,
+        "x": 600,
+        "y": 600,
+        "z": 0
+    },
+    "VERIFICATION_MOVE": true,
+    "NPC_OBSTACLE": true
+}

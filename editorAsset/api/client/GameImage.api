@@ -1,0 +1,119 @@
+/**
+ * 图像系统
+ * 根据编号显示图片或动画，每个编号最多显示一张图片或动画
+ * Created by 黑暗之神KDS on 2019-02-06 21:03:38.
+ */
+class GameImage extends UIBitmap {
+    static EVENT_PLAY_OVER: string = "GameImage_EVENT_PLAY_OVER";
+    /**
+     * 中心点模式 0-原点 1-中心点
+     */
+    pivotType: number;
+    //------------------------------------------------------------------------------------------------------
+    // 静态：图像处理
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 图像层，所有图像显示在图像层上
+     */
+    static imageLayer: GameSprite;
+    /**
+     * 清空
+     */
+    static clear() {
+       
+    }
+    /**
+     * 显示图片
+     * @param id 编号
+     * @param url 地址
+     * @param pivotType 
+     * @param x 坐标x
+     * @param y 坐标y
+     * @param width [可选] 默认值=0 
+     * @param height [可选] 默认值=0 
+     * @param rotation [可选] 默认值=0 
+     * @param alpha [可选] 默认值=1 
+     * @param blendMode [可选] 默认值=null 
+     */
+    static showImage(id: number, url: string, pivotType: number, x: number, y: number, width: number = 0, height: number = 0, rotation: number = 0, alpha: number = 1, blendMode: string = null): void {
+        
+    }
+    /**
+     * 移动图片
+     * @param id 
+     * @param time 
+     * @param pivotType 
+     * @param x 
+     * @param y 
+     * @param width [可选] 默认值=0 
+     * @param height [可选] 默认值=0 
+     * @param rotation [可选] 默认值=0 
+     * @param alpha [可选] 默认值=1 
+     * @param blendMode [可选] 默认值=null 
+     * @param tweenType:number
+     */
+    static moveImage(id: number, time: number, pivotType: number = 0, x: number, y: number, width: number = 0, height: number = 0, rotation: number = 0, alpha: number = 1, blendMode: string = null, tweenID: number = null): void {
+    
+    }
+    /**
+     * 自动旋转
+     * @param id 
+     * @param rotation 
+     */
+    static autoRotation(id: number, angle: number): void {
+
+    }
+    /**
+     * 更改色调
+     * @param id 
+     * @param r 
+     * @param g 
+     * @param b 
+     * @param gray 
+     * @param t 
+     */
+    static changeTonal(id: number, r: number, g: number, b: number, gray: number, t: number, mr: number = 1, mg: number = 1, mb: number = 1, tweenID: number = null): void {
+    
+    }
+    /**
+     * 删除图片/动画
+     * @param id 
+     */
+    static deleteImage(id: number) {
+
+    }
+    /**
+     * 显示动画
+     * @param id 
+     * @param url 
+     * @param x 
+     * @param y 
+     * @param scaleX [可选] 默认值=1 
+     * @param scaleY [可选] 默认值=1 
+     * @param rotation [可选] 默认值=0 
+     * @param alpha [可选] 默认值=1 
+     */
+    static showAnimation(id: number, url: string, x: number, y: number, scaleX: number = 1, scaleY: number = 1, rotation: number = 0, alpha: number = 1, loop: number = 0): void {
+    
+    }
+    /**
+     * 移动动画
+     * @param id 
+     * @param time 
+     * @param x 
+     * @param y 
+     * @param scaleX [可选] 默认值=1 
+     * @param scaleY [可选] 默认值=1 
+     * @param rotation [可选] 默认值=0 
+     * @param alpha [可选] 默认值=1 
+     */
+    static moveAnimation(id: number, time: number, x: number, y: number, scaleX: number = 1, scaleY: number = 1, rotation: number = 0, alpha: number = 1, tweenID: number = null): void {
+    
+    }
+    /**
+     * 等待：这里是共用等待时间
+     */
+    static delay(time: number): void {
+
+    }
+}

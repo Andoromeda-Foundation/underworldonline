@@ -1,0 +1,25 @@
+{
+    "list": [
+        null,
+        "头部受击位置",
+        "身体受击位置",
+        "第3个参考物"
+    ],
+    "data": {
+        "1": {
+            "color": "#0400ff",
+            "line": true,
+            "id": 1
+        },
+        "2": {
+            "color": "#1eff00",
+            "line": true,
+            "id": 2
+        },
+        "3": {
+            "color": "#ff00ea",
+            "line": true,
+            "id": 3
+        }
+    }
+}

@@ -1,0 +1,255 @@
+{
+    "loop": false,
+    "showHitEffect": false,
+    "fps": 20,
+    "totalFrame": 18,
+    "imageSources": [
+        null,
+        {
+            "x": 0,
+            "y": 0,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 1
+        },
+        {
+            "x": -128,
+            "y": 0,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 2
+        },
+        {
+            "x": -256,
+            "y": 0,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 3
+        },
+        {
+            "x": -384,
+            "y": 0,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 4
+        },
+        {
+            "x": 0,
+            "y": -128,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 5
+        },
+        {
+            "x": -128,
+            "y": -128,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 6
+        },
+        {
+            "x": -256,
+            "y": -128,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 7
+        },
+        {
+            "x": -384,
+            "y": -128,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 8
+        },
+        {
+            "x": 0,
+            "y": -256,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 9
+        },
+        {
+            "x": -128,
+            "y": -256,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 10
+        },
+        {
+            "x": -256,
+            "y": -256,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 11
+        },
+        {
+            "x": -384,
+            "y": -256,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 12
+        },
+        {
+            "x": 0,
+            "y": -384,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 13
+        },
+        {
+            "x": -128,
+            "y": -384,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 14
+        },
+        {
+            "x": -256,
+            "y": -384,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 15
+        },
+        {
+            "x": -384,
+            "y": -384,
+            "width": 128,
+            "height": 128,
+            "url": "asset/image/animation/2.png",
+            "index": 16
+        }
+    ],
+    "layers": [
+        {
+            "name": "目标层",
+            "type": 0,
+            "children": [],
+            "frames": [
+                {
+                    "index": 0,
+                    "horizontalReversal": false,
+                    "hue": 0,
+                    "blur": 0,
+                    "tonal_r": 0,
+                    "tonal_g": 0,
+                    "tonal_b": 0,
+                    "tonal_gray": 0,
+                    "tonal_mr": 1,
+                    "tonal_mg": 1,
+                    "tonal_mb": 1,
+                    "x": 0,
+                    "y": 0,
+                    "rotation": 0,
+                    "alpha": 1,
+                    "scaleX": 1,
+                    "scaleY": 1
+                }
+            ],
+            "isHitEffect": false
+        },
+        {
+            "name": "layer",
+            "type": 1,
+            "children": [],
+            "frames": [
+                {
+                    "index": 0,
+                    "horizontalReversal": false,
+                    "hue": 0,
+                    "blur": 0,
+                    "tonal_r": 0,
+                    "tonal_g": 0,
+                    "tonal_b": 0,
+                    "tonal_gray": 0,
+                    "tonal_mr": 1,
+                    "tonal_mg": 1,
+                    "tonal_mb": 1,
+                    "x": -130,
+                    "y": -180,
+                    "rotation": 0,
+                    "alpha": 1,
+                    "width": 256,
+                    "height": 256,
+                    "imageSource": 1,
+                    "blendModeType": 1
+                },
+                {
+                    "index": 15,
+                    "horizontalReversal": false,
+                    "hue": 0,
+                    "blur": 0,
+                    "tonal_r": 0,
+                    "tonal_g": 0,
+                    "tonal_b": 0,
+                    "tonal_gray": 0,
+                    "tonal_mr": 1,
+                    "tonal_mg": 1,
+                    "tonal_mb": 1,
+                    "x": -130,
+                    "y": -180,
+                    "rotation": 0,
+                    "alpha": 1,
+                    "width": 256,
+                    "height": 256,
+                    "imageSource": 16,
+                    "blendModeType": 1
+                },
+                {
+                    "index": 17,
+                    "horizontalReversal": false,
+                    "hue": 0,
+                    "blur": 0,
+                    "tonal_r": 0,
+                    "tonal_g": 0,
+                    "tonal_b": 0,
+                    "tonal_gray": 0,
+                    "tonal_mr": 1,
+                    "tonal_mg": 1,
+                    "tonal_mb": 1,
+                    "x": -130,
+                    "y": -180,
+                    "rotation": 0,
+                    "alpha": 0,
+                    "width": 256,
+                    "height": 256,
+                    "imageSource": 16,
+                    "blendModeType": 1
+                }
+            ],
+            "isHitEffect": false
+        },
+        {
+            "name": "音效层",
+            "type": 3,
+            "children": [],
+            "frames": [
+                {
+                    "index": 0
+                }
+            ],
+            "isHitEffect": false,
+            "audioInfo": {
+                "url": "asset/audio/se/火焰.mp3",
+                "volume": "1",
+                "pitch": "1"
+            }
+        }
+    ],
+    "isParticle": false,
+    "id": 3
+}

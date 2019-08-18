@@ -1,0 +1,24 @@
+{
+    "picUrls": [],
+    "oriMode": 4,
+    "refObjs": {},
+    "parts": [
+        {
+            "id": 0,
+            "showOnEditor": true,
+            "mouseEventEnabledInEditor": true
+        }
+    ],
+    "actionListArr": [
+        {
+            "id": 1,
+            "frameImageInfo": [
+                [],
+                [],
+                [],
+                []
+            ]
+        }
+    ],
+    "id": 1030
+}

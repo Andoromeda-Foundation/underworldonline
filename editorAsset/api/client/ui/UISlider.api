@@ -1,0 +1,51 @@
+/**
+ * UI组件：滑块控件
+ * 相关事件：
+ *  EventObject.CHANGE 当改变状态时派发
+ *  EventObject.LOADED 加载完成时候事件
+ * Created by 黑暗之神KDS on 2018-10-12 14:00:10.
+ */
+class UISlider extends UIBase {
+    /**
+     * 背景图
+     */
+    image1: string;
+    /**
+     * 滑块图
+     */
+    image2: string;
+    /**
+     * 横向模式
+     */
+    transverseMode: boolean;
+    /**
+     * 最小值
+     */
+    min: number;
+    /**
+     * 最大值
+     */
+    max: number;
+    /**
+     * 当前值
+     */
+    value: number;
+    /**
+     * 步进值
+     */
+    step: number;
+    /**
+     * 滑块九宫格设置：上边距、右边距、下边距、左边距
+     * 让素材不再简单拉伸，而是根据九宫格方式进行拉伸
+     */
+    grid9:string;
+    /**
+     * 滑块背景九宫格设置：上边距、右边距、下边距、左边距
+     * 让素材不再简单拉伸，而是根据九宫格方式进行拉伸
+     */
+    bgGrid9:string;
+    /**
+     * 填充模式：可用于制作进度条效果，填充模式下无法使用光标拖拽滑块
+     */
+    blockFillMode:boolean;
+}

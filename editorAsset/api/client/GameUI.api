@@ -1,0 +1,41 @@
+/**
+ * 游戏UI 管理器
+ * 系统单例界面系统
+ * 相同ID的界面只存在一个，如额外需要创建界面 可以 new GUI_XXX
+ * Created by 黑暗之神KDS on 2018-10-12 13:40:11.
+ */
+class GameUI {
+    /**
+     * 获取界面
+     */
+    static get(id: number): UIRoot {
+        return null;
+    }
+    /**
+     * 释放UI
+     */
+    static dispose(id: number): void {
+
+    }
+    /**
+     * 显示UI
+     * @param id 
+     * @return [UIRoot] 
+     */
+    static show(id: number): UIRoot {
+        return null;    
+    }
+    /**
+     * 隐藏界面
+     * @param id 同ID则指同一个界面
+     */
+    static hide(id: number): void {
+
+    }
+    /**
+     * 隐藏全部界面
+     */
+    static hideAll(): void {
+ 
+    }
+}

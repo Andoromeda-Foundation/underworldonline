@@ -1,0 +1,73 @@
+{
+    "obstacleData": [],
+    "maskData": [],
+    "sceneObjects": [],
+    "helpPoint": {
+        "x": 0,
+        "y": 0
+    },
+    "serverInstanceClassName": "GameServerScene",
+    "clientInstanceClassName": "GameClientScene",
+    "broadcastMode": 2,
+    "id": 1,
+    "name": "新的地图1",
+    "width": 1400,
+    "height": 800,
+    "LayerDatas": [
+        {
+            "dx": 0,
+            "dy": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "xMove": 0,
+            "yMove": 0,
+            "prospectsPer": 1,
+            "xLoop": false,
+            "yLoop": false,
+            "opacity": 1,
+            "blendMode": null,
+            "drawMode": false,
+            "tileData": [],
+            "img": "asset/image/scene/全景图/mainMenu/background_Florence.png",
+            "prospectsPerX": 1,
+            "prospectsPerY": 1
+        },
+        {
+            "dx": 0,
+            "dy": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "xMove": 0,
+            "yMove": 0,
+            "prospectsPerX": 1,
+            "prospectsPerY": 1,
+            "xLoop": false,
+            "yLoop": false,
+            "opacity": 1,
+            "blendMode": null,
+            "drawMode": false,
+            "tileData": [],
+            "img": "asset/image/scene/全景图/mainMenu/backgroundMask.png"
+        },
+        {
+            "p": true
+        },
+        {
+            "dx": 0,
+            "dy": 0,
+            "scaleX": 1,
+            "scaleY": 1,
+            "xMove": 0,
+            "yMove": 0,
+            "prospectsPer": 1,
+            "xLoop": false,
+            "yLoop": false,
+            "opacity": 1,
+            "blendMode": null,
+            "drawMode": true,
+            "tileData": [],
+            "img": null,
+            "tileTexIDs": {}
+        }
+    ]
+}

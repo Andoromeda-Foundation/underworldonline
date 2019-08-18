@@ -1,0 +1,147 @@
+/**
+ * 场景对象-服务端
+ * 【创建】
+ *    -- 编辑器预设对象
+ *    -- 玩家的唯一场景对象
+ *    -- 通过create创建
+ *    -- 通过clone复制
+ * 【功能】
+ *    -- 设置/追加行为
+ *    -- 条件和出现系统
+ *    -- 系统预设功能：移动、面向、体型、长相等
+ * 
+ * Created by 黑暗之神KDS on 2018-07-24 18:51:43.
+ */
+class ServerSceneObject extends SceneObject {
+    /**
+     * 系统派发出来的需要移动停止的事件  onEvent(state)
+     * state:0-对话框显示时 1-对话选择框显示时 2-场景移动时
+     */
+    static EVENT_NEED_STOP_BEHAVIOR: string = "ServerSceneObject_EVENT_NEED_STOP_BEHAVIOR";
+    /**
+     * 获取NPC开关
+     * @param varID 开关ID 
+     * @return [number] 
+     */
+    getSwitchs(varID: number): number {
+        return null;
+    }
+    /**
+     * 设置NPC开关
+     * @param varID 开关ID
+     * @param value 数值
+     * @param notice [可选] 默认值=true 
+     */
+    setSwitchs(varID: number, value: number, notice: boolean = true) {
+
+    }
+    /**
+     * 是否在添加在场景上
+     */
+    inScene: boolean = false;
+    /**
+     * 同步给客户端的数据：包含场景对象和玩家数据（若是玩家的话）
+     * 数据中的自定义属性仅包含设定了“当对象出现时[同步该属性]”的属性（[场景对象模型设定]与[玩家数据设定]中可对属性进行设计）
+     * @param syncSelf 是否同步给自己，根据设定可以筛选哪些属性是可以同步给别的玩家客户端的
+     */
+    syncClientData(syncSelf: boolean) { return null; }
+    /**
+     * 所属玩家
+     */
+    player: ServerPlayer;
+    /** 场景对象自定义事件页 下标=indexType */
+    customCommandPages: CommandPage[] = [];
+    /**
+     * 是否副本
+     */
+    get isCopy() { return null; };
+    /** 是否已释放*/
+    isDisposed: boolean;
+    //------------------------------------------------------------------------------------------------------
+    // 创建对象
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 构造函数
+     * 创建服务器对象需要通过create来创建
+     * @param soData [可选] 默认值=null 参考SceneObject，根据此数据来创建
+     * @param presetCustomAttrs [可选] 默认值=null 参考数据 预设属性，若为空则使用模型数据的默认值
+     * @param player [可选] 默认值=null 该对象所属的玩家，若是NPC则该属性为空
+     */
+    constructor(soData: SceneObject = null, presetCustomAttrs: { [varName: string]: { varType: number, value: any } } = null, player: ServerPlayer = null) {
+        super();
+
+    }
+    /**
+     * 销毁
+     * 主动创建或克隆或玩家对象才会销毁
+     */
+    dispose(): void {
+
+    }
+    /**
+     * 创建场景对象
+     * 实际根据SceneObject的modelID创建对应的类（场景对象模型有自己的实现类 ServerSceneObject_X）
+     * @param soData 参考SceneObject，根据此数据来创建
+     * @param presetCustomAttrs [可选] 默认值=null 参考数据 预设属性，若为空则使用模型数据的默认值 
+     * @param player [可选] 默认值=null 该对象所属的玩家，若是NPC则该属性为空
+     * @return [ServerSceneObject] 实际的场景对象类
+     */
+    static create(soData: SceneObject, presetCustomAttrs: { [varName: string]: { varType: number, value: any } } = null, player: ServerPlayer = null, isClone: boolean = true): ServerSceneObject {
+        return null;
+    }
+    /**
+     * 创建副本（NPC）
+     * 可以从A场景中复制场景对象到B场景中
+     * @param fromSceneID 副本所在的场景ID
+     * @param fromSceneObjectindex 副本所在的索引
+     * @param toScene 需要复制到的场景对象
+     * @return [ServerSceneObject] 实际的对象类
+     */
+    static clone(fromSceneID: number, fromSceneObjectindex: number, toScene: ServerScene, isCopy: boolean = true): ServerSceneObject {
+        return null;
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 行为和事件
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 添加一组行为 
+     * @param behaviorData 行为数据 [行为ID,参数1,参数2...]
+     *                     参考 ServerSceneObjectBehavior 的行为方法（behavior1表示行为ID=1，参数则是后面的参数）
+     * @param loop 是否循环
+     * @param targetPlayerSceneObject 存在的玩家目标对象
+     * @param onOver 当行为结束时回调
+     * @param cover 覆盖旧的行为
+     */
+    addBehavior(behaviorData: any[], loop: boolean, targetPlayerSceneObject: ServerSceneObject, onOver: Callback, cover: boolean) {
+
+    }
+    /**
+     * 移除行为
+     */
+    clearBehavior() {
+
+    }
+    /**
+     * 获取事件触发器:单线事件拿到的是唯一触发器，而多线事件则新生成触发器
+     * @param mainType 0-场景相关 1-场景对象相关 2-UI相关 （对应CommandTarget.COMMAND_MAIN_TYPE_XXX）
+     * @param indexType 对应的小类别
+     * @return 事件触发器
+     */
+    getCommandTrigger(mainType: number, indexType: number): CommandTarget { return null; }
+    //------------------------------------------------------------------------------------------------------
+    // 刷新
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 更新 此处会刷新NPC并行事件
+     * @param now 当前时间 unix时间戳
+     */
+    update(now: number) {
+
+    }
+    /**
+     * 刷新行为：取得当前对象身上的行为列表逐一执行
+     */
+    protected updateBehavior() {
+
+    }
+}

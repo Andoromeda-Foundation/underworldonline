@@ -1,0 +1,1531 @@
+{
+    "list": [
+        null,
+        "卡牌",
+        "能力",
+        "",
+        "",
+        ""
+    ],
+    "data": {
+        "1": {
+            "id": 1,
+            "blockList": [
+                {
+                    "name": "卡牌基本信息",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "5626263283_0.832221198539888",
+                                "varName": "卡牌图片",
+                                "varType": 1,
+                                "compData": {
+                                    "compType": 22,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 13,
+                            "x": 9,
+                            "width": 184,
+                            "height": 164
+                        },
+                        {
+                            "attr": {
+                                "id": "5628758807_0.5644348385466429",
+                                "varName": "卡牌类别",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "地区卡,角色卡,事务卡,附属卡,秘社卡"
+                                    }
+                                },
+                                "defaultValue": "0",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 15,
+                            "x": 210,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6219922232_0.1639597797532013",
+                                "varName": "卡牌派系",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "帷幕守望,猎魔人,王座会,鸣钟教派,国家机构,圣贤,方碑序列,梦境行者,中立"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 53,
+                            "x": 210,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6222481454_0.20335153118638738",
+                                "varName": "魔法领域",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "无,心灵,神圣,星辰,死亡,血脉"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 90,
+                            "x": 210,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6222565719_0.7524366392431086",
+                                "varName": "插画家",
+                                "varType": 1,
+                                "compData": {
+                                    "compType": 9,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 130,
+                            "x": 211,
+                            "width": 196,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6493270795_0.33816146142148273",
+                                "varName": "费用",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {
+                                        "items": "无,心灵,神圣,星辰,死亡,血脉"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 12,
+                            "x": 429,
+                            "width": 66,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6494041267_0.12684286409016532",
+                                "varName": "忠诚需求",
+                                "varType": 3,
+                                "compData": {
+                                    "compType": 1003,
+                                    "compParam": {
+                                        "items": "帷幕守望"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 2,
+                                "dataStructureID": 1,
+                                "arrayMode": true,
+                                "arrayLength": 20,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 53,
+                            "x": 426,
+                            "width": 410,
+                            "height": 106
+                        },
+                        {
+                            "attr": {
+                                "id": "6505608266_0.1164119168122606",
+                                "varName": "能效描述",
+                                "varType": 1,
+                                "compData": {
+                                    "compType": 11,
+                                    "compParam": {
+                                        "items": "无,心灵,神圣,星辰,死亡,血脉"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 14,
+                            "x": 848,
+                            "width": 289,
+                            "height": 132
+                        },
+                        {
+                            "attr": {
+                                "id": "6507494837_0.6667587526245355",
+                                "varName": "背景描述",
+                                "varType": 1,
+                                "compData": {
+                                    "compType": 11,
+                                    "compParam": {
+                                        "items": "无,心灵,神圣,星辰,死亡,血脉"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 160,
+                            "x": 845,
+                            "width": 289,
+                            "height": 109
+                        },
+                        {
+                            "attr": {
+                                "id": "7703713090_0.5073677576555979",
+                                "varName": "数量限制",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {
+                                        "items": "无,心灵,神圣,星辰,死亡,血脉"
+                                    }
+                                },
+                                "defaultValue": "4",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 12,
+                            "x": 537,
+                            "width": 96,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                },
+                {
+                    "name": "角色卡属性",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6493465234_0.17749308136906472",
+                                "varName": "防御力",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {
+                                        "items": "无,心灵,神圣,星辰,死亡,血脉"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 32,
+                            "x": 237,
+                            "width": 88,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6493475465_0.16471463894233573",
+                                "varName": "类别",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "鸟,人类"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 33,
+                            "x": 37,
+                            "width": 166,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6493519279_0.2531175079337431",
+                                "varName": "子类别",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "魔宠,德鲁伊,法师,学者"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": true,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 75,
+                            "x": 35,
+                            "width": 171,
+                            "height": 207
+                        },
+                        {
+                            "attr": {
+                                "id": "6506603824_0.4896080730540784",
+                                "varName": "能力",
+                                "varType": 4,
+                                "compData": {
+                                    "compType": 1004,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 2,
+                                "dataStructureID": 1,
+                                "arrayMode": true,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 75,
+                            "x": 233,
+                            "width": 344,
+                            "height": 208
+                        },
+                        {
+                            "attr": {
+                                "id": "7640981171_0.4169221057453776",
+                                "varName": "调查图标",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "0",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 25,
+                            "x": 622,
+                            "width": 92,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "7643885787_0.45272089168709795",
+                                "varName": "战斗图标",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "0",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 75,
+                            "x": 622,
+                            "width": 92,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "7643991726_0.7471509707634076",
+                                "varName": "势力图标",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "0",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 125,
+                            "x": 622,
+                            "width": 92,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "7644033454_0.47616771906820365",
+                                "varName": "临时调查图标",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "0",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 25,
+                            "x": 722,
+                            "width": 109,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "7644078047_0.8702287217101528",
+                                "varName": "临时战斗图标",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "0",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 75,
+                            "x": 722,
+                            "width": 109,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "7644079700_0.07048207569266118",
+                                "varName": "临时势力图标",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "0",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 125,
+                            "x": 722,
+                            "width": 109,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [
+                        {
+                            "attrID": "5628758807_0.5644348385466429",
+                            "value": 1
+                        }
+                    ],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                },
+                {
+                    "name": "事务卡属性",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "7707567059_0.8216228451406433",
+                                "varName": "类别",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "法术"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 33,
+                            "x": 37,
+                            "width": 166,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "7707567059_0.9143317913191904",
+                                "varName": "子类别",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "空间,异界,心灵"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": true,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 75,
+                            "x": 35,
+                            "width": 171,
+                            "height": 207
+                        },
+                        {
+                            "attr": {
+                                "id": "7871090584_0.1528174276930936",
+                                "varName": "能力",
+                                "varType": 4,
+                                "compData": {
+                                    "compType": 1004,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 2,
+                                "dataStructureID": 1,
+                                "arrayMode": true,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 32,
+                            "x": 229,
+                            "width": 344,
+                            "height": 208
+                        }
+                    ],
+                    "blockCondition": [
+                        {
+                            "attrID": "5628758807_0.5644348385466429",
+                            "value": 2
+                        }
+                    ],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                },
+                {
+                    "name": "附属卡属性",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6234532941_0.40341061375389575",
+                                "varName": "结附类别",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "角色,地区,资产,秘社"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [
+                                {
+                                    "attrID": "5628758807_0.5644348385466429",
+                                    "value": 3
+                                }
+                            ],
+                            "y": 14,
+                            "x": 554,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6234547501_0.742736344066812",
+                                "varName": "结附阵营",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "我方,敌方,任一方,双方同时"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 52,
+                            "x": 554,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6234768705_0.7283694536424599",
+                                "varName": "作用范围",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "单体,全体,指定数量"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 89,
+                            "x": 554,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6234860878_0.4313665121570456",
+                                "varName": "具体数量",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [
+                                {
+                                    "attrID": "6234768705_0.7283694536424599",
+                                    "value": 2
+                                }
+                            ],
+                            "y": 89,
+                            "x": 765,
+                            "width": 100,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6493864266_0.917073132224423",
+                                "varName": "类别",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "机构,徽章"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 9,
+                            "x": 19.457627118644066,
+                            "width": 166,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6493864266_0.5741648715199683",
+                                "varName": "子类别",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": ""
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": true,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 51,
+                            "x": 17.457627118644066,
+                            "width": 171,
+                            "height": 186
+                        },
+                        {
+                            "attr": {
+                                "id": "7871095717_0.17812587687242676",
+                                "varName": "能力",
+                                "varType": 4,
+                                "compData": {
+                                    "compType": 1004,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 2,
+                                "dataStructureID": 1,
+                                "arrayMode": true,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 8,
+                            "x": 199,
+                            "width": 344,
+                            "height": 228
+                        }
+                    ],
+                    "blockCondition": [
+                        {
+                            "attrID": "5628758807_0.5644348385466429",
+                            "value": 3
+                        }
+                    ],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                },
+                {
+                    "name": "角色卡初级场属性",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "7870967004_0.3957373189112874",
+                                "varName": "能力",
+                                "varType": 4,
+                                "compData": {
+                                    "compType": 1004,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 2,
+                                "dataStructureID": 1,
+                                "arrayMode": true,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 17,
+                            "x": 6,
+                            "width": 344,
+                            "height": 208
+                        },
+                        {
+                            "attr": {
+                                "id": "7870975554_0.5690220750752131",
+                                "varName": "调查图标",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "0",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 16,
+                            "x": 358,
+                            "width": 92,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "7870975554_0.5855817848268299",
+                                "varName": "战斗图标",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "0",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 69,
+                            "x": 358,
+                            "width": 92,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "7870975554_0.8878846022465887",
+                                "varName": "势力图标",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "0",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 119,
+                            "x": 358,
+                            "width": 92,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [
+                        {
+                            "attrID": "5628758807_0.5644348385466429",
+                            "value": 1
+                        }
+                    ],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                },
+                {
+                    "name": "事务卡初级场属性",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "7871141328_0.8027775518440188",
+                                "varName": "能力",
+                                "varType": 4,
+                                "compData": {
+                                    "compType": 1004,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 2,
+                                "dataStructureID": 1,
+                                "arrayMode": true,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 11,
+                            "x": 18,
+                            "width": 344,
+                            "height": 228
+                        }
+                    ],
+                    "blockCondition": [
+                        {
+                            "attrID": "5628758807_0.5644348385466429",
+                            "value": 2
+                        }
+                    ],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                },
+                {
+                    "name": "附属卡初级场属性",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "7871190824_0.6772650110465259",
+                                "varName": "结附类别",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "角色,地区,资产,秘社"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [
+                                {
+                                    "attrID": "5628758807_0.5644348385466429",
+                                    "value": 3
+                                }
+                            ],
+                            "y": 20,
+                            "x": 374,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "7871190824_0.8094088370802972",
+                                "varName": "结附阵营",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "我方,敌方,任一方,双方同时"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 58,
+                            "x": 372,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "7871190824_0.8383571455356915",
+                                "varName": "作用范围",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "单体,全体,指定数量"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 95,
+                            "x": 372,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "7871190824_0.36287669321323746",
+                                "varName": "具体数量",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [
+                                {
+                                    "attrID": "6234768705_0.7283694536424599",
+                                    "value": 2
+                                }
+                            ],
+                            "y": 95,
+                            "x": 583,
+                            "width": 100,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "7871190824_0.05224472880195696",
+                                "varName": "能力",
+                                "varType": 4,
+                                "compData": {
+                                    "compType": 1004,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 2,
+                                "dataStructureID": 1,
+                                "arrayMode": true,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 14,
+                            "x": 17,
+                            "width": 344,
+                            "height": 228
+                        }
+                    ],
+                    "blockCondition": [
+                        {
+                            "attrID": "5628758807_0.5644348385466429",
+                            "value": 3
+                        }
+                    ],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "2": {
+            "id": 2,
+            "blockList": [
+                {
+                    "name": "基本信息",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6506794072_0.5606183883080056",
+                                "varName": "能力类型",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {
+                                        "items": "持续,行动,触发"
+                                    }
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 17,
+                            "x": 9,
+                            "width": 145,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 80,
+                    "autoOrder": true
+                },
+                {
+                    "name": "持续条件",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6506958286_0.6203356369962818",
+                                "varName": "资产区的魔法领域",
+                                "varType": 3,
+                                "compData": {
+                                    "compType": 1001,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": true,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 2,
+                                "arrayMode": true,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 1,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 22,
+                            "x": 15,
+                            "width": 204,
+                            "height": 169
+                        }
+                    ],
+                    "blockCondition": [
+                        {
+                            "attrID": "6506794072_0.5606183883080056",
+                            "value": 0
+                        }
+                    ],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "3": {
+            "id": 3,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "4": {
+            "id": 4,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "5": {
+            "id": 5,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        }
+    }
+}

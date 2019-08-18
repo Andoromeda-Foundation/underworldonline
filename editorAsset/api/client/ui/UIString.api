@@ -1,0 +1,50 @@
+/**
+ * UI组件：文本
+ * 相关事件
+ * EventObject.CHANGE 文本改变时
+ * [变量系统]在显示时会自动注册请求同步显示服务器玩家变量
+ * Created by 黑暗之神KDS on 2018-10-12 14:01:57.
+ */
+class UIString extends UIBase {
+    /**
+     * 文本内容 $5 表示使用5号玩家字符串变量
+     */
+    text:string;
+    /**
+     * 字体大小
+     */
+    fontSize:number;
+    /**
+     * 字体颜色
+     */
+    color:string;
+    /**
+     * 粗体
+     */
+    bold:boolean;
+    /**
+     * 行间距
+     */
+    leading:number;
+    /**
+     * 字体
+     */
+    font:string;
+    /**
+     * 是否自动换行
+     */
+    wardWrap:boolean;
+    /**
+     * 文本超出时处理方式 0-显示 1-隐藏
+     */
+    overflow:number;
+    /**
+     * 横向对齐方式 0-左对齐 1-中对齐 2-右对齐
+     */
+    align:number;
+    /**
+     * 垂直对齐方式 0-上对齐 1-中对齐 2-右对齐
+     */
+    valign:number;
+}
+

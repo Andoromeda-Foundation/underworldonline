@@ -1,0 +1,32 @@
+/**
+ * 网络消息发送器
+ * Created by 黑暗之神KDS on 2018-07-21 23:41:40.
+ */
+class ServerMsgSender {
+    /**
+     * 发送字符串消息
+     * @param player 玩家
+     * @param msg 字符串消息
+     */
+    static send(player: ServerPlayer, msg: string): void {
+        
+    }
+    /**
+     * 让客户端执行代码
+     * @param player 玩家
+     * @param code 客户端代码
+     */
+    static eval(player: ServerPlayer, code: string): void {
+        
+    }
+    /**
+     * 远程调用客户端的方法
+     * @param className 类名
+     * @param funcName 方法名
+     * @param params 参数
+     */
+    static rpc(player: ServerPlayer, className: string, funcName: string, params: any[]): void {
+       
+    }
+
+}

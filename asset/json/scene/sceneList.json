@@ -1,0 +1,34 @@
+{
+    "list": [
+        null,
+        "新的地图1",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+    ],
+    "node": [
+        {
+            "id": 1,
+            "name": "新的地图1",
+            "children": []
+        }
+    ]
+}

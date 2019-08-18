@@ -1,0 +1,26 @@
+/**
+ * Created by 黑暗之神KDS on 2018-07-28 20:49:42.
+ */
+class Game {
+    /**
+     * 游戏层次
+     */
+    static layer: GameLayer;
+    /**
+    * 当前的场景对象
+    */
+    static currentScene: ClientScene;
+    /**
+     * 我的玩家key
+     */
+    static playerKey: string;
+    /**
+     * 玩家对象
+     */
+    static player: ClientPlayer;
+    /**
+     * 我的场景对象
+     */
+    static mySceneObject: ClientSceneObject;
+}
+

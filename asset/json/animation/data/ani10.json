@@ -1,0 +1,12 @@
+{
+    "loop": false,
+    "showHitEffect": false,
+    "fps": 20,
+    "totalFrame": 0,
+    "imageSources": [
+        null
+    ],
+    "layers": [],
+    "isParticle": false,
+    "id": 10
+}

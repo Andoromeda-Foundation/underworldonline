@@ -1,0 +1,51 @@
+/**
+ * 服务器的配置
+ * Created by 黑暗之神KDS on 2018-04-16 20:39:24.
+ */
+class ServerConfig {
+    /**
+     * 开启的固定场景线程数（3~N）
+     */
+    static SCENE_FIXED_THREAD_COUNT: number;
+    /**
+     * 允许登陆的服务器上线人数
+     */
+    static MAX_CONN: number;
+    /**
+     * 数据库服务器地址
+     */
+    static MYSQL_CONN_HOST: string;
+    /**
+     * 数据库服务器端口
+     */
+    static MYSQL_CONN_PORT: string;
+    /**
+     * 数据库服务器用户名
+     */
+    static MYSQL_CONN_USERNAME: string;
+    /**
+     * 数据库服务器密码
+     */
+    static MYSQL_CONN_PASSWORD: string;
+    /**
+     * 数据库名称
+     */
+    static MYSQL_CONN_DATABASE: string;
+    /**
+     * 出生点
+     */
+    static BORN: { sceneID: number, so: SceneObject, customAttribute: { [varName: string]: { varType: number, value: any } } };
+    /**
+     * 找不到场景时的默认场景
+     */
+    static WHEN_NO_SCENE: { sceneID: number, x: number, y: number, z: number };
+    /**
+     * * 是否验证移动（关闭验证可减少服务端计算，但可能导致玩家作弊，如穿越障碍、加速、瞬移等）
+     * 尚未实现
+     */
+    static VERIFICATION_MOVE: boolean;
+    /**
+     * 是否NPC障碍
+     */
+    static NPC_OBSTACLE: boolean;
+}

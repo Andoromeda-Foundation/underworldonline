@@ -1,0 +1,41 @@
+/**
+ * 数据库操作工具
+ * Created by 黑暗之神KDS
+ */
+class SQLUtils {
+    /**
+     * 查询
+     * @param tableName 表名
+     * @param params 参数
+     * @param condition 条件
+     */
+    static query(tableName: string, params: string, condition: string): any[] {
+        return null;
+    }
+    /**
+     * 插入单条数据
+     * @param tableName 表名称
+     * @param sqlObj 数据库对象
+     * @return 返回是否成功
+     */
+    static insert(tableName: string, sqlObj: any): boolean {
+       return null;
+    }
+    /**
+     * 更新单条数据
+     * @param tableName 表名称
+     * @conditions 主体语句
+     */
+    static update(tableName: string, sqlObj: any, where: string): boolean {
+        return true;
+    }
+    /**
+     * 删除邮件
+     * @param tableName 表名称
+     * @param condition 插入字符串 "where id>5"
+     * @return [boolean] 
+     */
+    static delete_data(tableName: string, condition: string): boolean {
+        return true;
+    }
+}

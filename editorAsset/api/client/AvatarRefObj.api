@@ -1,0 +1,26 @@
+/**
+ * Avatar参考物体
+ * @author 黑暗之神KDS
+ */
+class AvatarRefObj {
+    /**
+     * ID
+     */
+    id:number;
+    /**
+     * 坐标x
+     */
+    x:number;
+    /**
+     * 坐标y
+     */
+    y:number;
+    /**
+     * 宽度
+     */
+    width:number;
+    /**
+     * 高度
+     */
+    height:number;
+}

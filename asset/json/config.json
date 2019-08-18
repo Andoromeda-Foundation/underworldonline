@@ -1,0 +1,16 @@
+{
+    "GAME_SERVER_HOST": "127.0.0.1",
+    "GAME_SERVER_PORT": 13140,
+    "WINDOW_WIDTH": 1400,
+    "WINDOW_HEIGHT": 800,
+    "STAGE_BACKGROUND_COLOR": "#000000",
+    "SCENE_BGM_TWEEN": 3000,
+    "SCENE_BGS_TWEEN": 0,
+    "SCENE_GRID_SIZE": 8,
+    "MOVE_TO_GRID_CENTER": true,
+    "MOVE_4_ORI": false,
+    "TILE_LINEAR": true,
+    "SCENE_OBJECT_JUMP_INTERVAL": 500,
+    "SCENE_OBJECT_JUMP_HEIGHT": 150,
+    "customConfig": {}
+}

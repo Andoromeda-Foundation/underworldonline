@@ -1,0 +1,182 @@
+/**
+ * 游戏世界
+ * Created by 黑暗之神KDS on 2018-07-18 00:05:25.
+ */
+class ServerWorld {
+    /**
+     * 事件：服务器世界启动完毕 每个线程都会派发此事件，同时系统会开启允许登录 ServerWorld.isOpenGate=true
+     */
+    static EVENT_STARTUP_COMPLETE:string = "ServerWorld_EVENT_STARTUP_COMPLETE";
+    /**
+     * 是否打开大门：允许登录
+     */
+    static isOpenGate: boolean = true;
+    /**
+     * 世界是否停止：当已执行重启或关闭服务器时
+     */
+    private static _isStop: boolean;
+    static get isStop() { return null; }
+    /**
+     * 世界数据
+     * 可以直接读取，而写入的话需要通过 ServerWorld.dataWrite 否则写入未同步线程仅作为该线程临时数据使用（重启服务器则重置了）
+     */
+    static data: typeof WorldData;
+    /**
+     * ui点击事件集 id-CommandPage
+     */
+    static uiCustomCommandPages: { [id: string]: CommandPage[] } = {};
+    /**
+     * 事件触发
+     */
+    static startTriggerCommand:Function;
+    //------------------------------------------------------------------------------------------------------
+    // 
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 世界数据写入
+     * 【注意事项】
+     * -- 方法内代码在其他线程是独立运行，所以不能依赖外部的变量，需要使用外部的数据应通过args传递过来
+     * -- 方法内不应该含有随机的因素，必须是确定的，否则同步有误
+     * -- 参数必须可经过JSON打包复制的纯数据
+     * 
+     * 示例：
+     * var a = new DataStructure_数据结构2();
+     * a.AAA = MathUtils.rand(1000000000) + 1000000000;
+     * a.BBB = 22222222
+     * a.CCC = 33333333
+     * var aaa = Math.random();
+     * ServerWorld.dataWrite(function (a: DataStructure_数据结构2,aaa) {
+     *     ServerWorld.data.arr2.push(a);
+     *     ServerWorld.data.arr2[ServerWorld.data.arr2.length - 1].AAA = aaa;
+     * }, [a,aaa]);
+     * 
+     * @param func 执行的方法： 会在全线程都执行此方法
+     * @param args 方法的参数
+     */
+    static dataWrite(func: Function, args: any[]): void {
+
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 世界功能
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 关闭世界
+     * -- 玩家数据储存
+     * -- 场景数据储存
+     * -- 世界数据储存
+     * -- 关闭服务器
+     */
+    static close(onFin: Callback = null): void {
+
+    }
+    /**
+     * 重启世界
+     * -- 关闭世界
+     * -- 调用外部脚本以便重新启动
+     */
+    static restart(): void {
+       
+    }
+    /**
+     * 踢出玩家
+     * @param uid 
+     */
+    static kickPlayer(uid: number): void {
+
+    }
+    /**
+     * 玩家加入黑名单，无法登陆
+     */
+    static addPlayerToBlackList(uid: number) {
+
+    }
+    /**
+     * 玩家从黑名单移除
+     */
+    static removePlayerToBlackList(uid: number) {
+
+    }
+    /**
+     * 增加允许调用的服务器方法
+     * @param classDomain 允许的域
+     * @param functionName [可选] 默认值=null 允许的方法，null则表示该域下所有方法均可使用
+     */
+    static addServerFunction(classDomain: string, functionName: string=null): void {
+        
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 变量
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 设置变量可获取至客户端的权限
+     * @param type 0-全局变量 1-全局开关 2-全局字符串
+     * @param index 变量ID
+     * @param accessible 是否可获取至客户端
+     */
+    static setWorldVariableAccessible(type: number, index: number, accessible: boolean): void {
+
+    }
+    /**
+     * 获得变量可获取至客户端的权限
+     * @param type 0-全局变量 1-全局开关 2-全局字符串
+     * @param index 变量ID
+     * @return [boolean] 是否可获取至客户端
+     */
+    static getWorldVariableAccessible(type: number, index: number): boolean {
+        return null;
+    }
+
+    /**
+     * 写入世界变量
+     */
+    static setWorldVariable(index: number, value: number, isNotice: boolean = true): void {
+     
+    }
+    /**
+     * 读取世界变量
+     */
+    static getWorldVariable(index: number): number {
+        return null;
+    }
+    /**
+     * 写入世界开关
+     */
+    static setWorldSwitch(index: number, value: number, isNotice: boolean = true): void {
+
+    }
+    /**
+     * 读取世界开关
+     */
+    static getWorldSwitch(index: number): number {
+        return null;
+    }
+    /**
+     * 写入世界字符串
+     */
+    static setWorldString(index: number, value: string, isNotice: boolean = true): void {
+        
+    }
+    /**
+     * 读取世界变量
+     */
+    static getWorldString(index: number): string {
+         return null;
+    }
+    /**
+     * 监听当世界变量的改变时
+     * @param type 0-变量 1-开关 2-字符串
+     * @param onChange onChange(varID:number,value:number|string);
+     */
+    static addListenerVariable(type: number, onChange: Callback): void {
+
+    }
+    /**
+     * 取消监听：当世界变量改变时
+     * @param type 0-变量 1-开关 2-字符串
+     * @param onChange 
+     */
+    static removeListenerVariable(type: number, onChange: Callback): void {
+
+    }
+
+}

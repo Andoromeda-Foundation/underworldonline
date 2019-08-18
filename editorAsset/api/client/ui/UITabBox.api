@@ -1,0 +1,61 @@
+/**
+ * UI组件：开关
+ * 相关事件：
+ *  EventObject.CHANGE 当改变状态时派发
+ *  EventObject.LOADED 加载完成时候事件
+ * Created by 黑暗之神KDS on 2019-04-14 22:31:21.
+ */
+class UITabBox extends UIBase {
+    /**
+     * 选中项
+     */
+    selectedIndex:number
+    /**
+     * 标签项 逗号隔开
+     */
+    items: string;
+    /**
+     * 标签项选中时的图片样式
+     */
+    itemImage1: string
+    /**
+     * 标签项移入时的图片样式
+     */
+    itemImage2: string
+    /**
+     * 排列为行的模式
+     */
+    rowMode: boolean;
+    /**
+     * 标签项长度
+     */
+    itemWidth: number;
+    /**
+     * 标签项高度
+     */
+    itemHeight: number;
+    /**
+     * 标签项间距
+     */
+    spacing: number;
+    /**
+     * 文本颜色 标签项选中时
+     */
+    labelSelectedColor: string;
+    /**
+     * 文本颜色 标签项未选中时
+     */
+    labelColor: string;
+    /**
+     * 文本字体大小
+     */
+    labelSize: number;
+    /**
+     * 文本字体对齐模式
+     */
+    labelAlign: number;
+    /**
+     * 文本字体粗体模式
+     */
+    labelBold: boolean;
+}

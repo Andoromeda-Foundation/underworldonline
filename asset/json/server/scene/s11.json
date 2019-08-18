@@ -1,0 +1,138 @@
+{
+    "sceneObjects": [
+        null,
+        {
+            "modelID": 1,
+            "index": 1,
+            "name": "未命名2",
+            "x": 675,
+            "y": 312,
+            "z": 0,
+            "avatarID": 0,
+            "avatarOri": 2,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {},
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        }
+    ],
+    "commands": [
+        [
+            63,
+            "asset/audio/bgm/Foxtail-Grass Studio - tief=blau.mp3",
+            0.5,
+            1,
+            "1"
+        ],
+        [
+            22,
+            -2,
+            0,
+            [
+                [
+                    36,
+                    1,
+                    0,
+                    0
+                ]
+            ]
+        ],
+        [
+            23
+        ],
+        [
+            17,
+            "2000",
+            1,
+            false
+        ],
+        [
+            16,
+            1
+        ],
+        [
+            11,
+            1,
+            null,
+            "冒险者",
+            2,
+            -2,
+            "<span style='color:#FfFffF'>这就是传说中的神圣之地么？</span>"
+        ],
+        [
+            16,
+            2
+        ],
+        [
+            22,
+            -2,
+            0,
+            [
+                [
+                    13,
+                    1,
+                    17,
+                    11
+                ]
+            ]
+        ],
+        [
+            23
+        ],
+        [
+            11,
+            1,
+            null,
+            "系统",
+            2,
+            -2,
+            "<span style='color:#FfFffF'>恭喜你完成所有测试。</span>"
+        ]
+    ],
+    "behaviors": [
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ]
+    ],
+    "customAttributes": [],
+    "events": [
+        {
+            "condition": [],
+            "click": [],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [],
+            "collide": [],
+            "update": []
+        }
+    ],
+    "id": 11
+}

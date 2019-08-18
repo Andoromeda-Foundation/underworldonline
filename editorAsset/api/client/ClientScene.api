@@ -1,0 +1,343 @@
+/**
+ * 客户端场景
+ * 【新建场景】 ps:利用相机以及当前的场景还可以很方便的制作小地图
+ *  var s = new ClientScene();
+ *  s.id = 5;
+ *  stage.addChild(s.displayObject);
+ * 
+ * 【相关事件】
+ *  EventObject.LOADED 全地图资源加载完毕
+ *  ClientScene.EVENT_BASE_DATA_LOADED 地图基础资源加载完毕
+ * 
+ * 
+ * 
+ * 【层次】
+ * -- 场景 sceneLayer
+ *     - 自定义底层
+ *     - 动画底层
+ *     - 影子层
+ *     - 场景对象层
+ *     - 自定义高层
+ *     - 最高层角色
+ *     - 最高层动画层
+ *     - 雾层
+ *     - 天气层
+ * -- 图片 imageLayer
+ * -- UI uiLayer
+ * 
+ * Created by 黑暗之神KDS on 2018-07-22 17:29:13.
+ */
+class ClientScene extends Scene {
+    /**
+     * 事件：基础数据加载完毕（可用于快速切入场景，而后再加载相关资源，flash页游时代几乎都是这样做的）
+     * onBaseDataLoaded(scene)
+     */
+    static EVENT_BASE_DATA_LOADED:string = "ClientScene_EVENT_FIRST_LOADED";
+    /**
+     * 是否已卸载
+     */
+    isDisposed: boolean;
+    /**
+     * 玩家集
+     */
+    players: Player[] = [];
+    /**
+     * 预先设定层组(地图编辑器中预设的)
+     */
+    settingLayers: ClientSceneLayer[] = [];
+    /**
+     * 显示对象
+     */
+    displayObject: GameSprite = new GameSprite();
+    /**
+     * 影子层
+     */
+    shadowLayer: ClientSceneLayer;
+    /**
+     * 动画层：底层
+     */
+    animationLowLayer: ClientSceneLayer;
+    /**
+     * 场景对象所在的层次
+     */
+    sceneObjectLayer: ClientSceneLayer;
+    /**
+     * 场景对象：高层
+     */
+    sceneObjectHighLayer: ClientSceneLayer;
+    /**
+     * 动画层：高层
+     */
+    animationHighLayer: ClientSceneLayer;
+    /**
+     * 雾层
+     */
+    fogLayer: ClientSceneLayer;
+    /**
+     * 天气层
+     */
+    weaterLayer: ClientSceneLayer;
+    /**
+     * 层次显示对象
+     */
+    layers: ClientSceneLayer[] = [];
+    /**
+     * 锁定的场景对象
+     */
+    cameraObject: ClientSceneObject;
+    /**
+     * 创建场景，会根据预设的实现类来创建对应的实例场景
+     * @param sceneID 场景ID
+     * @param onBaseDataLoaded [可选] 默认值=null 当基础数据加载完毕时 onBaseDataLoaded(scene)
+     * @param onLoaded [可选] 默认值=null onLoaded(scene)
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @return [ClientScene] 
+     */
+    static createScene(sceneID: number, onBaseDataLoaded: Callback = null, onLoaded: Callback = null,syncCallbackWhenAssetExist:boolean=false): void {
+    
+    }
+    /**
+     * 清理当前的场景
+     */
+    dispose(autoStopAudio: boolean = true): void {
+        
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 图层：由于系统预设了一些层次，需要了解后使用
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 添加显示层
+     * @param layer 
+     */
+    addLayer(layer: ClientSceneLayer) {
+        
+    }
+    /**
+     * 添加显示层到指定层
+     * @param layer 
+     * @param index 
+     */
+    addLayerAt(layer: ClientSceneLayer, index: number) {
+        
+    }
+    /**
+     * 移除显示层
+     * @param layer 
+     */
+    removeLayer(layer: ClientSceneLayer) {
+        
+    }
+    /**
+     * 指定移除某一层
+     * @param index 
+     */
+    removeLayerAt(index: number) {
+        
+    }
+    /**
+     * 设置层
+     */
+    setLayerIndex(layer: ClientSceneLayer, index: number): void {
+       
+    }
+    /**
+     * 获取层，根据实际层次
+     */
+    getLayer(index: number): ClientSceneLayer {
+        return null;
+    }
+    /**
+     * 获取层，根据预设层次
+     * @param id 对应地图层预览中的序号
+     */
+    getLayerByPreset(id: number): ClientSceneLayer {
+        return null;
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 场景对象
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 有场景对象加入至场景上
+     * @param soData 场景对象数据
+     * @param isSoc 是否是实际的对象而非数据
+     * @param useModelClass 是否使用场景对象模型的实现类
+     * @return [ClientSceneObject] 添加的场景对象实例
+     */
+    addSceneObject(soData: SceneObject, isSoc: boolean = false, useModelClass: boolean = false): ClientSceneObject {
+        return null;
+    }
+    /**
+     * 有场景对象从场景上移除
+     * @param so 场景对象数据
+     * @return [ClientSceneObject] 移除的场景对象实例
+     */
+    removeSceneObject(so: SceneObject): ClientSceneObject {
+        return null;
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 玩家
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 添加玩家
+     * @param player 
+     */
+    addPlayer(player: Player): void {
+        
+    }
+    /**
+     * 移除玩家
+     * @param player 
+     */
+    removePlayer(player: Player): void {
+       
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 获取数据
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 获取鼠标X所在的场景位置
+     */
+    get localX() {
+       return 0;
+    }
+    /**
+     * 获取鼠标Y所在的场景位置
+     */
+    get localY() {
+        return 0;
+    }
+    /**
+     * 获取鼠标绝对位置
+     */
+    get globalPos(): Point {
+        return null;
+    }
+    /**
+     * 获取绝对鼠标位置根据指定的场景位置
+     * @param localX 
+     * @param localY 
+     * @return [Point] 
+     */
+    getGlobalPos(localX: number, localY: number): Point {
+        return null;
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 镜头与显示
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 锁定一个场景对象
+     * @param sceneObject 场景对象
+     */
+    setCameraSceneObject(sceneObject: ClientSceneObject): void {
+
+    }
+    /**
+     * 设置镜头坐标
+     * @param x 
+     * @param y 
+     * @param w [可选] 默认值=null 
+     * @param h [可选] 默认值=null 
+     */
+    setCameraPos(x: number, y: number, w: number = null, h: number = null): void {
+        
+    }
+    /**
+     * 设置镜头缩放
+     */
+    setCameraScale(scaleX: number, scaleY: number) {
+        
+    }
+    /**
+     * 设置镜头尺寸（一般游戏中默认是预设的分辨率尺寸）
+     * 超出该分辨率外的不显示
+     */
+    setCameraSize(w: number, h: number) {
+        
+    }
+    /**
+     * 获取相机
+     */
+    getCamera(): Rectangle {
+        return null;
+    }
+    /**
+     * 立刻刷新镜头（默认情况下场景会逐帧刷新镜头，如绑定的场景对象在移动时）
+     */
+    updateCamera(): void {
+        
+    }
+    /**
+     * 获取和设置地图显示缩放
+     * 修改此值会在当前的视角中心点进行缩放
+     */
+    get viewScale(): number {
+        return 1;
+    }
+    set viewScale(v: number) {
+
+    }
+    /**
+     * 开始渲染
+     */
+    startRender(): void {
+       
+    }
+    /**
+     * 停止渲染
+     */
+    stopRender(zFrame: boolean = false): void {
+       
+    }
+    /**
+     * 渲染
+     */
+    protected onRender(): void {
+       
+    }
+    /**
+     * 检查 EventDispatcher 对象是否为特定事件类型注册了任何侦听器。
+     * @param	type 事件的类型。
+     * @return 如果指定类型的侦听器已注册，则值为 true；否则，值为 false。
+     */
+    hasListener(type: string): boolean { return null };
+    /**
+     * 派发事件。
+     * @param type	事件类型。
+     * @param data	（可选）回调数据。<b>注意：</b>如果是需要传递多个参数 p1,p2,p3,...可以使用数组结构如：[p1,p2,p3,...] ；如果需要回调单个参数 p 是一个数组，则需要使用结构如：[p]，其他的单个参数 p ，可以直接传入参数 p。
+     * @return 此事件类型是否有侦听者，如果有侦听者则值为 true，否则值为 false。
+     */
+    event(type: string, data?: any): boolean { return null };
+    /**
+     * 使用 EventDispatcher 对象注册指定类型的事件侦听器对象，以使侦听器能够接收事件通知。
+     * @param type		事件的类型。
+     * @param caller	事件侦听函数的执行域。a
+     * @param listener	事件侦听函数。
+     * @param args		（可选）事件侦听函数的回调参数。
+     * @return 此 EventDispatcher 对象。a
+     */
+    on(type: string, caller: any, listener: Function, args?: Array<any>): EventDispatcher { return null };
+    /**
+     * 使用 EventDispatcher 对象注册指定类型的事件侦听器对象，以使侦听器能够接收事件通知，此侦听事件响应一次后自动移除。
+     * @param type		事件的类型。
+     * @param caller	事件侦听函数的执行域。
+     * @param listener	事件侦听函数。
+     * @param args		（可选）事件侦听函数的回调参数。
+     * @return 此 EventDispatcher 对象。
+     */
+    once(type: string, caller: any, listener: Function, args?: Array<any>): EventDispatcher { return null };
+    /**
+    * 从 EventDispatcher 对象中删除侦听器。
+    * @param type		事件的类型。
+    * @param caller	事件侦听函数的执行域。
+    * @param listener	事件侦听函数。
+    * @param onceOnly	（可选）如果值为 true ,则只移除通过 once 方法添加的侦听器。
+    * @return 此 EventDispatcher 对象。
+    */
+    off(type: string, caller: any, listener: Function, onceOnly?: boolean): EventDispatcher { return null };
+    /**
+     * 从 EventDispatcher 对象中删除指定事件类型的所有侦听器。
+     * @param type	（可选）事件类型，如果值为 null，则移除本对象所有类型的侦听器。
+     * @return 此 EventDispatcher 对象。
+     */
+    offAll(type?: string): EventDispatcher { return null };
+}

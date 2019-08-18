@@ -1,0 +1,1097 @@
+{
+    "sceneObjects": [
+        null,
+        {
+            "modelID": 1,
+            "index": 1,
+            "name": "",
+            "x": 967,
+            "y": 783,
+            "z": 0,
+            "avatarID": 2,
+            "avatarOri": 6,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": true,
+            "shadowWidth": 22,
+            "shadowHeight": 8,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 256,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 1,
+            "index": 2,
+            "name": "",
+            "x": 735,
+            "y": 515,
+            "z": 0,
+            "avatarID": 2,
+            "avatarOri": 6,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": true,
+            "shadowWidth": 22,
+            "shadowHeight": 8,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 256,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 1,
+            "index": 3,
+            "name": "",
+            "x": 1075,
+            "y": 552,
+            "z": 0,
+            "avatarID": 2,
+            "avatarOri": 6,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": true,
+            "shadowWidth": 22,
+            "shadowHeight": 8,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 256,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 1,
+            "index": 4,
+            "name": "",
+            "x": 715,
+            "y": 763,
+            "z": 0,
+            "avatarID": 2,
+            "avatarOri": 6,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": true,
+            "shadowWidth": 22,
+            "shadowHeight": 8,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 256,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 1,
+            "index": 5,
+            "name": "",
+            "x": 749,
+            "y": 976,
+            "z": 0,
+            "avatarID": 2,
+            "avatarOri": 6,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": true,
+            "shadowWidth": 22,
+            "shadowHeight": 8,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 256,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 1,
+            "index": 6,
+            "name": "",
+            "x": 1092,
+            "y": 974,
+            "z": 0,
+            "avatarID": 2,
+            "avatarOri": 6,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": true,
+            "shadowWidth": 22,
+            "shadowHeight": 8,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 256,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 1,
+            "index": 7,
+            "name": "",
+            "x": 1189,
+            "y": 582,
+            "z": 0,
+            "avatarID": 2,
+            "avatarOri": 6,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": true,
+            "shadowWidth": 22,
+            "shadowHeight": 8,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 256,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 1,
+            "index": 8,
+            "name": "",
+            "x": 934,
+            "y": 485,
+            "z": 0,
+            "avatarID": 6,
+            "avatarOri": 6,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": true,
+            "shadowWidth": 22,
+            "shadowHeight": 8,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 256,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 1,
+            "index": 9,
+            "name": "",
+            "x": 804,
+            "y": 649,
+            "z": 0,
+            "avatarID": 6,
+            "avatarOri": 6,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": true,
+            "shadowWidth": 22,
+            "shadowHeight": 8,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 256,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 1,
+            "index": 10,
+            "name": "",
+            "x": 622,
+            "y": 957,
+            "z": 0,
+            "avatarID": 6,
+            "avatarOri": 6,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": true,
+            "shadowWidth": 22,
+            "shadowHeight": 8,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 256,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 1,
+            "index": 11,
+            "name": "",
+            "x": 776,
+            "y": 1161,
+            "z": 0,
+            "avatarID": 6,
+            "avatarOri": 6,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": true,
+            "shadowWidth": 22,
+            "shadowHeight": 8,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 256,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 1,
+            "index": 12,
+            "name": "",
+            "x": 1312,
+            "y": 1165,
+            "z": 0,
+            "avatarID": 6,
+            "avatarOri": 6,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": true,
+            "shadowWidth": 22,
+            "shadowHeight": 8,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 256,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 1,
+            "index": 13,
+            "name": "",
+            "x": 1550,
+            "y": 819,
+            "z": 0,
+            "avatarID": 6,
+            "avatarOri": 6,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": true,
+            "shadowWidth": 22,
+            "shadowHeight": 8,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 256,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        }
+    ],
+    "commands": [],
+    "behaviors": [
+        null,
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ]
+    ],
+    "events": [
+        {
+            "condition": [],
+            "click": [],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>要回去吗[.s]</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "回去"
+                ],
+                [
+                    21,
+                    1,
+                    357,
+                    507
+                ],
+                [
+                    4,
+                    "去森林"
+                ],
+                [
+                    21,
+                    12,
+                    361,
+                    437
+                ],
+                [
+                    4,
+                    "不回去"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>要回去吗[.s]</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "回去"
+                ],
+                [
+                    21,
+                    1,
+                    357,
+                    507
+                ],
+                [
+                    4,
+                    "去森林"
+                ],
+                [
+                    21,
+                    12,
+                    361,
+                    437
+                ],
+                [
+                    4,
+                    "不回去"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>要回去吗[.s]</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "回去"
+                ],
+                [
+                    21,
+                    1,
+                    357,
+                    507
+                ],
+                [
+                    4,
+                    "去森林"
+                ],
+                [
+                    21,
+                    12,
+                    361,
+                    437
+                ],
+                [
+                    4,
+                    "不回去"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>要回去吗[.s]</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "回去"
+                ],
+                [
+                    21,
+                    1,
+                    357,
+                    507
+                ],
+                [
+                    4,
+                    "去森林"
+                ],
+                [
+                    21,
+                    12,
+                    361,
+                    437
+                ],
+                [
+                    4,
+                    "不回去"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>要回去吗[.s]</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "回去"
+                ],
+                [
+                    21,
+                    1,
+                    357,
+                    507
+                ],
+                [
+                    4,
+                    "去森林"
+                ],
+                [
+                    21,
+                    12,
+                    361,
+                    437
+                ],
+                [
+                    4,
+                    "不回去"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>要回去吗[.s]</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "回去"
+                ],
+                [
+                    21,
+                    1,
+                    357,
+                    507
+                ],
+                [
+                    4,
+                    "去森林"
+                ],
+                [
+                    21,
+                    12,
+                    361,
+                    437
+                ],
+                [
+                    4,
+                    "不回去"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>要回去吗[.s]</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "回去"
+                ],
+                [
+                    21,
+                    1,
+                    357,
+                    507
+                ],
+                [
+                    4,
+                    "去森林"
+                ],
+                [
+                    21,
+                    12,
+                    361,
+                    437
+                ],
+                [
+                    4,
+                    "不回去"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>要回去吗[.s]</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "回去"
+                ],
+                [
+                    21,
+                    1,
+                    357,
+                    507
+                ],
+                [
+                    4,
+                    "去森林"
+                ],
+                [
+                    21,
+                    12,
+                    361,
+                    437
+                ],
+                [
+                    4,
+                    "不回去"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>要回去吗[.s]</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "回去"
+                ],
+                [
+                    21,
+                    1,
+                    357,
+                    507
+                ],
+                [
+                    4,
+                    "去森林"
+                ],
+                [
+                    21,
+                    12,
+                    361,
+                    437
+                ],
+                [
+                    4,
+                    "不回去"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>要回去吗[.s]</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "回去"
+                ],
+                [
+                    21,
+                    1,
+                    357,
+                    507
+                ],
+                [
+                    4,
+                    "去森林"
+                ],
+                [
+                    21,
+                    12,
+                    361,
+                    437
+                ],
+                [
+                    4,
+                    "不回去"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>要回去吗[.s]</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "回去"
+                ],
+                [
+                    21,
+                    1,
+                    357,
+                    507
+                ],
+                [
+                    4,
+                    "去森林"
+                ],
+                [
+                    21,
+                    12,
+                    361,
+                    437
+                ],
+                [
+                    4,
+                    "不回去"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>要回去吗[.s]</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "回去"
+                ],
+                [
+                    21,
+                    1,
+                    357,
+                    507
+                ],
+                [
+                    4,
+                    "去森林"
+                ],
+                [
+                    21,
+                    12,
+                    361,
+                    437
+                ],
+                [
+                    4,
+                    "不回去"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/1.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>要回去吗[.s]</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "回去"
+                ],
+                [
+                    21,
+                    1,
+                    357,
+                    507
+                ],
+                [
+                    4,
+                    "去森林"
+                ],
+                [
+                    21,
+                    12,
+                    361,
+                    437
+                ],
+                [
+                    4,
+                    "不回去"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        }
+    ],
+    "id": 21
+}

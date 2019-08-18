@@ -1,0 +1,17 @@
+﻿/**
+ * Created by kds on 2017/1/8 03:56:12
+ * 用于创建一个线程来运行脚本
+ */
+/**
+ * 创建一个线程用于执行全部脚本，脚本中可以通过kdsrpg_scriptID来区分
+ * 首次创建的kdsrpg_scriptID为2，每次创建累加1
+ * 仅在主线程可创建
+ * @return 线程脚本ID - kdsrpg_scriptID
+ */
+function scriptThread_create():number{
+    // c++ Implement
+}
+/**
+ * 获取当前线程的ID
+ */
+var kdsrpg_scriptID:number;

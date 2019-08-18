@@ -1,0 +1,637 @@
+{
+    "sceneObjects": [
+        {
+            "modelID": 1,
+            "index": 0,
+            "name": "",
+            "x": 980,
+            "y": 768,
+            "z": 0,
+            "avatarID": 7,
+            "avatarOri": 2,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 1,
+            "index": 1,
+            "name": "",
+            "x": 674,
+            "y": 831,
+            "z": 0,
+            "avatarID": 6,
+            "avatarOri": 3,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 1,
+            "index": 2,
+            "name": "",
+            "x": 967,
+            "y": 660,
+            "z": 0,
+            "avatarID": 6,
+            "avatarOri": 1,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        }
+    ],
+    "commands": [
+        [
+            37,
+            [
+                [
+                    1,
+                    999,
+                    60,
+                    0,
+                    0,
+                    0,
+                    1072,
+                    1072,
+                    0,
+                    0,
+                    null,
+                    0
+                ],
+                [
+                    8,
+                    60
+                ],
+                [
+                    4,
+                    999
+                ]
+            ]
+        ],
+        [
+            17,
+            "120",
+            0,
+            true
+        ],
+        [
+            11,
+            1,
+            "asset/image/face/JS1.png",
+            "",
+            3,
+            -2,
+            "<span style='color:#FFFFFF'>最近在深渊矿洞中似乎发现了魔族的踪迹，我们需要前去调查一番。</span>"
+        ],
+        [
+            37,
+            [
+                [
+                    0,
+                    1,
+                    "asset/image/picture/ad5.png",
+                    1,
+                    675,
+                    342,
+                    2273,
+                    1141,
+                    0,
+                    0,
+                    null
+                ],
+                [
+                    1,
+                    1,
+                    20,
+                    1,
+                    505,
+                    332,
+                    876,
+                    440,
+                    0,
+                    1,
+                    null,
+                    3
+                ],
+                [
+                    8,
+                    20
+                ],
+                [
+                    0,
+                    2,
+                    "asset/image/picture/ad2h.png",
+                    1,
+                    192,
+                    368,
+                    202,
+                    208,
+                    0,
+                    0,
+                    null
+                ],
+                [
+                    1,
+                    2,
+                    20,
+                    1,
+                    192,
+                    388,
+                    202,
+                    208,
+                    0,
+                    1,
+                    null,
+                    null
+                ],
+                [
+                    3,
+                    2,
+                    106,
+                    95,
+                    0,
+                    0,
+                    20,
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    8,
+                    20
+                ],
+                [
+                    3,
+                    2,
+                    0,
+                    0,
+                    0,
+                    0,
+                    10,
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    2,
+                    2,
+                    0.2
+                ],
+                [
+                    0,
+                    3,
+                    "asset/image/picture/ad4.png",
+                    0,
+                    398,
+                    266,
+                    202,
+                    208,
+                    0,
+                    0,
+                    null
+                ],
+                [
+                    1,
+                    3,
+                    20,
+                    0,
+                    398,
+                    286,
+                    202,
+                    208,
+                    0,
+                    1,
+                    null
+                ],
+                [
+                    3,
+                    3,
+                    106,
+                    95,
+                    0,
+                    0,
+                    20,
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    8,
+                    20
+                ],
+                [
+                    3,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    10,
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    0,
+                    4,
+                    "asset/image/picture/ad2h.png",
+                    0,
+                    718,
+                    266,
+                    202,
+                    208,
+                    0,
+                    0,
+                    null
+                ],
+                [
+                    1,
+                    4,
+                    20,
+                    0,
+                    728,
+                    286,
+                    202,
+                    208,
+                    0,
+                    1,
+                    null
+                ],
+                [
+                    3,
+                    4,
+                    106,
+                    95,
+                    0,
+                    0,
+                    20,
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    8,
+                    20
+                ],
+                [
+                    3,
+                    4,
+                    0,
+                    0,
+                    0,
+                    0,
+                    10,
+                    1,
+                    1,
+                    1
+                ],
+                [
+                    0,
+                    5,
+                    "asset/image/picture/foint.png",
+                    0,
+                    84,
+                    122,
+                    155,
+                    97,
+                    0,
+                    1,
+                    "lighter"
+                ],
+                [
+                    1,
+                    5,
+                    30,
+                    0,
+                    419,
+                    168,
+                    155,
+                    97,
+                    0,
+                    1,
+                    "lighter",
+                    9
+                ]
+            ]
+        ],
+        [
+            11,
+            1,
+            "asset/image/face/JS1.png",
+            "",
+            3,
+            -2,
+            "<span style='color:#FFFFFF'>请选择一个角色：[.s]</span>"
+        ],
+        [
+            3,
+            0
+        ],
+        [
+            4,
+            "牛头人"
+        ],
+        [
+            13,
+            3,
+            9,
+            0,
+            0,
+            1,
+            1,
+            1,
+            [
+                0,
+                100
+            ],
+            0
+        ],
+        [
+            4,
+            "女战士"
+        ],
+        [
+            13,
+            3,
+            9,
+            0,
+            0,
+            2,
+            1,
+            1,
+            [
+                0,
+                100
+            ],
+            0
+        ],
+        [
+            10
+        ],
+        [
+            37,
+            [
+                [
+                    4,
+                    1
+                ],
+                [
+                    4,
+                    2
+                ],
+                [
+                    4,
+                    3
+                ],
+                [
+                    4,
+                    4
+                ],
+                [
+                    4,
+                    5
+                ]
+            ]
+        ],
+        [
+            17,
+            "60",
+            0,
+            false
+        ],
+        [
+            37,
+            [
+                [
+                    5,
+                    1,
+                    1,
+                    398,
+                    242,
+                    1,
+                    1,
+                    0,
+                    1,
+                    false
+                ]
+            ]
+        ],
+        [
+            67,
+            "asset/audio/se/selectServer.mp3",
+            1,
+            1.5
+        ],
+        [
+            17,
+            "15",
+            0,
+            false
+        ],
+        [
+            0,
+            0,
+            2,
+            [
+                0,
+                1,
+                9,
+                0
+            ],
+            0,
+            0,
+            [
+                1,
+                1,
+                1,
+                0
+            ],
+            0,
+            [
+                1,
+                1,
+                0
+            ],
+            0,
+            0,
+            [
+                1,
+                1
+            ],
+            "",
+            "",
+            true
+        ],
+        [
+            22,
+            -2,
+            0,
+            [
+                [
+                    1,
+                    6,
+                    1,
+                    0
+                ]
+            ]
+        ],
+        [
+            1
+        ],
+        [
+            22,
+            -2,
+            0,
+            [
+                [
+                    1,
+                    1,
+                    1,
+                    0
+                ]
+            ]
+        ],
+        [
+            2
+        ]
+    ],
+    "behaviors": [
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ]
+    ],
+    "events": [
+        {
+            "condition": [],
+            "click": [
+                [
+                    67,
+                    "se/ts.mp3",
+                    1,
+                    1
+                ],
+                [
+                    11,
+                    1,
+                    "asset/image/face/MAN2.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>我是自带BGM的男人...</span>"
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    11,
+                    1,
+                    "asset/image/face/NTR.png",
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FFFFFF'>最近听说这边有魔族出现，不知道是不是真的..</span>"
+                ],
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "传送出去"
+                ],
+                [
+                    21,
+                    9,
+                    1861,
+                    1006
+                ],
+                [
+                    4,
+                    "取消"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [],
+            "collide": [],
+            "update": []
+        }
+    ],
+    "id": 22
+}

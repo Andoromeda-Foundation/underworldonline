@@ -1,0 +1,72 @@
+{
+    "sceneObjects": [
+        {
+            "modelID": 1,
+            "index": 0,
+            "name": "未命名0",
+            "x": 337,
+            "y": 583,
+            "z": 0,
+            "avatarID": 1002,
+            "avatarOri": 1,
+            "avatarAct": 2,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {
+                "avatar": {
+                    "type": 1,
+                    "id": 0
+                }
+            },
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": 1,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 0.7,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "hasCommand": []
+        }
+    ],
+    "customCommands": [
+        [
+            [
+                1000,
+                false,
+                true,
+                true,
+                1
+            ]
+        ],
+        []
+    ],
+    "behaviors": [
+        [
+            -1,
+            0,
+            []
+        ]
+    ],
+    "customAttributes": [
+        {}
+    ],
+    "events": [
+        {
+            "condition": [],
+            "customCommands": [
+                [],
+                [],
+                []
+            ]
+        }
+    ]
+}

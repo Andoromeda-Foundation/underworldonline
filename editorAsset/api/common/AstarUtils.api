@@ -1,0 +1,48 @@
+/**
+ * Created by 黑暗之神KDS on 2018-10-07 15:02:01.
+ */
+class AstarUtils {
+    /**
+     * 最大搜寻次数，防卡死
+     */
+    static ROAD_FIND_MAX: number = 200;
+
+    /**
+     * 移动至
+     * 只在起点周围计算A星
+     * @param x_x1 起点X
+     * @param x_y1 起点Y
+     * @param x_x2 终点X
+     * @param x_y2 终点Y
+     * @param gridW 格子宽
+     * @param gridH 格子高
+     * @param obsArr 障碍数组 [x][y] = true/false
+     * @return [string] 返回移动路线结果 [有效路径]=|x,y|x,y|x,y|x,y [无效路径]=null
+     */
+    public static moveTo(startX: number, startY: number, endX: number, endY: number, gridW: number, gridH: number, scene: Scene): number[][] {
+        return null;
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 大地图移动
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 大地图移动模式缓存
+     * @param gridW 
+     * @param gridH 
+     * @param obsArr 
+     */
+    static def_bigMoveTo(gridW: number, gridH: number, obsArr: boolean[][]): void {
+       
+    }
+    /**
+     * 大地图移动
+     * @param x_x1 起点
+     * @param x_y1 起点
+     * @param x_x2 终点
+     * @param x_y2 终点
+     * @return [string] 
+     */
+    static bigMoveTo(startX: number, startY: number, endX: number, endY: number): number[][] {
+       return null;
+    }
+}

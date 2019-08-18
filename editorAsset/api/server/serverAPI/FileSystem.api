@@ -1,0 +1,41 @@
+﻿/**
+ * Created by kds on 2017/7/11 23:56:15
+ * 用于文件操作
+ */
+/**
+ * 读取一个文件
+ * @param filePath 文件路径
+ * @return 文本内容 如果文件不存在则返回 [no exist]
+ */
+function readFile(filePath:string):string{
+    // c++ Implement
+}
+/**
+ * 打开一个文件（流操作）
+ * @param filePath 文件路径
+ * @return 流ID
+ */
+function streamOpen(filePath:string):number{
+    // c++ Implement
+}
+/**
+ * 写入一个已打开的文件，第一次写入会覆盖掉内容，此后将增量式写入。
+ * @param streamID 流ID
+ * @param content 写入的内容
+ */
+function streamWrite(streamID:number,content:string):void{
+    // c++ Implement
+}
+/**
+ * 关闭指定的流。
+ * @param streamID 流ID
+ */
+function streamClose(streamID:number):void{
+    // c++ Implement
+}
+/**
+ * 工程所在的目录 
+ * 如 [WINDOWS] D:/projects/xxxxx/ 
+ *    [MACOS] /user/projects/xxxxx/
+ */
+declare var nativePath:string;

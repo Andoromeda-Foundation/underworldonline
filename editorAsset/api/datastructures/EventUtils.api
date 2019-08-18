@@ -1,0 +1,40 @@
+/**
+ * Created by 黑暗之神KDS on 2017-08-22 20:52:51.
+ */
+class EventUtils {
+    /**
+     * 注册事件
+     * @param obj 事件对象
+     * @param type 类型
+     * @param callBack 回调 
+     * @param isOnce 是否执行一次 默认 false
+     */
+    static addEventListener(obj: any, type: string, callBack: Callback, isOnce: boolean = false): void {
+        return null;
+    }
+    /**
+     * 移除事件
+     * @param obj 事件对象
+     * @param type 类型
+     * @param callBack 回调 
+     */
+    static removeEventListener(obj: any, type: string, callBack: Callback): void {
+        return null;
+    }
+    /**
+     * 派发事件，若注册时存在参数的话参数优先为注册的参数，再追加这里派发的参数args
+     * @param obj 事件对象
+     * @param type 类型
+     */
+    static happen(obj: any, type: string, args: any[] = null): void {
+        return null;
+    }
+    /**
+     * 清空事件
+     * @param obj 事件对象 
+     * @param type 类型，如果为null表示全部
+     */
+    static clear(obj: any, type: string = null): void {
+        return null;
+    }
+}

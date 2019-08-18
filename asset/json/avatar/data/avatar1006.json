@@ -1,0 +1,343 @@
+{
+    "picUrls": [
+        "asset/image/avatar/官方人物素材2/僧侶.png"
+    ],
+    "oriMode": 4,
+    "refObjs": {},
+    "parts": [
+        {
+            "id": 0,
+            "showOnEditor": true,
+            "mouseEventEnabledInEditor": true
+        }
+    ],
+    "actionListArr": [
+        {
+            "id": 1,
+            "frameImageInfo": [
+                [
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            0,
+                            0,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    }
+                ],
+                [
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            0,
+                            -96,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    }
+                ],
+                [
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            0,
+                            -192,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    }
+                ],
+                [
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            0,
+                            -288,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    }
+                ]
+            ]
+        },
+        {
+            "id": 2,
+            "frameImageInfo": [
+                [
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            0,
+                            0,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    },
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            -48,
+                            0,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    },
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            -96,
+                            0,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    },
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            -144,
+                            0,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    }
+                ],
+                [
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            0,
+                            -96,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    },
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            -48,
+                            -96,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    },
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            -96,
+                            -96,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    },
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            -144,
+                            -96,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    }
+                ],
+                [
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            0,
+                            -192,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    },
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            -48,
+                            -192,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    },
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            -96,
+                            -192,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    },
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            -144,
+                            -192,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    }
+                ],
+                [
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            0,
+                            -288,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    },
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            -48,
+                            -288,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    },
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            -96,
+                            -288,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    },
+                    {
+                        "picUrlIndex": 0,
+                        "rect": [
+                            -144,
+                            -288,
+                            48,
+                            96
+                        ],
+                        "x": -24,
+                        "y": -96,
+                        "width": 48,
+                        "height": 96,
+                        "rotation": 0,
+                        "alpha": 1
+                    }
+                ]
+            ]
+        }
+    ],
+    "id": 1006
+}

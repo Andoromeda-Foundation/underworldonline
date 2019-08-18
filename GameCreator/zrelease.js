@@ -1,0 +1,1 @@
+Config.RELEASE_MODE = true;

@@ -1,0 +1,79 @@
+﻿/**
+ * Created by kds on 2017/1/8 04:13:42
+ * 关于网络传输
+ *  -- websocket
+ *  -- socket 暂未支持
+ */
+/**
+ * 获取网页源代码
+ * 如若连接不上的话会有2秒的停顿
+ * @param url 网址，可带参数
+ * @return 源代码
+ */
+function http_get(url:string):string{
+    // c++ Implement
+}
+/**
+ * 访问网页 post方式
+ * 如若连接不上的话会有2秒的停顿
+ * @param host 网址：如 www.kdsrpg.com 不能包含http://
+ * @param port 端口，网页默认端口=80
+ * @param page 页面 如 ui/test.php
+ * @param postData post传输的参数 如 asd=666&ppp=123
+ * @return 返回结果
+ */
+function http_post(host:string,port:number,page:string,postData:string):string{
+    // c++ Implement
+}
+/**
+ * websocket启动
+ * 底层采用WINDOWS-IOCP
+ * @param port 开放的端口
+ * @param maxConnections 允许的最大连接数
+ * @return 是否启动成功
+ */
+function websocket_start(port:number,maxConnections:number):boolean{
+    // c++ Implement
+}
+/**
+ * 注册可用于接收消息的ID，未注册的消息将不会入消息库中
+ * @param msgID
+ */
+function websocket_regMsgID(msgID:number):void{
+    // c++ Implement
+}
+/**
+ * 从来自客户端的消息库中获取某个msgID的全部消息
+ * msgID=0且消息内容为onClientConnected的消息 = 当一个用户连接成功时
+ * msgID=0且消息内容为onClientDisconnected的消息 = 当客户端断开连接后
+ * msgID=0且消息内容为onClientReconnected的消息 = 挤号 挤号的话一般可以直接根据onClientConnected消息，但之后也会收到一条onClientReconnected的消息
+ * @param msgID 消息ID
+ * @param clientKey用户唯一key,msg消息
+ * @return 消息内容 [{key,msg},{key,msg}]  若没有拿到消息则返回null    ["key,content","key,content"]
+ */
+function websocket_getClientMsg(msgID:number):string[]{
+    // c++ Implement
+}
+/**
+ * 发送消息给某个客户端
+ * @param clientKey 客户端key
+ * @param msg 消息内容
+ */
+function websocket_sendClientMsg(clientKey:string,msg:string){
+    // c++ Implement
+}
+/**
+ * 获取客户端的信息
+ * @param clientKey 客户端key
+ * @return [IP,PORT]
+ */
+function websocket_getClientInfo(clientKey:string):[string,number]{
+    // c++ Implement
+}
+/**
+ * 获取客户端的信息
+ * @param clientKey 客户端key
+ */
+function websocket_kickOffLine(clientKey:string):void{
+	// c++ Implement
+}

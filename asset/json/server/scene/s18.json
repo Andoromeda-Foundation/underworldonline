@@ -1,0 +1,183 @@
+{
+    "sceneObjects": [
+        null,
+        {
+            "modelID": 1,
+            "index": 1,
+            "name": "",
+            "x": 528,
+            "y": 400,
+            "z": 0,
+            "avatarID": 1001,
+            "avatarOri": 2,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": true,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        }
+    ],
+    "commands": [
+        [
+            72,
+            1
+        ],
+        [
+            17,
+            "120",
+            0,
+            false
+        ],
+        [
+            19,
+            "更改变量9",
+            "if(triggerPlayer){\r\n    triggerPlayer.variable.setVariable(9,6665)\r\n}",
+            "if (triggerPlayer) {\n    triggerPlayer.variable.setVariable(9, 6665);\n}\n"
+        ],
+        [
+            14
+        ],
+        [
+            22,
+            -2,
+            0,
+            [
+                [
+                    5
+                ],
+                [
+                    5
+                ],
+                [
+                    5
+                ],
+                [
+                    5
+                ],
+                [
+                    5
+                ],
+                [
+                    5
+                ],
+                [
+                    5
+                ],
+                [
+                    5
+                ],
+                [
+                    5
+                ],
+                [
+                    5
+                ],
+                [
+                    5
+                ],
+                [
+                    5
+                ],
+                [
+                    5
+                ],
+                [
+                    5
+                ],
+                [
+                    5
+                ]
+            ]
+        ],
+        [
+            23
+        ],
+        [
+            11,
+            1,
+            null,
+            "",
+            3,
+            -2,
+            "<span style='color:#FfFffF'>dasdsadsadss</span>"
+        ]
+    ],
+    "behaviors": [
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ]
+    ],
+    "events": [
+        {
+            "condition": [],
+            "click": [],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [],
+            "collide": [
+                [
+                    11,
+                    1,
+                    null,
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FfFffF'>NPC碰触！</span>"
+                ],
+                [
+                    22,
+                    -2,
+                    0,
+                    [
+                        [
+                            4
+                        ],
+                        [
+                            4
+                        ],
+                        [
+                            4
+                        ],
+                        [
+                            4
+                        ],
+                        [
+                            4
+                        ]
+                    ]
+                ],
+                [
+                    23
+                ]
+            ],
+            "update": []
+        }
+    ],
+    "id": 18
+}

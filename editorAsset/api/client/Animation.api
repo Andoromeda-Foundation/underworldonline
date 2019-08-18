@@ -1,0 +1,117 @@
+/**
+ * 动画 显示对象
+ * 
+ * Created by feng on 2019-02-22 11:36:06.
+ */
+class Animation extends GameSprite {
+    /**
+     * 执行 onRender 时派发
+     */
+    static RENDER = "RENDER";
+    /**
+     * 动画播放完成事件
+     */
+    static PLAY_COMPLETED = "playCompleted";
+    /**
+     * 动画ID
+     */
+    id:number;
+    /**
+     * 同步加载，当资源存在时，当前帧则立刻显示
+     */
+    syncLoadWhenAssetExist: boolean;
+    /**
+     * 频率
+     */
+    fps = 20;
+    /**
+     * 禁音模式
+     */
+    silentMode: boolean = false;
+    /**
+     * 所属场景对象，会因为靠近镜头而声音更响
+     */
+    sceneObject: ClientSceneObject;
+    /**
+     * 是否显示命中效果
+     */
+    showHitEffect: boolean;
+    /**
+    * 当前帧
+    */
+    currentFrame: number;
+    /**
+     * 当前播放的动画是否循环
+     */
+    loop: boolean = false;
+    /**
+     * 是否正在播放中
+     */
+    get isPlaying() { return null; }
+    /**
+     * 目标对象
+     */
+    target: GameSprite;
+    /**
+     * 总帧数
+     */
+    get totalFrame(): number { return null; }
+    /**
+    * 是否是粒子
+    */
+    isParticle: boolean = false;
+    //------------------------------------------------------------------------------------------------------
+    // 
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 播放粒子动画
+     */
+    playParticleAni() {
+
+    }
+    /**
+     * 停止播放粒子动画
+     */
+    stopParticleAni() {
+
+    }
+    /**
+     * 添加动画到指定位置
+     * 
+     * @param parent 父容器 
+     * @param target 目标对象
+     * @param lowLayer 动画底层
+     * @param highLayer 动画高层
+     */
+    addToGameSprite(parent: Sprite, target: GameSprite = null, lowLayer: Sprite = null, highLayer: Sprite = null) {
+
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 播放
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 跳转某帧进行播放，越界会自动取模（如帧长度10，播放13则是播放3）
+     * @frame [可选]跳转AVATAR的帧数 单位：帧 默认从头开始
+     * @isHit [可选]默认命中模式，动画内部的元素存在仅在命中时显示的模式，可通过设置此项为false来屏蔽掉命中时效果
+     * @loop [可选]是否循环播放 默认false
+     */
+    gotoAndPlay(frame: number = 0): void {
+
+    }
+    /**
+     * 在AVATAR的当前帧数开始播放
+     */
+    play(): void {
+
+    }
+    /**
+     * 停止动画
+     * @param frame [可选] 默认值=0 指定停留的帧数
+     */
+    stop(frame: number = 0): void {
+
+    }
+    dispose() {
+
+    }
+}

@@ -1,0 +1,1216 @@
+[
+    {
+        "id": 1,
+        "class": "UIButton",
+        "icon": "asset/editor/image/UIIcon/z_btn.png",
+        "name": "按钮",
+        "attributes": [
+            {
+                "enable": true,
+                "attribute": "image1",
+                "name": "mouseoutSkin",
+                "tips": "鼠标移出时图片",
+                "compType": 13
+            },
+            {
+                "enable": true,
+                "attribute": "image2",
+                "name": "mouseoverSkin",
+                "tips": "鼠标移入时图片",
+                "compType": 13
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "image3",
+                "name": "image3",
+                "tips": "",
+                "compType": 13
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "grid9",
+                "name": "grid9",
+                "tips": "",
+                "compType": 9
+            }
+        ],
+        "tips": "按钮控件"
+    },
+    {
+        "id": 2,
+        "class": "UIBitmap",
+        "icon": "asset/editor/image/UIIcon/z_pic.png",
+        "name": "图片",
+        "attributes": [
+            {
+                "enable": true,
+                "attribute": "image",
+                "name": "skin",
+                "tips": "资源皮肤路径",
+                "compType": 14
+            },
+            {
+                "enable": true,
+                "attribute": "grid9",
+                "name": "sizeGrid",
+                "tips": "九宫格(格式:上边距, 右边距,下边距,左边距)",
+                "compParam": {},
+                "compType": 9
+            }
+        ],
+        "tips": "图片控件"
+    },
+    {
+        "class": "UIRoot",
+        "icon": "asset/editor/image/UIIcon/z_box.png",
+        "name": "容器",
+        "attributes": [
+            {
+                "enable": true,
+                "attribute": "enabledLimitView",
+                "name": "限制显示在区域内",
+                "tips": "子对象是否在限制区域内显示",
+                "compParam": {},
+                "compType": 15
+            },
+            {
+                "enable": true,
+                "attribute": "scrollShowType",
+                "name": "scrollShowType",
+                "tips": "滚动条显示状态",
+                "compType": 2,
+                "compParam": {
+                    "items": "不显示,显示,自动显示"
+                }
+            },
+            {
+                "enable": true,
+                "attribute": "hScrollBar",
+                "name": "hScrollBarSkin",
+                "tips": "横向滚动条滑块皮肤",
+                "compType": 13,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "hScrollBg",
+                "name": "hScrollBarBg",
+                "tips": "横向滚动条背景皮肤",
+                "compType": 13,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "vScrollBar",
+                "name": "vScrollBarSkin",
+                "tips": "纵向滚动条滑块皮肤",
+                "compType": 13,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "vScrollBg",
+                "name": "vScrollBarBg",
+                "tips": "纵向滚动条背景皮肤",
+                "compType": 13,
+                "compParam": {}
+            },
+            {
+                "enable": false,
+                "attribute": "scrollWidth",
+                "name": "scrollWidth",
+                "tips": "滚动条宽度",
+                "compType": 0,
+                "compParam": {}
+            },
+            {
+                "enable": false,
+                "attribute": "guiID",
+                "name": "guiID",
+                "tips": "界面ID",
+                "compParam": {}
+            }
+        ],
+        "tips": "容器控件"
+    },
+    {
+        "class": "UIString",
+        "icon": "asset/editor/image/UIIcon/z_txt.png",
+        "name": "文本",
+        "attributes": [
+            {
+                "enable": true,
+                "attribute": "text",
+                "name": "text",
+                "tips": "文本内容",
+                "compType": 10,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "fontSize",
+                "name": "fontSize",
+                "tips": "字体大小",
+                "compType": 1,
+                "compParam": {
+                    "minLimit": "12",
+                    "maxLimit": "50",
+                    "tickValue": "1",
+                    "limitInteger": true,
+                    "lockTextLimit": false
+                }
+            },
+            {
+                "enable": true,
+                "attribute": "color",
+                "name": "color",
+                "tips": "字体颜色",
+                "compType": 12,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "bold",
+                "name": "bold",
+                "tips": "是否粗体",
+                "compType": 15,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "align",
+                "name": "align",
+                "tips": "水平对齐方式",
+                "compParam": {
+                    "items": "居左,居中,居右"
+                },
+                "compType": 2
+            },
+            {
+                "enable": true,
+                "attribute": "leading",
+                "name": "leading",
+                "tips": "行间距",
+                "compType": 0,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "font",
+                "name": "font",
+                "tips": "字体",
+                "compType": 9,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "wordWrap",
+                "name": "wordWrap",
+                "tips": "是否自动换行",
+                "compType": 15,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "overflow",
+                "name": "overflow",
+                "tips": "文本超出时处理方式",
+                "compType": 2,
+                "compParam": {
+                    "items": "显示,隐藏"
+                }
+            },
+            {
+                "enable": true,
+                "attribute": "valign",
+                "name": "valign",
+                "tips": "竖直对齐方式",
+                "compType": 2,
+                "compParam": {
+                    "items": "居上,居中,居下"
+                }
+            },
+            {
+                "compParam": {},
+                "enable": false,
+                "attribute": "varID",
+                "name": "varID",
+                "tips": "",
+                "compType": 0
+            }
+        ],
+        "tips": "文本控件"
+    },
+    {
+        "class": "UIVariable",
+        "icon": "asset/editor/image/UIIcon/z_var.png",
+        "name": "变量",
+        "attributes": [
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "varID",
+                "name": "varID",
+                "tips": "",
+                "compType": 6
+            },
+            {
+                "enable": false,
+                "attribute": "text",
+                "name": "text",
+                "tips": "文本内容",
+                "compType": 6,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "fontSize",
+                "name": "fontSize",
+                "tips": "字体大小",
+                "compType": 1,
+                "compParam": {
+                    "minLimit": 0,
+                    "maxLimit": "100",
+                    "tickValue": "1",
+                    "limitInteger": true,
+                    "lockTextLimit": false
+                }
+            },
+            {
+                "enable": true,
+                "attribute": "color",
+                "name": "color",
+                "tips": "字体颜色",
+                "compType": 12,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "bold",
+                "name": "bold",
+                "tips": "是否粗体",
+                "compType": 15,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "align",
+                "name": "align",
+                "tips": "水平对齐方式",
+                "compParam": {
+                    "items": "居左,居中,居右"
+                },
+                "compType": 2
+            },
+            {
+                "enable": true,
+                "attribute": "leading",
+                "name": "leading",
+                "tips": "行间距",
+                "compType": 1,
+                "compParam": {
+                    "minLimit": 0,
+                    "maxLimit": "10",
+                    "tickValue": 1,
+                    "limitInteger": true,
+                    "lockTextLimit": false
+                }
+            },
+            {
+                "enable": true,
+                "attribute": "font",
+                "name": "font",
+                "tips": "字体",
+                "compType": 9,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "wordWrap",
+                "name": "wordWrap",
+                "tips": "是否自动换行",
+                "compType": 15,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "overflow",
+                "name": "overflow",
+                "tips": "文本超出时处理方式",
+                "compType": 2,
+                "compParam": {
+                    "items": "出现,隐藏"
+                }
+            },
+            {
+                "enable": true,
+                "attribute": "valign",
+                "name": "valign",
+                "tips": "竖直对齐方式",
+                "compType": 2,
+                "compParam": {
+                    "items": "居上,居中,居下"
+                }
+            }
+        ],
+        "tips": "变量控件"
+    },
+    {
+        "class": "UIAvatar",
+        "icon": "asset/editor/image/UIIcon/z_ava.png",
+        "name": "行走图",
+        "attributes": [
+            {
+                "enable": true,
+                "attribute": "avatarID",
+                "name": "avatar",
+                "tips": "行走图",
+                "compParam": {},
+                "compType": 3
+            },
+            {
+                "enable": true,
+                "attribute": "scaleNumber",
+                "name": "scale",
+                "tips": "缩放",
+                "compType": 1,
+                "compParam": {
+                    "minLimit": "0.1",
+                    "maxLimit": "20",
+                    "tickValue": "0.1",
+                    "limitInteger": false,
+                    "lockTextLimit": false
+                }
+            },
+            {
+                "enable": true,
+                "attribute": "orientationIndex",
+                "name": "ori",
+                "tips": "面向",
+                "compType": 1,
+                "compParam": {
+                    "items": "4-左,7-左上,8-上,9-右上,6-右,3-右下,2-下,1-左下",
+                    "minLimit": "0",
+                    "maxLimit": "7",
+                    "tickValue": 1,
+                    "limitInteger": true,
+                    "lockTextLimit": true
+                }
+            },
+            {
+                "enable": true,
+                "attribute": "avatarInterval",
+                "name": "playInterval",
+                "tips": "播放间隔",
+                "compType": 1,
+                "compParam": {
+                    "minLimit": "1",
+                    "maxLimit": "120",
+                    "tickValue": "1",
+                    "limitInteger": true,
+                    "lockTextLimit": true
+                }
+            },
+            {
+                "enable": true,
+                "attribute": "isPlay",
+                "name": "isPlay",
+                "tips": "是否播放",
+                "compType": 15,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "avatarFrame",
+                "name": "startFrame",
+                "tips": "起始帧数",
+                "compType": 0,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "actionID",
+                "name": "actionID",
+                "tips": "动作",
+                "compType": 21,
+                "compParam": {}
+            }
+        ],
+        "tips": "行走图控件"
+    },
+    {
+        "class": "UIAnimation",
+        "icon": "asset/editor/image/UIIcon/z_ani.png",
+        "name": "动画",
+        "attributes": [
+            {
+                "enable": true,
+                "attribute": "animationID",
+                "name": "animation",
+                "tips": "动画源",
+                "compType": 4,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "playType",
+                "name": "playType",
+                "tips": "播放模式",
+                "compType": 2,
+                "compParam": {
+                    "items": "不播放,播放一次,循环播放"
+                }
+            },
+            {
+                "enable": true,
+                "attribute": "scaleNumber",
+                "name": "scale",
+                "tips": "缩放",
+                "compType": 1,
+                "compParam": {
+                    "minLimit": "0.1",
+                    "maxLimit": "20",
+                    "tickValue": "0.1",
+                    "limitInteger": false,
+                    "lockTextLimit": false
+                }
+            }
+        ],
+        "tips": "动画控件"
+    },
+    {
+        "class": "UIInput",
+        "icon": "asset/editor/image/UIIcon/z_txtInput.png",
+        "name": "可输入文本",
+        "attributes": [
+            {
+                "enable": false,
+                "attribute": "wordWrap",
+                "name": "wordWrap",
+                "tips": "是否自动换行",
+                "compType": 16,
+                "compParam": {}
+            },
+            {
+                "enable": false,
+                "attribute": "overflow",
+                "name": "overflow",
+                "tips": "超出文本时操作",
+                "compType": 0,
+                "compParam": {}
+            },
+            {
+                "enable": false,
+                "attribute": "font",
+                "name": "font",
+                "tips": "字体",
+                "compType": 9,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "bold",
+                "name": "bold",
+                "tips": "是否粗体",
+                "compType": 15,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "align",
+                "name": "align",
+                "tips": "水平对齐方式",
+                "compType": 2,
+                "compParam": {
+                    "items": "居左对齐,居中对齐,居右对齐"
+                }
+            },
+            {
+                "enable": false,
+                "attribute": "leading",
+                "name": "leading",
+                "tips": "行间距",
+                "compType": 0,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "fontSize",
+                "name": "fontSize",
+                "tips": "字体大小",
+                "compType": 1,
+                "compParam": {
+                    "minLimit": 0,
+                    "maxLimit": "100",
+                    "tickValue": "1",
+                    "limitInteger": true,
+                    "lockTextLimit": true
+                }
+            },
+            {
+                "enable": true,
+                "attribute": "color",
+                "name": "color",
+                "tips": "字体颜色",
+                "compType": 12,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "text",
+                "name": "text",
+                "tips": "默认文本内容",
+                "compParam": {},
+                "compType": 9
+            },
+            {
+                "enable": true,
+                "attribute": "restrict",
+                "name": "restrict",
+                "tips": "限制输入的字符",
+                "compParam": {},
+                "compType": 9
+            },
+            {
+                "enable": true,
+                "attribute": "inputMode",
+                "name": "inputMode",
+                "tips": "输入类型",
+                "compParam": {
+                    "items": "文本模式,密码模式,数字模式,多行文本"
+                },
+                "compType": 2
+            },
+            {
+                "enable": true,
+                "attribute": "valign",
+                "name": "valign",
+                "tips": "竖直对齐方式",
+                "compType": 2,
+                "compParam": {
+                    "items": "居上,居中,居下"
+                }
+            },
+            {
+                "compParam": {},
+                "enable": false,
+                "attribute": "varID",
+                "name": "varID",
+                "tips": "",
+                "compType": 0
+            }
+        ],
+        "tips": "可输入文本控件"
+    },
+    {
+        "class": "UICheckBox",
+        "icon": "asset/editor/image/UIIcon/z_checkBox.png",
+        "name": "CheckBox",
+        "attributes": [
+            {
+                "enable": true,
+                "attribute": "selected",
+                "name": "selected",
+                "tips": "是否选中",
+                "compType": 15,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "image2",
+                "name": "selectedSkin",
+                "tips": "选中时图像",
+                "compParam": {},
+                "compType": 13
+            },
+            {
+                "enable": true,
+                "attribute": "image1",
+                "name": "normalSkin",
+                "tips": "未选中时图像",
+                "compParam": {},
+                "compType": 13
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "grid9",
+                "name": "grid9",
+                "tips": "",
+                "compType": 9
+            }
+        ],
+        "tips": "复选框控件"
+    },
+    {
+        "class": "UISwitch",
+        "icon": "asset/editor/image/UIIcon/z_switch.png",
+        "name": "开关",
+        "attributes": [
+            {
+                "enable": true,
+                "attribute": "selected",
+                "name": "switch",
+                "tips": "绑定的开关",
+                "compType": 7,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "image2",
+                "name": "openSkin",
+                "tips": "开关开启时图像",
+                "compParam": {},
+                "compType": 13
+            },
+            {
+                "enable": true,
+                "attribute": "image1",
+                "name": "closeSkin",
+                "tips": "开关关闭时图像",
+                "compParam": {},
+                "compType": 13
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "grid9",
+                "name": "grid9",
+                "tips": "",
+                "compType": 9
+            },
+            {
+                "compParam": {},
+                "enable": false,
+                "attribute": "switchID",
+                "name": "switchID",
+                "tips": "",
+                "compType": 0
+            }
+        ],
+        "tips": "开关控件"
+    },
+    {
+        "class": "UITabBox",
+        "icon": "asset/editor/image/UIIcon/z_tab.png",
+        "name": "UITabBox",
+        "attributes": [
+            {
+                "enable": true,
+                "attribute": "selectedIndex",
+                "name": "selectedIndex",
+                "tips": "选中项索引",
+                "compType": 0,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "itemImage1",
+                "name": "normalSkin",
+                "tips": "标签未选中时显示的图片",
+                "compParam": {},
+                "compType": 13
+            },
+            {
+                "enable": true,
+                "attribute": "itemImage2",
+                "name": "selectedSkin",
+                "tips": "标签选中时显示的图片",
+                "compParam": {},
+                "compType": 13
+            },
+            {
+                "enable": true,
+                "attribute": "itemWidth",
+                "name": "itemWidth",
+                "tips": "标签的宽度",
+                "compParam": {},
+                "compType": 0
+            },
+            {
+                "enable": true,
+                "attribute": "itemHeight",
+                "name": "itemHeight",
+                "tips": "标签的高度",
+                "compParam": {},
+                "compType": 0
+            },
+            {
+                "enable": true,
+                "attribute": "spacing",
+                "name": "spacing",
+                "tips": "标签间距",
+                "compType": 0,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "labelBold",
+                "name": "labelBold",
+                "tips": "文本是否粗体",
+                "compParam": {},
+                "compType": 15
+            },
+            {
+                "enable": true,
+                "attribute": "labelAlign",
+                "name": "labelAlign",
+                "tips": "文本水平对齐方式",
+                "compType": 2,
+                "compParam": {
+                    "items": "居左,居中,居右"
+                }
+            },
+            {
+                "enable": true,
+                "attribute": "labelSize",
+                "name": "labelSize",
+                "tips": "文本字体大小",
+                "compType": 1,
+                "compParam": {
+                    "minLimit": "1",
+                    "maxLimit": "100",
+                    "tickValue": "1",
+                    "limitInteger": true,
+                    "lockTextLimit": true
+                }
+            },
+            {
+                "enable": true,
+                "attribute": "items",
+                "name": "items",
+                "tips": "标签项",
+                "compParam": {},
+                "compType": 9
+            },
+            {
+                "enable": true,
+                "attribute": "rowMode",
+                "name": "rowMode",
+                "tips": "是否横向排列",
+                "compType": 15,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "labelSelectedColor",
+                "name": "selectedLabelColor",
+                "tips": "选中时文本颜色",
+                "compType": 12,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "labelColor",
+                "name": "normallabelColor",
+                "tips": "未选中时颜色",
+                "compType": 12,
+                "compParam": {}
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "grid9",
+                "name": "grid9",
+                "tips": "",
+                "compType": 9
+            }
+        ],
+        "tips": "标签选项卡控件"
+    },
+    {
+        "class": "UISlider",
+        "icon": "asset/editor/image/UIIcon/z_slider.png",
+        "name": "滑块控件",
+        "attributes": [
+            {
+                "enable": true,
+                "attribute": "image1",
+                "name": "bgSkin",
+                "tips": "滑块背景图",
+                "compType": 13,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "image2",
+                "name": "barSkin",
+                "tips": "滑块图",
+                "compType": 13,
+                "compParam": {}
+            },
+            {
+                "enable": true,
+                "attribute": "step",
+                "name": "step",
+                "tips": "步进值",
+                "compParam": {},
+                "compType": 0
+            },
+            {
+                "enable": true,
+                "attribute": "min",
+                "name": "min",
+                "tips": "最小值",
+                "compParam": {},
+                "compType": 0
+            },
+            {
+                "enable": true,
+                "attribute": "max",
+                "name": "max",
+                "tips": "最大值",
+                "compParam": {},
+                "compType": 0
+            },
+            {
+                "enable": true,
+                "attribute": "value",
+                "name": "value",
+                "tips": "值",
+                "compParam": {},
+                "compType": 0
+            },
+            {
+                "enable": true,
+                "attribute": "transverseMode",
+                "name": "transverseMode",
+                "tips": "是否是横向模式",
+                "compParam": {},
+                "compType": 15
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "grid9",
+                "name": "grid9",
+                "tips": "",
+                "compType": 9
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "bgGrid9",
+                "name": "bgGrid9",
+                "tips": "",
+                "compType": 9
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "blockFillMode",
+                "name": "blockFillMode",
+                "tips": "填充模式，可用于制作进度条效果。启用该模式后无法使用光标拖拽滑块。",
+                "compType": 15
+            }
+        ],
+        "tips": "滑块控件"
+    },
+    {
+        "class": "UIGUI",
+        "icon": "comp/bg.png",
+        "name": "UI界面",
+        "attributes": [
+            {
+                "enable": true,
+                "attribute": "guiID",
+                "name": "guiID",
+                "tips": "界面ID",
+                "compType": 5,
+                "compParam": {}
+            },
+            {
+                "enable": false,
+                "attribute": "root",
+                "name": "root",
+                "tips": "根容器",
+                "compParam": {}
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "instanceClassName",
+                "name": "实现的类",
+                "tips": "",
+                "compType": 9
+            }
+        ],
+        "tips": "UI界面控件"
+    },
+    {
+        "class": "UIList",
+        "icon": "comp/bg.png",
+        "name": "List",
+        "tips": "列表组件",
+        "attributes": [
+            {
+                "compParam": {},
+                "enable": false,
+                "attribute": "itemModelClass",
+                "name": "itemModelClass",
+                "tips": ""
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "itemModelGUI",
+                "name": "项模型",
+                "tips": "",
+                "compType": 5
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "selectEnable",
+                "name": "selectEnable",
+                "tips": "",
+                "compType": 15
+            },
+            {
+                "compParam": {
+                    "minLimit": "1",
+                    "maxLimit": "20",
+                    "tickValue": "1",
+                    "limitInteger": true,
+                    "lockTextLimit": false
+                },
+                "enable": true,
+                "attribute": "repeatX",
+                "name": "repeatX",
+                "tips": "",
+                "compType": 1
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "itemWidth",
+                "name": "itemWidth",
+                "tips": "",
+                "compType": 0
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "itemHeight",
+                "name": "itemHeight",
+                "tips": "",
+                "compType": 0
+            },
+            {
+                "compParam": {
+                    "minLimit": "0",
+                    "maxLimit": "100",
+                    "tickValue": 1,
+                    "limitInteger": true,
+                    "lockTextLimit": false
+                },
+                "enable": true,
+                "attribute": "spaceX",
+                "name": "spaceX",
+                "tips": "",
+                "compType": 1
+            },
+            {
+                "compParam": {
+                    "minLimit": 0,
+                    "maxLimit": "100",
+                    "tickValue": 1,
+                    "limitInteger": true,
+                    "lockTextLimit": false
+                },
+                "enable": true,
+                "attribute": "spaceY",
+                "name": "spaceY",
+                "tips": "",
+                "compType": 1
+            },
+            {
+                "compParam": {
+                    "items": "不显示,显示,自动显示"
+                },
+                "enable": true,
+                "attribute": "scrollShowType",
+                "name": "scrollShowType",
+                "tips": "",
+                "compType": 2
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "hScrollBar",
+                "name": "hScrollBar",
+                "tips": "",
+                "compType": 13
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "hScrollBg",
+                "name": "hScrollBg",
+                "tips": "",
+                "compType": 13
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "vScrollBar",
+                "name": "vScrollBar",
+                "tips": "",
+                "compType": 13
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "vScrollBg",
+                "name": "vScrollBg",
+                "tips": "",
+                "compType": 13
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "scrollWidth",
+                "name": "scrollWidth",
+                "tips": "",
+                "compType": 0
+            },
+            {
+                "compParam": {},
+                "enable": false,
+                "attribute": "guiID",
+                "name": "guiID",
+                "tips": ""
+            },
+            {
+                "compParam": {},
+                "enable": false,
+                "attribute": "items",
+                "name": "items",
+                "tips": ""
+            },
+            {
+                "compParam": {},
+                "enable": false,
+                "attribute": "length",
+                "name": "length",
+                "tips": "",
+                "compType": 0
+            },
+            {
+                "compParam": {},
+                "enable": false,
+                "attribute": "enabledLimitView",
+                "name": "enabledLimitView",
+                "tips": "",
+                "compType": 16
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "selectImageURL",
+                "name": "selectImageURL",
+                "tips": "",
+                "compType": 13
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "selectImageGrid9",
+                "name": "selectImageGrid9",
+                "tips": "",
+                "compType": 9
+            },
+            {
+                "compParam": {
+                    "minLimit": 0,
+                    "maxLimit": "1",
+                    "tickValue": "0.01",
+                    "limitInteger": false,
+                    "lockTextLimit": true
+                },
+                "enable": true,
+                "attribute": "selectedImageAlpha",
+                "name": "selectedImageAlpha",
+                "tips": "",
+                "compType": 1
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "selectedImageOnTop",
+                "name": "selectedImageOnTop",
+                "tips": "",
+                "compType": 15
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "overImageURL",
+                "name": "overImageURL",
+                "tips": "",
+                "compType": 13
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "overImageGrid9",
+                "name": "overImageGrid9",
+                "tips": "",
+                "compType": 9
+            },
+            {
+                "compParam": {
+                    "minLimit": 0,
+                    "maxLimit": "1",
+                    "tickValue": "0.01",
+                    "limitInteger": false,
+                    "lockTextLimit": true
+                },
+                "enable": true,
+                "attribute": "overImageAlpha",
+                "name": "overImageAlpha",
+                "tips": "",
+                "compType": 1
+            },
+            {
+                "compParam": {},
+                "enable": true,
+                "attribute": "overImageOnTop",
+                "name": "overImageOnTop",
+                "tips": "",
+                "compType": 15
+            },
+            {
+                "compParam": {},
+                "enable": false,
+                "attribute": "selectedIndex",
+                "name": "selectedIndex",
+                "tips": "",
+                "compType": 0
+            },
+            {
+                "compParam": {},
+                "enable": false,
+                "attribute": "selectedItem",
+                "name": "selectedItem",
+                "tips": ""
+            },
+            {
+                "compParam": {},
+                "enable": false,
+                "attribute": "overImage",
+                "name": "overImage",
+                "tips": ""
+            },
+            {
+                "compParam": {},
+                "enable": false,
+                "attribute": "selectImage",
+                "name": "selectImage",
+                "tips": ""
+            }
+        ]
+    }
+]

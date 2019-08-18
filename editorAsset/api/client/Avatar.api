@@ -1,0 +1,231 @@
+/**
+ * AVATAR 显示对象
+ * 根据动作、部位、方向、帧来显示当前的图像
+ * 
+ * Created by 黑暗之神KDS
+ */
+class Avatar extends GameSprite {
+    /**
+     * 动作播放完毕事件，每当该动作播放完一次则抛出此事件
+     */
+    static EVENT_ACTION_PLAY_COMPLETED:string = "Avatar_EVENT_PLAY_COMPLETED";
+    /**
+     * AVATAR唯一ID，对应制作数据ID
+     */
+    get id(): number { return null; };
+    /**
+     * 同步加载，当资源存在时，当前帧则立刻显示
+     */
+    syncLoadWhenAssetExist:boolean;
+    /**
+     * 方向模式 1 2 3 4 5 8 其中1、3、5会自动镜像翻转
+     */
+    get oriMode(): number { return null; };
+    /**
+     * 频率
+     */
+    get playInterval(): number { return 5; };
+    /**
+     * 固定朝向
+     */
+    fixedOrientation: boolean;
+    /**
+     * 参考点设置 id => AvatarRefObj
+     */
+    refObjs = {};
+    //------------------------------------------------------------------------------------------------------
+    // 构造和销毁
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 构造函数
+     */
+    constructor() {
+        super();
+    }
+    /**
+     * 销毁
+     */
+    dispose(): void {
+
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 朝向
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 设置朝向，参考小键盘方向
+     * 设置一个无效的朝向将忽略此次更改
+     * @v 朝向
+     * 7 8 9
+     * 4 + 6
+     * 1 2 3
+     */
+    set orientation(v: number) {
+
+    }
+    get orientation(): number {
+        return null;
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 动作
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 设置动作，根据索引
+     * 设置一个无效的动作将忽略此次更改
+     * @param index 动作索引
+     */
+    set actionIndex(index: number) {
+
+    }
+    get actionIndex(): number {
+        return null;
+    }
+    /**
+     * 设置动作，根据动作ID
+     * @param id 动作ID
+     */
+    set actionID(id: number) {
+
+    }
+    get actionID(): number {
+        return null;
+    }
+    /**
+     * 获取动作列表
+     */
+    get actionList(): AvatarAction[] {
+        return null;
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 部位
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 换部位，若该部位不存在将会新增部位，层次依赖根据partIndex的顺序决定
+     * @avatar 对应的AVATAR显示对象
+     * @partIndex 部位Index
+     */
+    changePart(avatar: Avatar, partIndex: number): void {
+
+    }
+    /**
+     * 添加部位，将该部位放置当前层级最高层
+     * @avatar 对应的AVATAR显示对象
+     * @partIndex [可选]插入的位置，默认值-1表示自动插入至最上层
+     * @return partIndex 部位索引
+     */
+    addPart(avatar: Avatar, partIndex: number = -1): number {
+        return null;
+    }
+    /**
+     * 移除部位，移除后，后面的部位索引会往前减少1
+     * 如果该部位不再使用，请将isDispose设置为true
+     * @param avatar 对应的AVATAR显示对象
+     * @param isDispose [可选] 默认值=false 是否销毁
+     * @return [number] 部位索引
+     */
+    removePart(avatar: Avatar, isDispose: boolean = false): number {
+        return null;
+    }
+    /**
+     * 移除部位,移除后，后面的部位索引会往前减少1
+     * @param partIndex 
+     * @param isDispose [可选] 默认值=false 是否销毁
+     */
+    removePartAt(partIndex: number, isDispose: boolean = false): void {
+
+    }
+    /**
+     * 根据名称获取AVATAR-PART
+     * @param avatarName 
+     * @return [M2Avatar] 
+     */
+    getPartByName(avatarName: string): Avatar {
+        return null;
+    }
+    /**
+     * 根据索引获取AVATAR-PART
+     * @param avatarIndex 
+     * @return [Avatar] 
+     */
+    getPartAt(avatarIndex: number): Avatar {
+        return null;
+    }
+    /**
+     * 根据ID获取AVATAR-PART
+     * @param avatarID
+     * @return [Avatar] 
+     */
+    getPartByID(avatarID: number): Avatar {
+        return null;
+    }
+    /**
+     * 根据ID获取AVATAR-PART
+     * @param avatarID
+     */
+    getPartIndex(avatar: Avatar): number {
+        return null;
+    }
+    /**
+     * 返回部位的个数
+     */
+    get PartLength(): number {
+        return null;
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 播放
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 设置播放频率
+     */
+    setPlayInterval(v: number) {
+
+    }
+    /**
+     * 设置帧
+     * @param v 帧数
+     * @param immediatelyRender [可选] 默认值=true 立刻刷新
+     */
+    setCurrentFrame(v: number, immediatelyRender: boolean = true) {
+
+    }
+    /**
+    * 获取当前帧
+    */
+    getCurrentFrame() {
+        return null;
+    }
+    /**
+     * 获取当前动作方向中的总帧数
+     */
+    get frameCount(): number {
+        return null;
+    }
+    /**
+     * 跳转某帧进行播放，越界会自动取模（如帧长度10，播放13则是播放3）
+     * @frame [可选]跳转AVATAR的帧数 单位：帧 默认从头开始
+     * @isHit [可选]默认命中模式，动画内部的元素存在仅在命中时显示的模式，可通过设置此项为false来屏蔽掉命中时效果
+     * @loop [可选]是否循环播放 默认false
+     */
+    gotoAndPlay(frame: number = 0, isHit: boolean = true, loop: boolean = false): void {
+
+    }
+    /**
+     * 在AVATAR的当前帧数开始播放
+     */
+    play(): void {
+
+    }
+    /**
+     * 停止动画
+     * @param frame [可选] 默认值=0 指定停留的帧数
+     * @param immediatelyRender [可选] 默认值=true 立刻刷新
+     */
+    stop(frame: number = 0, immediatelyRender: boolean = true): void {
+
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 
+    //------------------------------------------------------------------------------------------------------
+    hitTestPoint(x: number, y: number): boolean {
+        return null;
+    }
+}

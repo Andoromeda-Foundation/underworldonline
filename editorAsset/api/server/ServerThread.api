@@ -1,0 +1,50 @@
+/**
+ * 线程操作
+ * Created by 黑暗之神KDS on 2018-07-14 04:38:09.
+ */
+class ServerThread {
+    /**
+     * 调用指定线程的函数 
+     * @param threadID 指定的线程ID
+     * @param funcDomain 指定的域，如 ServerWrold
+     * @param funcName 指定的函数名称，如 happenVarChange
+     * @param params 参数集
+     * @param onReturn [可选] 默认值=null 函数回调，若存在则表示在指定线程中执行完毕函数后返回值
+     */
+    static callFunction(threadID: number, funcDomain: string, funcName: string, params: any[], onReturn: Callback = null): void {
+
+    }
+    /**
+     * 调用所有线程的函数
+     * @param funcDomain 指定的域，如 ServerWrold
+     * @param funcName 指定的函数名称，如 happenVarChange
+     * @param params 参数集
+     * @param excludeSelfThread [可选] 默认值=false 是否需要排除自身所在的线程
+     */
+    static callAllThreadFunction(funcDomain: string, funcName: string, params: any[], excludeSelfThread: boolean = false): void {
+       
+    }
+    /**
+     * 同步世界代码，让其他非当前线程的所有线程都执行该代码（包括主线程）
+     * 比如对修改世界数据的数组内的数据需要同步
+     * ServerWorld.data.arr[5] = 666;
+     * @param excludeSelfThread 是否排除当前线程
+     */
+    static syncCode(code: string, excludeSelfThread: boolean): void {
+
+    }
+    /**
+     * 获取当前线程
+     */
+    static get threadID(): number {
+        return null;
+    }
+    /**
+     * 获取场景所在的线程
+     * @param sceneID 
+     * @return [number] 
+     */
+    static getSceneThread(sceneID: number): number {
+        return null;
+    }
+}

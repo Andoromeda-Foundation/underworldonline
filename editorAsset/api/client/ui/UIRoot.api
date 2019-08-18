@@ -1,0 +1,42 @@
+/**
+ * UI组件：容器
+ * 相关事件
+ *  EventObject.LOADED 加载完成时候事件
+ * Created by 黑暗之神KDS on 2018-10-12 16:31:59.
+ */
+class UIRoot extends UIBase {
+    /**
+     * 是否限制区域内显示
+     */
+    enabledLimitView: boolean;
+    /**
+    * 滚动条显示模式 0-不显示 1-显示 2-自动显示
+    */
+    scrollShowType: number;
+    /**
+     * 滚动条宽度
+     */
+    scrollWidth: number;
+    /**
+    * 垂直滚动条背景皮肤
+    */
+    vScrollBg: string;
+    /**
+     * 垂直滚动条皮肤
+     */
+    vScrollBar: string;
+    /**
+     * 横向滚动条背景皮肤
+     */
+    hScrollBg: string;
+    /**
+    * 横向滚动条皮肤
+    */
+    hScrollBar: string;
+    /**
+     * 刷新滚动条根据内容区域大小
+     */
+    refresh() {
+
+    }
+}

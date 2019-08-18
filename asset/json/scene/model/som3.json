@@ -1,0 +1,14 @@
+{
+    "preLayer": [
+        {
+            "varName": "AA",
+            "type": 5,
+            "id": 1,
+            "isPreView": true,
+            "inEditorShowMode": 0
+        }
+    ],
+    "varAttributes": [],
+    "id": 3,
+    "clientCode": "class ClientSceneObject_3 extends ClientSceneObject_Base3 {\n    constructor(soData: SceneObject, scene: ClientScene){\n        super(soData,scene);\n    }\n}"
+}

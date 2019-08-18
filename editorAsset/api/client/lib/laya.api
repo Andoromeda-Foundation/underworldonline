@@ -1,0 +1,2543 @@
+/**
+ * Created by kds on 2017/1/16.
+ */
+class os {
+    /**
+     * 默认字体
+     */
+    static defaultFamily = "微软雅黑";
+    /**
+     * 获取canvas标签对象
+     * 必须在os初始化后才能够获得
+     */
+    static get canvas(): HTMLCanvasElement { return null; }
+    /**
+     * 支持的贴图最大尺寸
+     */
+    static get MAX_TEXTURE_SIZE(): number { return null; }
+    /**
+     * 添加帧循环
+     * @param onHappen onHappen(arg1,arg2,...)
+     * @param thisPtr 作用域
+     * @param args [可选]参数集合
+     */
+    static add_ENTERFRAME(onHappen: Function, thisPtr: any, args: any[] = null) { return null; }
+    /**
+     * 移除帧循环
+     * @param onHappen 利用add_ENTERFRAME注册的回调方法
+     * @param thisPtr 作用域
+     */
+    static remove_ENTERFRAME(onHappen: Function, thisPtr: any) { return null; }
+    /**
+     * 当前鼠标样式 如 os.cursor = "wait"
+     url 自定义图片 如 os.cursor = "url('icon.png'),pointer"; os.cursor = "url('icon.png'),default";
+     default	默认光标（通常是一个箭头）
+     auto	默认。浏览器设置的光标。
+     crosshair	光标呈现为十字线。
+     pointer	光标呈现为指示链接的指针（一只手）
+     move	此光标指示某对象可被移动。
+     e-resize	此光标指示矩形框的边缘可被向右（东）移动。
+     ne-resize	此光标指示矩形框的边缘可被向上及向右移动（北/东）。
+     nw-resize	此光标指示矩形框的边缘可被向上及向左移动（北/西）。
+     n-resize	此光标指示矩形框的边缘可被向上（北）移动。
+     se-resize	此光标指示矩形框的边缘可被向下及向右移动（南/东）。
+     sw-resize	此光标指示矩形框的边缘可被向下及向左移动（南/西）。
+     s-resize	此光标指示矩形框的边缘可被向下移动（南）。
+     w-resize	此光标指示矩形框的边缘可被向左移动（西）。
+     text	此光标指示文本。
+     wait	此光标指示程序正忙（通常是一只表或沙漏）。
+     help	此光标指示可用的帮助（通常是一个问号或一个气球）。
+     */
+    static setCursor(style: string) { return null; }
+
+    /**
+     * 恢复更改前的记录光标
+     */
+    static restoreCursor() { return null; }
+    /**
+     * 获取操作系统
+     * @returns Mac/Unix/Linux/Win2000/WinXP/Win2003/WinVista/Win7/other
+     */
+    static detectOS() { return null; }
+}
+/**
+ * 舞台
+ */
+var stage: Stage;
+
+
+/**
+ * 图像绘制
+ * 系统根据绘制命令来渲染图像，一次命令会产生一次渲染绘制（drawcall）。
+ * 渲染次数对性能影响较大，一般整个游戏每帧全局渲染次数控制在1000以内会较为合适
+ */
+class Graphics {
+    /**
+     * 销毁该对象
+     */
+    dispose(): void { };
+    /**
+     * 清空全部绘制命令。
+     * @param recoverCmds 是否回收绘图指令
+     */
+    clear(recoverCmds?: boolean): void { };
+    /**
+     * 绘制整张贴图
+     * @param tex 贴图
+     * @param x [可选] 默认值=0 X轴偏移量
+     * @param y [可选] 默认值=0 Y轴偏移量
+     * @param width [可选] 默认值=0 宽度 默认根据贴图宽度
+     * @param height [可选] 默认值=0 高度 默认根据贴图高度
+     * @param m [可选] 默认值=null 矩阵信息
+     * @param alpha [可选] 默认值=1 透明度
+     */
+    drawTexture(tex: Texture, x: number = 0, y: number = 0, width: number = 0, height: number = 0, m: Matrix = null, alpha: number = 1): void { };
+    /**
+     * 填充贴图，可裁剪只显示贴图的一部分
+     * @param tex 贴图
+     * @param x X轴偏移量
+     * @param y Y轴偏移量
+     * @param width [可选] 默认值=0 宽度 默认根据贴图宽度
+     * @param height [可选] 默认值=0 高度 默认根据贴图高度
+     * @param type [可选] 填充类型 repeat|repeat-x|repeat-y|no-repeat 表示平铺的循环方式
+     * @param offset [可选] 默认值=null 贴图取样的偏移量，如只绘制贴图中间的部分，则该值不是0,0点
+     */
+    fillTexture(tex: Texture, x: number, y: number, width: number = 0, height: number = 0, type: string = "repeat", offset: Point = null): void { };
+    /**
+     * 绘制文本
+     * @param text 文本内容
+     * @param x X轴偏移量
+     * @param y Y轴偏移量
+     * @param font 字号和字体 如"20px 宋体"
+     * @param color 文本颜色 如"#FFFF00"
+     * @param textAlign 对齐方式 "left"，"center"，"right" 
+     */
+    fillText(text: string, x: number, y: number, font: string, color: string, textAlign: string): void { };
+    /**
+     * 绘制线
+     * @param fromX X轴开始位置
+     * @param fromY Y轴开始位置
+     * @param toX X轴结束位置
+     * @param toY Y轴结束位置
+     * @param lineColor 颜色
+     * @param lineWidth [可选] 默认值=1 线条宽度
+     */
+    drawLine(fromX: number, fromY: number, toX: number, toY: number, lineColor: string, lineWidth: number = 1): void { };
+    /**
+     * 绘制一系列线段
+     * @param x 开始绘制的X轴位置
+     * @param y 开始绘制的Y轴位置
+     * @param points 线段的点集合 格式:[x1,y1,x2,y2,x3,y3...]
+     * @param lineColor 线段颜色
+     * @param lineWidth [可选] 默认值=1 
+     */
+    drawLines(x: number, y: number, points: number[], lineColor: string, lineWidth: number = 1): void { };
+    /**
+     * 绘制一系列曲线
+     * @param x 开始绘制的 X 轴位置
+     * @param y 开始绘制的 Y 轴位置
+     * @param points 线段的点集合，格式[startx,starty,ctrx,ctry,startx,starty...]
+     * @param lineColor 线段颜色，或者填充绘图的渐变对象
+     * @param lineWidth [可选] 默认值=1 
+     */
+    drawCurves(x: number, y: number, points: number[], lineColor: string, lineWidth: number = 1): void { };
+    /**
+     * 绘制矩形
+     * @param x 开始绘制的 X 轴位置
+     * @param y 开始绘制的 Y 轴位置
+     * @param width 矩形宽度
+     * @param height 矩形高度
+     * @param fillColor 填充颜色 
+     * @param lineColor [可选] 默认值=null 边框颜色
+     * @param lineWidth [可选] 默认值=1 边框宽度
+     */
+    drawRect(x: number, y: number, width: number, height: number, fillColor: any, lineColor: string = null, lineWidth: number = 1): void { };
+    /**
+     * 绘制圆形
+     * @param x 圆点X 轴位置
+     * @param y 圆点Y 轴位置
+     * @param radius 半径
+     * @param fillColor 填充颜色，或者填充绘图的渐变对象
+     * @param lineColor [可选] 默认值=null 边框颜色
+     * @param lineWidth [可选] 默认值=1 边框宽度 
+     */
+    drawCircle(x: number, y: number, radius: number, fillColor: string, lineColor: string = null, lineWidth: number = 1): void { };
+    /**
+     * 绘制扇形
+     * @param x 开始绘制的 X 轴位置
+     * @param y 开始绘制的 Y 轴位置
+     * @param radius 扇形半径
+     * @param startAngle 开始角度
+     * @param endAngle 结束角度
+     * @param fillColor 填充颜色
+     * @param lineColor [可选] 默认值=null 边框颜色
+     * @param lineWidth [可选] 默认值=1 边框宽度
+     */
+    drawPie(x: number, y: number, radius: number, startAngle: number, endAngle: number, fillColor: string, lineColor: string = null, lineWidth: number = 1): void { };
+    /**
+     * 绘制多边形
+     * @param x 开始绘制的 X 轴位置
+     * @param y 开始绘制的 Y 轴位置
+     * @param points 多边形的点集合 格式[x1,y1,x2,y2...]
+     * @param fillColor 填充颜色
+     * @param lineColor [可选] 默认值=null 边框颜色
+     * @param lineWidth [可选] 默认值=1 边框宽度
+     */
+    drawPoly(x: number, y: number, points: number[], fillColor: any, lineColor: string = null, lineWidth: number = 1): void { };
+}
+/**
+ * <p> <code>Matrix</code> 类表示一个转换矩阵，它确定如何将点从一个坐标空间映射到另一个坐标空间。</p>
+ * <p>您可以对一个显示对象执行不同的图形转换，方法是设置 Matrix 对象的属性，将该 Matrix 对象应用于 Transform 对象的 matrix 属性，然后应用该 Transform 对象作为显示对象的 transform 属性。这些转换函数包括平移（x 和 y 重新定位）、旋转、缩放和倾斜。</p>
+ */
+class Matrix {
+    static EMPTY: Matrix;
+    /** 用于中转使用的 <code>Matrix</code> 对象。*/
+    static TEMP: Matrix;
+    /**缩放或旋转图像时影响像素沿 x 轴定位的值。*/
+    a: number;
+    /**旋转或倾斜图像时影响像素沿 y 轴定位的值。*/
+    b: number;
+    /**旋转或倾斜图像时影响像素沿 x 轴定位的值。*/
+    c: number;
+    /**缩放或旋转图像时影响像素沿 y 轴定位的值。*/
+    d: number;
+    /**沿 x 轴平移每个点的距离。*/
+    tx: number;
+    /**沿 y 轴平移每个点的距离。*/
+    ty: number;
+    /**
+     * 使用指定参数创建新的 <code>Matrix</code> 对象。
+     * @param a		（可选）缩放或旋转图像时影响像素沿 x 轴定位的值。
+     * @param b		（可选）旋转或倾斜图像时影响像素沿 y 轴定位的值。
+     * @param c		（可选）旋转或倾斜图像时影响像素沿 x 轴定位的值。
+     * @param d		（可选）缩放或旋转图像时影响像素沿 y 轴定位的值。
+     * @param tx	（可选）沿 x 轴平移每个点的距离。
+     * @param ty	（可选）沿 y 轴平移每个点的距离。
+     */
+    constructor(a?: number, b?: number, c?: number, d?: number, tx?: number, ty?: number) { };
+    /**
+     * 将本矩阵设置为单位矩阵。
+     * @return 返回当前矩形。
+     */
+    identity(): Matrix { return null };
+    /**
+     * 设置沿 x 、y 轴平移每个点的距离。
+     * @param	x 沿 x 轴平移每个点的距离。
+     * @param	y 沿 y 轴平移每个点的距离。
+     * @return	返回对象本身
+     */
+    setTranslate(x: number, y: number): Matrix { return null };
+    /**
+     * 沿 x 和 y 轴平移矩阵，平移的变化量由 x 和 y 参数指定。
+     * @param	x 沿 x 轴向右移动的量（以像素为单位）。
+     * @param	y 沿 y 轴向下移动的量（以像素为单位）。
+     * @return 返回此矩形对象。
+     */
+    translate(x: number, y: number): Matrix { return null };
+    /**
+     * 对矩阵应用缩放转换。
+     * @param	x 用于沿 x 轴缩放对象的乘数。
+     * @param	y 用于沿 y 轴缩放对象的乘数。
+     */
+    scale(x: number, y: number): void { };
+    /**
+     * 对 Matrix 对象应用旋转转换。
+     * @param	angle 以弧度为单位的旋转角度。
+     */
+    rotate(angle: number): void { };
+    /**
+     * 对 Matrix 对象应用倾斜转换。
+     * @param	x 沿着 X 轴的 2D 倾斜弧度。
+     * @param	y 沿着 Y 轴的 2D 倾斜弧度。
+     * @return 当前 Matrix 对象。
+     */
+    skew(x: number, y: number): Matrix { return null };
+    /**
+     * 对指定的点应用当前矩阵的逆转化并返回此点。
+     * @param	out 待转化的点 Point 对象。
+     * @return	返回out
+     */
+    invertTransformPoint(out: Point): Point { return null };
+    /**
+     * 将 Matrix 对象表示的几何转换应用于指定点。
+     * @param	out 用来设定输出结果的点。
+     * @return	返回out
+     */
+    transformPoint(out: Point): Point { return null };
+    /**
+     * 将 Matrix 对象表示的几何转换应用于指定点，忽略tx、ty。
+     * @param	out 用来设定输出结果的点。
+     * @return	返回out
+     */
+    transformPointN(out: Point): Point { return null };
+    /**
+     * @private
+     * 将 Matrix 对象表示的几何转换应用于指定点。
+     * @param	data 点集合。
+     * @param	out 存储应用转化的点的列表。
+     * @return	返回out数组
+     */
+    transformPointArray(data: Array<any>, out: Array<any>): Array<any> { return null };
+    /**
+     * @private
+     * 将 Matrix 对象表示的几何缩放转换应用于指定点。
+     * @param	data 点集合。
+     * @param	out 存储应用转化的点的列表。
+     * @return	返回out数组
+     */
+    transformPointArrayScale(data: Array<any>, out: Array<any>): Array<any> { return null };
+    /**
+     * 获取 X 轴缩放值。
+     * @return  X 轴缩放值。
+     */
+    getScaleX(): number { return null };
+    /**
+     * 获取 Y 轴缩放值。
+     * @return Y 轴缩放值。
+     */
+    getScaleY(): number { return null };
+    /**
+     * 执行原始矩阵的逆转换。
+     * @return 当前矩阵对象。
+     */
+    invert(): Matrix { return null };
+    /**
+     *  将 Matrix 的成员设置为指定值。
+     * @param	a 缩放或旋转图像时影响像素沿 x 轴定位的值。
+     * @param	b 旋转或倾斜图像时影响像素沿 y 轴定位的值。
+     * @param	c 旋转或倾斜图像时影响像素沿 x 轴定位的值。
+     * @param	d 缩放或旋转图像时影响像素沿 y 轴定位的值。
+     * @param	tx 沿 x 轴平移每个点的距离。
+     * @param	ty 沿 y 轴平移每个点的距离。
+     * @return 当前矩阵对象。
+     */
+    setTo(a: number, b: number, c: number, d: number, tx: number, ty: number): Matrix { return null };
+    /**
+     * 将指定矩阵与当前矩阵连接，从而将这两个矩阵的几何效果有效地结合在一起。
+     * @param	matrix 要连接到源矩阵的矩阵。
+     * @return 当前矩阵。
+     */
+    concat(matrix: Matrix): Matrix { return null };
+    /**
+     * 将指定的两个矩阵相乘后的结果赋值给指定的输出对象。
+     * @param	m1 矩阵一。
+     * @param	m2 矩阵二。
+     * @param	out 输出对象。
+     * @return 结果输出对象 out。
+     */
+    static mul(m1: Matrix, m2: Matrix, out: Matrix): Matrix { return null };
+    /**
+     * 将指定的两个矩阵相乘，结果赋值给指定的输出数组，长度为16。
+     * @param m1	矩阵一。
+     * @param m2	矩阵二。
+     * @param out	输出对象Array。
+     * @return 结果输出对象 out。
+     */
+    static mul16(m1: Matrix, m2: Matrix, out: Array<any>): Array<any> { return null };
+    /**
+     * @private
+     * 对矩阵应用缩放转换。反向相乘
+     * @param	x 用于沿 x 轴缩放对象的乘数。
+     * @param	y 用于沿 y 轴缩放对象的乘数。
+     */
+    scaleEx(x: number, y: number): void { };
+    /**
+     * @private
+     * 对 Matrix 对象应用旋转转换。反向相乘
+     * @param	angle 以弧度为单位的旋转角度。
+     */
+    rotateEx(angle: number): void { };
+    static mulPre(m1: Matrix, ba: number, bb: number, bc: number, bd: number, btx: number, bty: number, out: Matrix): Matrix { return null };
+    static mulPos(m1: Matrix, aa: number, ab: number, ac: number, ad: number, atx: number, aty: number, out: Matrix): Matrix { return null };
+    static preMul(parent: Matrix, self: Matrix, out: Matrix): Matrix { return null };
+    static preMulXY(parent: Matrix, x: number, y: number, out: Matrix): Matrix { return null };
+    /**
+     * 返回此 Matrix 对象的副本。
+     * @return 与原始实例具有完全相同的属性的新 Matrix 实例。
+     */
+    clone(): Matrix { return null };
+    /**
+     * 将当前 Matrix 对象中的所有矩阵数据复制到指定的 Matrix 对象中。
+     * @param	dec 要复制当前矩阵数据的 Matrix 对象。
+     * @return 已复制当前矩阵数据的 Matrix 对象。
+     */
+    copyTo(dec: Matrix): Matrix { return null };
+    /**
+     * 返回列出该 Matrix 对象属性的文本值。
+     * @return 一个字符串，它包含 Matrix 对象的属性值：a、b、c、d、tx 和 ty。
+     */
+    toString(): string { return null };
+    /**
+     * 销毁此对象。
+     */
+    destroy(): void { };
+    /**
+     * 从对象池中创建一个 <code>Matrix</code> 对象。
+     * @return <code>Matrix</code> 对象。
+     */
+    static create(): Matrix { return null };
+}
+/**
+ * Sprite 显示对象精灵
+ * 支持事件：
+ * EventObject.RIGHT_MOUSE_UP
+ * EventObject.RIGHT_MOUSE_DOWN
+ * EventObject.RIGHT_CLICK
+ * EventObject.CLICK
+ * EventObject.DOUBLE_CLICK
+ * EventObject.MOUSE_DOWN
+ * EventObject.MOUSE_UP
+ * EventObject.MOUSE_WHEEL
+ * EventObject.DRAG_START
+ * EventObject.DRAG_MOVE
+ * EventObject.DRAG_END
+ */
+class Sprite extends TreeNode {
+    /**
+     * 销毁
+     * @param disposeChild 是否销毁子对象
+     */
+    dispose(disposeChild: boolean = false): void { };
+    /**
+     * 相对父容器的水平方向坐标
+     */
+    x: number;
+    /**
+     * 相对父容器的垂直方向坐标
+     */
+    y: number;
+    /**
+     * 宽度，用于鼠标检测
+     */
+    width: number;
+    /**
+     * 高度，用于鼠标检测
+     */
+    height: number;
+    /**
+     * 获取本对象在父容器坐标系的矩形显示区域，计算量较大，尽量少用
+     * @return 矩形区域
+     */
+    getBounds(): Rectangle { return null };
+    /**
+     * 获取本对象在自己坐标系的矩形显示区域，计算量较大，尽量少用
+     * @return 矩形区域
+     */
+    getSelfBounds(): Rectangle { return null };
+    /**
+     * X轴缩放值
+     */
+    scaleX: number;
+    /**
+     * Y轴缩放值
+     */
+    scaleY: number;
+    /**
+     * 旋转角度
+     */
+    rotation: number;
+    /**
+     * 水平倾斜角度
+     */
+    skewX: number;
+    /**
+     * 垂直倾斜角度
+     */
+    skewY: number;
+    /**
+     * 对象的矩阵信息。通过设置矩阵可以实现节点旋转，缩放，位移效果。
+     */
+    transform: Matrix;
+    /**
+     * 轴心点的位置X，以轴心点进行缩放、旋转
+     */
+    pivotX: number;
+    /**
+     * 轴心点的位置Y，以轴心点进行缩放、旋转
+     */
+    pivotY: number;
+    /**
+     * 透明度
+     */
+    alpha: number;
+    /**
+     * 是否显示
+     */
+    visible: boolean;
+    /**
+     * 合成模式 null/lighter/blend1-1 (lighter=加法 数字可以更改，参考地图图层自定义混合模式)
+     */
+    blendMode: string;
+    /**
+     * 绘制对象
+     */
+    graphics: Graphics;
+    /**
+     * 显示对象的滚动矩形范围，具有裁剪效果
+     */
+    scrollRect: Rectangle;
+    /**
+     * 滤镜集合 如果需要在父子节点关系的容器上都有滤镜可以使用 GameSprite 来叠加滤镜
+     */
+    filters: Array<Filter>;
+    /**
+     * 把本地坐标转换为全局坐标
+     * @param point 本地坐标点
+     * @return [Point] 转换后的全局坐标
+     */
+    localToGlobal(point: Point): Point { return null };
+    /**
+     * 把全局坐标转换为本地坐标
+     * @param point 全局坐标点
+     * @return [Point] 转换后的坐标的点
+     */
+    globalToLocal(point: Point): Point { return null };
+    /**
+     * 父节点
+     */
+    parent: TreeNode;
+    /**
+     * 若该对象在舞台上则返回舞台，否则返回null
+     * @return [Stage] 
+     */
+    get stage(): Stage { return null };
+    /**
+     * 可以设置一个Rectangle区域作为点击区域，设置后则以该区域作为鼠标事件检测
+     */
+    hitArea: HitArea | Rectangle;
+    /**
+     * 遮罩，可以设置一个对象(支持位图和矢量图)，根据对象形状进行遮罩显示
+     * 遮罩对象坐标系是相对遮罩对象本身的，即以该对象的0,0点为准
+     */
+    mask: Sprite;
+    /**
+     * 是否接受鼠标事件
+     * 默认为false，如果监听鼠标事件，则会自动设置本对象及父节点的属性 mouseEnable 的值都为 true（如果父节点手动设置为false，则不会更改）
+     * */
+    mouseEnabled: boolean;
+    /**
+     * 开始拖动此对象
+     * @param area [可选] 默认值=null 拖动限定的区域范围内
+     */
+    startDrag(area: Rectangle=null): void { };
+    /**
+     * 停止拖动此对象
+     */
+    stopDrag(): void { };
+    /**
+     * 检测某个点是否在此对象内
+     * @param	x 全局x坐标
+     * @param	y 全局y坐标。
+     * @return  表示是否在对象内
+     */
+    hitTestPoint(x: number, y: number): boolean { return null };
+    /**
+     * 获得相对于stage的全局X轴缩放值（会叠加父亲节点的缩放值）。
+     */
+    get globalScaleX(): number { return null };
+    /**
+     * 获得相对于stage的全局Y轴缩放值（会叠加父亲节点的缩放值）。
+     */
+    get globalScaleY(): number { return null };
+    /**
+     * 返回鼠标在此对象坐标系上的 X 轴坐标信息。
+     */
+    get mouseX(): number { return null };
+    /**
+     * 返回鼠标在此对象坐标系上的 Y 轴坐标信息。
+     */
+    get mouseY(): number { return null };
+}
+/**
+ * 鼠标点击区域，可以设置绘制一系列矢量图作为点击区域和非点击区域（目前只支持圆形，矩形，多边形）
+ */
+class HitArea {
+    /**
+     * 是否击中Graphic
+     * @param x 
+     * @param y 
+     * @param graphic 
+     * @return [boolean] 
+     */
+    static isHitGraphic(x: number, y: number, graphic: Graphics): boolean { return null };
+    /**
+     * 坐标是否在多边形内
+     * @param x 
+     * @param y 
+     * @param areaPoints 格式 [x1,x2,y1,y2...]
+     * @return [boolean] 
+     */
+    static ptInPolygon(x: number, y: number, areaPoints: number[]): boolean { return null };
+    /**
+     * 是否包含某个点
+     * @param x x坐标
+     * @param y y坐标
+     * @return 是否点击到
+     */
+    isHit(x: number, y: number): boolean { return null };
+    /**
+     * 检测对象是否包含指定的点。
+     * @param	x	点的 X 轴坐标值（水平位置）。
+     * @param	y	点的 Y 轴坐标值（垂直位置）。
+     * @return	如果包含指定的点，则值为 true；否则为 false。
+     */
+    contains(x: number, y: number): boolean { return null };
+    /**
+     * 可点击区域，可以设置绘制一系列矢量图作为点击区域（支持圆形，矩形，多边形）
+     */
+    hit: Graphics;
+    /**
+     * 不可点击区域，可以设置绘制一系列矢量图作为非点击区域（支持圆形，矩形，多边形）
+     */
+    unHit: Graphics;
+}
+
+
+/**
+ * 舞台类
+ * 只有一个舞台，可通过stage来访问
+ * 支持事件：
+ * EventObject.KEY_DOWN
+ * EventObject.KEY_UP
+ * EventObject.KEY_PRESS
+ * EventObject.RESIZE
+ * EventObject.FULL_SCREEN_CHANGE
+ * EventObject.FOCUS_CHANGE
+ * EventObject.FOCUS
+ * EventObject.BLUR
+ */
+class Stage extends Sprite {
+    /**应用保持设计宽高不变，不缩放不变型，stage的宽高等于设计宽高。*/
+    static SCALE_NOSCALE: string;
+    /**应用根据屏幕大小铺满全屏，非等比缩放会变型，stage的宽高等于设计宽高。*/
+    static SCALE_EXACTFIT: string;
+    /**应用显示全部内容，按照最小比率缩放，等比缩放不变型，一边可能会留空白，stage的宽高等于设计宽高。*/
+    static SCALE_SHOWALL: string;
+    /**应用按照最大比率缩放显示，宽或高方向会显示一部分，等比缩放不变型，stage的宽高等于设计宽高。*/
+    static SCALE_NOBORDER: string;
+    /**应用保持设计宽高不变，不缩放不变型，stage的宽高等于屏幕宽高。*/
+    static SCALE_FULL: string;
+    /**应用保持设计宽度不变，高度根据屏幕比缩放，stage的宽度等于设计高度，高度根据屏幕比率大小而变化*/
+    static SCALE_FIXED_WIDTH: string;
+    /**应用保持设计高度不变，宽度根据屏幕比缩放，stage的高度等于设计宽度，宽度根据屏幕比率大小而变化*/
+    static SCALE_FIXED_HEIGHT: string;
+    /**应用保持设计比例不变，全屏显示全部内容(类似showall，但showall非全屏，会有黑边)，根据屏幕长宽比，自动选择使用SCALE_FIXED_WIDTH或SCALE_FIXED_HEIGHT*/
+    static SCALE_FIXED_AUTO: string;
+    /**画布水平居左对齐。*/
+    static ALIGN_LEFT: string;
+    /**画布水平居右对齐。*/
+    static ALIGN_RIGHT: string;
+    /**画布水平居中对齐。*/
+    static ALIGN_CENTER: string;
+    /**画布垂直居上对齐。*/
+    static ALIGN_TOP: string;
+    /**画布垂直居中对齐。*/
+    static ALIGN_MIDDLE: string;
+    /**画布垂直居下对齐。*/
+    static ALIGN_BOTTOM: string;
+    /**不更改屏幕。*/
+    static SCREEN_NONE: string;
+    /**自动横屏。*/
+    static SCREEN_HORIZONTAL: string;
+    /**自动竖屏。*/
+    static SCREEN_VERTICAL: string;
+    /**
+     * 当前宽度
+     */
+    width: number;
+    /**
+     * 当前高度
+     */
+    height: number;
+    /**
+     * 使用矩阵变换
+     * @return [Matrix] 
+     */
+    get transform(): Matrix { return null };
+    /**
+    * 设置屏幕大小，场景会根据屏幕大小进行适配。可以动态调用此方法，来更改游戏显示的大小。
+    * @param	screenWidth		屏幕宽度。
+    * @param	screenHeight	屏幕高度。
+    */
+    setScreenSize(screenWidth: number, screenHeight: number): void { };
+    /**
+     * <p>缩放模式。默认值为 "noscale"。</p>
+     * <p><ul>取值范围：
+     * <li>"noscale" ：不缩放；</li>
+     * <li>"exactfit" ：全屏不等比缩放；</li>
+     * <li>"showall" ：最小比例缩放；</li>
+     * <li>"noborder" ：最大比例缩放；</li>
+     * <li>"full" ：不缩放，stage的宽高等于屏幕宽高；</li>
+     * <li>"fixedwidth" ：宽度不变，高度根据屏幕比缩放；</li>
+     * <li>"fixedheight" ：高度不变，宽度根据屏幕比缩放；</li>
+     * <li>"fixedauto" ：根据宽高比，自动选择使用fixedwidth或fixedheight；</li>
+     * </ul></p>
+     */
+    scaleMode: string;
+    /**
+     * <p>水平对齐方式。默认值为"left"。</p>
+     * <p><ul>取值范围：
+     * <li>"left" ：居左对齐；</li>
+     * <li>"center" ：居中对齐；</li>
+     * <li>"right" ：居右对齐；</li>
+     * </ul></p>
+     */
+    alignH: string;
+    /**
+     * <p>垂直对齐方式。默认值为"top"。</p>
+     * <p><ul>取值范围：
+     * <li>"top" ：居顶部对齐；</li>
+     * <li>"middle" ：居中对齐；</li>
+     * <li>"bottom" ：居底部对齐；</li>
+     * </ul></p>
+     */
+    alignV: string;
+    /**舞台的背景颜色，默认为黑色，null为透明。*/
+    bgColor: string;
+    /**鼠标在 Stage 上的 X 轴坐标。*/
+    get mouseX(): number { return null };
+    /**鼠标在 Stage 上的 Y 轴坐标。*/
+    get mouseY(): number { return null };
+    /**当前视窗由缩放模式导致的 X 轴缩放系数。*/
+    get clientScaleX(): number { return null };
+    /**当前视窗由缩放模式导致的 Y 轴缩放系数。*/
+    get clientScaleY(): number { return null };
+    /**
+     * <p>场景布局类型。</p>
+     * <p><ul>取值范围：
+     * <li>"none" ：不更改屏幕</li>
+     * <li>"horizontal" ：自动横屏</li>
+     * <li>"vertical" ：自动竖屏</li>
+     * </ul></p>
+     */
+    screenMode: string;
+    /**
+     * 是否顯示
+     */
+    visible: boolean;
+    /**
+     * <p>是否开启全屏，用户点击后进入全屏。</p>
+     * <p>兼容性提示：部分浏览器不允许点击进入全屏，比如Iphone等。</p>
+     */
+    fullScreenEnabled: boolean;
+    /**退出全屏模式*/
+    exitFullscreen(): void { return null };
+}
+
+
+/**
+ * 节点根类
+ * 支持事件：
+ * EventObject.UNDISPLAY
+ * EventObject.DISPLAY
+ * EventObject.REMOVED
+ * EventObject.ADDED
+ */
+class TreeNode extends EventDispatcher {
+    /**节点名称。*/
+    name: string;
+    /**[只读]是否已经销毁。对象销毁后不能再使用。*/
+    disposed: boolean;
+    /**
+     * <p>销毁此对象。destroy对象默认会把自己从父节点移除，并且清理自身引用关系，等待js自动垃圾回收机制回收。destroy后不能再使用。</p>
+     * <p>destroy时会移除自身的事情监听，自身的timer监听，移除子对象及从父节点移除自己。</p>
+     * @param destroyChild	（可选）是否同时销毁子节点，若值为true,则销毁子节点，否则不销毁子节点。
+     */
+    dispose(disposeChild?: boolean): void { };
+    /**
+     * 添加子节点。
+     * @param	node 节点对象
+     * @return	返回添加的节点
+     */
+    addChild(node: TreeNode): TreeNode { return null };
+    /**
+     * 批量增加子节点
+     * @param	...args 无数子节点。
+     */
+    addChildren(...args: any[]): void { };
+    /**
+     * 添加子节点到指定的索引位置。
+     * @param	node 节点对象。
+     * @param	index 索引位置。
+     * @return	返回添加的节点。
+     */
+    addChildAt(node: TreeNode, index: number): TreeNode { return null };
+    /**
+     * 根据子节点对象，获取子节点的索引位置。
+     * @param	node 子节点。
+     * @return	子节点所在的索引位置。
+     */
+    getChildIndex(node: TreeNode): number { return null };
+    /**
+     * 根据子节点的名字，获取子节点对象。
+     * @param	name 子节点的名字。
+     * @return	节点对象。
+     */
+    getChildByName(name: string): TreeNode { return null };
+    /**
+     * 根据子节点的索引位置，获取子节点对象。
+     * @param	index 索引位置
+     * @return	子节点
+     */
+    getChildAt(index: number): TreeNode { return null };
+    /**
+     * 设置子节点的索引位置。
+     * @param	node 子节点。
+     * @param	index 新的索引。
+     * @return	返回子节点本身。
+     */
+    setChildIndex(node: TreeNode, index: number): TreeNode { return null };
+    /**
+     * 删除子节点。
+     * @param	node 子节点
+     * @return	被删除的节点
+     */
+    removeChild(node: TreeNode): TreeNode { return null };
+    /**
+     * 从父容器删除自己，如已经被删除不会抛出异常。
+     * @return 当前节点（ TreeNode ）对象。
+     */
+    removeSelf(): TreeNode { return null };
+    /**
+     * 根据子节点名字删除对应的子节点对象，如果找不到不会抛出异常。
+     * @param	name 对象名字。
+     * @return 查找到的节点（ TreeNode ）对象。
+     */
+    removeChildByName(name: string): TreeNode { return null };
+    /**
+     * 根据子节点索引位置，删除对应的子节点对象。
+     * @param	index 节点索引位置。
+     * @return	被删除的节点。
+     */
+    removeChildAt(index: number): TreeNode { return null };
+    /**
+     * 删除指定索引区间的所有子对象。
+     * @param	beginIndex 开始索引。
+     * @param	endIndex 结束索引。
+     * @return 当前节点对象。
+     */
+    removeChildren(beginIndex?: number, endIndex?: number): TreeNode { return null };
+    /**
+     * 子对象数量。
+     */
+    get numChildren(): number { return null };
+    /**父节点。*/
+    parent: TreeNode;
+    /**
+     * 当前容器是否包含指定的 <code>TreeNode</code> 节点对象 。
+     * @param	node  指定的 <code>TreeNode</code> 节点对象 。
+     * @return	一个布尔值表示是否包含指定的 <code>TreeNode</code> 节点对象 。
+     */
+    contains(node: TreeNode): boolean { return null };
+}
+
+/**
+ * 事件对象，当发生事件后回调中带有此类实例
+ */
+class EventObject {
+    /** 一个空的 EventObject 对象。用于事件派发中转使用。*/
+    static EMPTY: EventObject;
+    /** 定义 mousedown 事件对象的 type 属性值。*/
+    static MOUSE_DOWN: string;
+    /** 定义 mouseup 事件对象的 type 属性值。*/
+    static MOUSE_UP: string;
+    /** 定义 click 事件对象的 type 属性值。*/
+    static CLICK: string;
+    /** 定义 rightmousedown 事件对象的 type 属性值。*/
+    static RIGHT_MOUSE_DOWN: string;
+    /** 定义 rightmouseup 事件对象的 type 属性值。*/
+    static RIGHT_MOUSE_UP: string;
+    /** 定义 rightclick 事件对象的 type 属性值。*/
+    static RIGHT_CLICK: string;
+    /** 定义 mousemove 事件对象的 type 属性值。*/
+    static MOUSE_MOVE: string;
+    /** 定义 mouseover 事件对象的 type 属性值。*/
+    static MOUSE_OVER: string;
+    /** 定义 mouseout 事件对象的 type 属性值。*/
+    static MOUSE_OUT: string;
+    /** 定义 mousewheel 事件对象的 type 属性值。*/
+    static MOUSE_WHEEL: string;
+    /** 定义 mouseover 事件对象的 type 属性值。*/
+    static ROLL_OVER: string;
+    /** 定义 mouseout 事件对象的 type 属性值。*/
+    static ROLL_OUT: string;
+    /** 定义 doubleclick 事件对象的 type 属性值。*/
+    static DOUBLE_CLICK: string;
+    /** 定义 change 事件对象的 type 属性值。*/
+    static CHANGE: string;
+    /** 定义 changed 事件对象的 type 属性值。*/
+    static CHANGED: string;
+    /** 定义 resize 事件对象的 type 属性值。*/
+    static RESIZE: string;
+    /** 定义 added 事件对象的 type 属性值。*/
+    static ADDED: string;
+    /** 定义 removed 事件对象的 type 属性值。*/
+    static REMOVED: string;
+    /** 定义 display 事件对象的 type 属性值。*/
+    static DISPLAY: string;
+    /** 定义 undisplay 事件对象的 type 属性值。*/
+    static UNDISPLAY: string;
+    /** 定义 error 事件对象的 type 属性值。*/
+    static ERROR: string;
+    /** 定义 complete 事件对象的 type 属性值。*/
+    static COMPLETE: string;
+    /** 定义 loaded 事件对象的 type 属性值。*/
+    static LOADED: string;
+    /** 定义 progress 事件对象的 type 属性值。*/
+    static PROGRESS: string;
+    /** 定义 input 事件对象的 type 属性值。*/
+    static INPUT: string;
+    /** 定义 render 事件对象的 type 属性值。*/
+    static RENDER: string;
+    /** 定义 open 事件对象的 type 属性值。*/
+    static OPEN: string;
+    /** 定义 message 事件对象的 type 属性值。*/
+    static MESSAGE: string;
+    /** 定义 close 事件对象的 type 属性值。*/
+    static CLOSE: string;
+    /** 定义 keydown 事件对象的 type 属性值。*/
+    static KEY_DOWN: string;
+    /** 定义 keypress 事件对象的 type 属性值。*/
+    static KEY_PRESS: string;
+    /** 定义 keyup 事件对象的 type 属性值。*/
+    static KEY_UP: string;
+    /** 定义 frame 事件对象的 type 属性值。*/
+    static FRAME: string;
+    /** 定义 dragstart 事件对象的 type 属性值。*/
+    static DRAG_START: string;
+    /** 定义 dragmove 事件对象的 type 属性值。*/
+    static DRAG_MOVE: string;
+    /** 定义 dragend 事件对象的 type 属性值。*/
+    static DRAG_END: string;
+    /** 定义 enter 事件对象的 type 属性值。*/
+    static ENTER: string;
+    /** 定义 select 事件对象的 type 属性值。*/
+    static SELECT: string;
+    /** 定义 blur 事件对象的 type 属性值。*/
+    static BLUR: string;
+    /** 定义 focus 事件对象的 type 属性值。*/
+    static FOCUS: string;
+    /** 定义 visibilitychange 事件对象的 type 属性值。*/
+    static VISIBILITY_CHANGE: string;
+    /** 定义 focuschange 事件对象的 type 属性值。*/
+    static FOCUS_CHANGE: string;
+    /** 定义 played 事件对象的 type 属性值。*/
+    static PLAYED: string;
+    /** 定义 paused 事件对象的 type 属性值。*/
+    static PAUSED: string;
+    /** 定义 stopped 事件对象的 type 属性值。*/
+    static STOPPED: string;
+    /** 定义 start 事件对象的 type 属性值。*/
+    static START: string;
+    /** 定义 end 事件对象的 type 属性值。*/
+    static END: string;
+    /** 定义 enablechanged 事件对象的 type 属性值。*/
+    static ENABLE_CHANGED: string;
+    /** 定义 activeinhierarchychanged 事件对象的 type 属性值。*/
+    static ACTIVE_IN_HIERARCHY_CHANGED: string;
+    /** 定义 componentadded 事件对象的 type 属性值。*/
+    static COMPONENT_ADDED: string;
+    /** 定义 componentremoved 事件对象的 type 属性值。*/
+    static COMPONENT_REMOVED: string;
+    /** 定义 layerchanged 事件对象的 type 属性值。*/
+    static LAYER_CHANGED: string;
+    /** 定义 hierarchyloaded 事件对象的 type 属性值。*/
+    static HIERARCHY_LOADED: string;
+    /** 定义 recovering 事件对象的 type 属性值。*/
+    static RECOVERING: string;
+    /** 定义 recovered 事件对象的 type 属性值。*/
+    static RECOVERED: string;
+    /** 定义 released 事件对象的 type 属性值。*/
+    static RELEASED: string;
+    /** 定义 link 事件对象的 type 属性值。*/
+    static LINK: string;
+    /** 定义 label 事件对象的 type 属性值。*/
+    static LABEL: string;
+    /**浏览器全屏更改时触发*/
+    static FULL_SCREEN_CHANGE: string;
+    /**显卡设备丢失时触发*/
+    static DEVICE_LOST: string;
+    /**模型更换时触发*/
+    static MESH_CHANGED: string;
+    /**材质更换时触发*/
+    static MATERIAL_CHANGED: string;
+    /**渲染队列更换时触发*/
+    static RENDERQUEUE_CHANGED: string;
+    /**世界矩阵更新时触发。*/
+    static WORLDMATRIX_NEEDCHANGE: string;
+    /**更换动作时触发。*/
+    static ANIMATION_CHANGED: string;
+    /** 事件类型。*/
+    type: string;
+    /** 原生浏览器事件。*/
+    nativeEvent: any;
+    /** 事件目标触发对象。*/
+    target: Sprite;
+    /** 事件当前冒泡对象。*/
+    currentTarget: Sprite;
+    /** 分配给触摸点的唯一标识号（作为 int）。*/
+    touchId: number;
+    /**键盘值*/
+    keyCode: number;
+    /**滚轮滑动增量*/
+    delta: number;
+    /**
+     * 阻止对事件流中当前节点的后续节点中的所有事件侦听器进行处理。此方法不会影响当前节点 (currentTarget) 中的任何事件侦听器。
+     */
+    stopPropagation(): void { };
+    /**
+     * 触摸点列表。
+     */
+    get touches(): Array<any> { return null };
+    /**
+     * 表示 Alt 键是处于活动状态 (true) 还是非活动状态 (false)。
+     */
+    get altKey(): boolean { return null };
+    /**
+     * 表示 Ctrl 键是处于活动状态 (true) 还是非活动状态 (false)。
+     */
+    get ctrlKey(): boolean { return null };
+    /**
+     * 表示 Shift 键是处于活动状态 (true) 还是非活动状态 (false)。
+     */
+    get shiftKey(): boolean { return null };
+    /**
+     * 包含按下或释放的键的字符代码值。字符代码值为英文键盘值。
+     */
+    get charCode(): boolean { return null };
+    /**
+     * 表示键在键盘上的位置。这对于区分在键盘上多次出现的键非常有用。<br>
+     * 例如，您可以根据此属性的值来区分左 Shift 键和右 Shift 键：左 Shift 键的值为 KeyLocation.LEFT，右 Shift 键的值为 KeyLocation.RIGHT。另一个示例是区分标准键盘 (KeyLocation.STANDARD) 与数字键盘 (KeyLocation.NUM_PAD) 上按下的数字键。
+     */
+    get keyLocation(): number { return null };
+    /**鼠标在 Stage 上的 X 轴坐标*/
+    get stageX(): number { return null };
+    /**鼠标在 Stage 上的 Y 轴坐标*/
+    get stageY(): number { return null };
+}
+/**
+ * <code>EventDispatcher</code> 类是可调度事件的所有类的基类。
+ */
+class EventDispatcher {
+    /**
+     * 检查 EventDispatcher 对象是否为特定事件类型注册了任何侦听器。
+     * @param	type 事件的类型。
+     * @return 如果指定类型的侦听器已注册，则值为 true；否则，值为 false。
+     */
+    hasListener(type: string): boolean { return null };
+    /**
+     * 派发事件。
+     * @param type	事件类型。
+     * @param data	（可选）回调数据。<b>注意：</b>如果是需要传递多个参数 p1,p2,p3,...可以使用数组结构如：[p1,p2,p3,...] ；如果需要回调单个参数 p 是一个数组，则需要使用结构如：[p]，其他的单个参数 p ，可以直接传入参数 p。
+     * @return 此事件类型是否有侦听者，如果有侦听者则值为 true，否则值为 false。
+     */
+    event(type: string, data?: any): boolean { return null };
+    /**
+     * 使用 EventDispatcher 对象注册指定类型的事件侦听器对象，以使侦听器能够接收事件通知。
+     * @param type		事件的类型。
+     * @param caller	事件侦听函数的执行域。a
+     * @param listener	事件侦听函数。
+     * @param args		（可选）事件侦听函数的回调参数。
+     * @return 此 EventDispatcher 对象。a
+     */
+    on(type: string, caller: any, listener: Function, args?: Array<any>): EventDispatcher { return null };
+    /**
+     * 使用 EventDispatcher 对象注册指定类型的事件侦听器对象，以使侦听器能够接收事件通知，此侦听事件响应一次后自动移除。
+     * @param type		事件的类型。
+     * @param caller	事件侦听函数的执行域。
+     * @param listener	事件侦听函数。
+     * @param args		（可选）事件侦听函数的回调参数。
+     * @return 此 EventDispatcher 对象。
+     */
+    once(type: string, caller: any, listener: Function, args?: Array<any>): EventDispatcher { return null };
+    /**
+    * 从 EventDispatcher 对象中删除侦听器。
+    * @param type		事件的类型。
+    * @param caller	事件侦听函数的执行域。
+    * @param listener	事件侦听函数。
+    * @param onceOnly	（可选）如果值为 true ,则只移除通过 once 方法添加的侦听器。
+    * @return 此 EventDispatcher 对象。
+    */
+    off(type: string, caller: any, listener: Function, onceOnly?: boolean): EventDispatcher { return null };
+    /**
+     * 从 EventDispatcher 对象中删除指定事件类型的所有侦听器。
+     * @param type	（可选）事件类型，如果值为 null，则移除本对象所有类型的侦听器。
+     * @return 此 EventDispatcher 对象。
+     */
+    offAll(type?: string): EventDispatcher { return null };
+    /**
+     * 检测指定事件类型是否是鼠标事件。
+     * @param	type 事件的类型。
+     * @return	如果是鼠标事件，则值为 true;否则，值为 false。
+     */
+    isMouseEvent(type: string): boolean { return null };
+}
+
+/**
+   * <code>Keyboard</code> 类的属性是一些常数，这些常数表示控制游戏时最常用的键。
+   */
+class Keyboard {
+    /** 与 0 的键控代码值(48)关联的常数。*/
+    static NUMBER_0: number;
+    /** 与 1 的键控代码值(49)关联的常数。*/
+    static NUMBER_1: number;
+    /** 与 2 的键控代码值(50)关联的常数。*/
+    static NUMBER_2: number;
+    /** 与 3 的键控代码值(51)关联的常数。*/
+    static NUMBER_3: number;
+    /** 与 4 的键控代码值(52)关联的常数。*/
+    static NUMBER_4: number;
+    /** 与 5 的键控代码值(53)关联的常数。*/
+    static NUMBER_5: number;
+    /** 与 6 的键控代码值(54)关联的常数。*/
+    static NUMBER_6: number;
+    /** 与 7 的键控代码值(55)关联的常数。*/
+    static NUMBER_7: number;
+    /** 与 8 的键控代码值(56)关联的常数。*/
+    static NUMBER_8: number;
+    /** 与 9 的键控代码值(57)关联的常数。*/
+    static NUMBER_9: number;
+    /** 与 A 键的键控代码值(65)关联的常数。*/
+    static A: number;
+    /** 与 B 键的键控代码值(66)关联的常数。*/
+    static B: number;
+    /** 与 C 键的键控代码值(67)关联的常数。*/
+    static C: number;
+    /** 与 D 键的键控代码值(68)关联的常数。*/
+    static D: number;
+    /** 与 E 键的键控代码值(69)关联的常数。*/
+    static E: number;
+    /** 与 F 键的键控代码值(70)关联的常数。*/
+    static F: number;
+    /** 与 G 键的键控代码值(71)关联的常数。*/
+    static G: number;
+    /** 与 H 键的键控代码值(72)关联的常数。*/
+    static H: number;
+    /** 与 I 键的键控代码值(73)关联的常数。*/
+    static I: number;
+    /** 与 J 键的键控代码值(74)关联的常数。*/
+    static J: number;
+    /** 与 K 键的键控代码值(75)关联的常数。*/
+    static K: number;
+    /** 与 L 键的键控代码值(76)关联的常数。*/
+    static L: number;
+    /** 与 M 键的键控代码值(77)关联的常数。*/
+    static M: number;
+    /** 与 N 键的键控代码值(78)关联的常数。*/
+    static N: number;
+    /** 与 O 键的键控代码值(79)关联的常数。*/
+    static O: number;
+    /** 与 P 键的键控代码值(80)关联的常数。*/
+    static P: number;
+    /** 与 Q 键的键控代码值(81)关联的常数。*/
+    static Q: number;
+    /** 与 R 键的键控代码值(82)关联的常数。*/
+    static R: number;
+    /** 与 S 键的键控代码值(83)关联的常数。*/
+    static S: number;
+    /** 与 T 键的键控代码值(84)关联的常数。*/
+    static T: number;
+    /** 与 U 键的键控代码值(85)关联的常数。*/
+    static U: number;
+    /** 与 V 键的键控代码值(86)关联的常数。*/
+    static V: number;
+    /** 与 W 键的键控代码值(87)关联的常数。*/
+    static W: number;
+    /** 与 X 键的键控代码值(88)关联的常数。*/
+    static X: number;
+    /** 与 Y 键的键控代码值(89)关联的常数。*/
+    static Y: number;
+    /** 与 Z 键的键控代码值(90)关联的常数。*/
+    static Z: number;
+    /** 与 F1 的键控代码值(112)关联的常数。*/
+    static F1: number;
+    /** 与 F2 的键控代码值(113)关联的常数。*/
+    static F2: number;
+    /** 与 F3 的键控代码值(114)关联的常数。*/
+    static F3: number;
+    /** 与 F4 的键控代码值(115)关联的常数。*/
+    static F4: number;
+    /** 与 F5 的键控代码值(116)关联的常数。*/
+    static F5: number;
+    /** 与 F6 的键控代码值(117)关联的常数。*/
+    static F6: number;
+    /** 与 F7 的键控代码值(118)关联的常数。*/
+    static F7: number;
+    /** 与 F8 的键控代码值(119)关联的常数。*/
+    static F8: number;
+    /** 与 F9 的键控代码值(120)关联的常数。*/
+    static F9: number;
+    /** 与 F10 的键控代码值(121)关联的常数。*/
+    static F10: number;
+    /** 与 F11 的键控代码值(122)关联的常数。*/
+    static F11: number;
+    /** 与 F12 的键控代码值(123)关联的常数。*/
+    static F12: number;
+    /** 与 F13 的键控代码值(124)关联的常数。*/
+    static F13: number;
+    /** 与 F14 的键控代码值(125)关联的常数。*/
+    static F14: number;
+    /** 与 F15 的键控代码值(126)关联的常数。*/
+    static F15: number;
+    /** 与数字键盘的伪键控代码(21)关联的常数。*/
+    static NUMPAD: number;
+    /** 与数字键盘上的数字 0 的键控代码值(96)关联的常数。*/
+    static NUMPAD_0: number;
+    /** 与数字键盘上的数字 1 的键控代码值(97)关联的常数。*/
+    static NUMPAD_1: number;
+    /** 与数字键盘上的数字 2 的键控代码值(98)关联的常数。*/
+    static NUMPAD_2: number;
+    /** 与数字键盘上的数字 3 的键控代码值(99)关联的常数。*/
+    static NUMPAD_3: number;
+    /** 与数字键盘上的数字 4 的键控代码值(100)关联的常数。*/
+    static NUMPAD_4: number;
+    /** 与数字键盘上的数字 5 的键控代码值(101)关联的常数。*/
+    static NUMPAD_5: number;
+    /** 与数字键盘上的数字 6 的键控代码值(102)关联的常数。*/
+    static NUMPAD_6: number;
+    /** 与数字键盘上的数字 7 的键控代码值(103)关联的常数。*/
+    static NUMPAD_7: number;
+    /** 与数字键盘上的数字 8 的键控代码值(104)关联的常数。*/
+    static NUMPAD_8: number;
+    /** 与数字键盘上的数字 9 的键控代码值(105)关联的常数。*/
+    static NUMPAD_9: number;
+    /** 与数字键盘上的加号(+)的键控代码值(107)关联的常数。*/
+    static NUMPAD_ADD: number;
+    /** 与数字键盘上的小数点(.)的键控代码值(110)关联的常数。*/
+    static NUMPAD_DECIMAL: number;
+    /** 与数字键盘上的除号(/)的键控代码值(111)关联的常数。*/
+    static NUMPAD_DIVIDE: number;
+    /** 与数字键盘上的 Enter 的键控代码值(108)关联的常数。*/
+    static NUMPAD_ENTER: number;
+    /** 与数字键盘上的乘号(*)的键控代码值(106)关联的常数。*/
+    static NUMPAD_MULTIPLY: number;
+    /** 与数字键盘上的减号(-)的键控代码值(109)关联的常数。*/
+    static NUMPAD_SUBTRACT: number;
+    /** 与 ; 键的键控代码值(186)关联的常数。*/
+    static SEMICOLON: number;
+    /** 与=键的键控代码值(187)关联的常数。*/
+    static EQUAL: number;
+    /** 与 F15 的键控代码值(188)关联的常数。*/
+    static COMMA: number;
+    /** 与 - 键的键控代码值(189)关联的常数。*/
+    static MINUS: number;
+    /** 与 . 键的键控代码值(190)关联的常数。*/
+    static PERIOD: number;
+    /** 与 / 键的键控代码值(191)关联的常数。*/
+    static SLASH: number;
+    /** 与 ` 键的键控代码值(192)关联的常数。*/
+    static BACKQUOTE: number;
+    /** 与 [ 键的键控代码值(219)关联的常数。*/
+    static LEFTBRACKET: number;
+    /** 与 \ 键的键控代码值(220)关联的常数。*/
+    static BACKSLASH: number;
+    /** 与 ] 键的键控代码值(221)关联的常数。*/
+    static RIGHTBRACKET: number;
+    /** 与 ' 键的键控代码值(222)关联的常数。*/
+    static QUOTE: number;
+    /** 与 Alternate(Option)键的键控代码值(18)关联的常数。*/
+    static ALTERNATE: number;
+    /** 与 Backspace 的键控代码值(8)关联的常数。*/
+    static BACKSPACE: number;
+    /** 与 Caps Lock 的键控代码值(20)关联的常数。*/
+    static CAPS_LOCK: number;
+    /** 与 Mac 命令键(15)关联的常数。*/
+    static COMMAND: number;
+    /** 与 Ctrl 的键控代码值(17)关联的常数。*/
+    static CONTROL: number;
+    /** 与 Delete 的键控代码值(46)关联的常数。*/
+    static DELETE: number;
+    /** 与 Enter 的键控代码值(13)关联的常数。*/
+    static ENTER: number;
+    /** 与 Esc 的键控代码值(27)关联的常数。*/
+    static ESCAPE: number;
+    /** 与 Page Up 的键控代码值(33)关联的常数。*/
+    static PAGE_UP: number;
+    /** 与 Page Down 的键控代码值(34)关联的常数。*/
+    static PAGE_DOWN: number;
+    /** 与 End 的键控代码值(35)关联的常数。*/
+    static END: number;
+    /** 与 Home 的键控代码值(36)关联的常数。*/
+    static HOME: number;
+    /** 与向左箭头键的键控代码值(37)关联的常数。*/
+    static LEFT: number;
+    /** 与向上箭头键的键控代码值(38)关联的常数。*/
+    static UP: number;
+    /** 与向右箭头键的键控代码值(39)关联的常数。*/
+    static RIGHT: number;
+    /** 与向下箭头键的键控代码值(40)关联的常数。*/
+    static DOWN: number;
+    /** 与 Shift 的键控代码值(16)关联的常数。*/
+    static SHIFT: number;
+    /** 与空格键的键控代码值(32)关联的常数。*/
+    static SPACE: number;
+    /** 与 Tab 的键控代码值(9)关联的常数。*/
+    static TAB: number;
+    /** 与 Insert 的键控代码值(45)关联的常数。*/
+    static INSERT: number;
+}
+/**
+  * <code>Filter</code> 是滤镜基类。
+  */
+class Filter  {
+   
+}
+/**
+ * 模糊滤镜
+ */
+class BlurFilter extends Filter {
+    /**模糊滤镜的强度(值越大，越不清晰 */
+    strength: number;
+    /**
+     * 模糊滤镜
+     * @param	strength	模糊滤镜的强度值
+     */
+    constructor(strength?: number) { super() };
+    /**
+     * @private
+     * 当前滤镜的类型
+     */
+    get type(): number { return null };
+    /**
+     * @private 通知微端
+     */
+    callNative(sp: Sprite): void { };
+}
+/**
+ * <p><code>ColorFilter</code> 是颜色滤镜。
+ * 使用 ColorFilter 类可以将 4 x 5 矩阵转换应用于输入图像上的每个像素的 RGBA 颜色和 Alpha 值，
+ * 以生成具有一组新的 RGBA 颜色和 Alpha 值的结果。该类允许饱和度更改、色相旋转、亮度转 Alpha 以及各种其他效果。
+ * 您可以将滤镜应用于任何显示对象（即，从 Sprite 类继承的对象）。</p>
+ * <p>注意：对于 RGBA 值，最高有效字节代表红色通道值，其后的有效字节分别代表绿色、蓝色和 Alpha 通道值。</p>
+ */
+class ColorFilter extends Filter {
+    /**
+     * 创建一个 <code>ColorFilter</code> 实例。
+     * @param mat	（可选）由 20 个项目（排列成 4 x 5 矩阵）组成的数组，用于颜色转换。
+     */
+    constructor(mat?: Array<any>) { super() };
+}
+/**
+*  发光滤镜(也可以当成阴影滤使用）
+*/
+class GlowFilter extends Filter {
+    /**
+     * 创建发光滤镜
+     * @param	color	滤镜的颜色
+     * @param	blur	边缘模糊的大小
+     * @param	offX	X轴方向的偏移
+     * @param	offY	Y轴方向的偏移
+     */
+    constructor(color: string, blur?: number, offX?: number, offY?: number) { super() };
+    offY: number;
+    offX: number;
+    getColor(): Array<any> { return null };
+    blur: number;
+}
+/**
+ * 色相滤镜
+ */
+class HueFilter extends ColorFilter {
+    /**
+     * 我的颜色矩阵 5x4
+     */
+    colorMat:number[];
+    /**
+     * -180~180
+     * -1~-120 normal -> green  
+     * -121~-180
+     * 
+     * @param hue 
+     */
+    constructor(hue: number = 0) {
+      super();
+    }
+}
+/**
+  * 
+  * <code>MathUtil</code> 是一个数据处理工具类。
+  */
+class MathUtil {
+    static subtractVector3(l: Float32Array, r: Float32Array, o: Float32Array): void { };
+    static lerp(left: number, right: number, amount: number): number { return null };
+    static scaleVector3(f: Float32Array, b: number, e: Float32Array): void { };
+    static lerpVector3(l: Float32Array, r: Float32Array, t: number, o: Float32Array): void { };
+    static lerpVector4(l: Float32Array, r: Float32Array, t: number, o: Float32Array): void { };
+    static slerpQuaternionArray(a: Float32Array, Offset1: number, b: Float32Array, Offset2: number, t: number, out: Float32Array, Offset3: number): Float32Array { return null };
+    /**
+     * 获取指定的两个点组成的线段的弧度值。
+     * @param	x0 点一的 X 轴坐标值。
+     * @param	y0 点一的 Y 轴坐标值。
+     * @param	x1 点二的 X 轴坐标值。
+     * @param	y1 点二的 Y 轴坐标值。
+     * @return 弧度值。
+     */
+    static getRotation(x0: number, y0: number, x1: number, y1: number): number { return null };
+    /**
+     * 一个用来确定数组元素排序顺序的比较函数。
+     * @param	a 待比较数字。
+     * @param	b 待比较数字。
+     * @return 如果a等于b 则值为0；如果b>a则值为1；如果b<则值为-1。
+     */
+    static sortBigFirst(a: number, b: number): number { return null };
+    /**
+     * 一个用来确定数组元素排序顺序的比较函数。
+     * @param	a 待比较数字。
+     * @param	b 待比较数字。
+     * @return 如果a等于b 则值为0；如果b>a则值为-1；如果b<则值为1。
+     */
+    static sortSmallFirst(a: number, b: number): number { return null };
+    /**
+     * 将指定的元素转为数字进行比较。
+     * @param	a 待比较元素。
+     * @param	b 待比较元素。
+     * @return b、a转化成数字的差值 (b-a)。
+     */
+    static sortNumBigFirst(a: any, b: any): number { return null };
+    /**
+     * 将指定的元素转为数字进行比较。
+     * @param	a 待比较元素。
+     * @param	b 待比较元素。
+     * @return a、b转化成数字的差值 (a-b)。
+     */
+    static sortNumSmallFirst(a: any, b: any): number { return null };
+    /**
+     * 返回根据对象指定的属性进行排序的比较函数。
+     * @param	key 排序要依据的元素属性名。
+     * @param	bigFirst 如果值为true，则按照由大到小的顺序进行排序，否则按照由小到大的顺序进行排序。
+     * @param	forceNum 如果值为true，则将排序的元素转为数字进行比较。
+     * @return 排序函数。
+     */
+    static sortByKey(key: string, bigFirst?: boolean, forceNum?: boolean): Function { return null };
+}
+/**
+  * @private
+  * 计算贝塞尔曲线的工具类。
+  */
+class Bezier {
+    /**
+     * 工具类单例
+     */
+    static I: Bezier;
+    /**
+     * 计算二次贝塞尔点。
+     * @param t
+     * @param rst
+     *
+     */
+    getPoint2(t: number, rst: Array<any>): void { };
+    /**
+     * 计算三次贝塞尔点
+     * @param t
+     * @param rst
+     *
+     */
+    getPoint3(t: number, rst: Array<any>): void { };
+    /**
+     * 计算贝塞尔点序列
+     * @param count
+     * @param rst
+     *
+     */
+    insertPoints(count: number, rst: Array<any>): void { };
+    /**
+     * 获取贝塞尔曲线上的点。
+     * @param pList 控制点[x0,y0,x1,y1...]
+     * @param inSertCount 每次曲线的插值数量
+     * @return
+     *
+     */
+    getBezierPoints(pList: Array<any>, inSertCount?: number, count?: number): Array<any> { return null };
+}
+/**
+ * @private
+ * 凸包算法。
+ */
+class GrahamScan {
+    static multiply(p1: Point, p2: Point, p0: Point): number { return null };
+    /**
+     * 计算两个点的距离。
+     * @param	p1
+     * @param	p2
+     * @return
+     */
+    static dis(p1: Point, p2: Point): number { return null };
+    /**
+     * 将数组 src 从索引0位置 依次取 cout 个项添加至 tst 数组的尾部。
+     * @param	rst 原始数组，用于添加新的子元素。
+     * @param	src 用于取子元素的数组。
+     * @param	count 需要取得子元素个数。
+     * @return 添加完子元素的 rst 对象。
+     */
+    static getFrom(rst: Array<any>, src: Array<any>, count: number): Array<any> { return null };
+    /**
+     * 将数组 src 从末尾索引位置往头部索引位置方向 依次取 cout 个项添加至 tst 数组的尾部。
+     * @param	rst 原始数组，用于添加新的子元素。
+     * @param	src 用于取子元素的数组。
+     * @param	count 需要取得子元素个数。
+     * @return 添加完子元素的 rst 对象。
+     */
+    static getFromR(rst: Array<any>, src: Array<any>, count: number): Array<any> { return null };
+    /**
+     *  [x,y...]列表 转 Point列表
+     * @param pList Point列表
+     * @return [x,y...]列表
+     */
+    static pListToPointList(pList: Array<any>, tempUse?: boolean): Array<any> { return null };
+    /**
+     * Point列表转[x,y...]列表
+     * @param pointList Point列表
+     * @return [x,y...]列表
+     */
+    static pointListToPlist(pointList: Array<any>): Array<any> { return null };
+    /**
+     *  寻找包括所有点的最小多边形顶点集合
+     * @param pList 形如[x0,y0,x1,y1...]的点列表
+     * @return  最小多边形顶点集合
+     */
+    static scanPList(pList: Array<any>): Array<any> { return null };
+    /**
+     * 寻找包括所有点的最小多边形顶点集合
+     * @param PointSet Point列表
+     * @return 最小多边形顶点集合
+     */
+    static scan(PointSet: Array<any>): Array<any> { return null };
+}
+
+/**
+ * <code>Point</code> 对象表示二维坐标系统中的某个位置，其中 x 表示水平轴，y 表示垂直轴。
+ */
+class Point {
+    /**临时使用的公用对象。*/
+    static TEMP: Point;
+    static EMPTY: Point;
+    /**该点的水平坐标。*/
+    x: number;
+    /**该点的垂直坐标。*/
+    y: number;
+    /**
+     * 根据指定坐标，创建一个新的 <code>Point</code> 对象。
+     * @param x	（可选）水平坐标。
+     * @param y	（可选）垂直坐标。
+     */
+    constructor(x?: number, y?: number) { };
+    /**
+     * 将 <code>Point</code> 的成员设置为指定值。
+     * @param	x 水平坐标。
+     * @param	y 垂直坐标。
+     * @return 当前 Point 对象。
+     */
+    setTo(x: number, y: number): Point { return null };
+    /**
+     * 计算当前点和目标点(x，y)的距离。
+     * @param	x 水平坐标。
+     * @param	y 垂直坐标。
+     * @return	返回当前点和目标点之间的距离。
+     */
+    distance(x: number, y: number): number { return null };
+    /**返回包含 x 和 y 坐标的值的字符串。*/
+    toString(): string { return null };
+    /**
+     * kds添加：返回from-to两点中间的点
+     */
+    static interpolate(to: Point, from: Point, per: number): Point { return null }
+    /**
+     * kds添加：返回from-to两点中间的距离
+     * @param from 
+     * @param to 
+     * @return [number] 
+     */
+    static distance(from: Point, to: Point): number { return null };
+}
+
+/**
+ * <p><code>Rectangle</code> 对象是按其位置（由它左上角的点 (x, y) 确定）以及宽度和高度定义的区域。</p>
+ * <p>Rectangle 类的 x、y、width 和 height 属性相互独立；更改一个属性的值不会影响其他属性。</p>
+ */
+class Rectangle {
+    static EMPTY: Rectangle;
+    /**全局临时的矩形区域，此对象用于全局复用，以减少对象创建*/
+    static TEMP: Rectangle;
+    /** 矩形左上角的 X 轴坐标。*/
+    x: number;
+    /** 矩形左上角的 Y 轴坐标。*/
+    y: number;
+    /** 矩形的宽度。*/
+    width: number;
+    /** 矩形的高度。*/
+    height: number;
+    /**
+     * 创建一个 <code>Rectangle</code> 对象。
+     * @param	x 矩形左上角的 X 轴坐标。
+     * @param	y 矩形左上角的 Y 轴坐标。
+     * @param	width 矩形的宽度。
+     * @param	height 矩形的高度。
+     */
+    constructor(x?: number, y?: number, width?: number, height?: number) { };
+    /** 此矩形右侧的 X 轴坐标。 x 和 width 属性的和。*/
+    get right(): number { return null };
+    /** 此矩形底端的 Y 轴坐标。y 和 height 属性的和。*/
+    get bottom(): number { return null };
+    /**
+     * 将 Rectangle 的属性设置为指定值。
+     * @param	x	x 矩形左上角的 X 轴坐标。
+     * @param	y	x 矩形左上角的 Y 轴坐标。
+     * @param	width	矩形的宽度。
+     * @param	height	矩形的高。
+     * @return	返回属性值修改后的矩形对象本身。
+     */
+    setTo(x: number, y: number, width: number, height: number): Rectangle { return null };
+    /**
+     * 复制 source 对象的属性值到此矩形对象中。
+     * @param	sourceRect	源 Rectangle 对象。
+     * @return	返回属性值修改后的矩形对象本身。
+     */
+    copyFrom(source: Rectangle): Rectangle { return null };
+    /**
+     * 确定由此 Rectangle 对象定义的矩形区域内是否包含指定的点。
+     * @param x	点的 X 轴坐标值（水平位置）。
+     * @param y	点的 Y 轴坐标值（垂直位置）。
+     * @return	如果 Rectangle 对象包含指定的点，则值为 true；否则为 false。
+     */
+    contains(x: number, y: number): boolean { return null };
+    /**
+     * 确定在 rect 参数中指定的对象是否与此 Rectangle 对象相交。此方法检查指定的 Rectangle 对象的 x、y、width 和 height 属性，以查看它是否与此 Rectangle 对象相交。
+     * @param	rect Rectangle 对象。
+     * @return	如果传入的矩形对象与此对象相交，则返回 true 值，否则返回 false。
+     */
+    intersects(rect: Rectangle): boolean { return null };
+    /**
+     * 如果在 rect 参数中指定的 Rectangle 对象与此 Rectangle 对象相交，则返回交集区域作为 Rectangle 对象。如果矩形不相交，则此方法返回null。
+     * @param rect	待比较的矩形区域。
+     * @param out	（可选）待输出的矩形区域。如果为空则创建一个新的。建议：尽量复用对象，减少对象创建消耗。
+     * @return	返回相交的矩形区域对象。
+     */
+    intersection(rect: Rectangle, out?: Rectangle): Rectangle { return null };
+    /**
+     * <p>矩形联合，通过填充两个矩形之间的水平和垂直空间，将这两个矩形组合在一起以创建一个新的 Rectangle 对象。</p>
+     * <p>注意：union() 方法忽略高度或宽度值为 0 的矩形，如：var rect2:Rectangle = new Rectangle(300,300,50,0);</p>
+     * @param	要添加到此 Rectangle 对象的 Rectangle 对象。
+     * @param	out	用于存储输出结果的矩形对象。如果为空，则创建一个新的。建议：尽量复用对象，减少对象创建消耗。Rectangle.TEMP对象用于对象复用。
+     * @return	充当两个矩形的联合的新 Rectangle 对象。
+     */
+    union(source: Rectangle, out?: Rectangle): Rectangle { return null };
+    /**
+     * 返回一个 Rectangle 对象，其 x、y、width 和 height 属性的值与当前 Rectangle 对象的对应值相同。
+     * @param out	（可选）用于存储结果的矩形对象。如果为空，则创建一个新的。建议：尽量复用对象，减少对象创建消耗。。Rectangle.TEMP对象用于对象复用。
+     * @return Rectangle 对象，其 x、y、width 和 height 属性的值与当前 Rectangle 对象的对应值相同。
+     */
+    clone(out?: Rectangle): Rectangle { return null };
+    /**
+     * 检测传入的 Rectangle 对象的属性是否与当前 Rectangle 对象的属性 x、y、width、height 属性值都相等。
+     * @param	rect 待比较的 Rectangle 对象。
+     * @return	如果判断的属性都相等，则返回 true ,否则返回 false。
+     */
+    equals(rect: Rectangle): boolean { return null };
+    /**
+     * <p>为当前矩形对象加一个点，以使当前矩形扩展为包含当前矩形和此点的最小矩形。</p>
+     * <p>此方法会修改本对象。</p>
+     * @param x	点的 X 坐标。
+     * @param y	点的 Y 坐标。
+     * @return 返回此 Rectangle 对象。
+     */
+    addPoint(x: number, y: number): Rectangle { return null };
+    /**
+     * 确定此 Rectangle 对象是否为空。
+     * @return 如果 Rectangle 对象的宽度或高度小于等于 0，则返回 true 值，否则返回 false。
+     */
+    isEmpty(): boolean { return null };
+}
+
+/**
+ * <p> <code>SoundChannel</code> 用来控制程序中的声音。每个声音均分配给一个声道，
+ * 而且应用程序可以具有混合在一起的多个声道。</p>
+ * <p> <code>SoundChannel</code> 类包含控制声音的播放、暂停、停止、音量的方法，
+ * 以及获取声音的播放状态、总时间、当前播放时间、总循环次数、播放地址等信息的方法。</p>
+ * 支持事件：EventObject.COMPLETE
+ */
+class SoundChannel extends EventDispatcher {
+    /**
+     * 声音地址。
+     */
+    url: string;
+    /**
+     * 循环次数。
+     */
+    loops: number;
+    /**
+     * 开始时间。
+     */
+    startTime: number;
+    /**
+     * 表示声音是否已暂停。
+     */
+    isStopped: boolean;
+    /**
+     * 音量范围从 0（静音）至 1（最大音量）。
+     */
+    volume: number;
+    /**
+     * 获取当前播放时间。
+     */
+    get position(): number { return null };
+    /**
+     * 获取总时间。
+     */
+    get duration(): number { return null };
+    /**
+     * 播放。
+     */
+    play(): void { };
+    /**
+     * 停止。
+     */
+    stop(): void { };
+    /**
+     * 暂停。
+     */
+    pause(): void { };
+    /**
+     * 继续播放。
+     */
+    resume(): void { };
+}
+/**
+ * <p> <code>HttpRequest</code> 通过封装 HTML <code>XMLHttpRequest</code> 对象提供了对 HTTP 协议的完全的访问，包括做出 POST 和 HEAD 请求以及普通的 GET 请求的能力。 <code>HttpRequest</code> 只提供以异步的形式返回 Web 服务器的响应，并且能够以文本或者二进制的形式返回内容。</p>
+ * <p><b>注意：</b>建议每次请求都使用新的 <code>HttpRequest</code> 对象，因为每次调用该对象的send方法时，都会清空之前设置的数据，并重置 HTTP 请求的状态，这会导致之前还未返回响应的请求被重置，从而得不到之前请求的响应结果。
+ * 支持事件
+ * EventObject.COMPLETE
+ * EventObject.PROGRESS
+ * EventObject.ERROR
+ */
+class HttpRequest extends EventDispatcher {
+    /**
+     * 发送 HTTP 请求。
+     * @param	url				请求的地址。大多数浏览器实施了一个同源安全策略，并且要求这个 URL 与包含脚本的文本具有相同的主机名和端口。
+     * @param	data			(default = null)发送的数据。
+     * @param	method			(default = "get")用于请求的 HTTP 方法。值包括 "get"、"post"、"head"。
+     * @param	responseType	(default = "text")Web 服务器的响应类型，可设置为 "text"、"json"、"xml"、"arraybuffer"。
+     * @param	headers			(default = null) HTTP 请求的头部信息。参数形如key-value数组：key是头部的名称，不应该包括空白、冒号或换行；value是头部的值，不应该包括换行。比如["Content-Type", "application/json"]。
+     */
+    send(url: string, data?: any, method?: string, responseType?: string, headers?: Array<any>): void { };
+
+    /** 请求的地址。*/
+    get url(): string { return null };
+    /** 返回的数据。*/
+    get data(): any { return null };
+    /**
+     * 本对象所封装的原生 XMLHttpRequest 引用。
+     */
+    get http(): any { return null };
+
+}
+
+
+/**
+ * <p> <code>LocalStorage</code> 类用于没有时间限制的数据存储。</p>
+ */
+class LocalStorage {
+    /**
+     *  数据列表。
+     */
+    static items: any;
+    /**
+     * 表示是否支持  <code>LocalStorage</code>。
+     */
+    static support: boolean;
+    /**
+     * 存储指定键名和键值，字符串类型。
+     * @param key 键名。
+     * @param value 键值。
+     */
+    static setItem(key: string, value: string): void { };
+    /**
+     * 获取指定键名的值。
+     * @param key 键名。
+     * @return 字符串型值。
+     */
+    static getItem(key: string): string { return null };
+    /**
+     * 存储指定键名及其对应的 <code>Object</code> 类型值。
+     * @param key 键名。
+     * @param value 键值。是 <code>Object</code> 类型，此致会被转化为 JSON 字符串存储。
+     */
+    static setJSON(key: string, value: any): void { };
+    /**
+     * 获取指定键名对应的 <code>Object</code> 类型值。
+     * @param key 键名。
+     * @return <code>Object</code> 类型值
+     */
+    static getJSON(key: string): any { return null };
+    /**
+     * 删除指定键名的信息。
+     * @param key 键名。
+     */
+    static removeItem(key: string): void { };
+    /**
+     * 清除本地存储信息。
+     */
+    static clear(): void { };
+}
+
+/**
+ * <code>Texture</code> 是一个纹理处理类。
+ */
+class Texture extends EventDispatcher {
+    /**默认 UV 信息。*/
+    static DEF_UV: Array<any>;
+    static INV_UV: Array<any>;
+    /**图片地址*/
+    url: string;
+    /**
+     * 表示资源是否已释放。
+     */
+    get released(): boolean { return null };
+    /**
+     * 销毁纹理（分直接销毁，跟计数销毁两种）。
+     * @param	forceDispose	(default = false)true为强制销毁主纹理，false是通过计数销毁纹理。
+     */
+    dispose(forceDispose?: boolean): void { };
+    /** 实际宽度。*/
+    width: number;
+    /** 实际高度。*/
+    height: number;
+    /**
+     * 获取Texture上的某个区域的像素点
+     * @param	x
+     * @param	y
+     * @param	width
+     * @param	height
+     * @return  返回像素点集合
+     */
+    getPixels(x: number, y: number, width: number, height: number): Array<any> { return null };
+}
+
+
+/**
+ * <code>Browser</code> 是浏览器代理类。封装浏览器及原生 js 提供的一些功能。
+ */
+class Browser {
+    /** 浏览器代理信息。*/
+    static userAgent: string;
+    /** 表示是否在 ios 设备。*/
+    static onIOS: boolean;
+    /** 表示是否在移动设备。*/
+    static onMobile: boolean;
+    /** 表示是否在 iphone设备。*/
+    static onIPhone: boolean;
+    /** 表示是否在 ipad 设备。*/
+    static onIPad: boolean;
+    /** 表示是否在 andriod设备。*/
+    static onAndriod: boolean;
+    /** 表示是否在 andriod设备。*/
+    static onAndroid: boolean;
+    /** 表示是否在 Windows Phone 设备。*/
+    static onWP: boolean;
+    /** 表示是否在 QQ 浏览器。*/
+    static onQQBrowser: boolean;
+    /** 表示是否在移动端 QQ 或 QQ 浏览器。*/
+    static onMQQBrowser: boolean;
+    /** 表示是否在移动端 Safari。*/
+    static onSafari: boolean;
+    /** 表示是否在IE浏览器内*/
+    static onIE: boolean;
+    /** 微信内*/
+    static onWeiXin: boolean;
+    /** 表示是否在 PC 端。*/
+    static onPC: boolean;
+    /** 表示是否在 PC 端。*/
+    static onMac: boolean;
+    /** 表示是否是 HTTP 协议。*/
+    static httpProtocol: boolean;
+    static webAudioEnabled: boolean;
+    static soundType: string;
+    static enableTouch: boolean;
+    /**
+     * 创建浏览器原生节点。
+     * @param	type 节点类型。
+     * @return	创建的节点对象的引用。
+     */
+    static createElement(type: string): any { };
+    /**
+     * 返回 Document 对象中拥有指定 id 的第一个对象的引用。
+     * @param	type 节点id。
+     * @return	节点对象。
+     */
+    static getElementById(type: string): any { };
+    /**
+     * 移除指定的浏览器原生节点对象。
+     * @param	type 节点对象。
+     */
+    static removeElement(ele: any): void { };
+    /**
+     * 获取浏览器当前时间戳，单位为毫秒。
+     */
+    static now(): number { return null };
+    /**
+     * 浏览器窗口可视宽度。
+     * 通过分析浏览器信息获得。浏览器多个属性值优先级为：window.innerWidth(包含滚动条宽度) > document.body.clientWidth(不包含滚动条宽度)，如果前者为0或为空，则选择后者。
+     */
+    static get clientWidth(): number { return null };
+    /**
+     * 浏览器窗口可视高度。
+     * 通过分析浏览器信息获得。浏览器多个属性值优先级为：window.innerHeight(包含滚动条高度) > document.body.clientHeight(不包含滚动条高度) > document.documentElement.clientHeight(不包含滚动条高度)，如果前者为0或为空，则选择后者。
+     */
+    static get clientHeight(): number { return null };
+    /** 浏览器窗口物理宽度。考虑了设备像素比。*/
+    static get width(): number { return null };
+    /** 浏览器窗口物理高度。考虑了设备像素比。*/
+    static get height(): number { return null };
+    /** 设备像素比。*/
+    static get pixelRatio(): number { return null };
+    /**画布容器，用来盛放画布的容器。方便对画布进行控制*/
+    static container: any;
+    /** 浏览器原生 window 对象的引用。*/
+    static get window(): any { return null };
+    /** 浏览器原生 document 对象的引用。*/
+    static get document(): any { return null };
+}
+
+
+/**
+* <code>Dictionary</code> 是一个字典型的数据存取类。
+*/
+class Dictionary {
+    /**
+     * 获取所有的子元素列表。
+     */
+    get values(): Array<any> { return null };
+    /**
+     * 获取所有的子元素键名列表。
+     */
+    get keys(): Array<any> { return null };
+    /**
+     * 给指定的键名设置值。
+     * @param	key 键名。
+     * @param	value 值。
+     */
+    set(key: any, value: any): void { };
+    /**
+     * 获取指定对象的键名索引。
+     * @param	key 键名对象。
+     * @return 键名索引。
+     */
+    indexOf(key: any): number;
+    /**
+     * 返回指定键名的值。
+     * @param	key 键名对象。
+     * @return 指定键名的值。
+     */
+    get(key: any): any { return null; };
+    /**
+     * 移除指定键名的值。
+     * @param	key 键名对象。
+     * @return 是否成功移除。
+     */
+    remove(key: any): boolean { return null };
+    /**
+     * 清除此对象的键名列表和键值列表。
+     */
+    clear(): void { };
+}
+/**
+* <code>Ease</code> 类定义了缓动函数，以便实现 <code>Tween</code> 动画的缓动效果。
+*/
+class Ease {
+    /**
+     * 定义无加速持续运动。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static linearNone(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 定义无加速持续运动。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static linearIn(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 定义无加速持续运动。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static linearInOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 定义无加速持续运动。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static linearOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 方法以零速率开始运动，然后在执行时加快运动速度。
+     * 它的运动是类似一个球落向地板又弹起后，几次逐渐减小的回弹运动。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static bounceIn(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 开始运动时速率为零，先对运动进行加速，再减速直到速率为零。
+     * 它的运动是类似一个球落向地板又弹起后，几次逐渐减小的回弹运动。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static bounceInOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 以较快速度开始运动，然后在执行时减慢运动速度，直至速率为零。
+     * 它的运动是类似一个球落向地板又弹起后，几次逐渐减小的回弹运动。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static bounceOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 开始时往后运动，然后反向朝目标移动。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @param	s 指定过冲量，此处数值越大，过冲越大。
+     * @return 指定时间的插补属性的值。
+     */
+    static backIn(t: number, b: number, c: number, d: number, s?: number): number { return null };
+    /**
+     * 开始运动时是向后跟踪，再倒转方向并朝目标移动，稍微过冲目标，然后再次倒转方向，回来朝目标移动。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @param	s 指定过冲量，此处数值越大，过冲越大。
+     * @return 指定时间的插补属性的值。
+     */
+    static backInOut(t: number, b: number, c: number, d: number, s?: number): number { return null };
+    /**
+     * 开始运动时是朝目标移动，稍微过冲，再倒转方向回来朝着目标。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @param	s 指定过冲量，此处数值越大，过冲越大。
+     * @return 指定时间的插补属性的值。
+     */
+    static backOut(t: number, b: number, c: number, d: number, s?: number): number { return null };
+    /**
+     * 方法以零速率开始运动，然后在执行时加快运动速度。
+     * 其中的运动由按照指数方式衰减的正弦波来定义。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @param	a 指定正弦波的幅度。
+     * @param	p 指定正弦波的周期。
+     * @return 指定时间的插补属性的值。
+     */
+    static elasticIn(t: number, b: number, c: number, d: number, a?: number, p?: number): number { return null };
+    /**
+     * 开始运动时速率为零，先对运动进行加速，再减速直到速率为零。
+     * 其中的运动由按照指数方式衰减的正弦波来定义。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @param	a 指定正弦波的幅度。
+     * @param	p 指定正弦波的周期。
+     * @return 指定时间的插补属性的值。
+     */
+    static elasticInOut(t: number, b: number, c: number, d: number, a?: number, p?: number): number { return null };
+    /**
+     * 以较快速度开始运动，然后在执行时减慢运动速度，直至速率为零。
+     * 其中的运动由按照指数方式衰减的正弦波来定义。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @param	a 指定正弦波的幅度。
+     * @param	p 指定正弦波的周期。
+     * @return 指定时间的插补属性的值。
+     */
+    static elasticOut(t: number, b: number, c: number, d: number, a?: number, p?: number): number { return null };
+    /**
+     * 以零速率开始运动，然后在执行时加快运动速度。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static strongIn(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 开始运动时速率为零，先对运动进行加速，再减速直到速率为零。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static strongInOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 以较快速度开始运动，然后在执行时减慢运动速度，直至速率为零。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static strongOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 开始运动时速率为零，先对运动进行加速，再减速直到速率为零。
+     * Sine 缓动方程中的运动加速度小于 Quad 方程中的运动加速度。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static sineInOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 以零速率开始运动，然后在执行时加快运动速度。
+     * Sine 缓动方程中的运动加速度小于 Quad 方程中的运动加速度。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static sineIn(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 以较快速度开始运动，然后在执行时减慢运动速度，直至速率为零。
+     * Sine 缓动方程中的运动加速度小于 Quad 方程中的运动加速度。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static sineOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 以零速率开始运动，然后在执行时加快运动速度。
+     * Quint 缓动方程的运动加速大于 Quart 缓动方程。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static quintIn(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 开始运动时速率为零，先对运动进行加速，再减速直到速率为零。
+     * Quint 缓动方程的运动加速大于 Quart 缓动方程。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static quintInOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 以较快速度开始运动，然后在执行时减慢运动速度，直至速率为零。
+     * Quint 缓动方程的运动加速大于 Quart 缓动方程。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static quintOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 方法以零速率开始运动，然后在执行时加快运动速度。
+     * Quart 缓动方程的运动加速大于 Cubic 缓动方程。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static quartIn(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 开始运动时速率为零，先对运动进行加速，再减速直到速率为零。
+     * Quart 缓动方程的运动加速大于 Cubic 缓动方程。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static quartInOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 以较快速度开始运动，然后在执行时减慢运动速度，直至速率为零。
+     * Quart 缓动方程的运动加速大于 Cubic 缓动方程。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static quartOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 方法以零速率开始运动，然后在执行时加快运动速度。
+     * Cubic 缓动方程的运动加速大于 Quad 缓动方程。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static cubicIn(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 开始运动时速率为零，先对运动进行加速，再减速直到速率为零。
+     * Cubic 缓动方程的运动加速大于 Quad 缓动方程。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static cubicInOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 以较快速度开始运动，然后在执行时减慢运动速度，直至速率为零。
+     * Cubic 缓动方程的运动加速大于 Quad 缓动方程。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static cubicOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 方法以零速率开始运动，然后在执行时加快运动速度。
+     * Quad 缓动方程中的运动加速度等于 100% 缓动的时间轴补间的运动加速度，并且显著小于 Cubic 缓动方程中的运动加速度。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static quadIn(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 开始运动时速率为零，先对运动进行加速，再减速直到速率为零。
+     * Quad 缓动方程中的运动加速度等于 100% 缓动的时间轴补间的运动加速度，并且显著小于 Cubic 缓动方程中的运动加速度。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static quadInOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 以较快速度开始运动，然后在执行时减慢运动速度，直至速率为零。
+     * Quad 缓动方程中的运动加速度等于 100% 缓动的时间轴补间的运动加速度，并且显著小于 Cubic 缓动方程中的运动加速度。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static quadOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 方法以零速率开始运动，然后在执行时加快运动速度。
+     * 其中每个时间间隔是剩余距离减去一个固定比例部分。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static expoIn(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 开始运动时速率为零，先对运动进行加速，再减速直到速率为零。
+     * 其中每个时间间隔是剩余距离减去一个固定比例部分。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static expoInOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 以较快速度开始运动，然后在执行时减慢运动速度，直至速率为零。
+     * 其中每个时间间隔是剩余距离减去一个固定比例部分。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static expoOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 方法以零速率开始运动，然后在执行时加快运动速度。
+     * 缓动方程的运动加速会产生突然的速率变化。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static circIn(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 开始运动时速率为零，先对运动进行加速，再减速直到速率为零。
+     * 缓动方程的运动加速会产生突然的速率变化。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static circInOut(t: number, b: number, c: number, d: number): number { return null };
+    /**
+     * 以较快速度开始运动，然后在执行时减慢运动速度，直至速率为零。
+     * 缓动方程的运动加速会产生突然的速率变化。
+     * @param	t 指定当前时间，介于 0 和持续时间之间（包括二者）。
+     * @param	b 指定动画属性的初始值。
+     * @param	c 指定动画属性的更改总计。
+     * @param	d 指定运动的持续时间。
+     * @return 指定时间的插补属性的值。
+     */
+    static circOut(t: number, b: number, c: number, d: number): number { return null };
+}
+
+
+/**
+* <code>Tween</code>  是一个缓动类。使用此类能够实现对目标对象属性的渐变。
+*/
+class Tween {
+    gid: number;
+    /**更新回调，缓动数值发生变化时，回调变化的值*/
+    update: Callback;
+    /**
+     * 缓动对象的props属性到目标值。
+     * @param	target 目标对象(即将更改属性值的对象)。
+     * @param	props 变化的属性列表，比如
+     * @param	duration 花费的时间，单位毫秒。
+     * @param	ease 缓动类型，默认为匀速运动。
+     * @param	complete 结束回调函数。
+     * @param	delay 延迟执行时间。
+     * @param	coverBefore 是否覆盖之前的缓动。
+     * @param	autoRecover 是否自动回收，默认为true，缓动结束之后自动回收到对象池。
+     * @return	返回Tween对象。
+     */
+    static to(target: any, props: any, duration: number, ease?: Function, complete?: Callback, delay?: number, coverBefore?: boolean, autoRecover?: boolean): Tween { return null };
+    /**
+     * 从props属性，缓动到当前状态。
+     * @param	target 目标对象(即将更改属性值的对象)。
+     * @param	props 变化的属性列表，比如
+     * @param	duration 花费的时间，单位毫秒。
+     * @param	ease 缓动类型，默认为匀速运动。
+     * @param	complete 结束回调函数。
+     * @param	delay 延迟执行时间。
+     * @param	coverBefore 是否覆盖之前的缓动。
+     * @param	autoRecover 是否自动回收，默认为true，缓动结束之后自动回收到对象池。
+     * @return	返回Tween对象。
+     */
+    static from(target: any, props: any, duration: number, ease?: Function, complete?: Callback, delay?: number, coverBefore?: boolean, autoRecover?: boolean): Tween { return null };
+    /**
+     * 缓动对象的props属性到目标值。
+     * @param	target 目标对象(即将更改属性值的对象)。
+     * @param	props 变化的属性列表，比如
+     * @param	duration 花费的时间，单位毫秒。
+     * @param	ease 缓动类型，默认为匀速运动。
+     * @param	complete 结束回调函数。
+     * @param	delay 延迟执行时间。
+     * @param	coverBefore 是否覆盖之前的缓动。
+     * @return	返回Tween对象。
+     */
+    to(target: any, props: any, duration: number, ease?: Function, complete?: Callback, delay?: number, coverBefore?: boolean): Tween { return null };
+    /**
+     * 从props属性，缓动到当前状态。
+     * @param	target 目标对象(即将更改属性值的对象)。
+     * @param	props 变化的属性列表，比如
+     * @param	duration 花费的时间，单位毫秒。
+     * @param	ease 缓动类型，默认为匀速运动。
+     * @param	complete 结束回调函数。
+     * @param	delay 延迟执行时间。
+     * @param	coverBefore 是否覆盖之前的缓动。
+     * @return	返回Tween对象。
+     */
+    from(target: any, props: any, duration: number, ease?: Function, complete?: Callback, delay?: number, coverBefore?: boolean): Tween { return null };
+    /**设置当前执行比例**/
+    progress: number;
+    /**
+     * 立即结束缓动并到终点。
+     */
+    complete(): void { };
+    /**
+     * 暂停缓动，可以通过resume或restart重新开始。
+     */
+    pause(): void { };
+    /**
+     * 设置开始时间。
+     * @param	startTime 开始时间。
+     */
+    setStartTime(startTime: number): void { };
+    /**
+     * 清理指定目标对象上的所有缓动。
+     * @param	target 目标对象。
+     */
+    static clearAll(target: any): void { };
+    /**
+     * 清理某个缓动。
+     * @param	tween 缓动对象。
+     */
+    static clear(tween: Tween): void { };
+    static clearTween(target: any): void { };
+    /**
+     * 停止并清理当前缓动。
+     */
+    clear(): void { };
+    /** 回收到对象池。*/
+    recover(): void { };
+    /**
+     * 重新开始暂停的缓动。
+     */
+    restart(): void { };
+    /**
+     * 恢复暂停的缓动。
+     */
+    resume(): void { };
+}
+
+/**
+ * <code>Utils</code> 是工具类。
+ */
+class Utils {
+    /**
+     * 角度转弧度。
+     * @param	angle 角度值。
+     * @return	返回弧度值。
+     */
+    static toRadian(angle: number): number { return null };
+    /**
+     * 弧度转换为角度。
+     * @param	radian 弧度值。
+     * @return	返回角度值。
+     */
+    static toAngle(radian: number): number { return null };
+    /**
+     * 将传入的 uint 类型颜色值转换为字符串型颜色值。
+     * @param color 颜色值。
+     * @return 字符串型颜色值。
+     */
+    static toHexColor(color: number): string { return null };
+    /**获取一个全局唯一ID。*/
+    static getGID(): number { return null };
+    /**
+     * 将字符串解析成 XML 对象。
+     * @param value 需要解析的字符串。
+     * @return js原生的XML对象。
+     */
+    static parseXMLFromString(): Function { return null };
+    /**
+     * @private
+     * <p>连接数组。和array的concat相比，此方法不创建新对象</p>
+     * <b>注意：</b>若 参数 a 不为空，则会改变参数 source 的值为连接后的数组。
+     * @param	source 待连接的数组目标对象。
+     * @param	array 待连接的数组对象。
+     * @return 连接后的数组。
+     */
+    static concatArray(source: Array<any>, array: Array<any>): Array<any> { return null };
+    /**
+     * @private
+     * 清空数组对象。
+     * @param	array 数组。
+     * @return	清空后的 array 对象。
+     */
+    static clearArray(array: Array<any>): Array<any> { return null };
+    /**
+     * @private
+     * 清空source数组，复制array数组的值。
+     * @param	source 需要赋值的数组。
+     * @param	array 新的数组值。
+     * @return 	复制后的数据 source 。
+     */
+    static copyArray(source: Array<any>, array: Array<any>): Array<any> { return null };
+    /**
+     * @private
+     * 根据传入的显示对象 <code>Sprite</code> 和此显示对象上的 两个点，返回此对象上的两个点在舞台坐标系上组成的最小的矩形区域对象。
+     * @param	sprite 显示对象 <code>Sprite</code>。
+     * @param	x0	点一的 X 轴坐标点。
+     * @param	y0	点一的 Y 轴坐标点。
+     * @param	x1	点二的 X 轴坐标点。
+     * @param	y1	点二的 Y 轴坐标点。
+     * @return 两个点在舞台坐标系组成的矩形对象 <code>Rectangle</code>。
+     */
+    static getGlobalRecByPoints(sprite: Sprite, x0: number, y0: number, x1: number, y1: number): Rectangle { return null };
+    /**
+     * 计算传入的显示对象 <code>Sprite</code> 的全局坐标系的坐标和缩放值，返回 <code>Rectangle</code> 对象存放计算出的坐标X值、Y值、ScaleX值、ScaleY值。
+     * @param	sprite <code>Sprite</code> 对象。
+     * @return  矩形对象 <code>Rectangle</code>
+     */
+    static getGlobalPosAndScale(sprite: Sprite): Rectangle { return null };
+    /**
+     * 给传入的函数绑定作用域，返回绑定后的函数。
+     * @param	fun 函数对象。
+     * @param	scope 函数作用域。
+     * @return 绑定后的函数。
+     */
+    static bind(fun: Function, scope: any): Function { return null };
+    /**
+     * 测量文本在指定样式下的宽度、高度信息。
+     * @param	txt 文本内容。
+     * @param	font 文本字体样式。
+     * @return 文本的宽高信息对象。如：
+     */
+    static measureText(txt: string, font: string): any { return null };
+    /**
+     * @private
+     * 对传入的数组列表，根据子项的属性 Z 值进行重新排序。返回是否已重新排序的 Boolean 值。
+     * @param	array 子对象数组。
+     * @return	Boolean 值，表示是否已重新排序。
+     */
+    static updateOrder(array: Array<any>): boolean { return null };
+    /**
+     * @private
+     * 批量移动点坐标。
+     * @param points 坐标列表。
+     * @param x x轴偏移量。
+     * @param y y轴偏移量。
+     */
+    static transPointList(points: Array<any>, x: number, y: number): void { }
+    /**
+     * 解析一个字符串，并返回一个整数。和JS原生的parseInt不同：如果str为空或者非数字，原生返回NaN，这里返回0。
+     * @param	str		要被解析的字符串。
+     * @param	radix	表示要解析的数字的基数。默认值为0，表示10进制，其他值介于 2 ~ 36 之间。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数不在上述范围内，则此方法返回 0。
+     * @return	返回解析后的数字。
+     */
+    static parseInt(str: string, radix?: number): number { return null };
+    static getFileExtension(path: string): string { return null };
+    /**
+     * 获取指定区域内相对于窗口左上角的transform。
+     * @param	coordinateSpace	坐标空间，不能是Stage引用
+     * @param	x				相对于coordinateSpace的x坐标
+     * @param	y				相对于coordinateSpace的y坐标
+     * @return
+     */
+    static getTransformRelativeToWindow(coordinateSpace: Sprite, x: number, y: number): any { return null };
+    /**
+     * 使DOM元素使用舞台内的某块区域内。
+     * @param	dom				DOM元素引用
+     * @param	coordinateSpace	坐标空间，不能是Stage引用
+     * @param	x				相对于coordinateSpace的x坐标
+     * @param	y				相对于coordinateSpace的y坐标
+     * @param	width			宽度
+     * @param	height			高度
+     */
+    static fitDOMElementInArea(dom: any, coordinateSpace: Sprite, x: number, y: number, width: number, height: number): void { };
+}

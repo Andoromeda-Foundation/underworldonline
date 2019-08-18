@@ -1,0 +1,157 @@
+{
+    "loop": false,
+    "showHitEffect": false,
+    "fps": 20,
+    "totalFrame": 6,
+    "imageSources": [
+        null,
+        {
+            "x": 0,
+            "y": 0,
+            "width": 64,
+            "height": 85,
+            "url": "asset/image/animation/3.png",
+            "index": 1
+        },
+        {
+            "x": -64,
+            "y": 0,
+            "width": 64,
+            "height": 85,
+            "url": "asset/image/animation/3.png",
+            "index": 2
+        },
+        {
+            "x": 0,
+            "y": -85,
+            "width": 64,
+            "height": 85,
+            "url": "asset/image/animation/3.png",
+            "index": 3
+        },
+        {
+            "x": -64,
+            "y": -85,
+            "width": 64,
+            "height": 85,
+            "url": "asset/image/animation/3.png",
+            "index": 4
+        },
+        {
+            "x": 0,
+            "y": -170,
+            "width": 64,
+            "height": 85,
+            "url": "asset/image/animation/3.png",
+            "index": 5
+        },
+        {
+            "x": -64,
+            "y": -170,
+            "width": 64,
+            "height": 85,
+            "url": "asset/image/animation/3.png",
+            "index": 6
+        }
+    ],
+    "layers": [
+        {
+            "name": "目标层",
+            "type": 0,
+            "children": [],
+            "frames": [
+                {
+                    "index": 0,
+                    "horizontalReversal": false,
+                    "hue": 0,
+                    "blur": 0,
+                    "tonal_r": 0,
+                    "tonal_g": 0,
+                    "tonal_b": 0,
+                    "tonal_gray": 0,
+                    "tonal_mr": 1,
+                    "tonal_mg": 1,
+                    "tonal_mb": 1,
+                    "x": 0,
+                    "y": 0,
+                    "rotation": 0,
+                    "alpha": 1,
+                    "scaleX": 1,
+                    "scaleY": 1
+                },
+                {
+                    "index": 5,
+                    "horizontalReversal": false,
+                    "hue": 0,
+                    "blur": 0,
+                    "tonal_r": 0,
+                    "tonal_g": 0,
+                    "tonal_b": 0,
+                    "tonal_gray": 0,
+                    "tonal_mr": 1,
+                    "tonal_mg": 1,
+                    "tonal_mb": 1,
+                    "x": 0,
+                    "y": 0,
+                    "rotation": 0,
+                    "alpha": 0,
+                    "scaleX": 1,
+                    "scaleY": 1
+                }
+            ],
+            "isHitEffect": false
+        },
+        {
+            "name": "layer",
+            "type": 1,
+            "children": [],
+            "frames": [
+                {
+                    "index": 0,
+                    "horizontalReversal": false,
+                    "hue": 0,
+                    "blur": 0,
+                    "tonal_r": 0,
+                    "tonal_g": 0,
+                    "tonal_b": 0,
+                    "tonal_gray": 0,
+                    "tonal_mr": 1,
+                    "tonal_mg": 1,
+                    "tonal_mb": 1,
+                    "x": -27,
+                    "y": -75,
+                    "rotation": 0,
+                    "alpha": 1,
+                    "width": 64,
+                    "height": 85,
+                    "imageSource": 1,
+                    "blendModeType": 0
+                },
+                {
+                    "index": 5,
+                    "horizontalReversal": false,
+                    "hue": 0,
+                    "blur": 0,
+                    "tonal_r": 0,
+                    "tonal_g": 0,
+                    "tonal_b": 0,
+                    "tonal_gray": 0,
+                    "tonal_mr": 1,
+                    "tonal_mg": 1,
+                    "tonal_mb": 1,
+                    "x": -27,
+                    "y": -75,
+                    "rotation": 0,
+                    "alpha": 1,
+                    "width": 64,
+                    "height": 85,
+                    "imageSource": 6,
+                    "blendModeType": 0
+                }
+            ],
+            "isHitEffect": false
+        }
+    ],
+    "isParticle": false,
+    "id": 4
+}

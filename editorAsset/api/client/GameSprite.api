@@ -1,0 +1,61 @@
+/**
+ * 游戏精灵
+ * -- 滤镜叠加实现（即父子级滤镜不会被覆盖而是叠加）
+ * -- 色调（R+,B+,G+,GRAY,R*,G*,B*）
+ * -- 色相
+ * Created by 黑暗之神KDS on 2019-02-01 02:34:59.
+ */
+class GameSprite extends Sprite {
+    isDisposed: boolean;
+    /**
+     * 滤镜组
+     */
+    gameFilters: Filter[];
+    /**
+     * 追加一个滤镜，已存在的则忽略
+     */
+    appendGameFilter(gameFilter: Filter) {
+
+    }
+    /**
+     * 减少一个滤镜，滤镜不存在则忽略
+     */
+    subtractGameFilter(gameFilter: Filter) {
+
+    }
+    /**
+     * 更改色调
+     * @param r 红色+ -255~255
+     * @param g 绿色+ -255~255
+     * @param b 蓝色+ -255~255
+     * @param gray 灰度 0-100
+     * @param mr [可选] 默认值=1 0~5
+     * @param mg [可选] 默认值=1 0~5
+     * @param mb [可选] 默认值=1 0~5
+     */
+    setTonal(r: number, g: number, b: number, gray: number, mr: number = 1, mg: number = 1, mb: number = 1): void {
+
+    }
+    /**
+     * 获取色调参数：r g b gray mr mg mb
+     */
+    getTonal(): number[] {
+        return null;
+    }
+    /**
+     * 设置不可用状态，将禁用mouseEnabled并且调整为灰度
+     */
+    get disabled(): boolean {
+        return null;
+    }
+    set disabled(v: boolean) {
+
+    }
+    /**
+     * 是否继承于指定的对象
+     * @param sp 指定的对象 
+     */
+    isInherit(sp: TreeNode): boolean {
+        return null;
+    }
+}

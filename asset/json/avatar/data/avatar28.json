@@ -1,0 +1,20 @@
+{
+    "picUrls": [
+        "asset/image/avatar/empty.png"
+    ],
+    "oriMode": 4,
+    "refObjs": {},
+    "parts": [
+        {
+            "id": 0,
+            "showOnEditor": true
+        }
+    ],
+    "actionListArr": [
+        {
+            "id": 1,
+            "frameImageInfo": []
+        }
+    ],
+    "id": 28
+}

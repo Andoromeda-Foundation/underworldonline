@@ -1,0 +1,65 @@
+{
+    "option": {
+        "x": 132,
+        "y": 189,
+        "width": 310,
+        "height": 40,
+        "color": "#FFFFFF",
+        "fontSize": 24,
+        "leading": 3,
+        "align": "center",
+        "valign": "top"
+    },
+    "optionBox": {
+        "x": 100,
+        "y": 161,
+        "width": 375,
+        "height": 87,
+        "column": 2,
+        "columnSpaceing": 5,
+        "rowSpaceing": 5,
+        "image1": "asset/image/ui/Kelvin 287_3.png",
+        "image2": "asset/image/ui/Kelvin 285_3.png",
+        "overSe": "asset/audio/se/btn.mp3",
+        "overVolume": 1,
+        "overPitch": 1,
+        "clickSe": "asset/audio/se/over_btn.mp3",
+        "clickVolume": 1,
+        "clikcPitch": 1
+    },
+    "dialogBox": {
+        "x": 39,
+        "y": 492,
+        "width": 926,
+        "height": 193,
+        "skin": "asset/image/ui/Kelvin 70_1.png"
+    },
+    "headBox": {
+        "x": 51,
+        "y": 512,
+        "width": 142,
+        "height": 142,
+        "skin": "asset/editor/image/unknowimage.png"
+    },
+    "dialog": {
+        "x": 207,
+        "y": 559,
+        "width": 726,
+        "height": 125,
+        "color": "#FFFFFF",
+        "fontSize": 24,
+        "leading": 6,
+        "align": "left"
+    },
+    "nameBox": {
+        "x": 208,
+        "y": 515,
+        "width": 123,
+        "height": 28,
+        "color": "#FFFF00",
+        "fontSize": 24,
+        "leading": 3,
+        "align": "left"
+    },
+    "id": 2
+}

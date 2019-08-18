@@ -1,0 +1,970 @@
+/**
+ * 资源管理器
+ * 采用引用计数方式缓存资源，一旦引用计数为0时则会自动释放实际的资源
+ * 加载会增加引用计数，释放会减少引用计数
+ * 
+ * 关于加载基础资源：图片、音频、文本、Json
+ *      使用后必须调用相应的方法来卸载基础资源
+ * 
+ * 关于预加载高级资源：场景、场景对象、行走图、动画、UI
+ *      默认情况下预加载的资源会在一定时间内自动释放以便减少掉预加载的引用计数
+ *      如若设置了手动释放模式则需要自己调用相关释放函数来释放资源
+ * Created by 黑暗之神KDS on 2018-08-08 16:28:46.
+ */
+class AssetManager {
+    /**
+     * 资源引用计数 url:引用计数
+     */
+    static assetCountMap: { [url: string]: number } = {};
+    /**
+     * Graphics 切片图片资源集
+     */
+    private static imageAssets: { [url: string]: { [key: string]: Graphics } } = {};
+    /**
+     * 释放资源的间隔ms（当引用计数为0时会延迟清理资源，因为最近可能还会频繁用到）
+     */
+    private static disposeInterval: number = 3000;
+    /**
+     * 预加载缓存的UI 
+     */
+    private static preUIs: any[] = [];
+    //------------------------------------------------------------------------------------------------------
+    // 游戏资源预加载
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 加载场景资源：已加载情况直接返回 scene
+     * 设置了预加载资源的情况则加载资源,在卸载场景时会卸载相关资源
+     * -- JSON文件
+     * -- 图层的图片、图块的图片
+     * -- BGM、BGS
+     * -- 自定义资源列表
+     * @param id 场景ID 
+     * @param complete [可选] 默认值=null complete(scene:ClientScene)
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param autoDispose [可选] 默认值=true 是否自动释放资源（加载后会在延迟一段时间后自动释放，用于减少引用计数）
+     */
+    static preLoadSceneAsset(id: number, complete: Callback = null, syncCallbackWhenAssetExist: boolean = false, autoDispose: boolean = true): void {
+        if (id == 0) {
+            complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(0));
+            return;
+        }
+        AssetManager.loadJson("asset/json/scene/data/scene" + id + ".json", Callback.New(function (jsonObj: MapData) {
+            if (!jsonObj) {
+                complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(0));
+                return;
+            }
+            // 全加载完成回调
+            var loadCount = 1;
+            function onLoadOne() {
+                loadCount--;
+                if (loadCount == 0) {
+                    if (autoDispose) setTimeout((id: number) => { AssetManager.disposeScene(id); }, AssetManager.disposeInterval, id);
+                    complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(0));
+                }
+            }
+            var onLoadOneCB = Callback.New(onLoadOne, this);
+            // 全图层用到的图片加载
+            var imgUrls = [];
+            for (var i = 0; i < jsonObj.LayerDatas.length; i++) {
+                var layerData: SceneLayerData = jsonObj.LayerDatas[i];
+                if (layerData.img) { imgUrls.push(layerData.img); }
+                if (layerData.drawMode && layerData.tileData) {
+                    for (var id in layerData.tileData) {
+                        var tileData: TileData = Game.data.tileList.data[id];
+                        if (tileData && tileData.url) imgUrls.push(tileData.url);
+                    }
+                }
+            }
+            loadCount += 1;
+            AssetManager.loadImages(imgUrls, onLoadOneCB, syncCallbackWhenAssetExist);
+            // BGM/BGS
+            if (jsonObj.bgm) {
+                loadCount++;
+                AssetManager.loadAudio(jsonObj.bgm, onLoadOneCB, syncCallbackWhenAssetExist);
+            }
+            if (jsonObj.bgs) {
+                loadCount++;
+                AssetManager.loadAudio(jsonObj.bgs, onLoadOneCB, syncCallbackWhenAssetExist);
+            }
+            // 自定义资源列表
+            for (var s in jsonObj.preLoadAssets) {
+                var preLoadAssetInfo = jsonObj.preLoadAssets[s];
+                var valueStr = preLoadAssetInfo.value as string;
+                var valueInt = preLoadAssetInfo.value as number;
+                loadCount++;
+                switch (preLoadAssetInfo.type) {
+                    case 0:
+                        AssetManager.loadImage(valueStr, onLoadOneCB, syncCallbackWhenAssetExist);
+                        break;
+                    case 1:
+                        AssetManager.loadAudio(valueStr, onLoadOneCB, syncCallbackWhenAssetExist);
+                        break;
+                    case 2:
+                        AssetManager.loadText(valueStr, onLoadOneCB, syncCallbackWhenAssetExist);
+                        break;
+                    case 3:
+                        AssetManager.loadJson(valueStr, onLoadOneCB, syncCallbackWhenAssetExist);
+                        break;
+                    case 4:
+                        AssetManager.preLoadAvatarAsset(valueInt, onLoadOneCB, syncCallbackWhenAssetExist);
+                        break;
+                    case 5:
+                        AssetManager.preLoadUIAsset(valueInt, onLoadOneCB, syncCallbackWhenAssetExist);
+                        break;
+                    case 6:
+                        AssetManager.preLoadAnimationAsset(valueInt, onLoadOneCB, syncCallbackWhenAssetExist);
+                        break;
+                }
+            }
+            onLoadOneCB.run();
+        }, this));
+    }
+    /**
+     * 预加载场景对象资源
+     * 根据自定义显示对象层（avatar、ui、animation）来加载其下所有资源
+     * @param so 场景对象数据
+     * @param complete [可选] 默认值=null complete(scene:ClientScene)
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param autoDispose [可选] 默认值=true 是否自动释放资源（加载后会在延迟一段时间后自动释放，用于减少引用计数）
+     * 
+     */
+    static preLoadSceneObjectAsset(so: SceneObject, complete: Callback = null, syncCallbackWhenAssetExist: boolean = false, autoDispose: boolean = true): void {
+        var modelData = Common.sceneObjectModelList.data[so.modelID];
+        if (!modelData) {
+            complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(0));
+            return;
+        }
+        var loadCount = 0;
+        function onLoadOne() {
+            loadCount--;
+            if (loadCount == 0) {
+                if (autoDispose) setTimeout((so: SceneObject) => { AssetManager.disposeSceneObject(so); }, AssetManager.disposeInterval, so);
+                loadCount = -1;
+                complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(0));
+            }
+        }
+        var onLoadOneCB = Callback.New(onLoadOne, this);
+        var loads: Callback[] = [];
+        for (var i in modelData.preLayer) {
+            var preLayer = modelData.preLayer[i];
+            var displayInfo = so.displayList[preLayer.varName];
+            switch (preLayer.type) {
+                case 1:
+                    loadCount++;
+                    loads.push(Callback.New(this.preLoadAvatarAsset, this, [displayInfo.id, onLoadOneCB, syncCallbackWhenAssetExist, autoDispose]));
+                    break;
+                case 2:
+                    loadCount++;
+                    loads.push(Callback.New(this.preLoadUIAsset, this, [preLayer.id, onLoadOneCB, syncCallbackWhenAssetExist, autoDispose]));
+                    break;
+                case 3:
+                    if (displayInfo) {
+                        loadCount++;
+                        loads.push(Callback.New(this.preLoadUIAsset, this, [displayInfo.id, onLoadOneCB, syncCallbackWhenAssetExist, autoDispose]));
+                    }
+                    break;
+                case 4:
+                    loadCount++;
+                    loads.push(Callback.New(this.preLoadAnimationAsset, this, [preLayer.id, onLoadOneCB, syncCallbackWhenAssetExist, autoDispose]));
+                    break;
+                case 5:
+                    if (displayInfo) {
+                        loadCount++;
+                        loads.push(Callback.New(this.preLoadAnimationAsset, this, [displayInfo.id, onLoadOneCB, syncCallbackWhenAssetExist, autoDispose]));
+                    }
+                    break;
+            }
+        }
+        for (var i in loads) {
+            loads[i].run();
+        }
+        if (loadCount == 0) {
+            complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(0));
+        }
+    }
+    /**
+     * 预加载行走图数据，当不再使用时需要调用 AssetManager::disposeAvatarAsset
+     * @param id 行走图ID
+     * @param complete [可选] 默认值=null 
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param autoDispose [可选] 默认值=true 是否自动释放资源（加载后会在延迟一段时间后自动释放，用于减少引用计数）
+     */
+    static preLoadAvatarAsset(id: number, complete: Callback = null, syncCallbackWhenAssetExist: boolean = false, autoDispose: boolean = true): void {
+        if (id < 0) {
+            complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(0));
+            return;
+        }
+        AssetManager.loadJson("asset/json/avatar/data/avatar" + id + ".json", Callback.New((avatarData: AvatarData) => {
+            if (!avatarData) {
+                complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(0));
+                return;
+            }
+            var loadCount = avatarData.parts.length;
+            var onLoaded = Callback.New(() => {
+                loadCount--;
+                if (loadCount == 0) {
+                    if (autoDispose) setTimeout((id: number) => { AssetManager.disposeAvatarAsset(id); }, AssetManager.disposeInterval, id);
+                    complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(0));
+                }
+            }, this);
+            // 加载自身
+            AssetManager.loadImages(avatarData.picUrls, onLoaded, syncCallbackWhenAssetExist);
+            // 加载部件
+            for (var i = 0; i < avatarData.parts.length; i++) {
+                var avatarPartID: number = avatarData.parts[i].id;
+                if (avatarPartID == 0) continue;
+                AssetManager.preLoadAvatarAsset(avatarPartID, onLoaded, syncCallbackWhenAssetExist, false);
+            }
+        }, this), syncCallbackWhenAssetExist);
+    }
+    /**
+     * 加载UI
+     * @param id 
+     * @param complete [可选] 默认值=null 
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param autoDispose [可选] 默认值=true 是否自动释放资源（加载后会在延迟一段时间后自动释放，用于减少引用计数）
+     */
+    static preLoadUIAsset(id: number, complete: Callback = null, syncCallbackWhenAssetExist: boolean = false, autoDispose: boolean = true): void {
+        if (id == 0) {
+            complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(0));
+            return;
+        }
+        AssetManager.loadJson("asset/json/ui/data/ui" + id + ".json", Callback.New((uiDisData: UIDisplayData) => {
+            if (!uiDisData || !uiDisData.root) {
+                complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(0));
+                return;
+            }
+            var root = new UIComponent.UIRoot(true, id);
+            var uiArr = AssetManager.preUIs[id];
+            if (!uiArr) uiArr = AssetManager.preUIs[id] = [];
+            uiArr.push(root);
+            root.once(EventObject.LOADED, complete.caller, () => {
+                complete.run();
+                if (autoDispose) setTimeout((id: number) => { AssetManager.disposeUIAsset(id); }, AssetManager.disposeInterval, id);
+            });
+            var ui = GameUI.parse(uiDisData, false, null, id, root, syncCallbackWhenAssetExist);
+        }, this), syncCallbackWhenAssetExist);
+    }
+    /**
+     * 加载动画
+     * @param id 
+     * @param complete [可选] 默认值=null 
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param autoDispose [可选] 默认值=true 是否自动释放资源（加载后会在延迟一段时间后自动释放，用于减少引用计数）
+     */
+    static preLoadAnimationAsset(id: number, complete: Callback = null, syncCallbackWhenAssetExist: boolean = false, autoDispose: boolean = true): void {
+        if (id == 0) {
+            complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(0));
+            return;
+        }
+        AssetManager.loadJson("asset/json/animation/data/ani" + id + ".json", Callback.New((aniData: AnimationData) => {
+            if (!aniData) {
+                complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(0));
+                return;
+            }
+            // 加载完成统计
+            var loadCount = 1;
+            var onLoaded = Callback.New(() => {
+                loadCount--;
+                if (loadCount == 0) {
+                    if (autoDispose) setTimeout((id: number) => { AssetManager.disposeAnimationAsset(id); }, AssetManager.disposeInterval, id);
+                    complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(0));
+                }
+            }, this);
+            if (aniData.isParticle && aniData.particleData) {
+                AssetManager.loadImage(aniData.particleData.textureName, onLoaded, syncCallbackWhenAssetExist);
+            }
+            else {
+                // 加载其中可能存在的动画层，列出该动画下面的所有动画层（含子节点的子节点等）
+                for (var index = 0; index < aniData.layers.length; index++) {
+                    var layerInfo: AnimationAnimationLayerData = aniData.layers[index] as AnimationAnimationLayerData;
+                    if (layerInfo.type == AnimationItemType.Animation) {
+                        var nodes: AnimationAnimationLayerData[] = ArrayUtils.getTreeNodeArray(layerInfo);
+                        for (var s in nodes) {
+                            var childLayerInfo = nodes[s];
+                            if (childLayerInfo.type == AnimationItemType.Animation) {
+                                loadCount++;
+                                AssetManager.preLoadAnimationAsset(childLayerInfo.animationId, onLoaded, syncCallbackWhenAssetExist, false);
+                            }
+                        }
+                    }
+                }
+                // 加载自身资源
+                var picUrls = aniData.imageSources ? aniData.imageSources.reduce(function (pv: string[], v) { if (v && pv.indexOf(v.url) == -1) pv.push(v.url); return pv; }, []) : [];
+                AssetManager.loadImages(picUrls, onLoaded, syncCallbackWhenAssetExist);
+            }
+        }, this), syncCallbackWhenAssetExist);
+    }
+    /**
+     * 批量加载高级资源
+     * @param onFin 当加载完成时回调 onFin();
+     * @param onProgress [可选] 默认值=null 加载进度回调 onProgress(current:number,count:number); 当前加载数,加载总数
+     * @param images [可选] 默认值=[] 需要加载的图片路径集
+     * @param scenes [可选] 默认值=[] 需要加载的场景ID集
+     * @param avatars [可选] 默认值=[] 需要加载的行走图ID集
+     * @param animations [可选] 默认值=[] 需要加载的动画ID集
+     * @param uis  [可选] 默认值=[] 需要加载的UI集
+     * @param jsons [可选] 默认值=[] 需要加载的JSON集
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param autoDispose [可选] 默认值=true 是否自动释放资源（加载后会在延迟一段时间后自动释放，用于减少引用计数）
+     */
+    static batchPreLoadAsset(onFin: Callback, onProgress: Callback = null, images: string[] = [], scenes: number[]=[], avatars: number[] = [], animations: number[] = [], uis: number[] = [], jsons: string[] = [], syncCallbackWhenAssetExist: boolean = false, autoDispose: boolean = true): void {
+        var loadCount = images.length + scenes.length + avatars.length + animations.length + uis.length + jsons.length;
+        if (loadCount) {
+            onFin && (syncCallbackWhenAssetExist ? onFin.run() : onFin.delayRun(0));
+            return;
+        }
+        var loadCountR = loadCount;
+        function onLoaded() {
+            loadCount--;
+            onProgress && onProgress.runWith([loadCountR - loadCount, loadCountR]);
+        }
+        var onLoadedCB = Callback.New(onLoaded, this);
+        for (var i = 0; i < images.length; i++) {
+            var url = images[i];
+            this.loadImage(url, onLoadedCB, syncCallbackWhenAssetExist, true);
+            if (autoDispose) setTimeout((id: number) => { AssetManager.disposeImage(url); }, AssetManager.disposeInterval, url);
+        }
+        for (var i = 0; i < scenes.length; i++) {
+            this.preLoadSceneAsset(scenes[i], onLoadedCB, syncCallbackWhenAssetExist, autoDispose);
+        }
+        for (var i = 0; i < avatars.length; i++) {
+            this.preLoadAvatarAsset(avatars[i], onLoadedCB, syncCallbackWhenAssetExist, autoDispose);
+        }
+        for (var i = 0; i < animations.length; i++) {
+            this.preLoadAnimationAsset(animations[i], onLoadedCB, syncCallbackWhenAssetExist, autoDispose);
+        }
+        for (var i = 0; i < uis.length; i++) {
+            this.preLoadUIAsset(uis[i], onLoadedCB, syncCallbackWhenAssetExist, autoDispose);
+        }
+        for (var i = 0; i < jsons.length; i++) {
+            var url = jsons[i];
+            this.loadJson(url, onLoadedCB, syncCallbackWhenAssetExist, true);
+            if (autoDispose) setTimeout((id: number) => { AssetManager.disposeJson(url); }, AssetManager.disposeInterval, url);
+        }
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 卸载游戏资源
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 释放场景资源
+     * @param id 
+     */
+    static disposeScene(id: number) {
+        if (!id || id <= 0 || Config.EDIT_MODE) return;
+        var dataURL = "asset/json/scene/data/scene" + id + ".json";
+        AssetManager.loadJson(dataURL, Callback.New(function (jsonObj: MapData) {
+            if (!jsonObj) return;
+            // 卸载制作数据
+            AssetManager.disposeJson(dataURL);
+            // 全图层用到的图片卸载
+            var imgUrls = [];
+            for (var i = 0; i < jsonObj.LayerDatas.length; i++) {
+                var layerData: SceneLayerData = jsonObj.LayerDatas[i];
+                if (layerData.img) { imgUrls.push(layerData.img); }
+                if (this.drawMode && layerData.tileData) {
+                    for (var id in layerData.tileData) {
+                        var tileData: TileData = Game.data.tileList.data[id];
+                        if (tileData && tileData.url) imgUrls.push(tileData.url);
+                    }
+                }
+            }
+            AssetManager.disposeImages(imgUrls);
+            // BGM/BGS
+            if (jsonObj.bgm) {
+                AssetManager.disposeAudio(jsonObj.bgm);
+            }
+            if (jsonObj.bgs) {
+                AssetManager.disposeAudio(jsonObj.bgs);
+            }
+            // 自定义资源列表
+            for (var s in jsonObj.preLoadAssets) {
+                var preLoadAssetInfo = jsonObj.preLoadAssets[s];
+                var valueStr = preLoadAssetInfo.value as string;
+                var valueInt = preLoadAssetInfo.value as number;
+                switch (preLoadAssetInfo.type) {
+                    case 0:
+                        AssetManager.disposeImage(valueStr);
+                        break;
+                    case 1:
+                        AssetManager.disposeAudio(valueStr);
+                        break;
+                    case 2:
+                        AssetManager.disposeText(valueStr);
+                        break;
+                    case 3:
+                        AssetManager.disposeJson(valueStr);
+                        break;
+                    case 4:
+                        AssetManager.disposeAvatarAsset(valueInt);
+                        break;
+                    case 5:
+                        AssetManager.disposeUIAsset(valueInt);
+                        break;
+                    case 6:
+                        AssetManager.disposeAnimationAsset(valueInt);
+                        break;
+                }
+            }
+        }, this));
+    }
+    /**
+     * 释放场景对象资源
+     */
+    static disposeSceneObject(so: SceneObject): void {
+        if (Config.EDIT_MODE) return;
+        var modelData = Common.sceneObjectModelList.data[so.modelID];
+        if (!modelData) {
+            return;
+        }
+        var loads: Callback[] = [];
+        for (var i in modelData.preLayer) {
+            var preLayer = modelData.preLayer[i];
+            var displayInfo = so.displayList[preLayer.varName];
+            if (!displayInfo) {
+                debugger
+                continue;
+            };
+            switch (preLayer.type) {
+                case 1:
+                    this.disposeAvatarAsset(displayInfo.id);
+                    break;
+                case 2:
+                    this.disposeUIAsset(preLayer.id);
+                    break;
+                case 3:
+                    if (displayInfo) {
+                        this.disposeUIAsset(displayInfo.id);
+                    }
+                    break;
+                case 4:
+                    this.disposeAnimationAsset(preLayer.id);
+                    break;
+                case 5:
+                    if (displayInfo) {
+                        this.disposeAnimationAsset(displayInfo.id);
+                    }
+                    break;
+            }
+        }
+    }
+    /**
+     * 释放行走图资源
+     * @param id 
+     */
+    static disposeAvatarAsset(id: number) {
+        if (!id || id < 0 || Config.EDIT_MODE) return;
+        var dataURL = "asset/json/avatar/data/avatar" + id + ".json";
+        AssetManager.loadJson(dataURL, Callback.New((avatarData: AvatarData) => {
+            if (!avatarData) { return; }
+            // 卸载制作数据
+            AssetManager.disposeJson(dataURL);
+            // 卸载自身的资源
+            AssetManager.disposeImages(avatarData.picUrls);
+            // 卸载部位的资源
+            for (var i = 0; i < avatarData.parts.length; i++) {
+                var avatarPartID: number = avatarData.parts[i].id;
+                if (avatarPartID == 0) continue;
+                AssetManager.disposeAvatarAsset(avatarPartID);
+            }
+        }, this), true, false);
+    }
+    /**
+     * 释放UI
+     */
+    static disposeUIAsset(id: number): void {
+        if (!id || id <= 0 || Config.EDIT_MODE) return;
+        var uiArr = AssetManager.preUIs[id];
+        if (!uiArr || uiArr.length == 0) return;
+        var ui: UIComponent.UIRoot = uiArr.shift();
+        ui.dispose();
+    }
+    /**
+     * 释放动画
+     * @param id 
+     */
+    static disposeAnimationAsset(id: number) {
+        if (!id || id <= 0 || Config.EDIT_MODE) return;
+        var dataURL = "asset/json/animation/data/ani" + id + ".json";
+        AssetManager.loadJson(dataURL, Callback.New((aniData: AnimationData) => {
+            if (!aniData || !aniData.imageSources) { return; }
+            // 卸载制作数据
+            AssetManager.disposeJson(dataURL);
+            if (aniData.isParticle && aniData.particleData) {
+                AssetManager.disposeImage(aniData.particleData.textureName);
+            }
+            else {
+                // 加载其中可能存在的动画层，列出该动画下面的所有动画层（含子节点的子节点等）
+                for (var index = 0; index < aniData.layers.length; index++) {
+                    var layerInfo: AnimationAnimationLayerData = aniData.layers[index] as AnimationAnimationLayerData;
+                    if (layerInfo.type == AnimationItemType.Animation) {
+                        var nodes: AnimationAnimationLayerData[] = ArrayUtils.getTreeNodeArray(layerInfo);
+                        for (var s in nodes) {
+                            var childLayerInfo = nodes[s];
+                            if (childLayerInfo.type == AnimationItemType.Animation) {
+                                AssetManager.disposeAnimationAsset(childLayerInfo.animationId);
+                            }
+                        }
+                    }
+                }
+                // 加载自身资源
+                var picUrls = aniData.imageSources.reduce(function (pv: string[], v) { if (v && pv.indexOf(v.url) == -1) pv.push(v.url); return pv; }, []);
+                AssetManager.disposeImages(picUrls);
+            }
+        }, this), true, false);
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 加载基础资源 
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 加载图片
+     * @param url 图片地址
+     * @param complete [可选] 默认值=null 当完成时回调 complete(tex:Texture)
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param useRef 使用引用计数
+     */
+    static loadImage(url: string, complete: Callback = null, syncCallbackWhenAssetExist: boolean = false, useRef: boolean = true): void {
+        this.loadAsset(url, Loader.IMAGE, complete, syncCallbackWhenAssetExist, useRef);
+    }
+    /**
+     * 加载图片集，忽略空地址，始终会返回加载完毕回调
+     * @param urls 图片地址集
+     * @param complete [可选] 默认值=null 
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param useRef 使用引用计数
+     */
+    static loadImages(urls: string[], complete: Callback = null, syncCallbackWhenAssetExist: boolean = false, useRef: boolean = true): void {
+        this.batchLoadAsset(urls, Loader.IMAGE, complete, syncCallbackWhenAssetExist, useRef);
+    }
+    /**
+     * 加载音频文件支持格式 .mp3 .ogg
+     * @param url 音频文件地址
+     * @param complete [可选] 默认值=null 加载完成时回调
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param useRef 使用引用计数
+     */
+    static loadAudio(url: string, complete: Callback = null, syncCallbackWhenAssetExist: boolean = false, useRef: boolean = true): void {
+        this.loadAsset(url, Loader.SOUND, complete, syncCallbackWhenAssetExist, useRef);
+    }
+    /**
+     * 加载音频文件集，忽略空地址，始终会返回加载完毕回调
+     * @param urls 音频文件集
+     * @param complete [可选] 默认值=null 
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param useRef 使用引用计数
+     */
+    static loadAudios(urls: string[], complete: Callback = null, syncCallbackWhenAssetExist: boolean = false, useRef: boolean = true): void {
+        this.batchLoadAsset(urls, Loader.IMAGE, complete, syncCallbackWhenAssetExist, useRef);
+    }
+    /**
+     * 加载并解析JSON文件
+     * @param url json文件地址
+     * @param complete complete(jsonObj:any)
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param useRef 使用引用计数
+     */
+    static loadJson(url: string, complete: Callback, syncCallbackWhenAssetExist: boolean = false, useRef: boolean = true): void {
+        if (!url) {
+            complete && (syncCallbackWhenAssetExist ? complete.runWith([]) : complete.delayRun(1, null, []));
+            return;
+        }
+        if (useRef) AssetManager.addRef(url);
+        var asset = loader.getRes(url);
+        if (asset) {
+            complete && (syncCallbackWhenAssetExist ? complete.runWith([asset]) : complete.delayRun(1, null, [asset]));
+            return;
+        }
+        FileUtils.loadJsonFile(url, complete);
+    }
+    /**
+     * 加载并解析JSON文件集，忽略空地址，始终会返回加载完毕回调
+     * @param urls json文件地址集
+     * @param complete [可选] 默认值=null 
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param useRef 使用引用计数
+     */
+    static loadJsons(urls: string[], complete: Callback, syncCallbackWhenAssetExist: boolean = false, useRef: boolean = true): void {
+        this.batchLoadAsset(urls, Loader.JSON, complete, syncCallbackWhenAssetExist, useRef);
+    }
+    /**
+     * 加载Text文件
+     * @param url 文件路径
+     * @param complete 
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param useRef 使用引用计数
+     */
+    static loadText(url: string, complete: Callback, syncCallbackWhenAssetExist: boolean = false, useRef: boolean = true): void {
+        this.loadAsset(url, Loader.TEXT, complete, syncCallbackWhenAssetExist, useRef);
+    }
+    /**
+     * 加载Text文件集
+     * @param urls 文件路径集 
+     * @param complete 
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param useRef 使用引用计数
+     */
+    static loadTexts(urls: string[], complete: Callback, syncCallbackWhenAssetExist: boolean = false, useRef: boolean = true): void {
+        this.batchLoadAsset(urls, Loader.TEXT, complete, syncCallbackWhenAssetExist, useRef);
+    }
+    /**
+     * 加载资源
+     * @param url 
+     * @param type 
+     * @param complete [可选] 默认值=null 
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param useRef 使用引用计数
+     */
+    private static loadAsset(url: string, type: string, complete: Callback = null, syncCallbackWhenAssetExist: boolean = false, useRef: boolean = true): void {
+        if (!url) {
+            complete && (syncCallbackWhenAssetExist ? complete.runWith([]) : complete.delayRun(1));
+            return;
+        }
+        if (useRef) AssetManager.addRef(url);
+        var asset = loader.getRes(url);
+        if (asset) {
+            complete && (syncCallbackWhenAssetExist ? complete.runWith([asset]) : complete.delayRun(1, null, [asset]));
+            return;
+        }
+        if (complete) {
+            loader.load(url, Handler.create(this, (asset: any) => {
+                complete.runWith([asset]);
+            }), null, Loader.IMAGE);
+        }
+        else {
+            loader.load(url, null, null, Loader.IMAGE);
+        }
+    }
+    /**
+     * 批量加载资源
+     * @param urls 资源集
+     * @param type 类别
+     * @param complete [可选] 默认值=null 回调
+     * @param syncCallbackWhenAssetExist [可选] 默认值=false 当资源存在时同步回调，否则需要等待一帧（异步回调）
+     * @param useRef 使用引用计数
+     */
+    private static batchLoadAsset(urls: string[], type: string, complete: Callback = null, syncCallbackWhenAssetExist: boolean = false, useRef: boolean = true): void {
+        var loadUrls = [];
+        for (var i in urls) {
+            if (urls[i]) loadUrls.push(urls[i]);
+        }
+        if (loadUrls.length == 0) {
+            complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(1));
+            return;
+        }
+        var allExist = true;
+        for (var i in loadUrls) {
+            var url = loadUrls[i];
+            var asset = loader.getRes(url);
+            if (!asset) allExist = false;
+            if (useRef) AssetManager.addRef(url);
+        }
+        if (allExist) {
+            complete && (syncCallbackWhenAssetExist ? complete.run() : complete.delayRun(1));
+        }
+        else {
+            if (complete) {
+                loader.load(loadUrls, Handler.create(this, () => {
+                    complete.run();
+                }), null, type);
+            }
+            else {
+                loader.load(loadUrls, null, null, type);
+            }
+        }
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 获取基础资源
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 获取贴图资源
+     * @param url 图片地址
+     * @return [Texture] 
+     */
+    static getImage(url: string): Texture {
+        var tex = loader.getRes(url);
+        return tex;
+    }
+    /**
+     * 获取JSON资源
+     */
+    static getJson(url: string): any {
+        return loader.getRes(url);
+    }
+    /**
+     * 获取文本资源
+     */
+    static getText(url: string): string {
+        return loader.getRes(url);
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 卸载基础资源
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 卸载图片资源：当引用计数为0时会延迟后清理掉实际的所有资源以及其所有的切图资源（需保证切图资源Graphics外部已没有引用）
+     * @param url 图片文件地址
+     */
+    static disposeImage(url: string): void {
+        if (Config.EDIT_MODE) return;
+        Callback.New((url: string) => {
+            var ref = AssetManager.subRef(url);
+            if (ref == 0) {
+                AssetManager.imageAssets[url] = null;
+                var t: Texture = loader.getRes(url);
+                loader.clearRes(url, true);
+                if (t && t.destroy) t.destroy(true);
+            }
+        }, this, [url]).delayRun(AssetManager.disposeInterval);
+    }
+    /**
+     * 卸载图片资源：当引用计数为0时会延迟后清理掉实际的所有资源以及其所有的切图资源（需保证切图资源Graphics外部已没有引用）
+     * @param url 图片文件地址
+     */
+    static disposeImages(urls: string[]): void {
+        if (Config.EDIT_MODE) return;
+        Callback.New((urls: string[]) => {
+            for (var i in urls) {
+                AssetManager.disposeImage(urls[i]);
+            }
+        }, this, [urls]).delayRun(AssetManager.disposeInterval);
+    }
+    /**
+     * 卸载音频资源，当引用计数为0时会延迟后清理掉实际的所有资源
+     * @param url 音频文件地址
+     */
+    static disposeAudio(url: string): void {
+        if (Config.EDIT_MODE) return;
+        Callback.New((url: string) => {
+            var ref = AssetManager.subRef(url);
+            if (ref == 0) {
+                var s: WebAudioSound = loader.getRes(url);
+                loader.clearRes(url, true);
+                if (s && s.dispose) s.dispose();
+            }
+        }, this, [url]).delayRun(AssetManager.disposeInterval);
+    }
+    /**
+     * 卸载JSON资源，当引用计数为0时会延迟后清理掉实际的所有资源
+     * @param url json文件地址
+     */
+    static disposeJson(url: string): void {
+        if (Config.EDIT_MODE || !url) return;
+        Callback.New((url: string) => {
+            var ref = AssetManager.subRef(url);
+            if (ref == 0) {
+                loader.clearRes(url, true);
+            }
+        }, this, [url]).delayRun(AssetManager.disposeInterval);
+    }
+    /**
+     * 卸载文本资源，当引用计数为0时会延迟后清理掉实际的所有资源
+     * @param url 文本文件地址
+     */
+    static disposeText(url: string): void {
+        if (Config.EDIT_MODE || !url) return;
+        Callback.New((url: string) => {
+            var ref = AssetManager.subRef(url);
+            if (ref == 0) {
+                loader.clearRes(url, true);
+            }
+        }, this, [url]).delayRun(AssetManager.disposeInterval);
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 切图、截图
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 获取切片的贴图资源：整图资源必须已载入，当没有对应的切图时会临时切一次
+     * @param url 
+     * @param x 显示的偏移值x
+     * @param y 显示的偏移值y
+     * @param rect 对纹理的取样 偏移和宽高
+     */
+    static getClipImage(url: string, x: number, y: number, rect: Rectangle): Graphics {
+        var tex = loader.getRes(url);
+        if (!tex) return null;
+        var imageAssetClips = AssetManager.imageAssets[url];
+        if (!imageAssetClips) imageAssetClips = AssetManager.imageAssets[url] = {};
+        var key = x + "_" + y + "_" + rect.width + "_" + rect.height + "_" + rect.x + "_" + rect.y;
+        var g: Graphics = imageAssetClips[key];
+        if (!g) {
+            g = imageAssetClips[key] = new Graphics();
+            g.fillTexture(tex, x, y, rect.width, rect.height, null, new Point(rect.x, rect.y));
+        }
+        return g;
+    }
+    /**
+     * 转为贴图（显存）
+     * @param source 源，Sprite或Graphics均可
+     * @param textureWidth 
+     * @param textureHeight 
+     * @param offsetX source相对于画布的偏移X
+     * @param offsetY source相对于画布的偏移Y
+     * @param mipmap [可选] 默认值=false 是否使用mipmap
+     * @param minFifter [可选] 默认值=-1 缩小时的采样方式
+     * @param magFifter [可选] 默认值=-1 放大时的采样方式
+     * @return [Texture] 
+     */
+    static drawToTexture(source: Graphics | Sprite, textureWidth: number, textureHeight: number, offsetX: number = 0, offsetY: number = 0, mipmap: boolean = false, minFifter: number = 0x2600, magFifter: number = 0x2600): Texture {
+        var helpSprite: Sprite;
+        if (source instanceof Graphics) {
+            helpSprite = new Sprite();
+            helpSprite.graphics = source;
+            helpSprite.blendMode = "light"
+        }
+        else {
+            helpSprite = source;
+        }
+        // var d1 = new Date().getTime();
+        var oldRect = helpSprite.scrollRect;
+        helpSprite.scrollRect = new Rectangle(-offsetX, -offsetY, textureWidth, textureHeight);
+        var t = _drawToTexture(helpSprite, textureWidth, textureHeight, 0, 0, mipmap, minFifter, magFifter);
+        // var d2 = new Date().getTime();
+        helpSprite.scrollRect = oldRect;
+        // trace(d2 - d1, "ms 花费A", source instanceof Graphics, textureWidth, textureHeight, offsetX, offsetY)
+        var texture = new Texture(t.bitmap);
+        return texture;
+        function _drawToTexture(sprite: Sprite, textureWidth: number, textureHeight: number, offsetX: number, offsetY: number, mipmap: boolean, minFifter: number, magFifter: number): RenderTarget2D {
+            var _renderType = 640;
+            offsetX -= sprite.x;
+            offsetY -= sprite.y;
+            sprite.scaleY *= -1;
+            var renderTarget = RenderTarget2D.create(textureWidth, textureHeight, 0x1908, 0x1401, 0, mipmap, false, minFifter, magFifter);
+            renderTarget.start();
+            renderTarget.clear(0.0, 0.0, 0.0, 0.0);
+            Render.context.clear();
+            RenderSprite.renders[_renderType]._fun(sprite, Render.context, offsetX, RenderState2D.height + offsetY);
+            Render.context.flush();
+            renderTarget.end();
+            sprite.scaleY *= -1;
+            return renderTarget;
+        }
+    }
+    /**
+     * 以拼合图的形式绘制到容器中（由于设备限制贴图大小而需要拼合）
+     * 需要调用disposeAtlasSprite来主动释放这些显存上的贴图
+     * @param source 
+     * @param width 
+     * @param height 
+     * @return [Sprite] 
+     */
+    static drawToAtlasSprite(source: Graphics | Sprite, width: number, height: number, mipmap: boolean = false, minFifter: number = -1, magFifter: number = -1, offsetX: number = 0, offsetY: number = 0): Sprite {
+        var root = new Sprite();
+        var splitW = Math.ceil(width / Config.TILE_SPLIT_SIZE);
+        var splitH = Math.ceil(height / Config.TILE_SPLIT_SIZE);
+        for (var xGrid = 0; xGrid < splitW; xGrid++) {
+            for (var yGrid = 0; yGrid < splitH; yGrid++) {
+                var dx = -Config.TILE_SPLIT_SIZE * xGrid;
+                var dy = -Config.TILE_SPLIT_SIZE * yGrid;
+                var tex = AssetManager.drawToTexture(source, Config.TILE_SPLIT_SIZE, Config.TILE_SPLIT_SIZE, dx + offsetX, dy + offsetY, mipmap, minFifter, magFifter);
+                var splitSp = new Sprite();
+                splitSp.texture = tex;
+                splitSp.x = -dx;
+                splitSp.y = -dy;
+                root.addChild(splitSp)
+            }
+        }
+        return root;
+    }
+    /**
+     * 大贴图转化为拼图
+     * @param texture 贴图
+     * @param xLoop x循环
+     * @param yLoop y循环
+     * @return [Sprite] 
+     */
+    static bigTextureToAtlasSprite(texture: Texture, xLoop: boolean = false, yLoop: boolean = false, mapWidth: number = 0, mapHeight: number = 0): Sprite {
+        var drawArea = [];
+        if (xLoop) {
+            drawArea.push([1, 0], [-1, 0]);
+        }
+        if (yLoop) {
+            drawArea.push([0, 1], [0, -1]);
+        }
+        if (xLoop && yLoop) {
+            drawArea.push([-1, -1], [1, -1], [1, 1], [-1, 1]);
+        }
+        var img = texture.bitmap["_image"];
+        if (!img) {
+            return new Sprite();
+        }
+        var maxW = Config.TILE_SPLIT_SIZE;
+        var maxH = Config.TILE_SPLIT_SIZE;
+        var root = new Sprite();
+        var splitW = Math.ceil(img.width / maxW);
+        var splitH = Math.ceil(img.height / maxW);
+        for (var xGrid = 0; xGrid < splitW; xGrid++) {
+            for (var yGrid = 0; yGrid < splitH; yGrid++) {
+                var dx = maxW * xGrid;
+                var dy = maxW * yGrid;
+                var canvas = document.createElement("canvas");
+                canvas.width = maxW;
+                canvas.height = maxW;
+                var canvas2d = document.createElement("canvas");
+                canvas2d.width = maxW;
+                canvas2d.height = maxW;
+                var ctx = canvas2d.getContext("2d");
+                ctx.drawImage(img, dx, dy, maxW, maxW, 0, 0, maxW, maxH);
+                var wgImage = new WebGLImage(canvas2d, new Date().getTime() + Math.random().toString());
+                var newTexture = new Texture(wgImage);
+                var splitSp = new Sprite();
+                splitSp.texture = newTexture;
+                splitSp.x = dx;
+                splitSp.y = dy;
+                for (var s in drawArea) {
+                    var loopSp = new Sprite();
+                    loopSp.name = "loop";
+                    loopSp.texture = newTexture;
+                    root.addChild(loopSp);
+                    loopSp.x = drawArea[s][0] * mapWidth + splitSp.x;
+                    loopSp.y = drawArea[s][1] * mapHeight + splitSp.y;
+                }
+                root.addChild(splitSp);
+            }
+        }
+        return root;
+    }
+    /**
+     * 释放拼合的贴图
+     * @param root 
+     */
+    static disposeAtlasSprite(root: Sprite): void {
+        if (!root) return;
+        for (var i = 0; i < root.numChildren; i++) {
+            var sp = (root.getChildAt(i) as Sprite);
+            sp.texture.destroy(true);
+            sp.texture = null;
+        }
+        root.removeChildren();
+    }
+    //------------------------------------------------------------------------------------------------------
+    // private
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 减少资源引用
+     * @param url 
+     */
+    private static subRef(url: string): number {
+        var ref = AssetManager.assetCountMap[url];
+        if (ref == null) return 0;
+        ref--;
+        if (ref == 0) {
+            delete AssetManager.assetCountMap[url];
+        }
+        else {
+            AssetManager.assetCountMap[url] = ref;
+        }
+        return ref;
+    }
+    /**
+     * 增加资源引用
+     * @param url 
+     */
+    private static addRef(url: string): void {
+        var ref = AssetManager.assetCountMap[url];
+        if (ref == null) {
+            AssetManager.assetCountMap[url] = ref = 0;
+        }
+        AssetManager.assetCountMap[url] = ++ref;
+    }
+
+
+}

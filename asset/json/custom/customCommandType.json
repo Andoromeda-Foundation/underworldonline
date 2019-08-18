@@ -1,0 +1,543 @@
+{
+    "list": {
+        "1": [
+            null,
+            "发卡",
+            "数据结构2"
+        ],
+        "2": [
+            null,
+            "wocaniawa"
+        ],
+        "3": [
+            null
+        ]
+    },
+    "type": {
+        "1": "公共结构",
+        "2": "场景对象模型",
+        "3": "自定义模块"
+    },
+    "data": {
+        "1": {
+            "id": 1,
+            "blockList": [
+                {
+                    "name": "战斗角色名称",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "6832800136_0.6299599713191182",
+                                "varName": "发的卡牌",
+                                "varType": 4,
+                                "compData": {
+                                    "compType": 1002,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 14,
+                            "x": 20,
+                            "width": 455,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "6832814653_0.5006725373358845",
+                                "varName": "数目",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": false,
+                                "moduleID": 1,
+                                "dataStructureID": 1,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 0,
+                                "syncMode": 0,
+                                "attrTips": "",
+                                "preview": false
+                            },
+                            "attrConditions": [],
+                            "y": 15,
+                            "x": 449,
+                            "width": 200,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 68,
+                    "autoOrder": true
+                },
+                {
+                    "name": "基础属性",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "1557055819911_0.6514490596360087",
+                                "varName": "形象",
+                                "varType": 1,
+                                "compData": {
+                                    "compType": 22,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 25,
+                            "x": 9,
+                            "width": 243,
+                            "height": 209
+                        },
+                        {
+                            "attr": {
+                                "id": "1557055872462_0.5602199915711632",
+                                "varName": "MAXHP",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 24,
+                            "x": 270,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "1557055872462_0.5602199915711632",
+                                "varName": "MAXSP",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 22,
+                            "x": 479,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "1557055872462_0.5602199915711632",
+                                "varName": "攻击力",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 60,
+                            "x": 268,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "1557055872462_0.5602199915711632",
+                                "varName": "防御力",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 57,
+                            "x": 477,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "1557055872462_0.5602199915711632",
+                                "varName": "移动速度",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 1,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 95,
+                            "x": 267,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "1557055872462_0.5602199915711632",
+                                "varName": "飞行速度",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 1,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 95,
+                            "x": 477,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "1557055872462_0.5602199915711632",
+                                "varName": "掉落道具",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 1,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": true,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 138,
+                            "x": 265,
+                            "width": 457,
+                            "height": 165
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 579,
+                    "autoOrder": true
+                },
+                {
+                    "name": "技能设定",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "varName": "技能模块",
+                                "varType": 4,
+                                "compData": {
+                                    "compType": 2,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "1",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 2,
+                                "dataStructureID": 5,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "x": 7,
+                            "y": 14,
+                            "width": 311,
+                            "height": 27
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 300,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "2": {
+            "id": 2,
+            "blockList": [
+                {
+                    "name": "未命名块",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "id": "1557052866245_0.48806597380813854",
+                                "varName": "AAA",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 11,
+                            "x": 14,
+                            "width": 225,
+                            "height": 26
+                        },
+                        {
+                            "attr": {
+                                "id": "1557052866394_0.8843441618240373",
+                                "varName": "BBB",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 51,
+                            "x": 17,
+                            "width": 200,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "id": "1557052866559_0.19009534112396165",
+                                "varName": "CCC",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 94,
+                            "x": 16,
+                            "width": 200,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 153,
+                    "autoOrder": true
+                }
+            ]
+        },
+        "1001": {
+            "id": 1001,
+            "blockList": [
+                {
+                    "name": "掉落道具",
+                    "blockAttrs": [
+                        {
+                            "attr": {
+                                "varName": "hehehehe1123",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 0,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 9,
+                            "x": 12,
+                            "width": 360,
+                            "height": 32
+                        },
+                        {
+                            "attr": {
+                                "varName": "掉落道具",
+                                "varType": 0,
+                                "compData": {
+                                    "compType": 3,
+                                    "compParam": {}
+                                },
+                                "defaultValue": "",
+                                "hideMode": false,
+                                "useCommand": false,
+                                "onlyPointTo": true,
+                                "moduleID": 0,
+                                "dataStructureID": 0,
+                                "arrayMode": false,
+                                "arrayLength": 100,
+                                "arrayAllowDelete": false,
+                                "arrayAllowSwap": false,
+                                "arrayAllowUpdate": false,
+                                "accessMode": 3,
+                                "syncMode": 4
+                            },
+                            "attrConditions": [],
+                            "y": 47,
+                            "x": 12,
+                            "width": 370,
+                            "height": 32
+                        }
+                    ],
+                    "blockCondition": [],
+                    "blockHeight": 96,
+                    "autoOrder": true
+                }
+            ]
+        }
+    }
+}

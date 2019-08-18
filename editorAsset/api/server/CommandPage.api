@@ -1,0 +1,37 @@
+/**
+ * 一个事件页数据
+ * ----- 关于触发对象 -----
+ * 【client-trigger-单线】场景对象-点击事件 trigger.trigger触发者=玩家场景对象 trigger.executor执行者=NPC
+ * 【client-trigger】场景对象-碰触事件 trigger.trigger触发者=玩家场景对象 trigger.executor执行者=NPC
+ *                  只有玩家与NPC的碰触
+ * 【server-trigger】场景对象-并行事件 trigger.trigger触发者=系统 trigger.executor触发者=系统
+ * 【server-trigger】公共事件-并行事件 trigger.trigger触发者=系统 trigger.executor执行者=系统
+ * 【client-trigger】UI-点击事件 trigger.trigger触发者=玩家场景对象 trigger.executor执行者=玩家场景对象
+ * 【server-trigger-单线】进入场景的事件 trigger.trigger触发者=玩家场景对象 trigger.executor执行者=玩家场景对象
+ * 
+ *  单线表示同时只能执行一个该类别事件。
+ * 
+ * ----- 请求玩家输入 -----
+ * 1-对话
+ * 2-选项
+ * 3-等待玩家输入
+ * 当遇到此类命令将会停止执行并且等待玩家输入，当玩家输入完毕后提交后再继续执行下去
+ * 
+ * Created by 黑暗之神KDS on 2018-10-09 16:37:07.
+ */
+class CommandPage {
+    /**
+     * 命令对象集合
+     */
+    commands: any[] = [];
+    /**
+     * 开始触发事件（首次）
+     * @param commandPage 触发者玩家身份
+     * @param trigger 触发者
+     * @param executor 执行者
+     * @param firstCall 首次执行
+     */
+    startTriggerEvent(trigger: CommandTarget, executor: ServerSceneObject, playerInput: any[] = []): void {
+    
+    }
+}

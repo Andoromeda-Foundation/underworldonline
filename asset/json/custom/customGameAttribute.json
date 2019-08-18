@@ -1,0 +1,2914 @@
+{
+    "worldAttributeSetting": {
+        "blockList": [
+            {
+                "name": "世界设定",
+                "blockAttrs": [],
+                "blockCondition": [],
+                "blockHeight": 300,
+                "autoOrder": true
+            }
+        ]
+    },
+    "playerAttributeSetting": {
+        "blockList": [
+            {
+                "name": "卡牌相关",
+                "blockAttrs": [
+                    {
+                        "attr": {
+                            "id": "6686224345_0.28555987317697906",
+                            "varName": "卡组",
+                            "varType": 3,
+                            "compData": {
+                                "compType": 1003,
+                                "compParam": {}
+                            },
+                            "defaultValue": "",
+                            "hideMode": false,
+                            "useCommand": true,
+                            "onlyPointTo": false,
+                            "moduleID": 1,
+                            "dataStructureID": 4,
+                            "arrayMode": true,
+                            "arrayLength": 10,
+                            "arrayAllowDelete": false,
+                            "arrayAllowSwap": false,
+                            "arrayAllowUpdate": false,
+                            "accessMode": 1,
+                            "syncMode": 1,
+                            "attrTips": "",
+                            "preview": false
+                        },
+                        "attrConditions": [],
+                        "y": 20,
+                        "x": 26,
+                        "width": 965,
+                        "height": 286
+                    },
+                    {
+                        "attr": {
+                            "id": "6957045460_0.4941747752934127",
+                            "varName": "卡库",
+                            "varType": 3,
+                            "compData": {
+                                "compType": 1003,
+                                "compParam": {}
+                            },
+                            "defaultValue": "",
+                            "hideMode": false,
+                            "useCommand": true,
+                            "onlyPointTo": false,
+                            "moduleID": 1,
+                            "dataStructureID": 3,
+                            "arrayMode": true,
+                            "arrayLength": 1000,
+                            "arrayAllowDelete": false,
+                            "arrayAllowSwap": false,
+                            "arrayAllowUpdate": false,
+                            "accessMode": 1,
+                            "syncMode": 1,
+                            "attrTips": "",
+                            "preview": false
+                        },
+                        "attrConditions": [],
+                        "y": 333,
+                        "x": 32,
+                        "width": 954,
+                        "height": 526
+                    }
+                ],
+                "blockCondition": [],
+                "blockHeight": 3500,
+                "autoOrder": true
+            }
+        ]
+    },
+    "worldAttributeConfig": {
+        "attrs": {}
+    },
+    "playerAttributeConfig": {
+        "attrs": {
+            "卡组": {
+                "varType": 9,
+                "value": [
+                    {
+                        "卡牌列表": {
+                            "varType": 9,
+                            "value": [
+                                {
+                                    "卡牌": {
+                                        "varType": 5,
+                                        "value": {
+                                            "id": 1,
+                                            "data": {
+                                                "卡牌图片": {
+                                                    "varType": 1,
+                                                    "value": "asset/image/picture/卡面/帷幕守望/001_001.jpg"
+                                                },
+                                                "卡牌类别": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "卡牌派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "魔法领域": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "插画家": {
+                                                    "varType": 1,
+                                                    "value": "T.K.Slicam"
+                                                },
+                                                "结附类别": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "结附阵营": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "作用范围": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "具体数量": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "费用": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "防御力": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "类别": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "子类别": {
+                                                    "varType": 6,
+                                                    "value": [
+                                                        0
+                                                    ]
+                                                },
+                                                "忠诚需求": {
+                                                    "varType": 9,
+                                                    "value": [
+                                                        {
+                                                            "数量": {
+                                                                "varType": 0,
+                                                                "value": 1
+                                                            },
+                                                            "派系": {
+                                                                "varType": 0,
+                                                                "value": 0
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "能力": {
+                                                    "varType": 11,
+                                                    "value": [
+                                                        {
+                                                            "id": 1,
+                                                            "data": {
+                                                                "能力类型": {
+                                                                    "varType": 0,
+                                                                    "value": 0
+                                                                },
+                                                                "资产区的魔法领域": {
+                                                                    "varType": 9,
+                                                                    "value": []
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": 1001,
+                                                            "data": {
+                                                                "能力类型": {
+                                                                    "varType": 0,
+                                                                    "value": 0
+                                                                },
+                                                                "资产区的魔法领域": {
+                                                                    "varType": 9,
+                                                                    "value": []
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "能效描述": {
+                                                    "varType": 1,
+                                                    "value": "不能被装备结附，持续若你的资产区具有<心灵><心灵>，则通灵猫头鹰获得<调查（白）>。"
+                                                },
+                                                "背景描述": {
+                                                    "varType": 1,
+                                                    "value": "大师分身乏术时，便会令佣兽到场代其号令。 "
+                                                },
+                                                "战斗图标": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "势力图标": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "临时战斗图标": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "临时势力图标": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "调查图标": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "临时调查图标": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "数量限制": {
+                                                    "varType": 0,
+                                                    "value": 3
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "数量": {
+                                        "varType": 0,
+                                        "value": 2
+                                    }
+                                },
+                                {
+                                    "卡牌": {
+                                        "varType": 5,
+                                        "value": {
+                                            "id": 2,
+                                            "data": {
+                                                "卡牌图片": {
+                                                    "varType": 1,
+                                                    "value": "asset/image/picture/卡面/帷幕守望/001_002.jpg"
+                                                },
+                                                "卡牌类别": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "卡牌派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "魔法领域": {
+                                                    "varType": 0,
+                                                    "value": 5
+                                                },
+                                                "插画家": {
+                                                    "varType": 1,
+                                                    "value": "T.K.Slicam"
+                                                },
+                                                "结附类别": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "结附阵营": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "作用范围": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "具体数量": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "费用": {
+                                                    "varType": 0,
+                                                    "value": 2
+                                                },
+                                                "防御力": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "类别": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "子类别": {
+                                                    "varType": 6,
+                                                    "value": [
+                                                        1
+                                                    ]
+                                                },
+                                                "忠诚需求": {
+                                                    "varType": 9,
+                                                    "value": [
+                                                        {
+                                                            "数量": {
+                                                                "varType": 0,
+                                                                "value": 1
+                                                            },
+                                                            "派系": {
+                                                                "varType": 0,
+                                                                "value": 0
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "能力": {
+                                                    "varType": 11,
+                                                    "value": []
+                                                },
+                                                "能效描述": {
+                                                    "varType": 1,
+                                                    "value": "现身触发横置目标与巨石阵看护人位于的相同地区的角色"
+                                                },
+                                                "背景描述": {
+                                                    "varType": 1,
+                                                    "value": "尽管石阵已有数千年未曾开启，此间祭司却从未擅离职守。"
+                                                },
+                                                "战斗图标": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "势力图标": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "临时战斗图标": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "临时势力图标": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "调查图标": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "临时调查图标": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "数量限制": {
+                                                    "varType": 0,
+                                                    "value": 3
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "数量": {
+                                        "varType": 0,
+                                        "value": 1
+                                    }
+                                },
+                                {
+                                    "卡牌": {
+                                        "varType": 5,
+                                        "value": {
+                                            "id": 3,
+                                            "data": {
+                                                "卡牌图片": {
+                                                    "varType": 1,
+                                                    "value": "asset/image/picture/卡面/帷幕守望/001_003.jpg"
+                                                },
+                                                "卡牌类别": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "卡牌派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "魔法领域": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "插画家": {
+                                                    "varType": 1,
+                                                    "value": ""
+                                                },
+                                                "结附类别": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "结附阵营": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "作用范围": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "具体数量": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "费用": {
+                                                    "varType": 0,
+                                                    "value": 3
+                                                },
+                                                "防御力": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "类别": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "子类别": {
+                                                    "varType": 6,
+                                                    "value": [
+                                                        2
+                                                    ]
+                                                },
+                                                "忠诚需求": {
+                                                    "varType": 9,
+                                                    "value": [
+                                                        {
+                                                            "数量": {
+                                                                "varType": 0,
+                                                                "value": 1
+                                                            },
+                                                            "派系": {
+                                                                "varType": 0,
+                                                                "value": 0
+                                                            }
+                                                        }
+                                                    ]
+                                                },
+                                                "能力": {
+                                                    "varType": 11,
+                                                    "value": []
+                                                },
+                                                "能效描述": {
+                                                    "varType": 1,
+                                                    "value": "瞬发【行动】②，横置： 横置目标角色或暗藏者"
+                                                },
+                                                "背景描述": {
+                                                    "varType": 1,
+                                                    "value": "永恒的帷幕必须得以守护，诸般隐秘事物应各安其位，依律而行。俗世的法规无法制约超凡的法师和异族，名为帷幕守望者的秘社便应运而生，为世界的隐秘一面建立秩序，并誓言守护凡人不受超自然力量的伤害。"
+                                                },
+                                                "战斗图标": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "势力图标": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "临时战斗图标": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "临时势力图标": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "调查图标": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "临时调查图标": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "数量限制": {
+                                                    "varType": 0,
+                                                    "value": 3
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "数量": {
+                                        "varType": 0,
+                                        "value": 1
+                                    }
+                                }
+                            ]
+                        },
+                        "卡组名称": {
+                            "varType": 1,
+                            "value": "初始卡组"
+                        }
+                    },
+                    {
+                        "卡牌列表": {
+                            "varType": 9,
+                            "value": []
+                        },
+                        "卡组名称": {
+                            "varType": 1,
+                            "value": "我的卡组"
+                        }
+                    }
+                ]
+            },
+            "卡库": {
+                "varType": 9,
+                "value": [
+                    {
+                        "数量": {
+                            "varType": 0,
+                            "value": 20
+                        },
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 1,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_001.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": "T.K.Slicam"
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": [
+                                            0
+                                        ]
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": [
+                                            {
+                                                "数量": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": [
+                                            {
+                                                "id": 1,
+                                                "data": {
+                                                    "能力类型": {
+                                                        "varType": 0,
+                                                        "value": 0
+                                                    },
+                                                    "资产区的魔法领域": {
+                                                        "varType": 9,
+                                                        "value": []
+                                                    }
+                                                }
+                                            },
+                                            {
+                                                "id": 1001,
+                                                "data": {
+                                                    "能力类型": {
+                                                        "varType": 0,
+                                                        "value": 0
+                                                    },
+                                                    "资产区的魔法领域": {
+                                                        "varType": 9,
+                                                        "value": []
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": "不能被装备结附，持续若你的资产区具有<心灵><心灵>，则通灵猫头鹰获得<调查（白）>。"
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": "大师分身乏术时，便会令佣兽到场代其号令。 "
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 3
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "数量": {
+                            "varType": 0,
+                            "value": 2
+                        },
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 2,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_002.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 5
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": "T.K.Slicam"
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": [
+                                            1
+                                        ]
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": [
+                                            {
+                                                "数量": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": "现身触发横置目标与巨石阵看护人位于的相同地区的角色"
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": "尽管石阵已有数千年未曾开启，此间祭司却从未擅离职守。"
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 3
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "数量": {
+                            "varType": 0,
+                            "value": 5
+                        },
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 3,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_003.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 3
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": [
+                                            2
+                                        ]
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": [
+                                            {
+                                                "数量": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": "瞬发【行动】②，横置： 横置目标角色或暗藏者"
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": "永恒的帷幕必须得以守护，诸般隐秘事物应各安其位，依律而行。俗世的法规无法制约超凡的法师和异族，名为帷幕守望者的秘社便应运而生，为世界的隐秘一面建立秩序，并誓言守护凡人不受超自然力量的伤害。"
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 3
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 4,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_004.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 4
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": [
+                                            2
+                                        ]
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": [
+                                            {
+                                                "派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "数量": {
+                                                    "varType": 0,
+                                                    "value": 2
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 5
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 5,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_005.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": [
+                                            0
+                                        ]
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": [
+                                            {
+                                                "派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "数量": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 4
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 6,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_006.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 4
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": [
+                                            3
+                                        ]
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": [
+                                            {
+                                                "派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "数量": {
+                                                    "varType": 0,
+                                                    "value": 2
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 5
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 7,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_007.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": [
+                                            1
+                                        ]
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": [
+                                            {
+                                                "派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "数量": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 1
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 8,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_008.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": "T.K.Slicam"
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": [
+                                            2
+                                        ]
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": [
+                                            {
+                                                "派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "数量": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 5
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 9,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_009.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 3
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 3
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 4
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": []
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": [
+                                            {
+                                                "派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "数量": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 5
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 10,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_010.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 6
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": [
+                                            2
+                                        ]
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": [
+                                            {
+                                                "派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "数量": {
+                                                    "varType": 0,
+                                                    "value": 3
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 5
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 11,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_011.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 6
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": [
+                                            2,
+                                            3
+                                        ]
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": [
+                                            {
+                                                "派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "数量": {
+                                                    "varType": 0,
+                                                    "value": 4
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 1
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 5
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 12,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_012.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 3
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 3
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": []
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": [
+                                            {
+                                                "派系": {
+                                                    "varType": 0,
+                                                    "value": 0
+                                                },
+                                                "数量": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 2
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 13,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_012.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": []
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": [
+                                            {
+                                                "派系": {
+                                                    "varType": 0,
+                                                    "value": 1
+                                                },
+                                                "数量": {
+                                                    "varType": 0,
+                                                    "value": 2
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 3
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 3
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 25,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_012.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 5
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": []
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": []
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 3
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 3
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 37,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_012.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 3
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 5
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": []
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": []
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 3
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 3
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 49,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_012.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 4
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": []
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": []
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 3
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 3
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 61,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_012.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 5
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 2
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": []
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": []
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 3
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 3
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 73,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_012.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 6
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": []
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": []
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 3
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 3
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 85,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_012.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 7
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": []
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": []
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 3
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 4
+                        }
+                    },
+                    {
+                        "卡牌": {
+                            "varType": 5,
+                            "value": {
+                                "id": 97,
+                                "data": {
+                                    "卡牌图片": {
+                                        "varType": 1,
+                                        "value": "asset/image/picture/卡面/帷幕守望/001_012.jpg"
+                                    },
+                                    "卡牌类别": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "卡牌派系": {
+                                        "varType": 0,
+                                        "value": 8
+                                    },
+                                    "魔法领域": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "插画家": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "结附类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "结附阵营": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "作用范围": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "具体数量": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "费用": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "防御力": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "类别": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "子类别": {
+                                        "varType": 6,
+                                        "value": [
+                                            0
+                                        ]
+                                    },
+                                    "忠诚需求": {
+                                        "varType": 9,
+                                        "value": []
+                                    },
+                                    "能力": {
+                                        "varType": 11,
+                                        "value": []
+                                    },
+                                    "能效描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "背景描述": {
+                                        "varType": 1,
+                                        "value": ""
+                                    },
+                                    "战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "势力图标": {
+                                        "varType": 0,
+                                        "value": 1
+                                    },
+                                    "临时战斗图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时势力图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "临时调查图标": {
+                                        "varType": 0,
+                                        "value": 0
+                                    },
+                                    "数量限制": {
+                                        "varType": 0,
+                                        "value": 2
+                                    }
+                                }
+                            }
+                        },
+                        "数量": {
+                            "varType": 0,
+                            "value": 3
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}

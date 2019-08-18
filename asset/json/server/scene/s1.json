@@ -1,0 +1,54 @@
+{
+    "sceneObjects": [],
+    "customCommands": [
+        [
+            [
+                13,
+                5,
+                1,
+                0,
+                0,
+                "苹果军团",
+                1,
+                1,
+                [
+                    0,
+                    100
+                ],
+                0,
+                -1
+            ],
+            [
+                72,
+                4
+            ]
+        ],
+        []
+    ],
+    "behaviors": [
+        [
+            -1,
+            0,
+            []
+        ],
+        null,
+        null
+    ],
+    "customAttributes": [
+        {},
+        null,
+        null
+    ],
+    "events": [
+        {
+            "condition": [],
+            "click": [],
+            "collide": [],
+            "update": []
+        },
+        null,
+        null
+    ],
+    "commands": [],
+    "id": 1
+}

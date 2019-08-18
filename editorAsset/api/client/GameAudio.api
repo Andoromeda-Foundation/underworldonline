@@ -1,0 +1,89 @@
+/**
+ * Created by 黑暗之神KDS on 2018-07-27 23:29:00.
+ */
+class GameAudio {
+    /**
+     * 全局背景音乐大小
+     */
+    static bgmVolume: number = 1;
+    /**
+     * 全局场景音效大小
+     */
+    static bgsVolume: number = 1;
+    /**
+     * 全局音效大小
+     */
+    static seVolume: number = 1;
+    /**
+     * 记录上次播放的背景音乐地址
+     */
+    static lastBgmURL: string;
+    /**
+     * 记录上次播放的场景音效地址
+     */
+    static lastBgsURL: string;
+    /**
+     * 播放BGM ： 地址不相等的情况才重新播放，但音量会改变（如果需要重新播放，可以停止BGM后再播放）
+     * @param url BGM地址
+     * @param volume 声量大小
+     * @param loop [可选] 循环次数 默认值=9999 
+     * @param isGradient [可选] 是否渐变 默认值=false 
+     * @param gradientTime [可选] 是否 默认值=1000 
+     * @param pitch [可选] 播放速率 默认值=1 范围0-2
+     */
+    static playBGM(url: string, volume: number = 1, loop: number = 9999, isGradient: boolean = false, gradientTime: number = 1000, pitch: number = 1): void {
+        
+    }
+    /**
+     * 停止播放BGM
+     * @param isGradient [可选] 默认值=false 
+     * @param gradientTime [可选] 默认值=1000 
+     */
+    static stopBGM(isGradient: boolean = false, gradientTime: number = 1000): void {
+       
+    }
+    /**
+     * 播放BGS ： 地址不相等的情况才重新播放，但音量会改变（如果需要重新播放，可以停止BGM后再播放）
+     * @param url BGM地址
+     * @param volume 声量大小
+     * @param loop [可选] 循环次数 默认值=9999 
+     * @param isGradient [可选] 是否渐变 默认值=false 
+     * @param gradientTime [可选] 是否 默认值=1000 
+     * @param pitch [可选] 播放速率 默认值=1 
+     */
+    static playBGS(url: string, volume: number = 1, loop: number = 9999, isGradient: boolean = false, gradientTime: number = 1000, pitch: number = 1): void {
+       
+    }
+    /**
+     * 停止播放BGM
+     * @param isGradient [可选] 默认值=false 
+     * @param gradientTime [可选] 默认值=1000 
+     */
+    static stopBGS(isGradient: boolean = false, gradientTime: number = 1000): void {
+       
+    }
+    /**
+     * 播放音效，播放在场景对象身上时则计算距离来变更声音大小
+     * @param url 音效地址 
+     * @param volume [可选] 默认值=1 音量
+     * @param pitch [可选] 播放速率 默认值=1 
+     * @param soc [可选] 场景对象 
+     */
+    static playSE(url: string, volume: number = 1, pitch: number = 1, soc: ClientSceneObject = null): SoundChannel {
+        return null;
+    }
+    /**
+     * 停止SE
+     * @param channels [可选] 传入则表示仅停止传入组的音效，否则是全部当前的音效
+     */
+    static stopSE(channels: SoundChannel | SoundChannel[] = null): void {
+        
+    }
+    /**
+     * 设置当失去焦点时停止音乐
+     * @param isStop 
+     */
+    setBlurStopMusic(isStop:boolean):void{
+        
+    }
+}

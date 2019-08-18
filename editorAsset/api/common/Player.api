@@ -1,0 +1,25 @@
+/**
+ * Created by 黑暗之神KDS on 2019-05-22 00:25:37.
+ */
+class Player {
+    /**
+     * 唯一key
+     */
+    public key: string;
+    /**
+     * 唯一uid
+     */
+    public uid: number;
+    /**
+     * 玩家属性
+     */
+    public data: PlayerData;
+    /**
+     * 玩家变量
+     */
+    public variable: Variable;
+    /**
+     * 游戏对象数据
+     */
+    public sceneObject: SceneObject;
+}

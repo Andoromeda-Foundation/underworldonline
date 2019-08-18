@@ -1,0 +1,59 @@
+/**
+ * 数学工具类
+ */
+class MathUtils {
+    /**
+     * 角度转弧度。
+     * @param	angle 角度值。
+     * @return	返回弧度值。
+     */
+    static angle2Radian(angle: number): number { return null };
+    /**
+     * 弧度转换为角度。
+     * @param	radian 弧度值。
+     * @return	返回角度值。
+     */
+    static radian2Angle(radian: number): number { return null };
+    /**
+     * 返回0~n-1的正整数
+     * @param n 
+     * @return [number] 
+     */
+    static rand(n: number): number {
+        return null;
+    }
+    /**
+     * 获取两点之间的角度 0-360
+     */
+    static direction_360(x_x1: number, x_y1: number, x_x2: number, x_y2: number): number {
+        return null;
+    }
+    /**
+     * 固定整数位
+     */
+    static fixIntDigit(s: string | number, fixDigit: number = 4): string {
+        return null;
+    }
+    /**
+     * 转化为整数
+     */
+    static int(v: any) {
+        return null;
+    }
+    /**
+     * 转化为浮点数
+     */
+    static float(v: any) {
+        return null;
+    }
+    /**
+     * 判断是否在度数范围内
+     * @param limitMax 上限 -360~360
+     * @param limitMin 下线 -360~360
+     * @param angle 指定的角度
+     * @return [boolean] 
+     */
+    static inAngleRange(limitMax: number, limitMin: number, angle: number): boolean {
+        return null;
+    }
+}

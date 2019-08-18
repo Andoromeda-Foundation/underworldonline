@@ -1,0 +1,101 @@
+{
+    "attrs": {
+        "卡牌图片": {
+            "varType": 1,
+            "value": ""
+        },
+        "卡牌类别": {
+            "varType": 0,
+            "value": 0
+        },
+        "卡牌派系": {
+            "varType": 0,
+            "value": 0
+        },
+        "魔法领域": {
+            "varType": 0,
+            "value": 0
+        },
+        "插画家": {
+            "varType": 1,
+            "value": ""
+        },
+        "费用": {
+            "varType": 0,
+            "value": 0
+        },
+        "忠诚需求": {
+            "varType": 9,
+            "value": []
+        },
+        "能效描述": {
+            "varType": 1,
+            "value": ""
+        },
+        "背景描述": {
+            "varType": 1,
+            "value": ""
+        },
+        "数量限制": {
+            "varType": 0,
+            "value": 4
+        },
+        "结附类别": {
+            "varType": 0,
+            "value": 0
+        },
+        "结附阵营": {
+            "varType": 0,
+            "value": 0
+        },
+        "作用范围": {
+            "varType": 0,
+            "value": 0
+        },
+        "具体数量": {
+            "varType": 0,
+            "value": 0
+        },
+        "类别": {
+            "varType": 0,
+            "value": 0
+        },
+        "子类别": {
+            "varType": 6,
+            "value": []
+        },
+        "防御力": {
+            "varType": 0,
+            "value": 0
+        },
+        "能力": {
+            "varType": 11,
+            "value": []
+        },
+        "调查图标": {
+            "varType": 0,
+            "value": 0
+        },
+        "战斗图标": {
+            "varType": 0,
+            "value": 0
+        },
+        "势力图标": {
+            "varType": 0,
+            "value": 0
+        },
+        "临时调查图标": {
+            "varType": 0,
+            "value": 0
+        },
+        "临时战斗图标": {
+            "varType": 0,
+            "value": 0
+        },
+        "临时势力图标": {
+            "varType": 0,
+            "value": 0
+        }
+    },
+    "id": 93
+}

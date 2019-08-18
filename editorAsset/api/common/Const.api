@@ -1,0 +1,23 @@
+/**
+ * 常量
+ * Created by 黑暗之神KDS on 2019-04-12 20:00:45.
+ */
+class Const {
+    //------------------------------------------------------------------------------------------------------
+    // 事件触发的类型
+    //------------------------------------------------------------------------------------------------------
+    /** 输入完毕后继续执行事件 */
+    static COMMAND_TRIGGER_TYPE_CONTINUE: number = 0;
+    /** 场景对象点击事件，单线 */
+    static COMMAND_TRIGGER_TYPE_SCENE_OBJECT_CLICK: number = 1;
+    /** 场景对象碰触事件 */
+    static COMMAND_TRIGGER_TYPE_SCENE_OBJECT_COLLIED: number = 2;
+    /** 场景对象更新事件，单线 */
+    static COMMAND_TRIGGER_TYPE_SCENE_OBJECT_UPDATE: number = 3;
+    /** 进入场景的事件，单线 */
+    static COMMAND_TRIGGER_TYPE_IN_SCENE: number = 4;
+    /** UI控件点击事件 */
+    static COMMAND_TRIGGER_TYPE_UI_CLICK: number = 5;
+    /** 主动调用公共事件 */
+    static COMMAND_TRIGGER_TYPE_CALL_COMMON_COMMAND: number = 6;
+}

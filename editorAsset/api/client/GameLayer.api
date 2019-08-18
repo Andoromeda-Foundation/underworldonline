@@ -1,0 +1,28 @@
+/**
+ * 游戏显示层次
+ * -- 场景层
+ * -- 图像层
+ * -- UI层
+ * 重写 initLayer 可以自定义层次关系
+ * Created by 黑暗之神KDS on 2019-01-09 15:09:23.
+ */
+class GameLayer extends Sprite {
+    /**
+     * 场景层
+     */
+    sceneLayer: GameSprite;
+    /**
+    * 图像层
+    */
+    imageLayer: GameSprite;
+    /**
+     * UI层
+     */
+    uiLayer: GameSprite;
+    /**
+     * 初始化层次
+     */
+    initLayer() {
+
+    }
+}

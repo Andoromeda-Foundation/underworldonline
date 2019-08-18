@@ -1,0 +1,246 @@
+{
+    "sceneObjects": [
+        {
+            "modelID": 2,
+            "index": 0,
+            "name": "未命名8",
+            "x": 336,
+            "y": 358,
+            "z": 0,
+            "avatarID": 1002,
+            "avatarOri": 2,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {
+                "avatar": {
+                    "type": 1,
+                    "id": 0
+                }
+            },
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        null,
+        {
+            "modelID": 2,
+            "index": 2,
+            "name": "未命名3",
+            "x": 178,
+            "y": 496,
+            "z": 0,
+            "avatarID": 1005,
+            "avatarOri": 2,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {
+                "avatar": {
+                    "type": 1,
+                    "id": 0
+                }
+            },
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1.6,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        }
+    ],
+    "commands": [],
+    "behaviors": [
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            1,
+            [
+                [
+                    10
+                ],
+                [
+                    17,
+                    10
+                ]
+            ]
+        ],
+        null
+    ],
+    "customAttributes": [
+        {
+            "arr": {
+                "varType": 6,
+                "value": []
+            },
+            "age": {
+                "varType": 0,
+                "value": 6661
+            }
+        },
+        {},
+        {
+            "arr": {
+                "varType": 6,
+                "value": []
+            },
+            "age": {
+                "varType": 0,
+                "value": 6661
+            }
+        },
+        null
+    ],
+    "events": [
+        {
+            "condition": [],
+            "click": [
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "创建"
+                ],
+                [
+                    19,
+                    "",
+                    "var soData = new SceneObject();\r\nsoData.modelID = 2;\r\nsoData.avatarID = 1008;\r\nsoData.x = MathUtils.rand(Config.WINDOW_WIDTH);\r\nsoData.y = MathUtils.rand(Config.WINDOW_HEIGHT);\r\nvar so = ServerSceneObject.create(soData);\r\ntrigger.scene.addSceneObject(so);\r\n\r\n",
+                    "var soData = new SceneObject();\nsoData.modelID = 2;\nsoData.avatarID = 1008;\nsoData.x = MathUtils.rand(Config.WINDOW_WIDTH);\nsoData.y = MathUtils.rand(Config.WINDOW_HEIGHT);\nvar so = ServerSceneObject.create(soData);\ntrigger.scene.addSceneObject(so);\n"
+                ],
+                [
+                    4,
+                    "克隆"
+                ],
+                [
+                    19,
+                    "",
+                    "var so = ServerSceneObject.clone(4,2,trigger.scene);\r\ntrigger.scene.addSceneObject(so);\r\n",
+                    "var so = ServerSceneObject.clone(4, 2, trigger.scene);\ntrigger.scene.addSceneObject(so);\n"
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [
+                {
+                    "type": 3,
+                    "varID": 15,
+                    "compare": 0,
+                    "value": 0
+                },
+                {
+                    "type": 4,
+                    "varID": 5,
+                    "compare": 1,
+                    "value": 0
+                }
+            ],
+            "click": [
+                [
+                    11,
+                    1,
+                    null,
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FfFffF'>caocaocao!!!</span>"
+                ],
+                [
+                    13,
+                    0,
+                    15,
+                    1,
+                    0,
+                    1,
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    11,
+                    1,
+                    null,
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FfFffF'>我还可以说话哦！！！</span>"
+                ],
+                [
+                    11,
+                    1,
+                    null,
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FfFffF'>我又来了！</span>"
+                ],
+                [
+                    11,
+                    1,
+                    null,
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FfFffF'>我又来了！22222</span>"
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        null
+    ],
+    "id": 4
+}

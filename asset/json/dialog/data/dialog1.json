@@ -1,0 +1,65 @@
+{
+    "option": {
+        "x": 290,
+        "y": 237,
+        "width": 196,
+        "height": 40,
+        "color": "#ffffff",
+        "fontSize": 24,
+        "leading": 3,
+        "align": 1,
+        "valign": "top"
+    },
+    "optionBox": {
+        "x": 272,
+        "y": 191,
+        "width": 231,
+        "height": 111,
+        "column": 2,
+        "columnSpaceing": 5,
+        "rowSpaceing": 5,
+        "image1": "asset/image/picture/UI/1.png",
+        "image2": "asset/image/picture/UI/1.png",
+        "overSe": "asset/audio/se/btn.mp3",
+        "overVolume": 1,
+        "overPitch": 1,
+        "clickSe": "asset/audio/se/over_btn.mp3",
+        "clickVolume": 1,
+        "clikcPitch": 1
+    },
+    "dialogBox": {
+        "x": 52,
+        "y": 439,
+        "width": 891,
+        "height": 259,
+        "skin": "asset/image/picture/UI/2.png"
+    },
+    "headBox": {
+        "x": -144,
+        "y": 556,
+        "width": 142,
+        "height": 142,
+        "skin": "asset/editor/image/unknowimage.png"
+    },
+    "dialog": {
+        "x": 69,
+        "y": 516,
+        "width": 861,
+        "height": 134,
+        "color": "#ffffff",
+        "fontSize": 22,
+        "leading": 6,
+        "align": "left"
+    },
+    "nameBox": {
+        "x": 157,
+        "y": 458,
+        "width": 123,
+        "height": 28,
+        "color": "#ffffff",
+        "fontSize": 24,
+        "leading": 3,
+        "align": 1
+    },
+    "id": 1
+}

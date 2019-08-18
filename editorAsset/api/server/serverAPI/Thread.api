@@ -1,0 +1,50 @@
+﻿/**
+ * Created by kds on 2017/1/8 02:45:32
+ * 可通过此项在线程之间共享数据
+ */
+/**
+ * 设置一个全局数据，任何线程都可以取得该数据
+ * @param key 字符串
+ * @param value 字符串
+ */
+function setGlobalValue(key:string,value:string):void{
+   // c++ Implement
+}
+/**
+ * 获取一个全局数据
+ * @param key 字符串
+ * @return value 字符串 若不存在则返回null
+ */
+function getGlobalValue(key:string):string{
+   // c++ Implement
+}
+/**
+ * 抽取一个全局数据，抽取后原数据被删除
+ * @param key 字符串
+ * @return value 字符串
+ */
+function extractGlobalValue(key:string):void{
+    // c++ Implement
+}
+/**
+ * 发送消息到某个共享的通道，任何脚本线程都可以获得
+ * 消息在未receive时会一直存在
+ * @param passagesID 通道ID
+ * @param msg 消息
+ * @param 返回是否成功
+ */
+function sendMsgToPassages(passagesID:number,msg:string):boolean{
+    // c++ Implement
+}
+/**
+ * 从某个通道中接收消息，任何脚本线程都可以获得
+ * @param passagesID 通道ID
+ * @return msg 消息数组[] 若不存在则返回null
+ */
+function receiveMsgFormPassages(passagesID:number):string[]{
+    // c++ Implement
+}
+/**
+ * 是否是发布版服务端
+ */
+var kdsrpg_release:boolean;

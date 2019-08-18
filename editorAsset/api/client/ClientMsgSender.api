@@ -1,0 +1,67 @@
+/**
+ * Created by 黑暗之神KDS on 2018-07-27 02:34:31.
+ */
+class ClientMsgSender {
+    /**
+     * 发送字符串消息
+     * @param msg 
+     * @param threadID [可选] 默认值=-1 指定发送的线程，未指定则说明是当前玩家所在的场景线程 2=主线程 3~N=场景线程 -1=表示默认玩家所在的线程
+     */
+    static send(msg: string, threadID: number = -1): void {
+        
+    }
+    /**
+     * 远程调用客户端的方法（需要服务器设置调用权限）
+     * -- 在玩家进入场景后才能使用该方法
+     * @param className 调用的类
+     * @param funcName 调用的方法
+     * @param params 方法参数
+     * @param onReturn 服务器返回值回调，超时会被删除
+     * @param threadID 指定发送的线程，未指定则说明是当前玩家所在的场景线程 2=主线程 3~N=场景线程 -1=表示默认玩家所在的线程
+     */
+    static rpc(className: string, funcName: string, params: any[] = [], onReturn: Callback = null, threadID: number = -1): void {
+       
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 系统发送消息
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 请求移动
+     * @param realLineArr 路径，格式 [[x1,y1],[x2,y2],[x3,y3]...] 不包含当前坐标点
+     */
+    static requestToMove(realLineArr: number[][]) {
+       
+    }
+    /**
+     * 请求进入场景中
+     */
+    static requestInScene() {
+        
+    }
+    /**
+     * 请求触发事件
+     * @param type 对应 Const.COMMAND_TRIGGER_TYPE_XXX
+     * @param commandID 命令标识
+     * @param inputMessage 玩家输入的信息
+     */
+    static requestTriggerEvent(type: number, commandID: number | string, inputMessage: string[]=null): void {
+        
+    }
+    /**
+     * 请求监听玩家变量
+     * @param isListen 是否监听
+     * @param type 类别 0-变量 1-开关 2-字符串
+     * @param varID 变量ID
+     */
+    static requestListenPlayerVariable(isListen: boolean, type: number, varID: number) {
+       
+    }
+    /**
+     * 请求获取世界变量
+     * @param type 0-变量 1-开关 2-字符串
+     * @param varID 变量ID
+     */
+    static requestGetWorldVariable(type: number, varID: number): void {
+        
+    }
+}

@@ -1,0 +1,81 @@
+/**
+ * 游戏命令处理
+ * -- 单线执行：会使玩家无法控制
+ *     1.进入场景的事件
+ *     2.NPC点击事件
+ * 
+ * -- 多线执行：
+ *     1.UI点击事件
+ *     2.主动调用有权限的公共事件
+ *     3.NPC碰触事件
+ * 
+ * -- 其他事件
+ *     1.[server]NPC并行事件（NPC单线）
+ * 
+ * sceneObject -- GameCommand x N
+ * Created by 黑暗之神KDS on 2019-01-12 08:01:14.
+ */
+class GameCommand  {
+    /** 点击事件的命令 true=开始 false=结束 */
+    static EVENT_SCENE_OBJECT_CLICK_COMMAND: string = "GameCommand_EVENT_SCENE_OBJECT_CLICK_COMMAND";
+    /** 进入场景的命令 true=开始 false=结束 */
+    static EVENT_IN_SCENE_COMMAND: string = "GameCommand_EVENT_IN_SCENE_COMMAND";
+    /** 是否玩家输入中 */
+    static isNeedPlayerInput: boolean;
+    /**
+     * 是否命令执行中
+     */
+    static isExecuteStart: boolean;
+    /**
+     * [场景-事件] 主动开始触发该事件
+     * @param indexType 事件类别，0~N 对应自定义的场景中的事件类别
+     * @param inputMessage [可选] 默认值=null 玩家输入值（等同调用事件时传递的参数）
+     * @param onCommandExecuteOver [可选] 默认值=null 当命令执行完毕时回调
+     * @return 是否触发执行成功
+     */
+    static startSceneCommand(indexType: number, inputMessage: any[] = null, onCommandExecuteOver: Callback = null): boolean {
+        return true;
+    }
+    /**
+     * [场景对象-事件] 主动开始新触发该事件
+     * @param sceneObjectIndex 场景对象索引（sceneObject.index）
+     * @param indexType 事件类别，0~N 对应自定义的场景对象中的事件类别
+     * @param inputMessage [可选] 默认值=null 玩家输入值（等同调用事件时传递的参数）
+     * @param onCommandExecuteOver [可选] 默认值=null 当命令执行完毕时回调
+     * @return 是否触发执行成功
+     */
+    static startSceneObjectCommand(sceneObjectIndex: number, indexType: number, inputMessage: any[] = null, onCommandExecuteOver: Callback = null): boolean {
+        return true;
+    }
+    /**
+     * [UI-事件] 主动开始执行
+     * @param commandID UI组件标识，格式：{uiID}_{componentID}
+     * @param indexType 子事件类别，0~N 对应UI的对象中的事件类别
+     * @param inputMessage [可选] 默认值=null 玩家输入值（等同调用事件时传递的参数）
+     * @param onCommandExecuteOver [可选] 默认值=null 当命令执行完毕时回调
+     * @return 是否触发执行成功
+     */
+    static startUICommand(comp: UIBase, indexType: number, inputMessage: any[] = null, onCommandExecuteOver: Callback = null): boolean {
+        return true;
+    }
+    /**
+     * [公共事件] 主动开始执行
+     * @param id 公共事件ID
+     * @param inputMessage [可选] 默认值=null 玩家输入值（等同调用事件时传递的参数）
+     * @param onCommandExecuteOver [可选] 默认值=null 当命令执行完毕时回调
+     * 
+     */
+    static startCommonCommand(id: number, inputMessage: any[] = null, onCommandExecuteOver: Callback = null): void {
+
+    }
+    /**
+     * 输入信息并继续执行下去
+     * @param inputMessage [可选] 默认值=null 输入的信息
+     * @param force [可选] 默认值=false 是否强制模式（非强制模式只有客户端判定需要输入时才发送）
+     * @param delayFrame [可选] 默认值=1 延迟多少帧发送
+     */
+    static inputMessageAndContinueExecute(inputMessage: any[] = null, force: boolean = false, delayFrame: number = 1) {
+
+    }
+
+}

@@ -1,0 +1,26 @@
+/**
+ * UI组件：复选框
+ * 相关事件：
+ *  EventObject.CHANGE 当改变状态时派发
+ *  EventObject.LOADED 加载完成时候事件
+ * Created by 黑暗之神KDS on 2019-04-14 21:41:10.
+ */
+class UICheckBox extends UIBase {
+    /**
+     * 更改选中状态
+     */
+    selected: boolean;
+    /**
+     * 未选中
+     */
+    image1: string;
+    /**
+     * 选中
+     */
+    image2: string;
+    /**
+     * 九宫格设置：上边距、右边距、下边距、左边距
+     * 让素材不再简单拉伸，而是根据九宫格方式进行拉伸
+     */
+    grid9:string;
+}

@@ -1,0 +1,77 @@
+/**
+ * Created by 黑暗之神KDS on 2018-07-24 02:09:40.
+ */
+class ObjectUtils {
+    /**
+     * 获取唯一ID
+     */
+    static getInstanceID(): number {
+        return null;
+    }
+    /**
+     * 获取随机唯一ID
+     */
+    static getRandID(): string {
+        return null;
+    }
+
+    /**
+     * 将A的属性克隆给B
+     * @param a 
+     * @param b 
+     */
+    static clone(form: any, to: any): void {
+        return null;
+    }
+    /**
+     * 将A的属性克隆给B，仅对于B存在的属性才克隆
+     * @param a 
+     * @param b 
+     */
+    static cloneExcludeNonExistentAttribute(form: any, to: any): void {
+        return null;
+    }
+    /**
+     * 深度克隆属性
+     */
+    static depthClone<T>(o: T): T {
+        return null;
+    }
+    /**
+     * 是否不同 遍历a的属性是否与b相同
+     */
+    static same(a: any, b: any): boolean {
+        return null;
+    }
+    /**
+     * 是否不同 遍历a的属性是否与b相同 深度对比
+     * @return 是否相同
+     */
+    static depthSame(a: any, b: any): boolean {
+       return null;
+    }
+    /**
+     * 赋值，将B的值赋值给A，不变更类型
+     * -- B中存在的属性才会被赋值
+     * -- 保持A的类型不变（这样可保留该类型下的方法）
+     */
+    static assignment(a: any, b: any) {
+       return null;
+    }
+    /**
+     * 重定义get/set
+     * @param target 目标对象
+     * @param defineContent {x:function(v){code}}
+     */
+    static reDefineGetSet(target: string, defineContent: any) {
+       return null;
+    }
+    /**
+     * 映射指定类事件相关方法，将types替换成指定对象的方法
+     * @param types 需要替换的类型集合
+     * @param toObjName 指定替换至的对象名 
+     */
+    static redefinedEventFunc(clsName: string, types: string[], toObjName: string) {
+       return null;
+    }
+}

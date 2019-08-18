@@ -1,0 +1,21 @@
+/**
+ * UI组件：行走图
+ * 相关事件
+ *  EventObject.LOADED 加载完成时候事件
+ * Created by 黑暗之神KDS on 2018-12-11 17:44:18.
+ */
+class UIAvatar extends UIBase {
+    /**
+     * AVATAR-ID
+     */
+    avatarID: number;
+    /**
+     * 行走图对象，每次更换avatarID会重新生成一个新的对象
+     * @return [Avatar] 
+     */
+    get avatar(): Avatar { return null; }
+    /**
+     * 是否播放
+     */
+    isPlay: boolean;
+}

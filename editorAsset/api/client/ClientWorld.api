@@ -1,0 +1,63 @@
+/**
+ * 世界-客户端
+ * Created by 黑暗之神KDS on 2019-06-02 22:49:26.
+ */
+class ClientWorld {
+    /**
+     * 是否是游戏
+     */
+    static isGame:boolean = true;
+    /**
+     * 事件：初始化完毕
+     */
+    static EVENT_INITED: string = "ClientMain_EVENT_INITED";
+    /**
+     * 事件：接收字符串消息
+     * EventUtils.addEventListener(ClientMain); callback(msg:string)
+     */
+    static EVENT_STRING_MESSAGE: string = "ClientMain_EVENT_STRING_MESSAGE";
+    /**
+     * 世界数据
+     */
+    static data: typeof WorldData;
+    /**
+     * 事件变量本地缓存，获取的值是最近从服务器中获取的值（如若已监听则是接近最新的值）
+     */
+    static variable: Variable = new Variable();
+    //------------------------------------------------------------------------------------------------------
+    // 
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 初始化
+     * @param onInited 
+     */
+    static init() {
+
+    }
+    /**
+     * 登录
+     * @param onLoginSuccess 连接成功后回调
+     * @param onLoginFail [可选] 默认值=null 失败/断线时回调
+     */
+    static startLogin(onLoginSuccess: Callback, onLoginFail: Callback = null) {
+
+    }
+    /**
+     * 登出
+     */
+    static logout(){
+        
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 变量
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 请求获取世界变量
+     * @param type 0-世界变量 1-世界开关 2-世界字符串
+     * @param varID 变量ID
+     * @param onResponse 回调 onResponse(isSuccess:boolean,type:number,varID:number,value:number|string);
+     */
+    static requestGetVariable(type: number, varID: number, onResponse: Callback): void {
+
+    }
+}

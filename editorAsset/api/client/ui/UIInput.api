@@ -1,0 +1,24 @@
+/**
+ * UI组件：文本
+ * 相关事件：
+ * EventObject.ENTER 按下ENTER键时
+ * EventObject.INPUT 输入文本时
+ * EventObject.CHANGE 文本改变时
+ * EventObject.FOCUS 产生焦点时
+ * EventObject.BLUR 失去焦点时
+ * Created by 黑暗之神KDS on 2019-04-14 17:43:32.
+ */
+class UIInput extends UIString {
+    /**
+     * 文本输入模式 0-文本模式 1-密码模式 2-数字模式 3-多行文本
+     */
+    inputMode: number;
+    /**
+     * 限制输入字符串 如0-9A-Za-z 则表示只能输入数字和字母（正则表达式）
+     */
+    restrict: string;
+    /**
+     * 产生焦点
+     */
+    focus(): void { }
+}

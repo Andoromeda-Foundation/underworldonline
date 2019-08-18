@@ -1,0 +1,112 @@
+/**
+ * 场景
+ *   玩家登陆后会进入对应的场景，场景由场景线程管理，每个场景线程分别管理多个预设的场景（需要管理的场景才会在该线程中实际创建出来）
+ *   创建副本则在当前场景线程中进行创建副本
+ * 
+ * Created by 黑暗之神KDS on 2018-07-14 01:33:57.
+ */
+class ServerScene extends Scene {
+    /** 场景 [id] = [ServerScene] 对应的线程存放对应的场景数据，参考 ServerThread.getSceneThread */
+    static scenes: ServerScene[] = [];
+    /** 场景副本 按顺序填入 id 表示副本 id>COPY_SCENE_ID_START表示副本ID */
+    static sceneCopys: ServerScene[] = [];
+    /** 该场景上的玩家列表 [uid] = [object ServerPlayer] */
+    playerMap: { [uid: string]: ServerPlayer } = {};
+    /** 玩家数量 */
+    playerCount: number = 0;
+    /** 场景总对象数量 */
+    sceneObjectCount: number = 0;
+    /** 是否已释放*/
+    isDisposed: boolean;
+    /** 场景自定义类别事件 */
+    customCommandPages:CommandPage[] = [];
+    //------------------------------------------------------------------------------------------------------
+    // 静态方法
+    //------------------------------------------------------------------------------------------------------
+    /**
+    * 创建场景，如果是副本则在当前线程下创建副本
+    * @param dataID 预设参考ID
+    * @param copyMode [可选] 默认值=false 是否副本模式
+    * @return [number] 返回的场景对象ID
+    */
+    static createScene(dataID: number, copyMode: boolean = false): number {
+      return null;
+    }
+    /**
+     * 获取当前线程中的指定场景
+     * @param sceneID 
+     */
+    static getScene(sceneID: number): ServerScene {
+       return null;
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 场景方法
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 当前场景刷新
+     */
+    update(now: number): void {
+        
+    }
+    /**
+     * 销毁：目前仅可以销毁副本
+     */
+    dispose(): void {
+        
+    }
+    /**
+     * 是否是副本
+     */
+    get isCopy(): boolean {
+        return null;
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 玩家相关
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 准备进入场景：让玩家加载场景
+     */
+    readyInScene(player: ServerPlayer): void {
+        
+    }
+    /**
+     * 添加玩家
+     * @param player 
+     */
+    addPlayer(player: ServerPlayer): void {
+       
+    }
+    /**
+     * 移除玩家
+     * @param player 
+     */
+    removePlayer(player: ServerPlayer): void {
+       
+    }
+    /**
+     * 获取玩家
+     */
+    getPlayer(uid: number): ServerPlayer {
+        return this.playerMap[uid];
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 游戏对象
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 添加游戏对象 并同步至客户端
+     * @param so 要添加的游戏对象 
+     * @param presetNPC 是否是预设NPC，是则不自动计算插入空位置上而是根据预设
+     * @return [number] 该游戏对象在场景上sceneObjects列表的位置
+     */
+    addSceneObject(so: ServerSceneObject, addToList: boolean = true): void {
+        
+    }
+    /**
+     * 移除游戏对象 并同步至客户端
+     * @param so 要移除的游戏对象
+     * @param presetNPC 是否是预设NPC，是则不会从列表位置中移除
+     */
+    removeSceneObject(so: ServerSceneObject, removeFromList: boolean = true,force:boolean=false): boolean {
+        return false;
+    }
+}

@@ -1,0 +1,46 @@
+/**
+ * Avatar 动作类
+ * 一个Avatar可能包含若干个动作，每个动作拥有对应每个方向都有一系列的图集
+ */
+class AvatarAction {
+    /**
+     * 动作ID 对应动作库中的ID
+     */
+    id: number;
+    /**
+     * 图集的帧数据信息
+     * [方向](对应小键盘) - 帧图
+     */
+    frameImageInfo: any[][] = [];
+    /**
+     * 方向模式 1 2 3 4 5 8
+     */
+    oriMode: number;
+    /**
+     * 获取某个方向的帧长度
+     * @param ori 方向 
+     * @param useMapping [可选] 默认值=true 使用映射获取实际面向
+     */
+    getFrameLength(ori: number, useMapping: boolean = true): number {
+        return null;
+    }
+    /**
+     * 获取当前动作中某个方向与某帧的数据图像
+     * @param ori 方向
+     * @param frame 帧
+     * @param useMapping [可选] 默认值=true 使用映射获取实际面向
+     * @return [AvatarFrameImage]
+     */
+    getFrameImage(ori: number, frame: number, useMapping: boolean = true): AvatarFrameImage {
+        return null;
+    }
+    /**
+     * 是否存在该面向
+     * @param ori 
+     * @return [boolean] 
+     */
+    hasOri(ori: number): boolean {
+        return null;
+    }
+
+}

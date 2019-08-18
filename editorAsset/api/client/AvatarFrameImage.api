@@ -1,0 +1,52 @@
+/**
+ * Avatar帧图像数据
+ */
+class AvatarFrameImage {
+    /**
+     * 所在帧索引
+     */
+    index: number
+    /**
+     * 对应图集的索引 Avatar的picUrls
+     */
+    picUrlIndex: number;
+    /**
+     * 图像
+     */
+    graphics: Graphics;
+    /**
+     * 切图数据 null表示直接使用整张图
+     */
+    rect: Rectangle;
+    /**
+     * 坐标X
+     */
+    x: number;
+    /**
+     * 坐标Y
+     */
+    y: number;
+    /**
+     * 宽度，存在则使用该宽度，否则使用切图宽度
+     */
+    width: number;
+    /**
+     * 高度，存在则使用该高度，否则使用切图高度
+     */
+    height: number;
+    /**
+     * 旋转
+     */
+    rotation: number;
+    /**
+     * 透明
+     */
+    alpha: number;
+    /**
+     * 获取图像的切图正数据
+     */
+    get positiveRect():Rectangle{
+        return null;
+    }
+
+}

@@ -1,0 +1,68 @@
+/**
+ * 命令的目标
+ * 一个场景对象对应多个CommandTarget，如：
+ * 点击的CommandTarget、碰触的CommandTarget
+ * 若玩家触发点击事件，则使用的是该玩家场景对象的[点击CommandTarget]
+ * Created by 黑暗之神KDS on 2018-10-11 20:48:57.
+ */
+class CommandTarget {
+    /** 执行开始 */
+    static EVENT_START: string = "CommandPage_EVENT_START_TRIGGER";
+    /** 执行结束 */
+    static EVENT_OVER: string = "CommandPage_EVENT_OVER";
+    /** 该事件域此前派发的设置对象的行为结束时派发此事件（同命令中的[等待行为结束]） */
+    static EVENT_BEHAVIOR_OVER: string = "CommandTarget_EVENT_BEHAVIOR_OVER";
+    /**
+     * 事件主类别：场景相关
+     */
+    static COMMAND_MAIN_TYPE_SCENE:number = 0;
+    /**
+     * 事件主类别：场景对象相关
+     */
+    static COMMAND_MAIN_TYPE_SCENE_OBJECT:number = 1;
+    /**
+     * 事件主类别：UI相关
+     */
+    static COMMAND_MAIN_TYPE_UI:number = 2;
+    /**
+     * 主类型 CommandTarget::COMMAND_MAIN_TYPE_XXXXX
+     */
+    mainType: number;
+    /**
+     * 小类型 主类型下的子类型
+     */
+    indexType: number;
+    /**
+     * 是否多线模式
+     */
+    multiline: boolean;
+    /**
+     * 所在的场景
+     */
+    scene: ServerScene;
+    /**
+     * 触发事件的场景对象
+     */
+    trigger: ServerSceneObject;
+    /**
+     * 执行事件的目标
+     */
+    executor: ServerSceneObject;
+    /**
+     * 暂停执行标记，表示事件暂时停止执行
+     */
+    pause: boolean;
+    /**
+     * 中断执行标记，表示事件命令该作用域中断了，返回到上一层作用域继续执行（如若已经是顶层则事件命令执行完毕）
+     */
+    cmdReturn: boolean;
+    /**
+     * 玩家输入值
+     */
+    inputMessage: any[] = [];
+    /**
+     * 获取触发事件的玩家
+     * @return [ServerPlayer] 
+     */
+    get triggerPlayer(): ServerPlayer { return null; }
+}

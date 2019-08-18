@@ -1,0 +1,138 @@
+/**
+ * Created by 黑暗之神KDS on 2019-02-04 16:43:35.
+ */
+class GameFunction {
+    //------------------------------------------------------------------------------------------------------
+    // 图像和画面
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 震动
+     * @param strength 幅度
+     * @param duration 帧数
+     */
+    static shake(strength: number, duration: number): void {
+
+    }
+    /**
+     * 色调：这里底层引擎的BUG，白色会有描边
+     * @param r 红色
+     * @param g 绿色
+     * @param b 蓝色
+     * @param gray 灰度 
+     * @param t 时间（帧）
+     * @param mr 红色曝光
+     * @param mg 绿色曝光
+     * @param mb 蓝色曝光
+     * @param layer 层次（后期追加的高级特性）
+     * @param tCur 当前的T
+     */
+    static tonal(r: number, g: number, b: number, gray: number, t: number, mr: number, mg: number, mb: number, layer: number = -1, tCur: number = null) {
+    
+    }
+    /**
+     * 相机移动
+     * @param type 0-直接坐标 1-锁定对象
+     * @param x 指定的坐标x
+     * @param y 指定的坐标y
+     * @param soIndex 锁定的对象
+     * @param tween 缓动
+     * @param t 帧数
+     * @param tCur 当前的帧数（首次为null）
+     */
+    static cameraMove(type: number, x: number, y: number, soIndex: number, tween: boolean, t: number, tCur: number = null, window_width: number = null, window_height: number = null) {
+    
+    }
+    /**
+     * 雾图形变更
+     * @param url 
+     * @param sx 
+     * @param sy 
+     * @param dx 
+     * @param dy 
+     * @param alpha 
+     * @param blendMode 
+     */
+    static fogSet(url: string, sx: number, sy: number, dx: number, dy: number, alpha: number, blendMode: number) {
+
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 播放音乐
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 播放音效
+     * @param soIndex 场景对象 -1表示全局，如果在场景对象身上播放，则相机离其越近越声音大
+     * @param url 音效地址
+     * @param volume 音量 0-1
+     * @param pitch 音调 0-2 1=正常
+     */
+    static playSE(soIndex: number, url: string, volume: number, pitch: number) {
+
+    }
+    /**
+     * 停止音效
+     */
+    static stopSE() {
+
+    }
+    /**
+     * 播放背景音乐
+     * @param bgmURL 背景音乐地址
+     * @param volume 音量大小 0-1
+     * @param pitch 音调 0-2 1=正常
+     * @param fadeIn 淡入时间 ms
+     */
+    static playBGM(bgmURL: string, volume: number, pitch: number, fadeIn: number) {
+
+    }
+    /**
+     * 播放环境音效
+     * @param bgsURL 环境音效地址
+     * @param volume 音量大小 0-1
+     * @param pitch 音调 0-2 1=正常
+     * @param fadeIn 淡入时间 ms
+     */
+    static playBGS(bgsURL: string, volume: number, pitch: number, fadeIn: number) {
+
+    }
+    /**
+     * 停止背景音乐
+     * @param fadeOut 淡出时间 ms
+     */
+    static stopBGM(fadeOut: number) {
+
+    }
+    /**
+     * 停止播放环境音效
+     * @param fadeOut 淡出时间 ms
+     */
+    static stopBGS(fadeOut: number) {
+
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 菜单和UI
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 打开UI
+     * @param id 界面ID
+     */
+    static openUI(id: number) {
+
+    }
+    /**
+     * 关闭UI
+     * @param id 界面ID
+     */
+    static closeUI(id: number) {
+
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 其他
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 执行客户端代码
+     * @param code 
+     */
+    static executeScript(code: string): void {
+
+    }
+}

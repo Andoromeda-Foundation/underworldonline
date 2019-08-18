@@ -1,0 +1,33 @@
+/**
+ * Soul Base Client
+ * 通用游戏框架客户端入口：基于该框架的入口应继承于此类
+ * 启动后即可连接服务器
+ * Created by 黑暗之神KDS on 2018-05-21 23:45:09.
+ */
+class ClientMain {
+    /**
+     * 事件：初始化完毕
+     */
+    static EVENT_INITED: string = "ClientMain_EVENT_INITED";
+    /**
+     * 事件：接收字符串消息
+     * EventUtils.addEventListener(ClientMain); callback(msg:string)
+     */
+    static EVENT_STRING_MESSAGE:string = "ClientMain_EVENT_STRING_MESSAGE";
+    /**
+     * 初始化
+     * @param onInited 
+     */
+    static init() {
+        
+    }
+    /**
+     * 登录
+     * @param onLoginSuccess 连接成功后回调
+     * @param onLoginFail [可选] 默认值=null 失败/断线时回调
+     */
+    static startLogin(onLoginSuccess: Callback, onLoginFail: Callback = null) {
+        
+    }
+}
+

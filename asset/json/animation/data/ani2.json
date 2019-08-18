@@ -1,0 +1,231 @@
+{
+    "loop": false,
+    "showHitEffect": false,
+    "fps": 20,
+    "totalFrame": 16,
+    "imageSources": [
+        null,
+        {
+            "x": 0,
+            "y": 0,
+            "width": 512,
+            "height": 450,
+            "url": "asset/image/animation/水花/1.png",
+            "index": 1
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "width": 512,
+            "height": 450,
+            "url": "asset/image/animation/水花/2.png",
+            "index": 2
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "width": 512,
+            "height": 450,
+            "url": "asset/image/animation/水花/3.png",
+            "index": 3
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "width": 512,
+            "height": 450,
+            "url": "asset/image/animation/水花/4.png",
+            "index": 4
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "width": 512,
+            "height": 450,
+            "url": "asset/image/animation/水花/5.png",
+            "index": 5
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "width": 512,
+            "height": 450,
+            "url": "asset/image/animation/水花/6.png",
+            "index": 6
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "width": 512,
+            "height": 450,
+            "url": "asset/image/animation/水花/7.png",
+            "index": 7
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "width": 512,
+            "height": 450,
+            "url": "asset/image/animation/水花/8.png",
+            "index": 8
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "width": 512,
+            "height": 450,
+            "url": "asset/image/animation/水花/9.png",
+            "index": 9
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "width": 512,
+            "height": 450,
+            "url": "asset/image/animation/水花/10.png",
+            "index": 10
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "width": 512,
+            "height": 450,
+            "url": "asset/image/animation/水花/11.png",
+            "index": 11
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "width": 512,
+            "height": 450,
+            "url": "asset/image/animation/水花/12.png",
+            "index": 12
+        },
+        {
+            "x": 0,
+            "y": 0,
+            "width": 512,
+            "height": 450,
+            "url": "asset/image/animation/水花/13.png",
+            "index": 13
+        }
+    ],
+    "layers": [
+        {
+            "name": "目标层",
+            "type": 0,
+            "children": [],
+            "frames": [
+                {
+                    "index": 0,
+                    "horizontalReversal": false,
+                    "hue": 0,
+                    "blur": 0,
+                    "tonal_r": 0,
+                    "tonal_g": 0,
+                    "tonal_b": 0,
+                    "tonal_gray": 0,
+                    "tonal_mr": 1,
+                    "tonal_mg": 1,
+                    "tonal_mb": 1,
+                    "x": 0,
+                    "y": 0,
+                    "rotation": 0,
+                    "alpha": 1,
+                    "scaleX": 1,
+                    "scaleY": 1
+                }
+            ],
+            "isHitEffect": false
+        },
+        {
+            "name": "layer",
+            "type": 1,
+            "children": [],
+            "frames": [
+                {
+                    "index": 0,
+                    "horizontalReversal": false,
+                    "hue": 0,
+                    "blur": 0,
+                    "tonal_r": 0,
+                    "tonal_g": 0,
+                    "tonal_b": 0,
+                    "tonal_gray": 0,
+                    "tonal_mr": 1,
+                    "tonal_mg": 1,
+                    "tonal_mb": 1,
+                    "x": -128,
+                    "y": -140,
+                    "rotation": 0,
+                    "alpha": 1,
+                    "width": 256,
+                    "height": 225,
+                    "imageSource": 1,
+                    "blendModeType": 0
+                },
+                {
+                    "index": 12,
+                    "horizontalReversal": false,
+                    "hue": 0,
+                    "blur": 0,
+                    "tonal_r": 0,
+                    "tonal_g": 0,
+                    "tonal_b": 0,
+                    "tonal_gray": 0,
+                    "tonal_mr": 1,
+                    "tonal_mg": 1,
+                    "tonal_mb": 1,
+                    "x": -128,
+                    "y": -140,
+                    "rotation": 0,
+                    "alpha": 1,
+                    "width": 256,
+                    "height": 225,
+                    "imageSource": 13,
+                    "blendModeType": 1
+                },
+                {
+                    "index": 15,
+                    "horizontalReversal": false,
+                    "hue": 0,
+                    "blur": 0,
+                    "tonal_r": 0,
+                    "tonal_g": 0,
+                    "tonal_b": 0,
+                    "tonal_gray": 0,
+                    "tonal_mr": 1,
+                    "tonal_mg": 1,
+                    "tonal_mb": 1,
+                    "x": -128,
+                    "y": -140,
+                    "rotation": 0,
+                    "alpha": 0,
+                    "width": 256,
+                    "height": 225,
+                    "imageSource": 13,
+                    "blendModeType": 1
+                }
+            ],
+            "isHitEffect": false
+        },
+        {
+            "name": "音效层",
+            "type": 3,
+            "children": [],
+            "frames": [
+                {
+                    "index": 0
+                }
+            ],
+            "isHitEffect": false,
+            "audioInfo": {
+                "url": "asset/audio/se/喷水.mp3",
+                "volume": "1",
+                "pitch": "1"
+            }
+        }
+    ],
+    "isParticle": false,
+    "id": 2
+}

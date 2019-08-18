@@ -1,0 +1,78 @@
+﻿/**
+ * Created by kds on 2017/1/8 03:49:22
+ * mysql 数据库
+ */
+/**
+ * 启动数据库
+ * @return 数据库索引，每次创建索引会增加，表明当前连接对应的服务ID -1则表示创建失败
+ */
+function mysql_start(host:string,port:number,dbName:string,username:string,password:string):number{
+    // c++ Implement
+	return null;
+}
+/**
+ * 执行mysql语句
+ * @param sql sql语句
+ * @param paramLength 参数 结果返回的参数
+ * @param mysqlIndex 数据库索引，表示使用的数据库服务编号（创建时会给与你）
+ * @return 返回 所有数据字符串格式，每行间隔String.fromCharCode(6) 每列数据String.fromCharCode(5)，未查询到或数据库未能连接成功就返回""
+*/
+function mysql_execute(sql:string,paramLength:number,mysqlIndex:number=0):string{
+   // c++ Implement
+   return null;
+}
+/**
+ * 查询数据库，一条MYSQL语句
+ * @param tableName 表名称 如 table
+ * @param params 参数 如 id,name
+ * @param condition 如 where id>5 order by id desc
+ * @param mysqlIndex 数据库索引，表示使用的数据库服务编号（创建时会给与你）
+ * @return 返回 所有数据字符串格式，每行间隔String.fromCharCode(6) 每列数据String.fromCharCode(5)，未查询到或数据库未能连接成功就返回""
+*/
+function mysql_query(tableName:string,params:string, condition:string,mysqlIndex:number=0):string{
+   // c++ Implement
+   return null;
+}
+/**
+ * 插入数据 可插入多条数据
+ * @param tableName 表名称 如 table
+ * @param datas 插入字符串 ["(name,age) values('kds',18)","(name,age) values('xx',20)"]
+ * @param mysqlIndex 数据库索引，表示使用的数据库服务编号（创建时会给与你）
+ * @return 返回执行成功的语句数目
+ */
+function mysql_insert(tableName:string,datas:string[],mysqlIndex:number=0):number{
+   // c++ Implement
+   return null;
+}
+
+/**
+ * 删除数据 可以执行多次删除语句
+ * @param tableName 表名称 如 table
+ * @param conditions 插入字符串 ["where id>5","where id mode 2 = 0"]
+ * @param mysqlIndex 数据库索引，表示使用的数据库服务编号（创建时会给与你）
+ * @return 返回执行成功的语句数目
+ */
+function mysql_delete(tableName:string,conditions:string[],mysqlIndex:number=0):number{
+    // c++ Implement
+	return null;
+}
+/**
+ * 更新数据 可以执行多条更新语句
+ * @param tableName 表名称 如 table
+ * @param conditions 插入字符串 ["set name='kds' where id=5","set name='xx' where id=6"]
+ * @param mysqlIndex 数据库索引，表示使用的数据库服务编号（创建时会给与你）
+ * @return 返回执行成功的语句数目
+ */
+function mysql_update(tableName:string,conditions:string[],mysqlIndex:number=0):number{
+    // c++ Implement
+	return null;
+}
+/**
+ * 返回MYSQL是否连接成功
+ * @param 数据库的索引
+ * @return 0=正常 否则表示已断开连接，需要重新调用mysql_start以便重新连接
+ */
+function mysql_ping(mysqlIndex:number):number{
+    // c++ Implement
+	return null;
+}

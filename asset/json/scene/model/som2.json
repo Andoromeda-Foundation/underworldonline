@@ -1,0 +1,63 @@
+{
+    "preLayer": [
+        {
+            "varName": "avatar",
+            "type": 1,
+            "id": 2,
+            "isPreView": true,
+            "inEditorShow": true
+        }
+    ],
+    "varAttributes": [
+        {
+            "id": "1306881286_0.622323384901796",
+            "varName": "arr",
+            "varType": 0,
+            "compData": {
+                "compType": 0,
+                "compParam": {}
+            },
+            "defaultValue": "",
+            "hideMode": false,
+            "useCommand": false,
+            "onlyPointTo": true,
+            "moduleID": 0,
+            "dataStructureID": 0,
+            "arrayMode": true,
+            "arrayLength": 5,
+            "arrayAllowDelete": false,
+            "arrayAllowSwap": false,
+            "arrayAllowUpdate": false,
+            "accessMode": 1,
+            "syncMode": 1
+        },
+        {
+            "id": "1994704705_0.031826257217310916",
+            "varName": "age",
+            "varType": 0,
+            "compData": {
+                "compType": 0,
+                "compParam": {}
+            },
+            "defaultValue": "6661",
+            "hideMode": false,
+            "useCommand": false,
+            "onlyPointTo": true,
+            "moduleID": 0,
+            "dataStructureID": 0,
+            "arrayMode": false,
+            "arrayLength": 100,
+            "arrayAllowDelete": false,
+            "arrayAllowSwap": false,
+            "arrayAllowUpdate": false,
+            "accessMode": 1,
+            "syncMode": 0
+        }
+    ],
+    "id": 2,
+    "attribute": [],
+    "clientCode": "class ClientSceneObject_2 extends ClientSceneObject_Base2 {\n    constructor(soData: SceneObject, scene: ClientScene){\n        super(soData,scene);\n    }\n}",
+    "clientJsCode": "var __extends = (this && this.__extends) || function (d, b) {\n    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];\n    function __() { this.constructor = d; }\n    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n};\nvar ClientSceneObject_2 = (function (_super) {\n    __extends(ClientSceneObject_2, _super);\n    function ClientSceneObject_2(soData, scene) {\n        _super.call(this, soData, scene);\n    }\n    return ClientSceneObject_2;\n}(ClientSceneObject_Base2));\n",
+    "commonCode": "",
+    "commonJsCode": ""
+}

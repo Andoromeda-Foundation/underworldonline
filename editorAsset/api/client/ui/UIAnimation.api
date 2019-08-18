@@ -1,0 +1,27 @@
+/**
+ * UI组件：动画
+ * 相关事件
+ *  EventObject.LOADED 加载完成时候事件
+ *  Animation.PLAY_COMPLETED 动画播放完成时事件 
+ * Created by 黑暗之神KDS on 2019-06-03 17:47:11.
+ */
+class UIAnimation extends UIBase {
+    /**
+     * 使用的动画编号
+     */
+    animationID: number;
+    /**
+     * 播放类型 0-不播放 1-播放一次 2-循环播放
+     */
+    playType: number;
+    /**
+     * 缩放
+     */
+    scaleNumber: number;
+    /**
+     * 获取动画元素
+     */
+    get animation(): Animation {
+        return null;
+    }
+}

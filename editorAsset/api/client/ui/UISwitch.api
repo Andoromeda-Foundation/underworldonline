@@ -1,0 +1,24 @@
+/**
+ * UI组件：开关
+ * [变量系统]在显示时会自动注册请求同步显示服务器玩家变量
+ * Created by 黑暗之神KDS on 2019-04-14 22:31:21.
+ */
+class UISwitch extends UIBase {
+    /**
+     * 指定绑定的变量ID
+     */
+    switchID: number;
+    /**
+     * 未选中时图片
+     */
+    image1: string;
+    /**
+     * 选中时图片
+     */
+    image2: string;
+    /**
+     * 九宫格设置：上边距、右边距、下边距、左边距
+     * 让素材不再简单拉伸，而是根据九宫格方式进行拉伸
+     */
+    grid9:string;
+}

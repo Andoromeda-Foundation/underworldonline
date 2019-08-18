@@ -1,0 +1,231 @@
+{
+    "sceneObjects": [
+        null,
+        null,
+        {
+            "modelID": 2,
+            "index": 2,
+            "name": "未命名0",
+            "x": 477,
+            "y": 382,
+            "z": 0,
+            "avatarID": 1010,
+            "avatarOri": 2,
+            "avatarAct": 2,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {
+                "avatar": {
+                    "type": 1,
+                    "id": 0
+                }
+            },
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        }
+    ],
+    "commands": [
+        [
+            0,
+            1,
+            0,
+            [
+                0,
+                1,
+                1,
+                0
+            ],
+            0,
+            0,
+            [
+                0,
+                1,
+                1,
+                0
+            ],
+            1,
+            [
+                1,
+                5,
+                0
+            ],
+            1,
+            0,
+            [
+                1,
+                1
+            ],
+            "",
+            "",
+            false
+        ],
+        [
+            13,
+            4,
+            5,
+            0,
+            0,
+            1,
+            1,
+            1,
+            [
+                0,
+                100
+            ],
+            0,
+            -1
+        ],
+        [
+            11,
+            1,
+            null,
+            "",
+            3,
+            -2,
+            "<span style='color:#FfFffF'>321321312</span>"
+        ],
+        [
+            72,
+            8
+        ],
+        [
+            2
+        ]
+    ],
+    "behaviors": [
+        null,
+        null,
+        [
+            -1,
+            0,
+            []
+        ]
+    ],
+    "customAttributes": [
+        null,
+        null,
+        {
+            "arr": {
+                "varType": 6,
+                "value": []
+            },
+            "age": {
+                "varType": 0,
+                "value": 6661
+            }
+        }
+    ],
+    "events": [
+        null,
+        null,
+        {
+            "condition": [],
+            "click": [
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "改"
+                ],
+                [
+                    19,
+                    "",
+                    "triggerPlayer.data.技能 = MathUtils.rand(10000);\r\nServerMsgSender.eval(triggerPlayer,`alert(${triggerPlayer.data.技能})`);",
+                    "triggerPlayer.data.技能 = MathUtils.rand(10000);\nServerMsgSender.eval(triggerPlayer, \"alert(\" + triggerPlayer.data.技能 + \")\");\n"
+                ],
+                [
+                    4,
+                    "----------------"
+                ],
+                [
+                    19,
+                    "",
+                    "ServerMsgSender.eval(triggerPlayer,`alert(${triggerPlayer.data.技能})`);",
+                    "ServerMsgSender.eval(triggerPlayer, \"alert(\" + triggerPlayer.data.技能 + \")\");\n"
+                ],
+                [
+                    4,
+                    "actor"
+                ],
+                [
+                    19,
+                    "",
+                    "trace(triggerPlayer.data.角色.HP)\r\ntrace(triggerPlayer.data.角色.id)",
+                    "trace(triggerPlayer.data.角色.HP);\ntrace(triggerPlayer.data.角色.id);\n"
+                ],
+                [
+                    4,
+                    "actor2改"
+                ],
+                [
+                    19,
+                    "",
+                    "triggerPlayer.data.角色.HP = MathUtils.rand(10000);\r\ntrace(triggerPlayer.data.角色.HP)",
+                    "triggerPlayer.data.角色.HP = MathUtils.rand(10000);\ntrace(triggerPlayer.data.角色.HP);\n"
+                ],
+                [
+                    4,
+                    "世界数据输出"
+                ],
+                [
+                    19,
+                    "",
+                    "ServerMsgSender.eval(triggerPlayer,`alert(${ServerWorld.data.AAAAA})`);",
+                    "ServerMsgSender.eval(triggerPlayer, \"alert(\" + ServerWorld.data.AAAAA + \")\");\n"
+                ],
+                [
+                    4,
+                    "世界数据改变"
+                ],
+                [
+                    19,
+                    "",
+                    "ServerWorld.data.AAAAA = MathUtils.rand(1000);\r\nServerMsgSender.eval(triggerPlayer,`alert(${ServerWorld.data.AAAAA})`);",
+                    "ServerWorld.data.AAAAA = MathUtils.rand(1000);\nServerMsgSender.eval(triggerPlayer, \"alert(\" + ServerWorld.data.AAAAA + \")\");\n"
+                ],
+                [
+                    4,
+                    "变身"
+                ],
+                [
+                    22,
+                    -2,
+                    0,
+                    [
+                        [
+                            1,
+                            1023,
+                            1,
+                            0
+                        ]
+                    ],
+                    0
+                ],
+                [
+                    10
+                ]
+            ],
+            "collide": [],
+            "update": []
+        }
+    ],
+    "id": 10
+}

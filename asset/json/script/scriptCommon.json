@@ -1,0 +1,14 @@
+{
+    "title": [
+        "GGG1",
+        "GGG2"
+    ],
+    "src": [
+        "class GlobalCommon{\r\n    static age:number =1;\r\n}",
+        ""
+    ],
+    "bin": [
+        "var GlobalCommon = (function () {\n    function GlobalCommon() {\n    }\n    GlobalCommon.age = 1;\n    return GlobalCommon;\n}());\n",
+        ""
+    ]
+}

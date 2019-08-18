@@ -1,0 +1,11 @@
+[
+	null,
+	{
+			"mouseover":"alert(123)",
+			"mouseout":null,
+			"mousemove":null,
+			"create":null,
+			"appear":null,
+			"disappear":null
+	}
+]

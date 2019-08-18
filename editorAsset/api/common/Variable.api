@@ -1,0 +1,52 @@
+/**
+ * 变量集合
+ * Created by 黑暗之神KDS on 2018-04-17 16:48:07.
+ */
+class Variable {
+    /**
+     * 获取数值变量
+     * @param index 变量ID
+     */
+    getVariable(varID: number): number {
+        return null;
+    }
+    /**
+     * 设置数值变量
+     * @param varID 
+     * @param v 
+     */
+    setVariable(varID: number, v: number) {
+        
+    }
+    /**
+     * 获取开关变量
+     * @param index 
+     */
+    getSwitch(varID: number): number {
+         return null;
+    }
+    /**
+     * 设置开关变量
+     * @param index 
+     * @param v 
+     */
+    setSwitch(varID: number, v: number) {
+        
+    }
+    /**
+     * 获取字符串变量
+     * @param index 
+     */
+    getString(varID: number):string{
+        return null;
+    }
+    /**
+     * 设置字符串变量
+     * @param index 
+     * @param v 
+     */
+    setString(varID: number, v: string) {
+       
+    }
+
+}

@@ -1,0 +1,361 @@
+{
+    "sceneObjects": [
+        {
+            "modelID": 2,
+            "index": 0,
+            "name": "未命名0",
+            "x": 334,
+            "y": 320,
+            "z": 0,
+            "avatarID": 1012,
+            "avatarOri": 2,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {
+                "avatar": {
+                    "type": 1,
+                    "id": 0
+                }
+            },
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 2,
+            "index": 1,
+            "name": "未命名1",
+            "x": 287,
+            "y": 472,
+            "z": 0,
+            "avatarID": 1002,
+            "avatarOri": 2,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {
+                "avatar": {
+                    "type": 1,
+                    "id": 0
+                }
+            },
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        },
+        {
+            "modelID": 2,
+            "index": 2,
+            "name": "未命名2",
+            "x": 519,
+            "y": 419,
+            "z": 0,
+            "avatarID": 1003,
+            "avatarOri": 2,
+            "avatarAct": 1,
+            "avatarPlayInterval": 5,
+            "avatarFrame": 0,
+            "avatarAlpha": 1,
+            "avatarHue": 0,
+            "shadowEnable": false,
+            "shadowWidth": 30,
+            "shadowHeight": 15,
+            "shadowAlpha": 0.5,
+            "displayList": {
+                "avatar": {
+                    "type": 1,
+                    "id": 0
+                }
+            },
+            "selectEnabled": true,
+            "fixedOrientation": false,
+            "onTop": false,
+            "through": false,
+            "bridge": false,
+            "autoPlayEnable": true,
+            "scale": 1,
+            "speed": 200,
+            "touchType": 0,
+            "playerUID": 0,
+            "clickEvent": false,
+            "colliedEvent": false
+        }
+    ],
+    "commands": [],
+    "behaviors": [
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ],
+        [
+            -1,
+            0,
+            []
+        ]
+    ],
+    "customAttributes": [
+        {
+            "arr": {
+                "varType": 6,
+                "value": []
+            },
+            "age": {
+                "varType": 0,
+                "value": 6661
+            }
+        },
+        {
+            "arr": {
+                "varType": 6,
+                "value": []
+            },
+            "age": {
+                "varType": 0,
+                "value": 6661
+            }
+        },
+        {
+            "arr": {
+                "varType": 6,
+                "value": []
+            },
+            "age": {
+                "varType": 0,
+                "value": 6661
+            }
+        }
+    ],
+    "events": [
+        {
+            "condition": [
+                {
+                    "type": 2,
+                    "varID": 3,
+                    "compare": 1,
+                    "value": 1
+                }
+            ],
+            "click": [],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    3,
+                    0
+                ],
+                [
+                    4,
+                    "ON"
+                ],
+                [
+                    13,
+                    6,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    4,
+                    "OFF"
+                ],
+                [
+                    13,
+                    6,
+                    0,
+                    0,
+                    0,
+                    0,
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    4,
+                    "----"
+                ],
+                [
+                    10
+                ],
+                [
+                    0,
+                    1,
+                    0,
+                    [
+                        0,
+                        1,
+                        1,
+                        0
+                    ],
+                    0,
+                    0,
+                    [
+                        0,
+                        1,
+                        1,
+                        0
+                    ],
+                    2,
+                    [
+                        1,
+                        1,
+                        0
+                    ],
+                    0,
+                    0,
+                    [
+                        1,
+                        1
+                    ],
+                    "",
+                    "",
+                    true
+                ],
+                [
+                    11,
+                    1,
+                    null,
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FfFffF'>我是开的！！！</span>"
+                ],
+                [
+                    1
+                ],
+                [
+                    11,
+                    1,
+                    null,
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FfFffF'>我是关的！！</span>"
+                ],
+                [
+                    2
+                ]
+            ],
+            "collide": [],
+            "update": []
+        },
+        {
+            "condition": [],
+            "click": [
+                [
+                    13,
+                    0,
+                    7,
+                    0,
+                    3,
+                    0,
+                    1,
+                    1,
+                    [
+                        100,
+                        1000
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    13,
+                    2,
+                    2,
+                    0,
+                    0,
+                    "卧槽123",
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    13,
+                    1,
+                    4,
+                    0,
+                    0,
+                    1,
+                    1,
+                    1,
+                    [
+                        0,
+                        100
+                    ],
+                    0,
+                    -1
+                ],
+                [
+                    11,
+                    1,
+                    null,
+                    "",
+                    3,
+                    -2,
+                    "<span style='color:#FfFffF'>好了热！！</span>"
+                ]
+            ],
+            "collide": [],
+            "update": []
+        }
+    ],
+    "id": 7
+}

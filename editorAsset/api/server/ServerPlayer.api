@@ -1,0 +1,106 @@
+/**
+ * 玩家类
+ * 玩家在主线程登录后读取数据然后进入到对应的场景线程
+ * 进入线程场景后会创建新的玩家类并将此前数据复制给新建立的玩家类
+ * 离开场景会将该数据清理掉
+ * Created by 黑暗之神KDS on 2018-07-14 00:20:36.
+ */
+class ServerPlayer extends Player {
+    /** 事件：玩家上线，加载玩家数据后派发事件，仅主线程可获取 
+     *  登录会读取数据库
+     *  EventUtils.addEventListener(ServerPlayer); callback(player:ServerPlayer)
+     */
+    static EVENT_PLAYER_LOGIN: string = "ServerPlayer_EVENT_PLAYER_LOGIN";
+    /** 事件：玩家挤号，挤号不会触发上线事件，仅主线程可获取 
+     *  挤号将直接使用在线玩家的数据（在对应的场景线程中）
+     *  EventUtils.addEventListener(ServerPlayer); callback(player:ServerPlayer)
+     * */
+    static EVENT_PLAYER_DISPLACEMENT: string = "ServerPlayer_EVENT_PLAYER_DISPLACEMENT";
+    /** 事件：玩家下线，在清理玩家前派发事件，仅主线程可获取 
+     *  EventUtils.addEventListener(ServerPlayer); callback(player:ServerPlayer)
+     * */
+    static EVENT_PLAYER_LOGOUT: string = "ServerPlayer_EVENT_PLAYER_LOGOUT";
+    /**
+     * 事件：接收玩家字符串消息
+     * 对应的场景线程可以接收到消息，客户端默认情况下发送到自身所在的场景线程，也可以发送到指定的线程（主线程除外）。
+     * EventUtils.addEventListener(ServerPlayer); callback(player:ServerPlayer,msg:string)
+     */
+    static EVENT_PLAYER_MESSAGE: string = "ServerPlayer_EVENT_PLAYER_MESSAGE";
+    /**
+    * 玩家列表 key -> [player]
+    * 主线程存在所有玩家
+    * 支线程仅存在该支线程上的所有玩家
+    */
+    static playerList: { [key: string]: ServerPlayer } = {};
+    /**
+     * 玩家所在场景
+     */
+    public sceneID: number;
+    /**
+     * 玩家所在的场景，如为空则说明该玩家已不在场景上
+     */
+    public scene: ServerScene;
+    /**
+     * 玩家所在的线程 player.sceneID % ServerConfig.SCENE_FIXED_THREAD_COUNT;
+     */
+    public threadID: number;
+    /**
+     * 禁止操作
+     */
+    public controlEnabled: boolean = true;
+    /**
+     * 对应的场景对象
+     */
+    get sceneObject(): ServerSceneObject {
+        return null;
+    }
+    /**
+     * 进入指定场景
+     * @param sceneID 场景ID
+     * @param x 实际坐标x
+     * @param y 实际坐标y
+     */
+    toScene(sceneID: number, x: number=0, y: number=0) {
+        
+    }
+    /**
+     * 执行公共事件，建立一个单独的事件线来执行，不影响其他的事件执行
+     * @param commandID 公共事件
+     * @param inputMessage 输入的参数，在事件中可通过trigger.inputMessage
+     */
+    execCommonCommand(commandID: number, inputMessage: any[]): CommandTarget {
+        return null;
+    }
+    /**
+     * 通用的操作玩家数据（离线玩家也可操作）
+     * 读取并解析该玩家的全部数据并操作完毕后储存
+     * [*] 目前临时解决方案，还需要针对玩家上线下线的情况作出处理
+     * @param uid 玩家ID
+     * @param func 操作的方法 func(player:ServerPlayer,...args)
+     * @param args [可选] 默认值=[] 执行func方法传递的参数：必须可以JSON化的参数
+     * @param onFin [可选] 默认值=null 完成时回调
+     * @param useVariables [可选] 默认值=true 是否使用变量，使用的话读写变量才能让离线玩家同步数据库
+     */
+    static changePlayerData(uid: number, func: Function, args: any[] = [], onFin: Callback = null, useVariables: boolean = true): void {
+      
+    }
+    //------------------------------------------------------------------------------------------------------
+    // 静态方法：玩家列表
+    //------------------------------------------------------------------------------------------------------
+    /**
+     * 获取玩家:主线程存在所有玩家，支线程仅存在该支线程上的所有玩家
+     * @param key 
+     * @return [ServerPlayer] 
+     */
+    static getPlayer(key: string): ServerPlayer {
+        return null;
+    }
+    /**
+     * 获取玩家-根据UID:主线程存在所有玩家，支线程仅存在该支线程上的所有玩家
+     * @param key 
+     * @return [ServerPlayer] 
+     */
+    static getPlayerByUID(uid: number): ServerPlayer {
+        return null;
+    }
+}

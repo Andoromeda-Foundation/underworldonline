@@ -1,0 +1,56 @@
+{
+    "root": {
+        "children": [
+            {
+                "id": "1222063971_0.37020952064028556",
+                "condition": [],
+                "type": "UIButton",
+                "name": "Login",
+                "x": 430,
+                "y": 486,
+                "width": 212,
+                "height": 84,
+                "opacity": 1,
+                "rotation": 0,
+                "show": true,
+                "mouseEventEnabledData": true,
+                "mouseEventEnabledInEditor": true,
+                "showOnEditor": true,
+                "image1": "asset/editor/image/btn1.png",
+                "image2": "asset/editor/image/btn2.png",
+                "image3": "",
+                "grid9": "",
+                "children": [
+                    {
+                        "id": "1550576546_0.5338580506424333",
+                        "condition": [],
+                        "type": "UIString",
+                        "name": "文本",
+                        "x": 55,
+                        "y": 28,
+                        "width": 200,
+                        "height": 30,
+                        "opacity": 1,
+                        "rotation": 0,
+                        "show": true,
+                        "mouseEventEnabledData": false,
+                        "mouseEventEnabledInEditor": true,
+                        "showOnEditor": true,
+                        "text": "LOGIN",
+                        "fontSize": 35,
+                        "color": "#ffffff",
+                        "bold": false,
+                        "align": 0,
+                        "leading": 0,
+                        "font": "宋体",
+                        "wordWrap": true,
+                        "overflow": 0,
+                        "valign": 0
+                    }
+                ]
+            }
+        ]
+    },
+    "id": 1,
+    "instanceClassName": ""
+}

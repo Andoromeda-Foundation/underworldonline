@@ -1,0 +1,32 @@
+/**
+ * UI组件基类
+ * Created by 黑暗之神KDS on 2018-10-12 14:31:34.
+ */
+class UIBase extends GameSprite {
+    /**
+      * 事件：组件构造初始化事件
+      */
+    static EVENT_COMPONENT_CONSTRUCTOR_INIT: string = "UIBase_EVENT_COMPONENT_CONSTRUCTOR_INIT";
+    /**
+     * 唯一ID：随机生成
+     */
+    id: string;
+    /**
+     * 是否存在事件
+     */
+    hasCommand: boolean[] = [];
+    /**
+     * 类型名称
+     */
+    className: string;
+    /**
+     * 事件输入值
+     */
+    commandInputMessage: any[] | Callback;
+    /**
+     * 释放
+     */
+    dispose(): void {
+
+    }
+}

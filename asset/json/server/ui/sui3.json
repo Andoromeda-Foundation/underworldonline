@@ -1,0 +1,838 @@
+{
+    "6945315737_0.5467488908817975": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6945466039_0.5343298286354461": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6945473109_0.7914398439174362": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6945641788_0.8854842735353878": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6945944975_0.49832974346185077": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "卡牌收藏界面移出",
+                    "var ui: GUI_mainMenu = GameUI.get(3) as any;\r\nTween.to(ui, { alpha: 0 }, 300);",
+                    "var ui = GameUI.get(3);\nTween.to(ui, { alpha: 0 }, 300);\n"
+                ],
+                [
+                    17,
+                    "200",
+                    1,
+                    true
+                ],
+                [
+                    20,
+                    "卡牌收藏界面移入",
+                    "var ui: GUI_mainMenu = GameUI.get(2) as any;\r\nTween.to(ui.容器_上, { y: 23, alpha: 1 }, 100);\r\nTween.to(ui.容器_右下, { y: 675, alpha: 1 }, 100);\r\nTween.to(ui.容器_左, { x: 0, alpha: 1 }, 100);\r\nTween.to(ui.容器_右, { x: 688, alpha: 1 }, 200);\r\n// 上下线消失\r\nui.图片_mainMenu_line1.alpha = 1;\r\nui.图片_mainMenu_line2.alpha = 1;",
+                    "var ui = GameUI.get(2);\nTween.to(ui.容器_上, { y: 23, alpha: 1 }, 100);\nTween.to(ui.容器_右下, { y: 675, alpha: 1 }, 100);\nTween.to(ui.容器_左, { x: 0, alpha: 1 }, 100);\nTween.to(ui.容器_右, { x: 688, alpha: 1 }, 200);\nui.图片_mainMenu_line1.alpha = 1;\nui.图片_mainMenu_line2.alpha = 1;\n"
+                ],
+                [
+                    20,
+                    "背景清晰",
+                    "var ui:GUI_mainMenu = GameUI.get(2) as any;\r\nTween.to(ui.图片_background_dim, { alpha: 0 }, 500);",
+                    "var ui = GameUI.get(2);\nTween.to(ui.图片_background_dim, { alpha: 0 }, 500);\n"
+                ],
+                [
+                    17,
+                    "100",
+                    1,
+                    true
+                ],
+                [
+                    73,
+                    3
+                ],
+                [
+                    20,
+                    "卡牌收藏界面恢复透明度",
+                    "var ui: GUI_mainMenu = GameUI.get(3) as any;\r\nui.alpha = 1;",
+                    "var ui = GameUI.get(3);\nui.alpha = 1;\n"
+                ]
+            ]
+        ]
+    },
+    "6946371569_0.13885870181347815": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6946497108_0.7719264985193901": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6953997073_0.044640320325749494": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6954237347_0.5585103721321558": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6954472716_0.7056804144819284": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6954842710_0.7225639247061242": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "卡组名称编辑",
+                    "let ui: GUI_card = GameUI.get(3) as any;\r\nui.文本_卡组标题.visible = false;\r\nui.图片_卡组标题编辑.visible = false;\r\nui.可输入文本_卡组标题.visible = true;\r\nui.可输入文本_卡组标题.focus();",
+                    "var ui = GameUI.get(3);\nui.文本_卡组标题.visible = false;\nui.图片_卡组标题编辑.visible = false;\nui.可输入文本_卡组标题.visible = true;\nui.可输入文本_卡组标题.focus();\n"
+                ]
+            ]
+        ]
+    },
+    "6955085162_0.4682303703336905": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "6955112696_0.8374018791120643": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7007536819_0.33597611890831725": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7007609502_0.5399370716061991": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7007609971_0.6322542903769905": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7007711718_0.44887704045260723": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7007832755_0.04959527618179416": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7007854269_0.5912064326200699": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7007949505_0.22618522401490537": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7008097948_0.12201053024244168": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7008269917_0.6881886406226059": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7008352778_0.8109880740181135": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7008358534_0.9712923798468487": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7008420497_0.6116766179059077": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7008479623_0.9904797566909436": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7008511034_0.017536771772993287": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7008530317_0.2545337819490654": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7008546421_0.6503467135622254": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7008812050_0.592715449692955": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7010350407_0.0027735858140203185": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7030243167_0.4071456390410091": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7030581023_0.7026449584406409": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7030677643_0.000400353956979016": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7030795161_0.6720488480710021": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "清空卡组",
+                    "let ui: GUI_card = GameUI.get(3) as any;\r\nGame.player.data.卡组[ui.index_deck].卡牌列表.length = 0;\r\nui.updateCardInDeck();",
+                    "var ui = GameUI.get(3);\nGame.player.data.卡组[ui.index_deck].卡牌列表.length = 0;\nui.updateCardInDeck();\n"
+                ]
+            ]
+        ]
+    },
+    "7031249516_0.5748067999162931": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7034399581_0.32901062659939084": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7034386812_0.8255603476568678": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7034592041_0.4626595537011766": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "搜索内容清空",
+                    "let ui: GUI_card = GameUI.get(3) as any;\r\nui.可输入文本_搜索内容.text = \"\";\r\nui.可输入文本_搜索内容.visible = false;\r\nui.文本_搜索内容.visible = true;\r\nui.可输入文本_搜索内容.focus();\r\nui.可输入文本_备用.focus();",
+                    "var ui = GameUI.get(3);\nui.可输入文本_搜索内容.text = \"\";\nui.可输入文本_搜索内容.visible = false;\nui.文本_搜索内容.visible = true;\nui.可输入文本_搜索内容.focus();\nui.可输入文本_备用.focus();\n"
+                ]
+            ]
+        ]
+    },
+    "7037229512_0.3451605469769825": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7088049387_0.155094549912427": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7088078263_0.30815921928081824": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(0);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(0);\n"
+                ]
+            ]
+        ]
+    },
+    "7089903452_0.6701374879126358": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(0);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(0);\n"
+                ]
+            ]
+        ]
+    },
+    "7089936410_0.9805927930310199": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(1);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(1);\n"
+                ]
+            ]
+        ]
+    },
+    "7089956529_0.05393459787880661": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(1);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(1);\n"
+                ]
+            ]
+        ]
+    },
+    "7090006939_0.7341594334168497": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(2);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(2);\n"
+                ]
+            ]
+        ]
+    },
+    "7090046719_0.21724134284051178": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(2);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(2);\n"
+                ]
+            ]
+        ]
+    },
+    "7090101210_0.26153816126200646": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(3);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(3);\n"
+                ]
+            ]
+        ]
+    },
+    "7090157602_0.24354141185779832": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(3);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(3);\n"
+                ]
+            ]
+        ]
+    },
+    "7090183849_0.3261624837060475": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(4);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(4);\n"
+                ]
+            ]
+        ]
+    },
+    "7090233557_0.12797697085884785": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(4);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(4);\n"
+                ]
+            ]
+        ]
+    },
+    "7090251077_0.08631511579634488": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(5);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(5);\n"
+                ]
+            ]
+        ]
+    },
+    "7090305736_0.815264275945135": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(5);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(5);\n"
+                ]
+            ]
+        ]
+    },
+    "7090340790_0.07212130744193868": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(6);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(6);\n"
+                ]
+            ]
+        ]
+    },
+    "7090486739_0.9507646102044409": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(6);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(6);\n"
+                ]
+            ]
+        ]
+    },
+    "7090501465_0.9529612297895547": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(7);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(7);\n"
+                ]
+            ]
+        ]
+    },
+    "7090525620_0.9174323502408155": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(7);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(7);\n"
+                ]
+            ]
+        ]
+    },
+    "7090540541_0.08532781019249036": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(8);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(8);\n"
+                ]
+            ]
+        ]
+    },
+    "7090564836_0.5661656243855109": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "派系选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.factionSelect(8);",
+                    "var ui = GameUI.get(3);\nui.factionSelect(8);\n"
+                ]
+            ]
+        ]
+    },
+    "7544941464_0.4900500862014945": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7545281050_0.2587012896616039": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(0);",
+                    "var ui = GameUI.get(3);\nui.costSelect(0);\n"
+                ]
+            ]
+        ]
+    },
+    "7547725808_0.778778941976491": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(0);",
+                    "var ui = GameUI.get(3);\nui.costSelect(0);\n"
+                ]
+            ]
+        ]
+    },
+    "7609901079_0.7618369597576655": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7610279628_0.013998326093070723": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(1);",
+                    "var ui = GameUI.get(3);\nui.costSelect(1);\n"
+                ]
+            ]
+        ]
+    },
+    "7610285331_0.5726998213959271": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(2);",
+                    "var ui = GameUI.get(3);\nui.costSelect(2);\n"
+                ]
+            ]
+        ]
+    },
+    "7610287651_0.8085344035591546": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(3);",
+                    "var ui = GameUI.get(3);\nui.costSelect(3);\n"
+                ]
+            ]
+        ]
+    },
+    "7610288384_0.3853226893328825": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(4);",
+                    "var ui = GameUI.get(3);\nui.costSelect(4);\n"
+                ]
+            ]
+        ]
+    },
+    "7610298829_0.09547791107483183": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(5);",
+                    "var ui = GameUI.get(3);\nui.costSelect(5);\n"
+                ]
+            ]
+        ]
+    },
+    "7610301911_0.20811565606132176": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(6);",
+                    "var ui = GameUI.get(3);\nui.costSelect(6);\n"
+                ]
+            ]
+        ]
+    },
+    "7610361189_0.6122632295651025": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(7);",
+                    "var ui = GameUI.get(3);\nui.costSelect(7);\n"
+                ]
+            ]
+        ]
+    },
+    "7610548086_0.7487266758412214": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(1);",
+                    "var ui = GameUI.get(3);\nui.costSelect(1);\n"
+                ]
+            ]
+        ]
+    },
+    "7610549451_0.8162691551203243": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(2);",
+                    "var ui = GameUI.get(3);\nui.costSelect(2);\n"
+                ]
+            ]
+        ]
+    },
+    "7610550756_0.23393415021186303": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(3);",
+                    "var ui = GameUI.get(3);\nui.costSelect(3);\n"
+                ]
+            ]
+        ]
+    },
+    "7610551831_0.6056002127376279": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(4);",
+                    "var ui = GameUI.get(3);\nui.costSelect(4);\n"
+                ]
+            ]
+        ]
+    },
+    "7610552985_0.15433788659547543": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(5);",
+                    "var ui = GameUI.get(3);\nui.costSelect(5);\n"
+                ]
+            ]
+        ]
+    },
+    "7610554250_0.7283486982898602": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(6);",
+                    "var ui = GameUI.get(3);\nui.costSelect(6);\n"
+                ]
+            ]
+        ]
+    },
+    "7610555413_0.3738760967040986": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "费用选择",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.costSelect(7);",
+                    "var ui = GameUI.get(3);\nui.costSelect(7);\n"
+                ]
+            ]
+        ]
+    },
+    "7610619410_0.8453519261542619": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7610620524_0.03939497443458806": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7610621144_0.22183046222150837": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7610623369_0.5429169393361057": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7610623924_0.8003101847684597": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7610624841_0.9749363022858499": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7610625195_0.2870162429544816": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7611284515_0.729528239106392": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7646166861_0.5171702851309821": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "7646329218_0.5783455639888686": {
+        "condition": [],
+        "commands": [
+            [
+                [
+                    20,
+                    "显示可输入文本",
+                    "let ui:GUI_card = GameUI.get(3) as any;\r\nui.文本_搜索内容.visible = false;\r\nui.可输入文本_搜索内容.visible = true;\r\nui.可输入文本_搜索内容.font = \"黑体\";\r\nui.可输入文本_搜索内容.focus();",
+                    "var ui = GameUI.get(3);\nui.文本_搜索内容.visible = false;\nui.可输入文本_搜索内容.visible = true;\nui.可输入文本_搜索内容.font = \"黑体\";\nui.可输入文本_搜索内容.focus();\n"
+                ]
+            ]
+        ]
+    },
+    "7681255215_0.28010723020372197": {
+        "condition": [],
+        "commands": [
+            []
+        ]
+    },
+    "id": 3
+}

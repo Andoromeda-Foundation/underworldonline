@@ -1,0 +1,14 @@
+{
+    "allowClient": true,
+    "conditionSwitch": 1,
+    "updateMode": false,
+    "commands": [
+        [
+            67,
+            "asset/audio/se/button/error2.mp3",
+            0.5,
+            1
+        ]
+    ],
+    "id": 1002
+}

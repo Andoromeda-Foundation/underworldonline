@@ -1,0 +1,27 @@
+/**
+ * 客户端玩家类
+ * Created by 黑暗之神KDS on 2019-06-03 18:56:43.
+ */
+class ClientPlayer extends Player {
+    /**
+     * 监听玩家变量
+     * 该变量首次监听时会与服务器-该编号的变量同步
+     * 其他非首次的监听直接来自客户端缓存
+     * @param type 0-变量 1-开关 2-字符串 
+     * @param varID 变量ID
+     * @param onChange 当变量改变时回调 onChange(typeID:number,varID:number,value:number|string)
+     */
+    addListenerPlayerVariable(type: number, varID: number, onChange: Callback): void {
+
+    }
+    /**
+     * 取消监听玩家变量
+     * 当所有监听该编号的变量都取消了后则通知服务器-取消该编号变量的同步
+     * @param type 0-变量 1-开关 2-字符串
+     * @param varID 变量ID
+     * @param onChange 当变量改变时回调
+     */
+    removeListenerPlayerVariable(type: number, varID: number, onChange: Callback): void {
+       
+    }
+}

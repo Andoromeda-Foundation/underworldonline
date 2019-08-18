@@ -1,0 +1,37 @@
+/**
+ * Created by kds on 2017-10-25 17:36:38.
+ */
+class PoolUtils {
+    /**
+     * 池子
+     */
+    pools:any[] = [];
+    /**
+     * 类
+     * @param cls 
+     */
+    cls:any;
+    /**
+     * 构造函数
+     */
+    constructor(cls:any){
+        this.cls = cls;
+    }
+    /**
+     * 归还
+     * @param obj 
+     */
+    free(obj:any){
+        this.pools.push(obj);
+    }
+    /**
+     * 取出
+     * @param obj 
+     */
+    takeout():any{
+        if(this.pools.length>0){
+            return this.pools.shift();
+        }
+        return new this.cls();
+    }
+}

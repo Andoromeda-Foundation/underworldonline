@@ -1,0 +1,170 @@
+/**
+ * 场景：公共数据
+ * 逻辑场景，通用于客户端和服务端
+ * Created by 黑暗之神KDS on 2018-05-21 01:49:13.
+ */
+class Scene {
+    /**
+     * 唯一编号
+     */
+    id: number;
+    /**
+     * 副本中对应的地图模型ID 非副本=0
+     */
+    modelID: number;
+    /**
+     * 最大宽度
+     */
+    width: number;
+    /**
+     * 最大高度
+     */
+    height: number;
+    /**
+     * 最大长度
+     */
+    long: number;
+    /**
+     * 名称
+     */
+    name: string;
+    /**
+     * 是否在进入场景时自动加载资源（自动判断 + 手动添加的列表）
+     */
+    autoLoadAsset: boolean;
+    /**
+    * 障碍数据 [x][y] = true/false  ture=有障碍
+    */
+    obstacleData: boolean[][] = [];
+    /**
+     * 遮罩 [x][y] = true/false true=有遮罩
+     */
+    maskData: boolean[][] = [];
+    /**
+     * BGM
+     */
+    bgm: string;
+    /**
+     * BGM-音量
+     */
+    bgmVolume: number;
+    /**
+     * BGM-音调
+     */
+    bgmPitch: number;
+    /**
+     * BGS
+     */
+    bgs: string;
+    /**
+     * BGS音量
+     */
+    bgsVolume: number;
+    /**
+     * BGS-音调
+     */
+    bgsPitch: number;
+    /**
+     * 游戏对象列表
+     */
+    sceneObjects: SceneObject[] = [];
+    /**
+     * 格子宽
+     */
+    gridWidth: number;
+    /**
+     * 格子高
+     */
+    gridHeight: number;
+    /**
+     * 格子上的场景对象
+     */
+    gridSceneObjects: SceneObject[][][] = [];
+    /**
+     * 是否障碍,实际坐标
+     * 计算了场景对象的动态障碍
+     * @param p 实际坐标
+     * @param except [可选] 默认值=null 忽略计算的对象（如玩家自身）
+     * @return [boolean] 
+     */
+    isObstacle(p: Point, except: SceneObject = null): boolean {
+       return false;
+    }
+    /**
+     * 是否是障碍格子
+     * 计算了场景对象的动态障碍
+     * @param gridP 格子坐标 
+     * @return [boolean] 
+     */
+    isObstacleGrid(gridP: Point, except: SceneObject = null): boolean {
+        return false;
+    }
+    /**
+     * 是否存在地图固定障碍（地图或图块设置的障碍）
+     */
+    isFixedObstacleGrid(gridP: Point): boolean {
+        return false;
+    }
+    /**
+     * 是否存在遮罩，根据实际坐标
+     * @param p 实际坐标
+     * @return [boolean] 
+     */
+    isMask(p: Point): boolean {
+        return false;
+    }
+    /**
+     * 是否存在遮罩，根据格子
+     * @param gridP 格子坐标
+     * @return [boolean] 
+     */
+    isMaskGrid(gridP: Point): boolean {
+        return false;
+    }
+    /**
+     * 是否在场景范围外
+     * @param p 坐标
+     * @return [boolean] 
+     */
+    isOutside(p: Point): boolean {
+        return false;
+    }
+    /**
+     * 是否在场景范围外，根据格子
+     * @param gridP 格子坐标
+     * @return [boolean] 
+     */
+    isOutsideByGrid(gridP: Point): boolean {
+        return false;
+    }
+    /**
+     * 将坐标限制在场内
+     * @param p 
+     */
+    limitInside(p: Point): void {
+        
+    }
+    /**
+     * 检查该格子是否具备动态穿透属性
+     * -- 只要有桥对象则视为穿透
+     * -- 否则只要有障碍物则视为有障碍
+     * @param gridP 格子坐标
+     * @param socIndex [可选] 默认值=-1 忽略的场景对象索引
+     * @return [number] 0-无 1-桥属性 2-存在障碍
+     */
+    gridDynamicObsStatus(gridP: Point, except: SceneObject = null): number {
+        return 0;
+    }
+    /**
+     * 刷新动态障碍和桥，根据单位场景对象
+     * 场景对象位置发生改变后需要调用此方法重新刷新缓存其所在的位置 gridSceneObjects 以及动态障碍
+     * @param soc 障碍对象
+     * @param inScene 是否在场景上
+     * @return isChange 是否真正更新过坐标
+     */
+    updateDynamicObsAndBridge(soc: SceneObject, inScene: boolean, posGrid: Point = null): boolean {
+        return false;
+    }
+
+
+}
