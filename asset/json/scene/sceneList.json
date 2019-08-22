@@ -2,7 +2,7 @@
     "list": [
         null,
         "新的地图1",
-        null,
+        "战场_初级场",
         null,
         null,
         null,
@@ -28,6 +28,11 @@
         {
             "id": 1,
             "name": "新的地图1",
+            "children": []
+        },
+        {
+            "id": 2,
+            "name": "战场_初级场",
             "children": []
         }
     ]

@@ -1,80 +1,24 @@
 {
-    "sceneObjects": [
-        null,
-        {
-            "modelID": 1,
-            "index": 1,
-            "name": "未命名1",
-            "x": 353,
-            "y": 198,
-            "z": 0,
-            "avatarID": 1002,
-            "avatarOri": 3,
-            "avatarAct": 1,
-            "avatarPlayInterval": 5,
-            "avatarFrame": 0,
-            "avatarAlpha": 1,
-            "avatarHue": 0,
-            "shadowEnable": false,
-            "shadowWidth": 30,
-            "shadowHeight": 15,
-            "shadowAlpha": 0.5,
-            "displayList": {
-                "avatar": {
-                    "type": 1,
-                    "id": 0
-                }
-            },
-            "selectEnabled": true,
-            "fixedOrientation": false,
-            "onTop": 1,
-            "through": false,
-            "bridge": false,
-            "autoPlayEnable": true,
-            "scale": 1,
-            "speed": 200,
-            "touchType": 0,
-            "playerUID": 0,
-            "hasCommand": []
-        }
-    ],
+    "sceneObjects": [],
     "customCommands": [
-        [],
+        [
+            [
+                73,
+                3001
+            ],
+            [
+                73,
+                2
+            ],
+            [
+                72,
+                4
+            ]
+        ],
         []
     ],
-    "behaviors": [
-        null,
-        [
-            -1,
-            0,
-            []
-        ],
-        null
-    ],
-    "customAttributes": [
-        null,
-        {},
-        null
-    ],
-    "events": [
-        null,
-        {
-            "condition": [],
-            "customCommands": [
-                [
-                    [
-                        1000,
-                        false,
-                        true,
-                        true,
-                        1
-                    ]
-                ],
-                [],
-                []
-            ]
-        },
-        null
-    ],
+    "behaviors": [],
+    "customAttributes": [],
+    "events": [],
     "id": 2
 }

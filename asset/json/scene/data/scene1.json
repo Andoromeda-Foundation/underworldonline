@@ -28,7 +28,7 @@
             "blendMode": null,
             "drawMode": false,
             "tileData": [],
-            "img": "asset/image/scene/全景图/mainMenu/background_Florence.png",
+            "img": "",
             "prospectsPerX": 1,
             "prospectsPerY": 1
         },
@@ -47,7 +47,7 @@
             "blendMode": null,
             "drawMode": false,
             "tileData": [],
-            "img": "asset/image/scene/全景图/mainMenu/backgroundMask.png"
+            "img": ""
         },
         {
             "p": true
