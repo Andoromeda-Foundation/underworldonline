@@ -7,9 +7,9 @@
                 "type": "UIRoot",
                 "name": "容器",
                 "x": 240,
-                "y": 148,
+                "y": 276,
                 "width": 470,
-                "height": 395,
+                "height": 228,
                 "opacity": 1,
                 "rotation": 0,
                 "show": true,
@@ -34,7 +34,9 @@
                         "mouseEventEnabledData": true,
                         "mouseEventEnabledInEditor": true,
                         "showOnEditor": true,
-                        "hasCommand": [],
+                        "hasCommand": [
+                            true
+                        ],
                         "image": "asset/image/picture/UI/cardCollect/deckTitle.png",
                         "grid9": "",
                         "children": [
@@ -50,7 +52,7 @@
                                 "opacity": 1,
                                 "rotation": 0,
                                 "show": true,
-                                "mouseEventEnabledData": true,
+                                "mouseEventEnabledData": false,
                                 "mouseEventEnabledInEditor": true,
                                 "showOnEditor": true,
                                 "hasCommand": [],

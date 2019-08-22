@@ -65,7 +65,7 @@
                 "condition": [],
                 "type": "UIBitmap",
                 "name": "图片_mainMenu_line1",
-                "x": -2,
+                "x": 0,
                 "y": 50,
                 "width": 1400,
                 "height": 2,
@@ -84,7 +84,7 @@
                 "condition": [],
                 "type": "UIBitmap",
                 "name": "图片_mainMenu_line2",
-                "x": -1,
+                "x": 0,
                 "y": 734,
                 "width": 1400,
                 "height": 2,
@@ -628,7 +628,9 @@
                         "mouseEventEnabledData": true,
                         "mouseEventEnabledInEditor": true,
                         "showOnEditor": true,
-                        "hasCommand": [],
+                        "hasCommand": [
+                            true
+                        ],
                         "image1": "asset/image/picture/UI/mainMenu/button_match1.png",
                         "image2": "asset/image/picture/UI/mainMenu/button_match1_large.png",
                         "image3": "asset/image/picture/UI/mainMenu/button_match1_large.png",

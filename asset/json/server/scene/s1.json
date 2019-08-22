@@ -3,6 +3,65 @@
     "customCommands": [
         [
             [
+                0,
+                1,
+                0,
+                [
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                0,
+                0,
+                [
+                    0,
+                    1,
+                    1,
+                    0
+                ],
+                1,
+                [
+                    1,
+                    1,
+                    [
+                        0,
+                        0
+                    ]
+                ],
+                1,
+                0,
+                [
+                    1,
+                    1
+                ],
+                "",
+                "",
+                false
+            ],
+            [
+                13,
+                4,
+                1,
+                0,
+                0,
+                1,
+                1,
+                1,
+                [
+                    0,
+                    100
+                ],
+                0,
+                -1
+            ],
+            [
+                19,
+                "记录玩家ID",
+                "// 记录ID\r\ntriggerPlayer.variable.setString(2, triggerPlayer.uid.toString());",
+                "triggerPlayer.variable.setString(2, triggerPlayer.uid.toString());\n"
+            ],
+            [
                 13,
                 5,
                 1,
@@ -19,8 +78,11 @@
                 -1
             ],
             [
+                2
+            ],
+            [
                 72,
-                4
+                2
             ]
         ],
         []
